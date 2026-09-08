@@ -17,18 +17,27 @@ DEFAULT_DB_PATH = BACKEND_DIR.parent / "seed-data" / "overwatch.db"
 
 DB_PATH = Path(os.environ.get("OW_DB_PATH", str(DEFAULT_DB_PATH)))
 
-# 점수 계산 가중치. 스펙은 "카운터 점수 = 카운터하는 상대 영웅 수 × 가중치" 식으로
-# 계산법만 정하고 구체적인 가중치 값은 정하지 않았음 — 아래는 초기 튜닝값이며
-# 실제 사용해보면서 조정하면 된다.
-WEIGHT_COUNTER = 15  # 카운터하는 상대 영웅 1명당
+# 하드카운터 가중치 불변식(스펙 "점수 계산 로직"의 "가중치 튜닝 제약" 참고):
+# WEIGHT_COUNTER 1건 값은 다른 모든 보너스의 최댓값 합(시너지 최대 4명 ×
+# WEIGHT_SYNERGY + WEIGHT_MAP_STRONG)보다 항상 커야 한다. 지금 값 기준
+# 4*10+15=55이므로 60으로 설정 — 이 상수들을 조정할 때마다 이 부등식을 다시 확인할 것.
+WEIGHT_COUNTER = 60  # 카운터하는 상대 영웅 1명당
 WEIGHT_SYNERGY = 10  # 시너지 좋은 아군 영웅 1명당
 WEIGHT_MAP_STRONG = 15  # 맵 평가 "강함"
 WEIGHT_MAP_WEAK = -15  # 맵 평가 "약함"
 # 맵 평가 데이터가 없거나 "보통"이면 0 (중립) — 스펙의 에러 처리 표 참고
 
-# 총점(raw score, 이론상 상한 없음)을 0~100% 표시용 점수로 바꿀 때 쓰는 기준선.
-# percentage = clamp(50 + raw_score, 0, 100)
+# 총점(raw score, 이론상 상한 없음)을 0~100 표시용 점수로 바꿀 때 쓰는 기준선.
+# percentage = round(PERCENTAGE_BASELINE + 50 * tanh(raw_score / PERCENTAGE_SCALE))
+# 50이 공식의 절반 지점 상수라 PERCENTAGE_SCALE만 튜닝 대상이고 이 값 자체는
+# 바꾸지 않는다.
 PERCENTAGE_BASELINE = 50
+
+# tanh 포화 곡선의 스케일 상수. 하드 clamp(50+raw_score, 0, 100)는 점수가 높은
+# 후보끼리 100%로 뭉개져 변별력이 사라지는 문제가 있어 교체했다. WEIGHT_COUNTER와
+# 같은 값으로 잡아, 카운터 1건만 있어도 강하게(약 88%) 오르되 100%로 즉시
+# 포화되지는 않도록 함.
+PERCENTAGE_SCALE = 60
 
 # 목업(Result.dc.html)의 "필수픽" 배지 기준. percentage가 이 값 이상이면 표시.
 # 근거 데이터가 굉장히 잘 들어맞는 상위권 픽에만 붙는 걸 의도한 임의 튜닝값.

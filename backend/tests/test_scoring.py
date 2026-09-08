@@ -2,6 +2,9 @@
 
 DB 없이 순수하게 scoring.score_candidates()만 검증한다.
 """
+import math
+
+from app.config import PERCENTAGE_SCALE, WEIGHT_COUNTER, WEIGHT_MAP_STRONG, WEIGHT_SYNERGY
 from app.scoring import NEUTRAL_REASON, score_candidates
 
 
@@ -21,7 +24,7 @@ def test_counter_score_applies_only_to_matching_candidate():
     result = score_candidates(candidates, counter_rows, [], [])
 
     by_id = {s.hero_id: s for s in result}
-    assert by_id["kiriko"].counter_score == 15
+    assert by_id["kiriko"].counter_score == WEIGHT_COUNTER
     assert by_id["kiriko"].reasons == ["스즈 무효화"]
     assert by_id["lucio"].counter_score == 0
     assert by_id["moira"].counter_score == 0
@@ -73,8 +76,9 @@ def test_total_score_sums_all_three_components_and_sorts_descending():
     result = score_candidates(candidates, counter_rows, synergy_rows, map_rows)
 
     assert result[0].hero_id == "kiriko"
-    assert result[0].total_score == 15 + 10 + 15
-    assert result[0].percentage == 90  # 50 + 40
+    expected_total = WEIGHT_COUNTER + WEIGHT_SYNERGY + WEIGHT_MAP_STRONG
+    assert result[0].total_score == expected_total
+    assert result[0].percentage == round(50 + 50 * math.tanh(expected_total / PERCENTAGE_SCALE))
     assert len(result[0].reasons) == 3
     assert result[0].is_must_pick is True  # percentage(90) >= MUST_PICK_PERCENTAGE_THRESHOLD(90)
 

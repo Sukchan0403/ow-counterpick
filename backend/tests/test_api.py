@@ -45,11 +45,12 @@ def test_recommendations_normal_case(client):
     assert body["notice"] is None
 
     top = body["recommendations"][0]
-    # 키리코: 위도우메이커 카운터(15) + 겐지랑 시너지 없음(0) + 맵 데이터 없음(0) = 15
+    # 키리코: 위도우메이커 카운터(60, WEIGHT_COUNTER 상향 후) + 겐지랑 시너지 없음(0)
+    #         + 맵 데이터 없음(0) = 60
     # 모이라: 카운터 없음(0) + 시너지 없음(0) + 맵 강함(15) = 15
-    # 둘 다 15점 동점 -> 이름 알파벳/가나다 순 정렬(모이라가 키리코보다 앞? 정렬은 문자열 비교)
+    # 루시우: 카운터 없음(0) + 겐지와 시너지(10) + 맵 데이터 없음(0) = 10
     scores = {r["hero_id"]: r["total_score"] for r in body["recommendations"]}
-    assert scores["kiriko"] == 15
+    assert scores["kiriko"] == 60
     assert scores["moira"] == 15
     assert scores["lucio"] == 10  # 겐지와 시너지만
 
@@ -189,8 +190,10 @@ def test_is_must_pick_when_percentage_reaches_threshold(client):
     assert res.status_code == 200
     body = res.json()
     reinhardt_row = next(r for r in body["recommendations"] if r["hero_id"] == "reinhardt")
-    assert reinhardt_row["percentage"] == 90
     assert reinhardt_row["is_must_pick"] is True
+    # tanh 포화 곡선 — 카운터+시너지+맵강함이 겹친 강한 조합이지만 100%로
+    # 완전히 포화되지는 않는다 (변별력 유지가 이 교체의 목적).
+    assert 90 <= reinhardt_row["percentage"] < 100
 
     # 다른 후보(합산 점수가 낮은 쪽)는 must-pick이 아니어야 함
     others = [r for r in body["recommendations"] if r["hero_id"] != "reinhardt"]

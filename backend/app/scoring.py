@@ -13,11 +13,13 @@ DB에 의존하지 않는 순수 함수로 만들어서, repository에서 가져
 데이터가 없는 조합(카운터/시너지/맵 평가 미등록)은 해당 항목 점수를
 0(중립)으로 처리한다. 근거가 하나도 없으면 "일반적으로 무난한 영웅" 문구를 쓴다.
 """
+import math
 from dataclasses import dataclass, field
 
 from app.config import (
     MUST_PICK_PERCENTAGE_THRESHOLD,
     PERCENTAGE_BASELINE,
+    PERCENTAGE_SCALE,
     WEIGHT_COUNTER,
     WEIGHT_MAP_STRONG,
     WEIGHT_MAP_WEAK,
@@ -51,8 +53,7 @@ class ScoredHero:
 
     @property
     def percentage(self) -> int:
-        pct = PERCENTAGE_BASELINE + self.total_score
-        return max(0, min(100, pct))
+        return round(PERCENTAGE_BASELINE + 50 * math.tanh(self.total_score / PERCENTAGE_SCALE))
 
     @property
     def is_must_pick(self) -> bool:
