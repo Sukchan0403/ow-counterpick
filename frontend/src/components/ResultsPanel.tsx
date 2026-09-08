@@ -39,6 +39,23 @@ export function ResultsPanel({ recommendations, notice }: Props) {
         return (
           <div key={rec.hero_id} className={`${styles.row} ${i === 0 ? styles.rowTop1 : ""}`}>
             <div className={styles.rank}>{i + 1}</div>
+            {rec.icon_url ? (
+              <img
+                src={rec.icon_url}
+                alt=""
+                className={`${styles.portrait} ${
+                  i === 0 || rec.is_must_pick ? styles.portraitHighlight : ""
+                }`}
+              />
+            ) : (
+              <div
+                className={`${styles.portraitFallback} ${
+                  i === 0 || rec.is_must_pick ? styles.portraitHighlight : ""
+                }`}
+              >
+                {rec.hero_name[0]}
+              </div>
+            )}
             <div className={styles.main}>
               <div className={styles.nameRow}>
                 <span className={styles.heroName}>{rec.hero_name}</span>
