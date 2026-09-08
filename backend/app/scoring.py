@@ -29,6 +29,22 @@ from app.config import (
 NEUTRAL_REASON = "일반적으로 무난한 영웅"
 
 
+def _particle_wa_gwa(name: str) -> str:
+    """이름 끝 글자의 받침 유무에 따라 "와"/"과" 조사를 고른다.
+
+    한글 음절(U+AC00~U+D7A3)은 (코드포인트 - 0xAC00) % 28 == 0이면 받침이
+    없다(종성 없음) — 이때는 "와", 그 외(받침 있음)엔 "과"를 쓴다.
+    한글 음절 범위 밖의 이름(빈 문자열, 영문 등)은 "와"로 폴백한다.
+    """
+    if not name:
+        return "와"
+    last_char = name[-1]
+    code_point = ord(last_char)
+    if 0xAC00 <= code_point <= 0xD7A3:
+        return "와" if (code_point - 0xAC00) % 28 == 0 else "과"
+    return "와"
+
+
 @dataclass
 class ScoredHero:
     hero_id: str
@@ -77,8 +93,11 @@ def score_candidates(
     synergy_rows: [{hero_id, synergy_hero_id, reason}, ...] (양방향 매칭된 결과라고 가정)
     map_rows: [{hero_id, rating, reason}, ...]
     """
-    enemy_ids = enemy_ids or []
-    ally_ids = ally_ids or []
+    # 중복 id가 섞여 들어와도(예: 요청 payload에 같은 영웅이 두 번 들어옴)
+    # data_gaps에 같은 영웅에 대한 메시지가 중복 생성되지 않도록 순서를
+    # 유지한 채 dedupe한다.
+    enemy_ids = list(dict.fromkeys(enemy_ids or []))
+    ally_ids = list(dict.fromkeys(ally_ids or []))
     reviewed_neutral_counter_pairs = reviewed_neutral_counter_pairs or []
     reviewed_neutral_synergy_pairs = reviewed_neutral_synergy_pairs or []
     id_to_name = id_to_name or {}
@@ -128,7 +147,8 @@ def score_candidates(
             if (cid, enemy_id) in neutral_counter_set:
                 continue
             enemy_name = id_to_name.get(enemy_id, enemy_id)
-            scored.data_gaps.append(f"상대 {enemy_name}와의 카운터 관계 미검토")
+            particle = _particle_wa_gwa(enemy_name)
+            scored.data_gaps.append(f"상대 {enemy_name}{particle}의 카운터 관계 미검토")
 
         # 시너지는 같은 관계 row가 중복으로 안 잡히도록 이미 처리한 상대 id를 추적
         seen_partners: set[str] = set()
@@ -146,7 +166,8 @@ def score_candidates(
             if (cid, ally_id) in neutral_synergy_set:
                 continue
             ally_name = id_to_name.get(ally_id, ally_id)
-            scored.data_gaps.append(f"아군 {ally_name}와의 시너지 관계 미검토")
+            particle = _particle_wa_gwa(ally_name)
+            scored.data_gaps.append(f"아군 {ally_name}{particle}의 시너지 관계 미검토")
 
         map_row = map_by_hero.get(cid)
         if map_row is not None:

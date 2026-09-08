@@ -126,7 +126,8 @@ def fetch_reviewed_neutral_pairs(
     other_ids: list[str],
     relation_type: str,
 ) -> list[sqlite3.Row]:
-    """"검토완료-중립" 마커 조회 (결측치 3단 상태). relation_type='counter'는
+    """ "검토완료-중립" 마커 조회 (결측치 3단 상태). relation_type='counter'는
+    hero_id(후보)->other_hero_id(상대) 방향으로만 저장(카운터는 방향성 있는
     hero_id(후보)->other_hero_id(상대) 방향으로만 저장(카운터는 방향성 있는
     관계). relation_type='synergy'는 synergy_relations처럼 양방향으로 저장될
     수 있어 양쪽 다 조회한다."""
