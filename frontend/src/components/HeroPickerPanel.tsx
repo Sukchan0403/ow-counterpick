@@ -35,7 +35,7 @@ export function HeroPickerPanel({ title, heroes, selectedIds, maxCount, onChange
         className={`${styles.heroButton} ${selected ? styles.heroButtonSelected : ""}`}
       >
         {hero.icon_url ? (
-          <img src={hero.icon_url} alt="" className={styles.heroIcon} />
+          <img src={hero.icon_url} alt="" className={styles.heroIcon} loading="lazy" />
         ) : (
           <span className={styles.heroIconFallback}>{hero.name[0]}</span>
         )}

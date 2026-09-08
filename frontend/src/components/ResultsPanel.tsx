@@ -36,6 +36,8 @@ export function ResultsPanel({ recommendations, notice }: Props) {
         const synergyPct = total > 0 ? (synergy / total) * 100 : 0;
         const mapPct = total > 0 ? (positiveMap / total) * 100 : 0;
 
+        const isHighlighted = i === 0 || rec.is_must_pick;
+
         return (
           <div key={rec.hero_id} className={`${styles.row} ${i === 0 ? styles.rowTop1 : ""}`}>
             <div className={styles.rank}>{i + 1}</div>
@@ -43,14 +45,12 @@ export function ResultsPanel({ recommendations, notice }: Props) {
               <img
                 src={rec.icon_url}
                 alt=""
-                className={`${styles.portrait} ${
-                  i === 0 || rec.is_must_pick ? styles.portraitHighlight : ""
-                }`}
+                className={`${styles.portrait} ${isHighlighted ? styles.portraitHighlight : ""}`}
               />
             ) : (
               <div
                 className={`${styles.portraitFallback} ${
-                  i === 0 || rec.is_must_pick ? styles.portraitHighlight : ""
+                  isHighlighted ? styles.portraitHighlight : ""
                 }`}
               >
                 {rec.hero_name[0]}

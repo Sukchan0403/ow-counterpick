@@ -26,7 +26,9 @@ CREATE TABLE IF NOT EXISTS heroes (
     id TEXT PRIMARY KEY,
     name TEXT NOT NULL,
     role TEXT NOT NULL CHECK (role IN ('tank', 'damage', 'support')),
-    archetype TEXT NOT NULL DEFAULT ''
+    archetype TEXT NOT NULL DEFAULT '',
+    icon_url TEXT NOT NULL DEFAULT '',
+    archetype_category TEXT NOT NULL DEFAULT ''
 );
 
 CREATE TABLE IF NOT EXISTS maps (
@@ -129,12 +131,25 @@ def main():
     for r in map_ratings:
         if r["hero_id"] not in hero_ids or r["map_id"] not in map_ids:
             problems.append(("map_hero_ratings", r))
+
+    # archetype_category 유효성 체크: 역할별로 정해진 하위 집합만 유효 (스펙의
+    # "아키타입 카테고리" 표 참고). 값이 비어있으면(아직 미배정) 통과 처리.
+    ALLOWED_ARCHETYPE_CATEGORIES = {
+        "tank": {"개시자", "투사", "강건한 자"},
+        "damage": {"전문가", "수색가", "측면 공격가", "명사수"},
+        "support": {"전술가", "의무관", "생존왕"},
+    }
+    for h in heroes:
+        category = h.get("archetype_category", "")
+        if category and category not in ALLOWED_ARCHETYPE_CATEGORIES.get(h["role"], set()):
+            problems.append(("heroes.archetype_category", h))
+
     if problems:
         print(f"\n경고: 참조 무결성 문제 {len(problems)}건")
         for table, row in problems:
             print(f"  [{table}] {row}")
     else:
-        print("\n무결성 체크 통과: 모든 관계 데이터의 hero_id/map_id가 유효함")
+        print("\n무결성 체크 통과: 모든 관계 데이터의 hero_id/map_id 및 영웅 archetype_category가 유효함")
 
     conn.close()
 
