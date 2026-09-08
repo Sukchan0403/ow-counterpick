@@ -9,6 +9,8 @@ def test_get_heroes(client):
     heroes = {h["id"]: h for h in res.json()}
     assert "kiriko" in heroes and "genji" in heroes
     assert heroes["kiriko"]["archetype"] == "정찰 지원"
+    assert heroes["kiriko"]["archetype_category"] == "의무관"
+    assert heroes["kiriko"]["icon_url"].startswith("https://d15f34w2p8l1cc.cloudfront.net/")
 
 
 def test_get_maps(client):

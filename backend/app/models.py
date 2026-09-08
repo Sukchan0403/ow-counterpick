@@ -75,6 +75,12 @@ class HeroOut(BaseModel):
         description="역할 세부 서브타이틀 (예: '정찰 지원', '방벽 수문장'). Main/Result 목업의 "
         "'힐러 · 정찰 지원' 같은 표시에 쓰임."
     )
+    icon_url: str = Field(
+        description="블리자드 CDN 초상화 URL. OverFast API에서 확보해 시드에 저장하고 런타임엔 그대로 핫링크."
+    )
+    archetype_category: str = Field(
+        description="그룹 필터링용 상위 분류(예: '의무관', '개시자'). 스펙의 아키타입 카테고리 표 참고."
+    )
 
 
 class MapOut(BaseModel):
