@@ -36,6 +36,8 @@ class HeroRecommendation(BaseModel):
     archetype: str = Field(
         description="Result.dc.html의 '힐러 · 정찰 지원' 같은 서브타이틀. HeroOut.archetype과 동일 값."
     )
+    icon_url: str = Field(default="", description="블리자드 CDN 초상화 URL 핫링크용")
+    archetype_category: str = Field(default="", description="그룹 필터링용 상위 분류")
     total_score: int
     percentage: int
     score_breakdown: ScoreBreakdown

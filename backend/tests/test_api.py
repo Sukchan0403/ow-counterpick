@@ -197,3 +197,19 @@ def test_is_must_pick_when_percentage_reaches_threshold(client):
     # 다른 후보(합산 점수가 낮은 쪽)는 must-pick이 아니어야 함
     others = [r for r in body["recommendations"] if r["hero_id"] != "reinhardt"]
     assert all(not o["is_must_pick"] for o in others)
+
+
+def test_recommendation_includes_icon_url_and_archetype_category(client):
+    res = client.post(
+        "/api/recommendations",
+        json={
+            "enemy_heroes": [],
+            "our_heroes": [],
+            "empty_position": "support",
+            "map_id": "eichenwalde",
+        },
+    )
+    body = res.json()
+    kiriko_row = next(r for r in body["recommendations"] if r["hero_id"] == "kiriko")
+    assert kiriko_row["icon_url"].startswith("https://d15f34w2p8l1cc.cloudfront.net/")
+    assert kiriko_row["archetype_category"] == "의무관"

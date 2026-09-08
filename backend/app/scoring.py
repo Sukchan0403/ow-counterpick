@@ -40,6 +40,8 @@ class ScoredHero:
     # 지금 시드 데이터엔 이 콘텐츠가 큐레이션돼 있지 않아 항상 빈 리스트 —
     # 목업 필드 완결성 점검 후 스키마만 먼저 맞춰둔 자리 (models.HeroRecommendation.notes 참고)
     notes: list[str] = field(default_factory=list)
+    icon_url: str = ""
+    archetype_category: str = ""
 
     @property
     def total_score(self) -> int:
@@ -90,6 +92,8 @@ def score_candidates(
             hero_name=candidate["name"],
             role=candidate["role"],
             archetype=candidate.get("archetype", ""),
+            icon_url=candidate.get("icon_url", ""),
+            archetype_category=candidate.get("archetype_category", ""),
         )
 
         for row in counter_by_hero.get(cid, []):
