@@ -75,10 +75,14 @@ def main():
     existing_cols = {row[1] for row in conn.execute("PRAGMA table_info(heroes)")}
     if "archetype" not in existing_cols:
         conn.execute("ALTER TABLE heroes ADD COLUMN archetype TEXT NOT NULL DEFAULT ''")
+    if "icon_url" not in existing_cols:
+        conn.execute("ALTER TABLE heroes ADD COLUMN icon_url TEXT NOT NULL DEFAULT ''")
+    if "archetype_category" not in existing_cols:
+        conn.execute("ALTER TABLE heroes ADD COLUMN archetype_category TEXT NOT NULL DEFAULT ''")
 
     conn.executemany(
-        "INSERT OR REPLACE INTO heroes (id, name, role, archetype) "
-        "VALUES (:id, :name, :role, :archetype)",
+        "INSERT OR REPLACE INTO heroes (id, name, role, archetype, icon_url, archetype_category) "
+        "VALUES (:id, :name, :role, :archetype, :icon_url, :archetype_category)",
         heroes,
     )
     conn.executemany(
