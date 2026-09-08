@@ -1,0 +1,56 @@
+/* 디자인 토큰: Claude Design 목업(OWTICS.GG 스타일 리스타일 버전)이랑 맞춘 값.
+   실제 색상 hex는 목업 캔버스에서 쓰던 값을 재사용. */
+:root {
+  --bg: #0a0a0c;
+  --bg-header: #050506;
+  --surface: #131316;
+  --surface-2: #1b1b1f;
+  --border: #26262b;
+
+  --text: #f2f2f4;
+  --text-muted: #8b8b93;
+
+  --accent: #ff8a3d; /* 밝은 주황 (사용자 요청대로 더 밝게) */
+  --accent-on: #1a0e04;
+  --accent-dim: rgba(255, 138, 61, 0.16);
+
+  --red: #e5556e;
+  --red-dim: rgba(229, 85, 110, 0.16);
+  --blue: #5b9dff; /* 카운터 */
+  --green: #3ecf8e; /* 시너지 */
+
+  --radius: 10px;
+  --radius-sm: 6px;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", -apple-system,
+    BlinkMacSystemFont, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}

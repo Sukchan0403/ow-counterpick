@@ -1,0 +1,10 @@
+[
+  { "id": "eichenwalde", "name": "아이헨발데", "mode": "hybrid" },
+  { "id": "kings_row", "name": "왕의 길", "mode": "hybrid" },
+  { "id": "hollywood", "name": "할리우드", "mode": "hybrid" },
+  { "id": "dorado", "name": "도라도", "mode": "escort" },
+  { "id": "havana", "name": "하바나", "mode": "escort" },
+  { "id": "junkertown", "name": "정크타운", "mode": "escort" },
+  { "id": "ilios", "name": "일리오스", "mode": "control" },
+  { "id": "oasis", "name": "오아시스", "mode": "control" }
+]

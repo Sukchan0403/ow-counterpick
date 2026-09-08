@@ -1,0 +1,31 @@
+.wrap {
+  display: flex;
+  gap: 8px;
+}
+
+.pill {
+  flex: 1;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s;
+}
+
+.pill:hover {
+  border-color: var(--accent);
+}
+
+.pillSelected {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-on);
+}
+
+.pillError {
+  border-color: var(--red);
+}

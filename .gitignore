@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Superpowers visual-companion brainstorm sessions (ephemeral, local only)
+.superpowers/
+
+# SQLite journal/temp cruft
+seed-data/_to_delete/

@@ -1,0 +1,19 @@
+[
+  { "id": "reinhardt", "name": "라인하르트", "role": "tank", "archetype": "방벽 수문장" },
+  { "id": "orisa", "name": "오리사", "role": "tank", "archetype": "전선 고정수" },
+  { "id": "winston", "name": "윈스턴", "role": "tank", "archetype": "개시자" },
+  { "id": "dva", "name": "디바", "role": "tank", "archetype": "항공 저지" },
+  { "id": "zarya", "name": "자리야", "role": "tank", "archetype": "에너지 방벽" },
+
+  { "id": "genji", "name": "겐지", "role": "damage", "archetype": "근접 플랭커" },
+  { "id": "widowmaker", "name": "위도우메이커", "role": "damage", "archetype": "저격수" },
+  { "id": "tracer", "name": "트레이서", "role": "damage", "archetype": "고기동 교란" },
+  { "id": "sojourn", "name": "소전", "role": "damage", "archetype": "원거리 포격" },
+
+  { "id": "ana", "name": "아나", "role": "support", "archetype": "디나이얼 지원" },
+  { "id": "moira", "name": "모이라", "role": "support", "archetype": "근접 유지 지원" },
+  { "id": "kiriko", "name": "키리코", "role": "support", "archetype": "정찰 지원" },
+  { "id": "lucio", "name": "루시우", "role": "support", "archetype": "기동 지원" },
+  { "id": "baptiste", "name": "바티스트", "role": "support", "archetype": "생존 지원" },
+  { "id": "zenyatta", "name": "젠야타", "role": "support", "archetype": "원거리 지원" }
+]

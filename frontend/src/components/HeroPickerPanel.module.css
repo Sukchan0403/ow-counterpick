@@ -1,0 +1,67 @@
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.count {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.roleGroup {
+  margin-bottom: 10px;
+}
+
+.roleLabel {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.heroGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.heroButton {
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s;
+}
+
+.heroButton:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.heroButton:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.heroButtonSelected {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}

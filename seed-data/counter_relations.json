@@ -1,0 +1,47 @@
+[
+  { "hero_id": "zarya", "countered_hero_id": "genji", "reason": "에너지 방벽이 겐지의 사격·용검 피해를 흡수하면서 동시에 자리야 에너지를 채워줌" },
+  { "hero_id": "ana", "countered_hero_id": "genji", "reason": "수면총으로 돌진(질풍참)이나 용검 이니시 타이밍을 그대로 끊을 수 있음" },
+
+  { "hero_id": "tracer", "countered_hero_id": "widowmaker", "reason": "점멸로 저격 사거리를 순식간에 좁혀 근접전으로 끌고 감" },
+  { "hero_id": "genji", "countered_hero_id": "widowmaker", "reason": "이중 점프·벽타기로 사거리를 좁히고, 조준 중엔 반사로 견제 가능" },
+  { "hero_id": "winston", "countered_hero_id": "widowmaker", "reason": "도약으로 단숨에 거리를 좁혀 실드 낀 채로 근접 압박" },
+
+  { "hero_id": "dva", "countered_hero_id": "reinhardt", "reason": "방어 매트릭스로 화염 강타를 무효화하고 실드 뒤 로 다이브 가능" },
+  { "hero_id": "winston", "countered_hero_id": "reinhardt", "reason": "도약으로 방벽을 우회해 후열을 직접 압박" },
+
+  { "hero_id": "tracer", "countered_hero_id": "ana", "reason": "점멸로 거리 좁히고 불규칙한 움직임으로 수면총 조준을 피함" },
+  { "hero_id": "genji", "countered_hero_id": "ana", "reason": "이동기로 생체 수류탄 사거리 밖에서 접근해 근접 압박" },
+
+  { "hero_id": "winston", "countered_hero_id": "orisa", "reason": "기동력으로 창/포탑 견제 사거리를 무시하고 후열로 직행" },
+  { "hero_id": "dva", "countered_hero_id": "orisa", "reason": "매트릭스로 포격 피해를 흡수하며 다이브로 압박" },
+
+  { "hero_id": "widowmaker", "countered_hero_id": "winston", "reason": "실드가 생기기 전에 장거리에서 선타를 넣을 수 있음" },
+  { "hero_id": "zarya", "countered_hero_id": "winston", "reason": "방벽+빔으로 실드 체력을 빠르게 녹여 도약 궁 활용을 막음" },
+
+  { "hero_id": "zarya", "countered_hero_id": "dva", "reason": "빔으로 매트릭스를 강제 소모시켜 이탈 타이밍을 앞당김" },
+  { "hero_id": "reinhardt", "countered_hero_id": "dva", "reason": "매트릭스가 빠진 순간 화염 강타로 확정 딜을 넣을 수 있음" },
+
+  { "hero_id": "genji", "countered_hero_id": "zarya", "reason": "반사와 이동기로 방벽 유지 시간을 버티고 그랩 콤보를 회피" },
+  { "hero_id": "tracer", "countered_hero_id": "zarya", "reason": "점멸로 그랩 각을 피하고 방벽 소모 전에 근접 버스트" },
+
+  { "hero_id": "reinhardt", "countered_hero_id": "tracer", "reason": "화염 강타 한 방으로 즉시 처치 가능한 체력대" },
+  { "hero_id": "orisa", "countered_hero_id": "tracer", "reason": "투창으로 저체력 플랭커를 원콤 처리" },
+
+  { "hero_id": "genji", "countered_hero_id": "sojourn", "reason": "반사로 충전 사격을 무력화하고 근접 압박" },
+  { "hero_id": "winston", "countered_hero_id": "sojourn", "reason": "기동력으로 충전 사격 타이밍을 주지 않고 근접전으로 전환" },
+
+  { "hero_id": "widowmaker", "countered_hero_id": "moira", "reason": "환영 질주 사거리 밖에서 선픽 가능" },
+  { "hero_id": "ana", "countered_hero_id": "moira", "reason": "수면총으로 회복 사이클을 끊고 생체 수류탄으로 치유량 감소" },
+
+  { "hero_id": "widowmaker", "countered_hero_id": "kiriko", "reason": "스즈로 상태이상은 지울 수 있어도 장거리 견제 자체는 피하기 어려움" },
+  { "hero_id": "zarya", "countered_hero_id": "kiriko", "reason": "방벽으로 근접 버스트를 막아 키리코의 카이팅을 무력화" },
+
+  { "hero_id": "widowmaker", "countered_hero_id": "lucio", "reason": "장거리 견제에 루시우가 힐 범위를 유지하며 접근하기 어려움" },
+  { "hero_id": "genji", "countered_hero_id": "lucio", "reason": "벽타기 기동력이 맞대응되어 회피 기동이 무의미해짐" },
+
+  { "hero_id": "genji", "countered_hero_id": "baptiste", "reason": "반사로 견제 사격을 막고 근접 거리로 파고듦" },
+  { "hero_id": "tracer", "countered_hero_id": "baptiste", "reason": "기동력으로 후열 포지션을 직접 노출시킴" },
+
+  { "hero_id": "genji", "countered_hero_id": "zenyatta", "reason": "이동기 없는 젠야타에게 근접 다이브가 그대로 들어감" },
+  { "hero_id": "tracer", "countered_hero_id": "zenyatta", "reason": "자체 생존기가 약해 플랭크 한 번에 무너지기 쉬움" }
+]
