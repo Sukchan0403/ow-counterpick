@@ -86,3 +86,69 @@ def test_archetype_passes_through_and_notes_defaults_empty():
     assert by_id["kiriko"].archetype == "정찰 지원"
     assert by_id["kiriko"].notes == []
     assert by_id["kiriko"].is_must_pick is False  # percentage(50) < threshold(90)
+
+
+def test_data_gaps_flags_unreviewed_enemy_counter_relation():
+    candidates = make_candidates()
+    result = score_candidates(
+        candidates, [], [], [],
+        enemy_ids=["widowmaker"],
+        id_to_name={"widowmaker": "위도우메이커"},
+    )
+    by_id = {s.hero_id: s for s in result}
+    assert by_id["kiriko"].data_gaps == ["상대 위도우메이커와의 카운터 관계 미검토"]
+
+
+def test_data_gaps_silent_when_pair_is_reviewed_neutral():
+    candidates = make_candidates()
+    result = score_candidates(
+        candidates, [], [], [],
+        enemy_ids=["widowmaker"],
+        reviewed_neutral_counter_pairs=[{"hero_id": "kiriko", "other_hero_id": "widowmaker"}],
+        id_to_name={"widowmaker": "위도우메이커"},
+    )
+    by_id = {s.hero_id: s for s in result}
+    assert by_id["kiriko"].data_gaps == []
+    assert by_id["kiriko"].counter_score == 0
+
+
+def test_data_gaps_skips_enemy_already_matched_by_actual_counter_row():
+    candidates = make_candidates()
+    counter_rows = [{"hero_id": "kiriko", "countered_hero_id": "widowmaker", "reason": "스즈 무효화"}]
+    result = score_candidates(
+        candidates, counter_rows, [], [],
+        enemy_ids=["widowmaker"],
+        id_to_name={"widowmaker": "위도우메이커"},
+    )
+    by_id = {s.hero_id: s for s in result}
+    assert by_id["kiriko"].data_gaps == []
+
+
+def test_data_gaps_flags_unreviewed_ally_synergy_relation():
+    candidates = make_candidates()
+    result = score_candidates(
+        candidates, [], [], [],
+        ally_ids=["tracer"],
+        id_to_name={"tracer": "트레이서"},
+    )
+    by_id = {s.hero_id: s for s in result}
+    assert by_id["kiriko"].data_gaps == ["아군 트레이서와의 시너지 관계 미검토"]
+
+
+def test_data_gaps_synergy_silent_when_reviewed_neutral_either_direction():
+    candidates = make_candidates()
+    result = score_candidates(
+        candidates, [], [], [],
+        ally_ids=["tracer"],
+        reviewed_neutral_synergy_pairs=[{"hero_id": "tracer", "other_hero_id": "kiriko"}],
+        id_to_name={"tracer": "트레이서"},
+    )
+    by_id = {s.hero_id: s for s in result}
+    assert by_id["kiriko"].data_gaps == []
+
+
+def test_data_gaps_empty_by_default_when_no_enemy_or_ally_ids_given():
+    candidates = make_candidates()
+    result = score_candidates(candidates, [], [], [])
+    for s in result:
+        assert s.data_gaps == []
