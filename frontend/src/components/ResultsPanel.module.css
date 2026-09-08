@@ -131,3 +131,13 @@
   color: var(--text-muted);
   border: 1px dashed var(--border);
 }
+
+.dataGapTag {
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px dashed var(--border);
+  font-style: italic;
+}
