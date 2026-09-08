@@ -56,6 +56,13 @@ CREATE TABLE IF NOT EXISTS map_hero_ratings (
     reason TEXT NOT NULL,
     PRIMARY KEY (map_id, hero_id)
 );
+
+CREATE TABLE IF NOT EXISTS reviewed_neutral_pairs (
+    hero_id TEXT NOT NULL REFERENCES heroes(id),
+    other_hero_id TEXT NOT NULL REFERENCES heroes(id),
+    relation_type TEXT NOT NULL CHECK (relation_type IN ('counter', 'synergy')),
+    PRIMARY KEY (hero_id, other_hero_id, relation_type)
+);
 """
 
 
@@ -66,6 +73,7 @@ def main():
     counters = load("counter_relations.json")
     synergies = load("synergy_relations.json")
     map_ratings = load("map_hero_ratings.json")
+    reviewed_neutral = load("reviewed_neutral_pairs.json")
 
     conn = sqlite3.connect(db_path)
     conn.executescript(SCHEMA)
@@ -103,6 +111,12 @@ def main():
            VALUES (:map_id, :hero_id, :rating, :reason)""",
         map_ratings,
     )
+    conn.executemany(
+        """INSERT OR REPLACE INTO reviewed_neutral_pairs
+           (hero_id, other_hero_id, relation_type)
+           VALUES (:hero_id, :other_hero_id, :relation_type)""",
+        reviewed_neutral,
+    )
     conn.commit()
 
     print(f"완료: {db_path}")
@@ -111,6 +125,7 @@ def main():
     print(f"  counter_relations: {len(counters)}")
     print(f"  synergy_relations: {len(synergies)}")
     print(f"  map_hero_ratings: {len(map_ratings)}")
+    print(f"  reviewed_neutral_pairs: {len(reviewed_neutral)}")
 
     # 간단한 무결성 체크: 관계 테이블이 참조하는 hero_id/map_id가 실제로 존재하는지
     hero_ids = {h["id"] for h in heroes}
@@ -125,6 +140,9 @@ def main():
     for r in map_ratings:
         if r["hero_id"] not in hero_ids or r["map_id"] not in map_ids:
             problems.append(("map_hero_ratings", r))
+    for n in reviewed_neutral:
+        if n["hero_id"] not in hero_ids or n["other_hero_id"] not in hero_ids:
+            problems.append(("reviewed_neutral_pairs", n))
     if problems:
         print(f"\n경고: 참조 무결성 문제 {len(problems)}건")
         for table, row in problems:
