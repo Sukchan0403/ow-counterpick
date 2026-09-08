@@ -10,8 +10,10 @@ from app.models import (
 )
 from app.repository import (
     fetch_counter_relations_for_candidates,
+    fetch_heroes_by_ids,
     fetch_heroes_by_role,
     fetch_map_ratings_for_candidates,
+    fetch_reviewed_neutral_pairs,
     fetch_synergy_relations_for_candidates,
     hero_exists,
     map_exists,
@@ -75,8 +77,34 @@ def post_recommendations(payload: RecommendationRequest):
             dict(r)
             for r in fetch_map_ratings_for_candidates(conn, candidate_ids, payload.map_id)
         ]
+        reviewed_neutral_counter = [
+            dict(r)
+            for r in fetch_reviewed_neutral_pairs(
+                conn, candidate_ids, payload.enemy_heroes, "counter"
+            )
+        ]
+        reviewed_neutral_synergy = [
+            dict(r)
+            for r in fetch_reviewed_neutral_pairs(
+                conn, candidate_ids, payload.our_heroes, "synergy"
+            )
+        ]
+        id_to_name = {
+            r["id"]: r["name"]
+            for r in fetch_heroes_by_ids(conn, [*payload.enemy_heroes, *payload.our_heroes])
+        }
 
-    scored = score_candidates(candidates, counter_rows, synergy_rows, map_rows)
+    scored = score_candidates(
+        candidates,
+        counter_rows,
+        synergy_rows,
+        map_rows,
+        enemy_ids=payload.enemy_heroes,
+        ally_ids=payload.our_heroes,
+        reviewed_neutral_counter_pairs=reviewed_neutral_counter,
+        reviewed_neutral_synergy_pairs=reviewed_neutral_synergy,
+        id_to_name=id_to_name,
+    )
 
     recommendations = [
         HeroRecommendation(
@@ -92,6 +120,7 @@ def post_recommendations(payload: RecommendationRequest):
             reasons=s.reasons,
             is_must_pick=s.is_must_pick,
             notes=s.notes,
+            data_gaps=s.data_gaps,
         )
         for s in scored[:TOP_N]
     ]
