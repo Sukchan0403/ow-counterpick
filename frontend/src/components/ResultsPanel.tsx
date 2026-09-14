@@ -78,7 +78,7 @@ export function ResultsPanel({ recommendations, notice }: Props) {
                   </span>
                 ))}
                 {rec.data_gaps.map((gap, idx) => (
-                  <span key={`gap-${idx}`} className={styles.dataGapTag}>
+                  <span key={`gap-${idx}`} className={`${styles.noteTag} ${styles.dataGapTag}`}>
                     데이터 없음 · {gap}
                   </span>
                 ))}
