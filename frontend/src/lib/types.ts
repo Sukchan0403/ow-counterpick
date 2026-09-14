@@ -8,6 +8,8 @@ export interface Hero {
   name: string;
   role: Role;
   archetype: string;
+  icon_url: string;
+  archetype_category: string;
 }
 
 export interface MapInfo {
@@ -35,6 +37,8 @@ export interface HeroRecommendation {
   hero_name: string;
   role: Role;
   archetype: string;
+  icon_url: string;
+  archetype_category: string;
   total_score: number;
   percentage: number;
   score_breakdown: ScoreBreakdown;
@@ -56,9 +60,21 @@ export interface MetaInfo {
 }
 
 export const ROLE_LABEL: Record<Role, string> = {
-  tank: "탱커",
-  damage: "딜러",
-  support: "힐러",
+  tank: "돌격",
+  damage: "공격",
+  support: "지원",
+};
+
+// 블리자드 공식 아키타입 카테고리 (역할별 유효값, 표시 순서 고정).
+// 스펙의 "UI 리디자인" 섹션 표 참고.
+// 주의: 이 목록은 seed-data/seed_db.py의 ALLOWED_ARCHETYPE_CATEGORIES와 같은
+// 값을 유지해야 한다 (공유 소스가 없어 양쪽 다 수동으로 갱신해야 함) — 한쪽만
+// 바뀌면 seed_db.py의 무결성 체크는 통과해도 여기서 그 카테고리를 몰라 헤어로
+// 피커가 조용히 "기타" 그룹으로 빠뜨린다.
+export const ARCHETYPE_CATEGORY_ORDER: Record<Role, string[]> = {
+  tank: ["개시자", "투사", "강건한 자"],
+  damage: ["전문가", "수색가", "측면 공격가", "명사수"],
+  support: ["전술가", "의무관", "생존왕"],
 };
 
 // 백엔드 maps.mode는 영문 enum으로 저장돼 있음 (seed-data/maps.json 참고) — 화면엔 한글로 표시.

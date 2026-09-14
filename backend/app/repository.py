@@ -9,12 +9,15 @@ from app.config import MAP_DATA_RICH_THRESHOLD
 
 
 def fetch_all_heroes(conn: sqlite3.Connection) -> list[sqlite3.Row]:
-    return conn.execute("SELECT id, name, role, archetype FROM heroes").fetchall()
+    return conn.execute(
+        "SELECT id, name, role, archetype, icon_url, archetype_category FROM heroes"
+    ).fetchall()
 
 
 def fetch_heroes_by_role(conn: sqlite3.Connection, role: str) -> list[sqlite3.Row]:
     return conn.execute(
-        "SELECT id, name, role, archetype FROM heroes WHERE role = ?", (role,)
+        "SELECT id, name, role, archetype, icon_url, archetype_category FROM heroes WHERE role = ?",
+        (role,),
     ).fetchall()
 
 

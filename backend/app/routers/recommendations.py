@@ -55,7 +55,14 @@ def post_recommendations(payload: RecommendationRequest):
         # --- 후보 조회: 빈 포지션에 해당하는, 아직 안 나온 영웅 전부 ---
         role_heroes = fetch_heroes_by_role(conn, payload.empty_position)
         candidates = [
-            {"id": r["id"], "name": r["name"], "role": r["role"], "archetype": r["archetype"]}
+            {
+                "id": r["id"],
+                "name": r["name"],
+                "role": r["role"],
+                "archetype": r["archetype"],
+                "icon_url": r["icon_url"],
+                "archetype_category": r["archetype_category"],
+            }
             for r in role_heroes
             if r["id"] not in already_picked
         ]
@@ -120,6 +127,8 @@ def post_recommendations(payload: RecommendationRequest):
             reasons=s.reasons,
             is_must_pick=s.is_must_pick,
             notes=s.notes,
+            icon_url=s.icon_url,
+            archetype_category=s.archetype_category,
             data_gaps=s.data_gaps,
         )
         for s in scored[:TOP_N]

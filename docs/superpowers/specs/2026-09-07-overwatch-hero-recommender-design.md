@@ -187,7 +187,7 @@
 
 화면 목업(밴프준 보조 입력 폼 · 맵 선택 모달 · 추천 결과 화면 · 입력 검증 오류 상태)을
 근거로 각 엔드포인트의 요청/응답 스키마와 상태 코드를 구체화한다. **이 섹션은 실제 구현
-(`backend/app/models.py`, `backend/app/routers/`)과 1:1로 맞춰져 있고, 전체 19개
+(`backend/app/models.py`, `backend/app/routers/`)과 1:1로 맞춰져 있고, 전체 24개
 백엔드 테스트(`backend/tests/`)로 검증됐다.** 초안 단계에서 쓰던 필드명과 다른 부분은
 "주의" 문구로 표시해뒀다.
 
@@ -218,6 +218,10 @@ Hero {
   role: "tank" | "damage" | "support"
   archetype: string         // "방벽 수문장" — heroes 테이블 컬럼. 초안엔 tagline으로
                             // 썼으나 실제 구현에서 archetype으로 확정.
+  icon_url: string          // 블리자드 CDN 초상화 URL. OverFast API에서 확보해
+                            // 시드에 저장하고 런타임엔 그대로 핫링크.
+  archetype_category: string // 그룹 필터링용 상위 분류(예: "의무관", "개시자").
+                            // "아키타입 카테고리" 절의 10개 값 중 하나.
 }
 ```
 
@@ -293,7 +297,9 @@ RecommendationResponse {
       hero_id: string
       hero_name: string
       role: "tank" | "damage" | "support"
-      archetype: string          // Result.dc.html "힐러 · 정찰 지원" 서브타이틀용
+      archetype: string          // Result.dc.html "지원 · 정찰 지원" 서브타이틀용
+      icon_url: string           // 블리자드 CDN 초상화 URL. HeroOut.icon_url과 동일 값.
+      archetype_category: string // 그룹 필터링용 상위 분류. HeroOut.archetype_category와 동일 값.
       total_score: int            // 카운터+시너지+맵 가중합 원점수. 상한 없음.
       percentage: int             // 0~100. percentage = round(50 + 50 * tanh(total_score / config.PERCENTAGE_SCALE)).
                                    // 초안/이전 버전의 하드 clamp(50 + total_score, 0, 100)를
@@ -362,7 +368,7 @@ RecommendationResponse {
 
 | 목업 요소 | 감사 결과 | 조치 |
 |---|---|---|
-| 영웅/추천 결과의 역할 세부 서브타이틀 ("힐러 · 정찰 지원", "탱커 · 방벽 수문장") | 없음 (`heroes` 테이블엔 role만 존재) | `Hero.archetype`/`HeroRecommendation.archetype` 필드 추가, `heroes` 테이블에 `archetype` 컬럼 추가 + 15개 영웅 전체에 값 채움 |
+| 영웅/추천 결과의 역할 세부 서브타이틀 ("지원 · 정찰 지원", "돌격 · 방벽 수문장") | 없음 (`heroes` 테이블엔 role만 존재) | `Hero.archetype`/`HeroRecommendation.archetype` 필드 추가, `heroes` 테이블에 `archetype` 컬럼 추가 + 15개 영웅 전체에 값 채움 |
 | 추천 결과 1위의 "필수픽" 배지 | 없음 | `HeroRecommendation.is_must_pick` 필드 추가. 판정 기준은 "1위면 무조건"이 아니라 `percentage >= 90`(임계치, `config.MUST_PICK_PERCENTAGE_THRESHOLD`)으로 확정 — 1위라도 점수가 낮으면 배지 없음 |
 | 근거 중 "최근 패치 이후 픽률 상승세" 같은, 카운터/시너지/맵 관계로 설명 안 되는 자유 코멘터리 | 없음 | `HeroRecommendation.notes: string[]` 필드 추가. 신규 `hero_notes` 테이블은 MVP 범위 밖으로 확정(큐레이션 비용 대비 우선순위 낮음) — 현재는 항상 빈 배열, 스키마만 준비 |
 | 맵 선택 모달의 "데이터 풍부" / "데이터 보강 중" 그룹 배지 | 없음 | `Map.data_richness` 필드 추가(저장값 아닌 계산값 — `map_hero_ratings` 등록 건수 기준). 프론트는 그룹 내 최소값 기준으로 배지 표시 |

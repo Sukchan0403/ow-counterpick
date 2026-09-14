@@ -59,6 +59,8 @@ class ScoredHero:
     # 지금 시드 데이터엔 이 콘텐츠가 큐레이션돼 있지 않아 항상 빈 리스트 —
     # 목업 필드 완결성 점검 후 스키마만 먼저 맞춰둔 자리 (models.HeroRecommendation.notes 참고)
     notes: list[str] = field(default_factory=list)
+    icon_url: str = ""
+    archetype_category: str = ""
     data_gaps: list[str] = field(default_factory=list)
     # "결측치 3단 상태": 미검토 상태인 카운터/시너지 관계만 여기 담긴다.
     # 검토완료-중립(reviewed_neutral_pairs에 등록됨)은 조용히 0점 처리되고
@@ -137,6 +139,8 @@ def score_candidates(
             hero_name=candidate["name"],
             role=candidate["role"],
             archetype=candidate.get("archetype", ""),
+            icon_url=candidate.get("icon_url", ""),
+            archetype_category=candidate.get("archetype_category", ""),
         )
 
         countered_enemy_ids: set[str] = set()

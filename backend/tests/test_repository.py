@@ -1,5 +1,10 @@
-"""repository.py의 결측치 3단 상태 지원 조회 함수 유닛 테스트."""
-from app.repository import fetch_heroes_by_ids, fetch_reviewed_neutral_pairs
+"""repository.py의 결측치 3단 상태 지원 조회 함수 + icon_url/archetype_category 포함 여부 유닛 테스트."""
+from app.repository import (
+    fetch_all_heroes,
+    fetch_heroes_by_ids,
+    fetch_heroes_by_role,
+    fetch_reviewed_neutral_pairs,
+)
 
 
 def test_fetch_heroes_by_ids_returns_matching_rows(conn):
@@ -30,3 +35,17 @@ def test_fetch_reviewed_neutral_pairs_synergy_matches_either_direction(conn):
     # 시너지는 대칭 관계이므로 candidate/other 인자를 뒤바꿔도 잡혀야 함
     rows_reversed_args = fetch_reviewed_neutral_pairs(conn, ["moira"], ["kiriko"], "synergy")
     assert len(rows_reversed_args) == 1
+
+
+def test_fetch_all_heroes_includes_icon_and_archetype_category(conn):
+    rows = fetch_all_heroes(conn)
+    kiriko = next(r for r in rows if r["id"] == "kiriko")
+    assert kiriko["icon_url"].startswith("https://d15f34w2p8l1cc.cloudfront.net/")
+    assert kiriko["archetype_category"] == "의무관"
+
+
+def test_fetch_heroes_by_role_includes_icon_and_archetype_category(conn):
+    rows = fetch_heroes_by_role(conn, "support")
+    kiriko = next(r for r in rows if r["id"] == "kiriko")
+    assert kiriko["icon_url"].startswith("https://d15f34w2p8l1cc.cloudfront.net/")
+    assert kiriko["archetype_category"] == "의무관"

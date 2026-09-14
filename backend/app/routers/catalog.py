@@ -14,7 +14,14 @@ def get_heroes():
     with db_session() as conn:
         rows = fetch_all_heroes(conn)
         return [
-            HeroOut(id=r["id"], name=r["name"], role=r["role"], archetype=r["archetype"])
+            HeroOut(
+                id=r["id"],
+                name=r["name"],
+                role=r["role"],
+                archetype=r["archetype"],
+                icon_url=r["icon_url"],
+                archetype_category=r["archetype_category"],
+            )
             for r in rows
         ]
 

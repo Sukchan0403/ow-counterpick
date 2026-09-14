@@ -1,5 +1,6 @@
 import type { HeroRecommendation } from "@/lib/types";
 import { ROLE_LABEL } from "@/lib/types";
+import { HeroAvatar } from "./HeroAvatar";
 import styles from "./ResultsPanel.module.css";
 
 interface Props {
@@ -36,9 +37,17 @@ export function ResultsPanel({ recommendations, notice }: Props) {
         const synergyPct = total > 0 ? (synergy / total) * 100 : 0;
         const mapPct = total > 0 ? (positiveMap / total) * 100 : 0;
 
+        const isHighlighted = i === 0 || rec.is_must_pick;
+
         return (
           <div key={rec.hero_id} className={`${styles.row} ${i === 0 ? styles.rowTop1 : ""}`}>
             <div className={styles.rank}>{i + 1}</div>
+            <HeroAvatar
+              iconUrl={rec.icon_url}
+              name={rec.hero_name}
+              variant="portrait"
+              highlighted={isHighlighted}
+            />
             <div className={styles.main}>
               <div className={styles.nameRow}>
                 <span className={styles.heroName}>{rec.hero_name}</span>

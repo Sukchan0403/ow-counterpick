@@ -261,3 +261,27 @@ def test_single_counter_outranks_max_synergy_and_strong_map_candidate():
     assert by_id["lucio"].total_score == 4 * WEIGHT_SYNERGY + WEIGHT_MAP_STRONG
     assert by_id["kiriko"].total_score > by_id["lucio"].total_score
     assert result[0].hero_id == "kiriko"
+
+
+def test_icon_url_and_archetype_category_default_to_empty_when_absent():
+    candidates = make_candidates()  # icon_url/archetype_category 키 없음
+    result = score_candidates(candidates, [], [], [])
+    by_id = {s.hero_id: s for s in result}
+    assert by_id["kiriko"].icon_url == ""
+    assert by_id["kiriko"].archetype_category == ""
+
+
+def test_icon_url_and_archetype_category_pass_through_when_present():
+    candidates = [
+        {
+            "id": "kiriko",
+            "name": "키리코",
+            "role": "support",
+            "archetype": "정찰 지원",
+            "icon_url": "https://example.com/kiriko.png",
+            "archetype_category": "의무관",
+        },
+    ]
+    result = score_candidates(candidates, [], [], [])
+    assert result[0].icon_url == "https://example.com/kiriko.png"
+    assert result[0].archetype_category == "의무관"
