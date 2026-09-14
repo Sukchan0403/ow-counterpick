@@ -66,6 +66,10 @@ export const ROLE_LABEL: Record<Role, string> = {
 
 // 블리자드 공식 아키타입 카테고리 (역할별 유효값, 표시 순서 고정).
 // 스펙의 "UI 리디자인" 섹션 표 참고.
+// 주의: 이 목록은 seed-data/seed_db.py의 ALLOWED_ARCHETYPE_CATEGORIES와 같은
+// 값을 유지해야 한다 (공유 소스가 없어 양쪽 다 수동으로 갱신해야 함) — 한쪽만
+// 바뀌면 seed_db.py의 무결성 체크는 통과해도 여기서 그 카테고리를 몰라 헤어로
+// 피커가 조용히 "기타" 그룹으로 빠뜨린다.
 export const ARCHETYPE_CATEGORY_ORDER: Record<Role, string[]> = {
   tank: ["개시자", "투사", "강건한 자"],
   damage: ["전문가", "수색가", "측면 공격가", "명사수"],
