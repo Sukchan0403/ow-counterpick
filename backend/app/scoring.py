@@ -18,6 +18,7 @@ from dataclasses import dataclass, field
 
 from app.config import (
     MUST_PICK_PERCENTAGE_THRESHOLD,
+    PERCENTAGE_AMPLITUDE,
     PERCENTAGE_BASELINE,
     PERCENTAGE_SCALE,
     WEIGHT_COUNTER,
@@ -69,7 +70,9 @@ class ScoredHero:
 
     @property
     def percentage(self) -> int:
-        return round(PERCENTAGE_BASELINE + 50 * math.tanh(self.total_score / PERCENTAGE_SCALE))
+        return round(
+            PERCENTAGE_BASELINE + PERCENTAGE_AMPLITUDE * math.tanh(self.total_score / PERCENTAGE_SCALE)
+        )
 
     @property
     def is_must_pick(self) -> bool:
@@ -136,12 +139,17 @@ def score_candidates(
             archetype=candidate.get("archetype", ""),
         )
 
+        countered_enemy_ids: set[str] = set()
         for row in counter_by_hero.get(cid, []):
             scored.counter_score += WEIGHT_COUNTER
             scored.reasons.append(row["reason"])
+            countered_enemy_ids.add(row["countered_hero_id"])
 
-        countered_enemy_ids = {row["countered_hero_id"] for row in counter_by_hero.get(cid, [])}
         for enemy_id in enemy_ids:
+            if enemy_id == cid:
+                # 미러 픽 허용 규칙상 후보가 상대 팀에도 있을 수 있음 — 자기 자신과의
+                # "카운터 관계"는 애초에 성립하지 않으므로 결측치로 취급하지 않는다.
+                continue
             if enemy_id in countered_enemy_ids:
                 continue
             if (cid, enemy_id) in neutral_counter_set:
