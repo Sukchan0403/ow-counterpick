@@ -80,13 +80,20 @@ def main() -> None:
     summarize("시너지 단독", synergy_only_pct, synergy_only_must_pick)
 
     # 3) 카운터+시너지 결합 (같은 후보가 두 리스트 모두에 등장하는 경우)
+    # synergy_relations는 한 방향으로만 저장되므로(scoring.py의 synergy_by_hero와
+    # 동일하게) hero_id/synergy_hero_id 양쪽을 다 확인해야 한다 — 안 그러면
+    # synergy_hero_id 쪽에만 등장하는 후보가 조용히 누락된다.
     counter_heroes = {row["hero_id"] for row in counters}
-    synergy_heroes = {row["hero_id"] for row in synergies}
+    synergy_heroes = {row["hero_id"] for row in synergies} | {
+        row["synergy_hero_id"] for row in synergies
+    }
     combined_pct: list[int] = []
     combined_must_pick = 0
     for hero_id in counter_heroes & synergy_heroes:
         hero_counters = [r for r in counters if r["hero_id"] == hero_id]
-        hero_synergies = [r for r in synergies if r["hero_id"] == hero_id]
+        hero_synergies = [
+            r for r in synergies if r["hero_id"] == hero_id or r["synergy_hero_id"] == hero_id
+        ]
         result = score_candidates(
             [candidate_for(hero_id)],
             hero_counters[:1],
