@@ -159,7 +159,7 @@ def test_neutral_hero_with_no_matching_data_gets_neutral_reason(client):
 
 
 def test_recommendation_includes_archetype_and_empty_notes(client):
-    """목업 필드 완결성 점검: Result.dc.html의 '힐러 · 정찰 지원' 서브타이틀은
+    """목업 필드 완결성 점검: Result.dc.html의 '지원 · 정찰 지원' 서브타이틀은
     archetype 필드로, notes는 아직 큐레이션된 데이터가 없어 항상 빈 리스트."""
     res = client.post(
         "/api/recommendations",
