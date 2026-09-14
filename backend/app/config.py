@@ -28,10 +28,14 @@ WEIGHT_MAP_WEAK = -15  # 맵 평가 "약함"
 # 맵 평가 데이터가 없거나 "보통"이면 0 (중립) — 스펙의 에러 처리 표 참고
 
 # 총점(raw score, 이론상 상한 없음)을 0~100 표시용 점수로 바꿀 때 쓰는 기준선.
-# percentage = round(PERCENTAGE_BASELINE + 50 * tanh(raw_score / PERCENTAGE_SCALE))
-# 50이 공식의 절반 지점 상수라 PERCENTAGE_SCALE만 튜닝 대상이고 이 값 자체는
-# 바꾸지 않는다.
+# percentage = round(PERCENTAGE_BASELINE + PERCENTAGE_AMPLITUDE * tanh(raw_score / PERCENTAGE_SCALE))
 PERCENTAGE_BASELINE = 50
+
+# tanh 공식의 진폭 상수. PERCENTAGE_BASELINE이 곡선의 중심(절반 지점)이 되려면
+# 항상 PERCENTAGE_AMPLITUDE == PERCENTAGE_BASELINE이어야 한다(0~100 범위를
+# 정확히 채우도록). PERCENTAGE_BASELINE을 조정할 일이 생기면 이 값도 반드시
+# 같이 맞출 것 — 별도 상수로 뺀 이유가 바로 이 불변식을 코드에서 드러내기 위함.
+PERCENTAGE_AMPLITUDE = PERCENTAGE_BASELINE
 
 # tanh 포화 곡선의 스케일 상수. 하드 clamp(50+raw_score, 0, 100)는 점수가 높은
 # 후보끼리 100%로 뭉개져 변별력이 사라지는 문제가 있어 교체했다. WEIGHT_COUNTER와
