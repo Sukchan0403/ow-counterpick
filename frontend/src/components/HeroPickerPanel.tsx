@@ -1,5 +1,6 @@
 import type { Hero, Role } from "@/lib/types";
 import { ARCHETYPE_CATEGORY_ORDER, ROLE_LABEL } from "@/lib/types";
+import { HeroAvatar } from "./HeroAvatar";
 import styles from "./HeroPickerPanel.module.css";
 
 const ROLE_ORDER: Role[] = ["tank", "damage", "support"];
@@ -34,11 +35,7 @@ export function HeroPickerPanel({ title, heroes, selectedIds, maxCount, onChange
         disabled={!selected && atMax}
         className={`${styles.heroButton} ${selected ? styles.heroButtonSelected : ""}`}
       >
-        {hero.icon_url ? (
-          <img src={hero.icon_url} alt="" className={styles.heroIcon} loading="lazy" />
-        ) : (
-          <span className={styles.heroIconFallback}>{hero.name[0]}</span>
-        )}
+        <HeroAvatar iconUrl={hero.icon_url} name={hero.name} variant="icon" />
         <span className={styles.heroName}>{hero.name}</span>
       </button>
     );
