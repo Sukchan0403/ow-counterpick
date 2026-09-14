@@ -21,11 +21,11 @@ pip install -r requirements.txt
 # ../seed-data/overwatch.db가 없다면 먼저 시드부터:
 #   cd ../seed-data && python3 seed_db.py && cd ../backend
 #
-# 주의: DB 스키마가 바뀐 뒤(예: 새 테이블/컬럼 추가)에는 overwatch.db가 이미
-# 존재하더라도 seed_db.py를 다시 실행해야 한다 — seed_db.py는 "파일이 없으면
-# 만든다"가 아니라 항상 CREATE TABLE IF NOT EXISTS/ALTER TABLE로 기존 파일을
-# 마이그레이션하는 방식이라, 이미 있는 DB 파일에 대해 재실행해도 안전하다
-# (기존 row는 보존됨):
+# 주의: DB 스키마가 바뀐 뒤(예: 새 컬럼 추가)에는 overwatch.db가 이미 존재하더라도
+# seed_db.py를 다시 실행해야 한다. 단, seed_db.py의 마이그레이션은 범용이 아니라
+# 컬럼별로 손으로 짠 ALTER TABLE(예: heroes.archetype)만 있다 — CREATE TABLE IF
+# NOT EXISTS는 기존 테이블엔 아무 효과가 없으므로, 새 컬럼을 추가할 때마다
+# seed_db.py에 그 컬럼용 ALTER TABLE을 직접 추가해야 기존 DB 파일이 반영된다:
 #   cd ../seed-data && python3 seed_db.py overwatch.db && cd ../backend
 
 uvicorn app.main:app --reload --port 8000
