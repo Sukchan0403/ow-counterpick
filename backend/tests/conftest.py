@@ -45,6 +45,12 @@ CREATE TABLE map_hero_ratings (
     reason TEXT NOT NULL,
     PRIMARY KEY (map_id, hero_id)
 );
+CREATE TABLE reviewed_neutral_pairs (
+    hero_id TEXT NOT NULL REFERENCES heroes(id),
+    other_hero_id TEXT NOT NULL REFERENCES heroes(id),
+    relation_type TEXT NOT NULL CHECK (relation_type IN ('counter','synergy')),
+    PRIMARY KEY (hero_id, other_hero_id, relation_type)
+);
 """
 
 _conn = sqlite3.connect(str(_TEST_DB_PATH))
@@ -103,6 +109,14 @@ _conn.executemany(
         ("kings_row", "reinhardt", "강함", "좁은 골목 구간을 방벽으로 틀어막기 좋음"),
         ("kings_row", "genji", "약함", "장거리 구간에서 견제에 노출되기 쉬움"),
         ("kings_row", "moira", "강함", "실내 구간에서 유지력 좋음"),
+    ],
+)
+_conn.executemany(
+    "INSERT INTO reviewed_neutral_pairs VALUES (?, ?, ?)",
+    [
+        # Task 4의 API 테스트에서 "검토완료-중립"(data_gap 없음)을 확인하는 데 사용
+        ("lucio", "widowmaker", "counter"),
+        ("kiriko", "moira", "synergy"),
     ],
 )
 _conn.commit()

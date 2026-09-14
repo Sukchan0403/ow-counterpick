@@ -52,7 +52,7 @@ export function ResultsPanel({ recommendations, notice }: Props) {
               <div className={styles.nameRow}>
                 <span className={styles.heroName}>{rec.hero_name}</span>
                 {rec.is_must_pick && <span className={styles.mustPickBadge}>필수픽</span>}
-                <span className={styles.percentage}>{rec.percentage}%</span>
+                <span className={styles.percentage}>추천 지수 {rec.percentage}</span>
               </div>
               <div className={styles.archetype}>
                 {ROLE_LABEL[rec.role]} · {rec.archetype}
@@ -84,6 +84,11 @@ export function ResultsPanel({ recommendations, notice }: Props) {
                 {rec.notes.map((note, idx) => (
                   <span key={`note-${idx}`} className={styles.noteTag}>
                     {note}
+                  </span>
+                ))}
+                {rec.data_gaps.map((gap, idx) => (
+                  <span key={`gap-${idx}`} className={`${styles.noteTag} ${styles.dataGapTag}`}>
+                    데이터 없음 · {gap}
                   </span>
                 ))}
               </div>

@@ -47,11 +47,12 @@ def test_recommendations_normal_case(client):
     assert body["notice"] is None
 
     top = body["recommendations"][0]
-    # 키리코: 위도우메이커 카운터(15) + 겐지랑 시너지 없음(0) + 맵 데이터 없음(0) = 15
+    # 키리코: 위도우메이커 카운터(60, WEIGHT_COUNTER 상향 후) + 겐지랑 시너지 없음(0)
+    #         + 맵 데이터 없음(0) = 60
     # 모이라: 카운터 없음(0) + 시너지 없음(0) + 맵 강함(15) = 15
-    # 둘 다 15점 동점 -> 이름 알파벳/가나다 순 정렬(모이라가 키리코보다 앞? 정렬은 문자열 비교)
+    # 루시우: 카운터 없음(0) + 겐지와 시너지(10) + 맵 데이터 없음(0) = 10
     scores = {r["hero_id"]: r["total_score"] for r in body["recommendations"]}
-    assert scores["kiriko"] == 15
+    assert scores["kiriko"] == 60
     assert scores["moira"] == 15
     assert scores["lucio"] == 10  # 겐지와 시너지만
 
@@ -191,12 +192,54 @@ def test_is_must_pick_when_percentage_reaches_threshold(client):
     assert res.status_code == 200
     body = res.json()
     reinhardt_row = next(r for r in body["recommendations"] if r["hero_id"] == "reinhardt")
-    assert reinhardt_row["percentage"] == 90
     assert reinhardt_row["is_must_pick"] is True
+    # tanh 포화 곡선 — 카운터+시너지+맵강함이 겹친 강한 조합이지만 100%로
+    # 완전히 포화되지는 않는다 (변별력 유지가 이 교체의 목적).
+    assert 90 <= reinhardt_row["percentage"] < 100
 
     # 다른 후보(합산 점수가 낮은 쪽)는 must-pick이 아니어야 함
     others = [r for r in body["recommendations"] if r["hero_id"] != "reinhardt"]
     assert all(not o["is_must_pick"] for o in others)
+
+
+def test_recommendations_data_gaps_distinguish_reviewed_neutral_from_unreviewed(client):
+    """상대 위도우메이커 기준: 키리코=실제 카운터(값있음, data_gap 없음),
+    루시우=검토완료-중립(conftest 시드, data_gap 없음), 모이라/아나=미검토(data_gap 있음)."""
+    res = client.post(
+        "/api/recommendations",
+        json={
+            "enemy_heroes": ["widowmaker"],
+            "our_heroes": [],
+            "empty_position": "support",
+            "map_id": "eichenwalde",
+        },
+    )
+    assert res.status_code == 200
+    rows = {r["hero_id"]: r for r in res.json()["recommendations"]}
+
+    assert rows["kiriko"]["data_gaps"] == []
+    assert rows["lucio"]["data_gaps"] == []
+    assert rows["moira"]["data_gaps"] == ["상대 위도우메이커와의 카운터 관계 미검토"]
+    assert rows["ana"]["data_gaps"] == ["상대 위도우메이커와의 카운터 관계 미검토"]
+
+
+def test_recommendations_data_gaps_for_unreviewed_synergy(client):
+    """아군 겐지와의 시너지 관계가 검토완료-중립으로도 실제 관계로도 등록 안 된
+    후보는 data_gap이 붙어야 한다."""
+    res = client.post(
+        "/api/recommendations",
+        json={
+            "enemy_heroes": [],
+            "our_heroes": ["genji"],
+            "empty_position": "support",
+            "map_id": "eichenwalde",
+        },
+    )
+    assert res.status_code == 200
+    rows = {r["hero_id"]: r for r in res.json()["recommendations"]}
+
+    assert rows["lucio"]["data_gaps"] == []  # conftest 시드: genji-lucio 시너지 실제 존재
+    assert rows["moira"]["data_gaps"] == ["아군 겐지와의 시너지 관계 미검토"]
 
 
 def test_recommendation_includes_icon_url_and_archetype_category(client):

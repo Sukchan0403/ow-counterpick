@@ -45,6 +45,7 @@ export interface HeroRecommendation {
   reasons: string[];
   is_must_pick: boolean;
   notes: string[];
+  data_gaps: string[];
 }
 
 export interface RecommendationResponse {

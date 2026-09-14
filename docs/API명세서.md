@@ -2,9 +2,12 @@
 
 - 프로젝트: 오버워치 밴프준 보조 웹서비스 (ow-counterpick)
 - 저장소: https://github.com/Sukchan0403/ow-counterpick
-- 기준: `master` 브랜치의 현재 구현 (`backend/app/`) — 설계 문서
-  (`docs/superpowers/specs/2026-09-07-overwatch-hero-recommender-design.md`)의
-  "API 명세 (상세)" 섹션을 실제 코드·테스트(`backend/tests/`)와 대조해 정리
+- 기준: `master` + `worktree-scoring-improvements` 병합 후 구현 (`backend/app/`) —
+  설계 문서(`docs/superpowers/specs/2026-09-07-overwatch-hero-recommender-design.md`)의
+  "API 명세 (상세)"/"결측치 3단 상태"/"스코어링 개선 검토" 절을 실제 코드·
+  테스트(`backend/tests/`)와 대조해 정리. `icon_url`/`archetype_category`
+  (`worktree-ui-hero-images-archetype`)와 `data_gaps`/tanh percentage
+  (`worktree-scoring-improvements`)를 모두 반영한 통합 버전.
 - 베이스 URL(로컬 개발): `http://localhost:8000`
 
 ## 엔드포인트 개요
@@ -29,7 +32,9 @@
   id: string
   name: string
   role: "tank" | "damage" | "support"
-  archetype: string   // 역할 세부 서브타이틀 (예: "정찰 지원", "방벽 수문장")
+  archetype: string            // 역할 세부 서브타이틀 (예: "정찰 지원", "방벽 수문장")
+  icon_url: string             // 블리자드 CDN 초상화 URL. 없으면 빈 문자열(프론트가 이니셜 폴백 렌더링)
+  archetype_category: string   // 그룹 필터링용 상위 분류 (예: "의무관", "개시자")
 }
 ```
 
@@ -79,13 +84,22 @@ DB 조회 없이 `config.SEED_SEASON`/`config.SEED_DATA_VERSION` 상수를 그�
       hero_name: string
       role: "tank" | "damage" | "support"
       archetype: string
+      icon_url: string                // Hero.icon_url과 동일 값
+      archetype_category: string      // Hero.archetype_category와 동일 값
       total_score: int              // 카운터+시너지+맵 가중합 원점수. 상한 없음
-      percentage: int                // 0~100. percentage = clamp(50 + total_score, 0, 100)
+      percentage: int                // 0~100. percentage = round(PERCENTAGE_BASELINE +
+                                      // PERCENTAGE_AMPLITUDE * tanh(total_score / PERCENTAGE_SCALE))
+                                      // (하드 clamp에서 tanh 포화 곡선으로 교체 — 하이스코어
+                                      // 후보끼리 100%로 뭉개지는 변별력 문제 완화)
       score_breakdown: { counter: int, synergy: int, map: int }
       reasons: string[]              // 추천 근거 (일치하는 관계가 없으면 "일반적으로 무난한 영웅")
       is_must_pick: boolean           // percentage >= 90 (config.MUST_PICK_PERCENTAGE_THRESHOLD)
       notes: string[]                // 패치 트렌드 등 자유 코멘터리 자리 — 아직 큐레이션
                                       // 데이터가 없어 항상 빈 배열
+      data_gaps: string[]            // "결측치 3단 상태" — 카운터/시너지 관계가 "미검토"인
+                                      // 상대/아군만 여기 담김 (예: "상대 리퍼와의 카운터
+                                      // 관계 미검토"). "검토완료-중립"(reviewed_neutral_pairs
+                                      // 테이블에 등록됨)은 여기 안 담기고 조용히 0점 처리됨
     }
   ]
   notice: string | null   // 상대/우리 팀 픽을 하나도 입력하지 않았을 때 등, 추천 근거가
@@ -96,12 +110,29 @@ DB 조회 없이 `config.SEED_SEASON`/`config.SEED_DATA_VERSION` 상수를 그�
 ## 점수 계산 로직 요약
 
 후보 영웅마다 다음 3가지를 합산한다 (`backend/app/scoring.py`, `config.py`):
-- **카운터 점수**: 상대 팀 중 카운터하는 영웅 수 × `WEIGHT_COUNTER`(15)
+- **카운터 점수**: 상대 팀 중 카운터하는 영웅 수 × `WEIGHT_COUNTER`(60 — 다른 모든
+  보너스의 최댓값 합보다 항상 크게 잡아 하드카운터가 다른 점수에 밀리지 않도록 함)
 - **시너지 점수**: 우리 팀 중 시너지 좋은 영웅 수 × `WEIGHT_SYNERGY`(10)
 - **맵 점수**: 맵 평가 강함 `+15` / 약함 `-15` / 데이터 없음(또는 "보통") `0`
 
-`percentage = clamp(50 + total_score, 0, 100)`로 0~100 표시값 변환.
+`percentage = round(PERCENTAGE_BASELINE + PERCENTAGE_AMPLITUDE * tanh(total_score / PERCENTAGE_SCALE))`
+(기본값: BASELINE=50, AMPLITUDE=50, SCALE=60)로 0~100 표시값 변환.
 `percentage >= 90`이면 `is_must_pick = true`.
+
+### 결측치 3단 상태
+
+"데이터 없는 조합은 중립 점수"만으로는 "아직 검토 안 한 조합"과 "검토했는데
+실제로 중립인 조합"을 구분할 수 없다. 그래서 카운터/시너지 관계를 3단으로
+명시적으로 구분한다:
+
+| 상태 | 판정 기준 | 응답 반영 |
+|---|---|---|
+| 미검토 | `counter_relations`/`synergy_relations`에도, `reviewed_neutral_pairs`에도 없음 | `data_gaps`에 노출 |
+| 검토완료-중립 | `reviewed_neutral_pairs`에 마커로 등록됨 | 조용히 0점 처리, `data_gaps`에 안 담김 |
+| 검토완료-값있음 | `counter_relations`/`synergy_relations`에 실제 행 있음 | 기존처럼 점수+`reasons`에 표시 |
+
+미러 픽(후보가 상대 팀에도 있는 경우)은 자기 자신과의 카운터 관계를 애초에
+따지지 않으므로 `data_gaps`에 자기참조 항목이 생기지 않는다.
 
 ## 에러 응답 예시
 
@@ -120,17 +151,10 @@ DB 조회 없이 `config.SEED_SEASON`/`config.SEED_DATA_VERSION` 상수를 그�
 { "detail": "일시적인 오류가 발생했어요. 잠시 후 다시 시도해주세요." }
 ```
 
-## 참고 — 설계 문서에는 있으나 아직 구현되지 않은 항목
+## 참고 — 아직 남은 갭
 
-`design.md`의 "스코어링 개선 검토"/"결측치 3단 상태" 절은 아래 두 가지 변경을
-**"결정 완료" 또는 "구현 대기"**로 기록해뒀지만, 이 문서 작성 시점 기준
-`backend/app/scoring.py`에는 반영되어 있지 않다. 실제로 구현되면 이 API
-명세서도 함께 갱신해야 한다.
-
-1. `percentage` 계산을 현재의 선형 clamp에서 tanh 기반 포화 곡선으로 교체하는 안
-2. 결측치를 "미검토/검토완료-중립/검토완료-값있음" 3단으로 구분해 `data_gaps: string[]`
-   필드를 응답에 추가하는 안 (`reviewed_neutral_pairs` 테이블 포함)
-
-또한 `icon_url`/`archetype_category` 필드(영웅 초상화·아키타입 그룹핑)는 별도
-브랜치(`worktree-ui-hero-images-archetype`)에서 진행 중이며, 이 문서는 `master`
-기준이라 포함하지 않았다.
+- 맵 6개 모드 중 `clash`/`flashpoint`/`push` 3개는 아직 `maps.json`에 시드
+  데이터가 없다 (`hybrid`/`escort`/`control`만 존재).
+- `MUST_PICK_PERCENTAGE_THRESHOLD`(90)는 아직 실제 시드 데이터 기준 실증
+  검증 전이다 — `backend/scripts/audit_must_pick_distribution.py`로 분포를
+  확인한 뒤 조정 여부를 판단해야 한다.

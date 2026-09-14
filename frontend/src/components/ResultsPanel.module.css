@@ -132,3 +132,6 @@
   border: 1px dashed var(--border);
 }
 
+.dataGapTag {
+  font-style: italic;
+}

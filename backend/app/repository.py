@@ -113,3 +113,47 @@ def fetch_map_ratings_for_candidates(
         WHERE map_id = ? AND hero_id IN ({placeholders})
     """
     return conn.execute(query, (map_id, *candidate_ids)).fetchall()
+
+
+def fetch_heroes_by_ids(conn: sqlite3.Connection, hero_ids: list[str]) -> list[sqlite3.Row]:
+    if not hero_ids:
+        return []
+    placeholders = ",".join("?" for _ in hero_ids)
+    query = f"SELECT id, name, role, archetype FROM heroes WHERE id IN ({placeholders})"
+    return conn.execute(query, tuple(hero_ids)).fetchall()
+
+
+def fetch_reviewed_neutral_pairs(
+    conn: sqlite3.Connection,
+    candidate_ids: list[str],
+    other_ids: list[str],
+    relation_type: str,
+) -> list[sqlite3.Row]:
+    """ "검토완료-중립" 마커 조회 (결측치 3단 상태). relation_type='counter'는
+    hero_id(후보)->other_hero_id(상대) 방향으로만 저장(카운터는 방향성 있는
+    관계). relation_type='synergy'는 synergy_relations처럼 양방향으로 저장될
+    수 있어 양쪽 다 조회한다."""
+    if not candidate_ids or not other_ids:
+        return []
+    placeholders_c = ",".join("?" for _ in candidate_ids)
+    placeholders_o = ",".join("?" for _ in other_ids)
+
+    if relation_type == "counter":
+        query = f"""
+            SELECT hero_id, other_hero_id
+            FROM reviewed_neutral_pairs
+            WHERE relation_type = ?
+              AND hero_id IN ({placeholders_c}) AND other_hero_id IN ({placeholders_o})
+        """
+        return conn.execute(query, (relation_type, *candidate_ids, *other_ids)).fetchall()
+
+    query = f"""
+        SELECT hero_id, other_hero_id
+        FROM reviewed_neutral_pairs
+        WHERE relation_type = ?
+          AND ((hero_id IN ({placeholders_c}) AND other_hero_id IN ({placeholders_o}))
+            OR (hero_id IN ({placeholders_o}) AND other_hero_id IN ({placeholders_c})))
+    """
+    return conn.execute(
+        query, (relation_type, *candidate_ids, *other_ids, *other_ids, *candidate_ids)
+    ).fetchall()

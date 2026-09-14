@@ -59,6 +59,13 @@ class HeroRecommendation(BaseModel):
             "현재는 항상 빈 배열 — 스키마만 먼저 맞춰둔 상태."
         ),
     )
+    data_gaps: list[str] = Field(
+        default_factory=list,
+        description=(
+            "결측치 3단 상태 중 '미검토' 항목만 담긴다 (예: '상대 리퍼와의 카운터 "
+            "관계 미검토'). '검토완료-중립'은 조용히 0점 처리되고 여기 안 담긴다."
+        ),
+    )
 
 
 class RecommendationResponse(BaseModel):

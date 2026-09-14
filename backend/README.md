@@ -20,6 +20,13 @@ pip install -r requirements.txt
 
 # ../seed-data/overwatch.db가 없다면 먼저 시드부터:
 #   cd ../seed-data && python3 seed_db.py && cd ../backend
+#
+# 주의: DB 스키마가 바뀐 뒤(예: 새 컬럼 추가)에는 overwatch.db가 이미 존재하더라도
+# seed_db.py를 다시 실행해야 한다. 단, seed_db.py의 마이그레이션은 범용이 아니라
+# 컬럼별로 손으로 짠 ALTER TABLE(예: heroes.archetype)만 있다 — CREATE TABLE IF
+# NOT EXISTS는 기존 테이블엔 아무 효과가 없으므로, 새 컬럼을 추가할 때마다
+# seed_db.py에 그 컬럼용 ALTER TABLE을 직접 추가해야 기존 DB 파일이 반영된다:
+#   cd ../seed-data && python3 seed_db.py overwatch.db && cd ../backend
 
 uvicorn app.main:app --reload --port 8000
 ```
@@ -39,8 +46,9 @@ pytest -v
   무관하게 항상 같은 결과로 검증된다.
 
 **이 코드는 Claude 클라우드 샌드박스에서 실제로 pip install → pytest → uvicorn 기동 →
-curl 요청까지 전부 실행해서 검증한 상태로 전달합니다** (14개 테스트 전부 통과,
-실제 시드 DB로 정상 케이스/중립 케이스 curl 확인 완료).
+curl 요청까지 전부 실행해서 검증한 상태로 전달합니다** (38개 테스트 전부 통과,
+실제 시드 DB로 정상 케이스/중립 케이스 curl 확인 완료. 테스트 개수는 기능이
+늘어날 때마다 계속 바뀌므로, 정확한 최신 값은 `pytest -v`로 직접 확인할 것).
 
 ## API
 
@@ -58,6 +66,12 @@ curl 요청까지 전부 실행해서 검증한 상태로 전달합니다** (14�
 → 상위 5개 후보를 `total_score` 내림차순으로 반환. 각 항목에
 `score_breakdown`(counter/synergy/map 세부 점수)과 `reasons`(DB에 저장된 근거 문장
 그대로)가 들어있다. 근거가 하나도 안 잡히면 `"일반적으로 무난한 영웅"`.
+`data_gaps`(string[])에는 아직 검토(큐레이션) 안 된 카운터/시너지 조합이
+"상대 OO와의 카운터 관계 미검토" 같은 문구로 담긴다 — "검토완료-중립"(조사했지만
+관계 없음)은 여기 안 담기고 조용히 0점 처리된다("결측치 3단 상태", 스펙 문서
+참고). 현재 맵 평가(`score_breakdown.map`)는 이 3단 구분 없이 데이터가 없으면
+그냥 중립(0점) 처리만 되고 `data_gaps`엔 아직 반영되지 않는다 — 카운터/시너지만
+구현된 상태.
 
 `enemy_heroes`/`our_heroes`를 둘 다 비워서 보내면(스펙의 에러 처리 표대로) 요청은
 정상 처리되고 맵 점수만 반영되며, 응답의 `notice` 필드에 안내 문구가 채워진다.
@@ -72,12 +86,15 @@ curl 요청까지 전부 실행해서 검증한 상태로 전달합니다** (14�
 점수를 더한다. 가중치는 스펙에 구체적으로 명시돼 있지 않아서 `app/config.py`에
 상수로 뒀다 — 실제로 써보면서 튜닝하면 된다.
 
-- 카운터: 상대 팀 중 이 영웅이 카운터하는 영웅 1명당 +15
+- 카운터: 상대 팀 중 이 영웅이 카운터하는 영웅 1명당 +60 (다른 모든 보너스의
+  합보다 항상 크게 잡아, 하드카운터가 자잘한 시너지/맵 보너스에 묻히지 않도록 함)
 - 시너지: 우리 팀 중 이 영웅과 시너지 좋은 영웅 1명당 +10
 - 맵: 강함 +15 / 약함 -15 / 데이터 없음(보통 포함) 0
 
-`percentage = clamp(50 + total_score, 0, 100)` — 목업에서 쓰던 "%" 표시용 값이고,
-실제 순위/필터링은 `total_score`(raw) 기준.
+`percentage = round(50 + 50 * tanh(total_score / 60))` — tanh 기반 완만한 포화
+곡선(하드 clamp 대체, 점수 높은 후보끼리 100%로 뭉개지는 변별력 손실 완화).
+화면 표시는 "OO%"가 아니라 "추천 지수 OO"(퍼센트 기호 제거, 실제 승률로 오해
+방지). 실제 순위/필터링은 여전히 `total_score`(raw) 기준.
 
 ## 알아둘 것 / 다음 단계
 
