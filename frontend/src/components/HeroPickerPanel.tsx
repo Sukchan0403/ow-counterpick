@@ -12,27 +12,50 @@ interface Props {
   selectedIds: string[];
   maxCount: number;
   onChange: (ids: string[]) => void;
+  // 역할별 최대 인원(예: 탱커1·딜러2·힐러2). 넘기면 해당 역할이 정원을 채운
+  // 순간 그 역할 영웅 버튼이 전부 비활성화된다 — 표준 조합에 안 맞는 구성
+  // 자체를 선택 단계에서 막기 위함.
+  roleLimits?: Partial<Record<Role, number>>;
 }
 
-export function HeroPickerPanel({ title, heroes, selectedIds, maxCount, onChange }: Props) {
+export function HeroPickerPanel({
+  title,
+  heroes,
+  selectedIds,
+  maxCount,
+  onChange,
+  roleLimits,
+}: Props) {
   const atMax = selectedIds.length >= maxCount;
 
-  function toggle(heroId: string) {
-    if (selectedIds.includes(heroId)) {
-      onChange(selectedIds.filter((id) => id !== heroId));
-    } else if (!atMax) {
-      onChange([...selectedIds, heroId]);
+  const countByRole: Partial<Record<Role, number>> = {};
+  for (const id of selectedIds) {
+    const hero = heroes.find((h) => h.id === id);
+    if (hero) countByRole[hero.role] = (countByRole[hero.role] ?? 0) + 1;
+  }
+
+  function isRoleAtMax(role: Role) {
+    const limit = roleLimits?.[role];
+    return limit !== undefined && (countByRole[role] ?? 0) >= limit;
+  }
+
+  function toggle(hero: Hero) {
+    if (selectedIds.includes(hero.id)) {
+      onChange(selectedIds.filter((id) => id !== hero.id));
+    } else if (!atMax && !isRoleAtMax(hero.role)) {
+      onChange([...selectedIds, hero.id]);
     }
   }
 
   function renderHeroButton(hero: Hero) {
     const selected = selectedIds.includes(hero.id);
+    const disabled = !selected && (atMax || isRoleAtMax(hero.role));
     return (
       <button
         key={hero.id}
         type="button"
-        onClick={() => toggle(hero.id)}
-        disabled={!selected && atMax}
+        onClick={() => toggle(hero)}
+        disabled={disabled}
         className={`${styles.heroButton} ${selected ? styles.heroButtonSelected : ""}`}
       >
         <HeroAvatar iconUrl={hero.icon_url} name={hero.name} variant="icon" />
@@ -71,7 +94,15 @@ export function HeroPickerPanel({ title, heroes, selectedIds, maxCount, onChange
 
         return (
           <div key={role} className={styles.roleGroup}>
-            <div className={styles.roleLabel}>{ROLE_LABEL[role]}</div>
+            <div className={styles.roleLabel}>
+              {ROLE_LABEL[role]}
+              {roleLimits?.[role] !== undefined && (
+                <span className={styles.roleCount}>
+                  {" "}
+                  {countByRole[role] ?? 0}/{roleLimits[role]}
+                </span>
+              )}
+            </div>
             {groups.map((group) => (
               <div key={group.label} className={styles.archetypeGroup}>
                 <div className={styles.archetypeLabel}>{group.label}</div>

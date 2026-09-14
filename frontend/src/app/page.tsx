@@ -7,10 +7,14 @@ import { MapPickerModal } from "@/components/MapPickerModal";
 import { ResultsPanel } from "@/components/ResultsPanel";
 import { ErrorScreen } from "@/components/ErrorScreen";
 import { fetchHeroes, fetchMaps, fetchMeta, postRecommendations, ApiValidationError } from "@/lib/api";
-import type { Hero, MapInfo, MetaInfo, RecommendationResponse } from "@/lib/types";
+import type { Hero, MapInfo, MetaInfo, RecommendationResponse, Role } from "@/lib/types";
 import { modeLabel } from "@/lib/types";
 
 const OUR_TEAM_SIZE = 4;
+// 오버워치 역할 고정 큐 표준 조합(탱커1·딜러2·힐러2) — backend/app/config.py의
+// TEAM_ROLE_COMPOSITION과 동일 값. 선택창 자체에서 이 정원을 넘는 역할은
+// 고를 수 없게 막아서, 애초에 표준 조합이 아닌 팀 구성이 만들어지지 않게 한다.
+const TEAM_ROLE_LIMITS: Record<Role, number> = { tank: 1, damage: 2, support: 2 };
 
 type CatalogState = "loading" | "ready" | "error";
 type SubmitPhase = "idle" | "loading" | "success" | "error";
@@ -117,6 +121,7 @@ export default function Home() {
               heroes={heroes}
               selectedIds={enemyHeroes}
               maxCount={5}
+              roleLimits={TEAM_ROLE_LIMITS}
               onChange={setEnemyHeroes}
             />
             <HeroPickerPanel
@@ -124,6 +129,7 @@ export default function Home() {
               heroes={heroes}
               selectedIds={ourHeroes}
               maxCount={OUR_TEAM_SIZE}
+              roleLimits={TEAM_ROLE_LIMITS}
               onChange={setOurHeroes}
             />
           </div>
