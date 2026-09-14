@@ -409,7 +409,7 @@ RecommendationResponse {
 | 맵 선택 모달의 "데이터 풍부" / "데이터 보강 중" 그룹 배지 | 없음 | `Map.data_richness` 필드 추가(저장값 아닌 계산값 — `map_hero_ratings` 등록 건수 기준). 프론트는 그룹 내 최소값 기준으로 배지 표시 |
 | 헤더의 "시즌 4 시드 데이터 · v0.3" 배지 | 없음 | `GET /api/meta` 엔드포인트 신규 추가 (`config.SEED_SEASON`/`SEED_DATA_VERSION` 상수 반환) |
 | 맵 버튼의 모드 표시("아이헨발데 · 혼합") | 프론트 버그: `mode`가 영문 enum(`hybrid` 등)인데 그대로 렌더링해서 "아이헨발데 · hybrid"처럼 영한 혼용될 뻔함 | 실제 API 응답을 curl로 확인해 발견. `frontend/src/lib/types.ts`에 `MODE_LABEL`/`modeLabel()` 추가해 표시 시점에 한글 변환 |
-| 맵 선택 모달의 모드 그룹 6종(점령·격돌·호위·혼합·플래시포인트·밀기, 14개 맵) | 스키마 문서엔 `mode` enum이 3종("hybrid"/"escort"/"control")만 기재돼 있어 "clash"/"flashpoint"/"push" 3종 누락 | `Map.mode` enum 설명에 6종 전부 추가. `maps` 테이블엔 6종 맵이 모두 등록돼 있음(2026-09-14, image_url 포함) — 격돌/플래시포인트/밀기 맵은 `map_hero_ratings` 큐레이션이 아직 안 끝나 "데이터 보강 중"으로 표시되는 정상 진행 상태(별도 이슈 아님) |
+| 맵 선택 모달의 모드 그룹 6종(점령·격돌·호위·혼합·플래시포인트·밀기, 32개 맵(2026-09-14 나무위키/OverFast API 기준 확장)) | 스키마 문서엔 `mode` enum이 3종("hybrid"/"escort"/"control")만 기재돼 있어 "clash"/"flashpoint"/"push" 3종 누락 | `Map.mode` enum 설명에 6종 전부 추가. `maps` 테이블엔 6종 맵이 모두 등록돼 있음(2026-09-14, image_url 포함) — 격돌/플래시포인트/밀기 맵은 `map_hero_ratings` 큐레이션이 아직 안 끝나 "데이터 보강 중"으로 표시되는 정상 진행 상태(별도 이슈 아님) |
 | "드래프트 시뮬레이션" 상단 탭 | 설계 문서에 "추후 별도 스펙"으로 이미 범위 밖 명시됨 | 조치 불필요 |
 | 입력 폼 검증 오류 문구 (빈 포지션/맵 필수) | 에러 처리 표에 프론트 검증으로만 명시 | 422 상태 코드 + 응답 예시로 백엔드 방어 검증 명시. 실제 구현엔 알 수 없는 hero_id/map_id를 걸러내는 400도 추가로 존재 |
 

@@ -2,15 +2,38 @@
   { "id": "eichenwalde", "name": "아이헨발데", "mode": "hybrid", "image_url": "https://overfast-api.tekrop.fr/static/maps/eichenwalde.jpg" },
   { "id": "kings_row", "name": "왕의 길", "mode": "hybrid", "image_url": "https://overfast-api.tekrop.fr/static/maps/kings-row.jpg" },
   { "id": "hollywood", "name": "할리우드", "mode": "hybrid", "image_url": "https://overfast-api.tekrop.fr/static/maps/hollywood.jpg" },
+  { "id": "numbani", "name": "눔바니", "mode": "hybrid", "image_url": "https://overfast-api.tekrop.fr/static/maps/numbani.jpg" },
+  { "id": "midtown", "name": "미드타운", "mode": "hybrid", "image_url": "https://overfast-api.tekrop.fr/static/maps/midtown.jpg" },
+  { "id": "blizzard_world", "name": "블리자드 월드", "mode": "hybrid", "image_url": "https://overfast-api.tekrop.fr/static/maps/blizzard-world.jpg" },
+  { "id": "paraiso", "name": "파라이수", "mode": "hybrid", "image_url": "https://overfast-api.tekrop.fr/static/maps/paraiso.jpg" },
+  { "id": "neon_junction", "name": "네온 교차로", "mode": "hybrid", "image_url": "" },
+
   { "id": "dorado", "name": "도라도", "mode": "escort", "image_url": "https://overfast-api.tekrop.fr/static/maps/dorado.jpg" },
   { "id": "havana", "name": "하바나", "mode": "escort", "image_url": "https://overfast-api.tekrop.fr/static/maps/havana.jpg" },
   { "id": "junkertown", "name": "정크타운", "mode": "escort", "image_url": "https://overfast-api.tekrop.fr/static/maps/junkertown.jpg" },
+  { "id": "route_66", "name": "66번 국도", "mode": "escort", "image_url": "https://overfast-api.tekrop.fr/static/maps/route-66.jpg" },
+  { "id": "watchpoint_gibraltar", "name": "감시 기지: 지브롤터", "mode": "escort", "image_url": "https://overfast-api.tekrop.fr/static/maps/watchpoint-gibraltar.jpg" },
+  { "id": "rialto", "name": "리알토", "mode": "escort", "image_url": "https://overfast-api.tekrop.fr/static/maps/rialto.jpg" },
+  { "id": "shambali_monastery", "name": "샴발리 수도원", "mode": "escort", "image_url": "https://overfast-api.tekrop.fr/static/maps/shambali-monastery.jpg" },
+  { "id": "circuit_royal", "name": "서킷 로얄", "mode": "escort", "image_url": "https://overfast-api.tekrop.fr/static/maps/circuit-royal.jpg" },
+
   { "id": "ilios", "name": "일리오스", "mode": "control", "image_url": "https://overfast-api.tekrop.fr/static/maps/ilios.jpg" },
   { "id": "oasis", "name": "오아시스", "mode": "control", "image_url": "https://overfast-api.tekrop.fr/static/maps/oasis.jpg" },
+  { "id": "antarctic_peninsula", "name": "남극 반도", "mode": "control", "image_url": "https://overfast-api.tekrop.fr/static/maps/antarctic-peninsula.jpg" },
+  { "id": "nepal", "name": "네팔", "mode": "control", "image_url": "https://overfast-api.tekrop.fr/static/maps/nepal.jpg" },
+  { "id": "lijiang_tower", "name": "리장 타워", "mode": "control", "image_url": "https://overfast-api.tekrop.fr/static/maps/lijiang-tower.jpg" },
+  { "id": "busan", "name": "부산", "mode": "control", "image_url": "https://overfast-api.tekrop.fr/static/maps/busan.jpg" },
+  { "id": "samoa", "name": "사모아", "mode": "control", "image_url": "https://overfast-api.tekrop.fr/static/maps/samoa.jpg" },
+
   { "id": "hanaoka", "name": "하나오카", "mode": "clash", "image_url": "https://overfast-api.tekrop.fr/static/maps/hanaoka.jpg" },
   { "id": "throne_of_anubis", "name": "아누비스의 왕좌", "mode": "clash", "image_url": "https://overfast-api.tekrop.fr/static/maps/throne-of-anubis.jpg" },
+
   { "id": "colosseo", "name": "콜로세오", "mode": "push", "image_url": "https://overfast-api.tekrop.fr/static/maps/colosseo.jpg" },
   { "id": "new_queen_street", "name": "뉴 퀸 스트리트", "mode": "push", "image_url": "https://overfast-api.tekrop.fr/static/maps/new-queen-street.jpg" },
+  { "id": "esperanca", "name": "이스페란사", "mode": "push", "image_url": "https://overfast-api.tekrop.fr/static/maps/esperanca.jpg" },
+  { "id": "runasapi", "name": "루나사피", "mode": "push", "image_url": "https://overfast-api.tekrop.fr/static/maps/runasapi.jpg" },
+
   { "id": "suravasa", "name": "수라바사", "mode": "flashpoint", "image_url": "https://overfast-api.tekrop.fr/static/maps/suravasa.jpg" },
-  { "id": "new_junk_city", "name": "뉴 정크 시티", "mode": "flashpoint", "image_url": "https://overfast-api.tekrop.fr/static/maps/new-junk-city.jpg" }
+  { "id": "new_junk_city", "name": "뉴 정크 시티", "mode": "flashpoint", "image_url": "https://overfast-api.tekrop.fr/static/maps/new-junk-city.jpg" },
+  { "id": "aatlis", "name": "아틀리스", "mode": "flashpoint", "image_url": "https://overfast-api.tekrop.fr/static/maps/aatlis.jpg" }
 ]

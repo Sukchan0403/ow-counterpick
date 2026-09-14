@@ -47,9 +47,10 @@
   id: string
   name: string
   mode: string                 // 저장값은 영문 enum: "control" | "escort" | "hybrid" |
-                                // "clash" | "push" | "flashpoint" (6종 전부 시드 등록됨,
-                                // 2026-09-14 갱신 — clash/push/flashpoint는 아직
-                                // map_hero_ratings 큐레이션 전이라 growing 고정)
+                                // "clash" | "push" | "flashpoint" (6종·32개 맵 전부 시드 등록됨,
+                                // 2026-09-14 나무위키/OverFast API 기준 확장 — 신규
+                                // 추가된 맵들은 아직 map_hero_ratings 큐레이션 전이라
+                                // growing 고정)
   image_url: string            // 맵 스크린샷 URL. OverFast API(overfast-api.tekrop.fr)에서
                                 // 확보해 시드에 저장. 없으면 빈 문자열(프론트가 단색
                                 // 배경으로 폴백).
@@ -167,9 +168,12 @@ DB 조회 없이 `config.SEED_SEASON`/`config.SEED_DATA_VERSION` 상수를 그�
 
 ## 참고 — 아직 남은 갭
 
-- 6개 모드 맵은 전부 시드에 등록됐지만(2026-09-14), `clash`/`push`/`flashpoint`
-  맵들은 `map_hero_ratings` 큐레이션이 아직 없어 `data_richness`가 항상
-  `growing`이다.
+- 6개 모드 32개 맵이 전부 시드에 등록됐지만(2026-09-14, 나무위키/OverFast API
+  기준), `map_hero_ratings` 큐레이션은 최초 8개 맵(혼합 3·호위 3·점령 2)에만
+  돼 있다 — 새로 추가된 24개 맵은 `data_richness`가 항상 `growing`이다.
+- `neon_junction`(혼합)은 OverFast API에 스크린샷 URL이 등록돼 있으나 실제
+  파일이 아직 404라서 `image_url`을 빈 문자열로 남겨뒀다 — 프론트가 단색
+  배경으로 폴백한다.
 - `MUST_PICK_PERCENTAGE_THRESHOLD`(90)는 아직 실제 시드 데이터 기준 실증
   검증 전이다 — `backend/scripts/audit_must_pick_distribution.py`로 분포를
   확인한 뒤 조정 여부를 판단해야 한다.
