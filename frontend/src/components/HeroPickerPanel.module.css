@@ -40,6 +40,9 @@
 }
 
 .heroButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   border: 1px solid var(--border);
   background: var(--surface-2);
   color: var(--text);
@@ -64,4 +67,23 @@
   border-color: var(--accent);
   color: var(--accent);
   font-weight: 600;
+}
+
+.heroName {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.archetypeGroup {
+  margin-bottom: 10px;
+}
+
+.archetypeLabel {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
 }

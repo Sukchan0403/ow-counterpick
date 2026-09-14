@@ -9,6 +9,8 @@ def test_get_heroes(client):
     heroes = {h["id"]: h for h in res.json()}
     assert "kiriko" in heroes and "genji" in heroes
     assert heroes["kiriko"]["archetype"] == "정찰 지원"
+    assert heroes["kiriko"]["archetype_category"] == "의무관"
+    assert heroes["kiriko"]["icon_url"].startswith("https://d15f34w2p8l1cc.cloudfront.net/")
 
 
 def test_get_maps(client):
@@ -157,7 +159,7 @@ def test_neutral_hero_with_no_matching_data_gets_neutral_reason(client):
 
 
 def test_recommendation_includes_archetype_and_empty_notes(client):
-    """목업 필드 완결성 점검: Result.dc.html의 '힐러 · 정찰 지원' 서브타이틀은
+    """목업 필드 완결성 점검: Result.dc.html의 '지원 · 정찰 지원' 서브타이틀은
     archetype 필드로, notes는 아직 큐레이션된 데이터가 없어 항상 빈 리스트."""
     res = client.post(
         "/api/recommendations",
@@ -195,3 +197,19 @@ def test_is_must_pick_when_percentage_reaches_threshold(client):
     # 다른 후보(합산 점수가 낮은 쪽)는 must-pick이 아니어야 함
     others = [r for r in body["recommendations"] if r["hero_id"] != "reinhardt"]
     assert all(not o["is_must_pick"] for o in others)
+
+
+def test_recommendation_includes_icon_url_and_archetype_category(client):
+    res = client.post(
+        "/api/recommendations",
+        json={
+            "enemy_heroes": [],
+            "our_heroes": [],
+            "empty_position": "support",
+            "map_id": "eichenwalde",
+        },
+    )
+    body = res.json()
+    kiriko_row = next(r for r in body["recommendations"] if r["hero_id"] == "kiriko")
+    assert kiriko_row["icon_url"].startswith("https://d15f34w2p8l1cc.cloudfront.net/")
+    assert kiriko_row["archetype_category"] == "의무관"

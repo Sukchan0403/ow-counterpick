@@ -1,19 +1,19 @@
 [
-  { "id": "reinhardt", "name": "라인하르트", "role": "tank", "archetype": "방벽 수문장" },
-  { "id": "orisa", "name": "오리사", "role": "tank", "archetype": "전선 고정수" },
-  { "id": "winston", "name": "윈스턴", "role": "tank", "archetype": "개시자" },
-  { "id": "dva", "name": "디바", "role": "tank", "archetype": "항공 저지" },
-  { "id": "zarya", "name": "자리야", "role": "tank", "archetype": "에너지 방벽" },
+  { "id": "reinhardt", "name": "라인하르트", "role": "tank", "archetype": "방벽 수문장", "archetype_category": "강건한 자", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/551fbe070c16fdfcc17f7f1de63af22c53e7d2f1340fc2f3172441504527bc4e.png" },
+  { "id": "orisa", "name": "오리사", "role": "tank", "archetype": "전선 고정수", "archetype_category": "투사", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a73958a28551f5254f3ab3f97c5f5f8d698a95c0b6a515d1a2b1caac169205a6.png" },
+  { "id": "winston", "name": "윈스턴", "role": "tank", "archetype": "개시자", "archetype_category": "개시자", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/46a10db3aa908c590ddc4e7606376a88143d1f1306ecfbea043263040f9529a5.png" },
+  { "id": "dva", "name": "디바", "role": "tank", "archetype": "항공 저지", "archetype_category": "개시자", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/df5a5532862d9292634fb3dc0e51a4705aa601de65e5e815513ccc663d84de56.png" },
+  { "id": "zarya", "name": "자리야", "role": "tank", "archetype": "에너지 방벽", "archetype_category": "투사", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9b6f63cc66ddf9d5e0862173c733cc0d2e574c5c89357798d91b93b2f95a7080.png" },
 
-  { "id": "genji", "name": "겐지", "role": "damage", "archetype": "근접 플랭커" },
-  { "id": "widowmaker", "name": "위도우메이커", "role": "damage", "archetype": "저격수" },
-  { "id": "tracer", "name": "트레이서", "role": "damage", "archetype": "고기동 교란" },
-  { "id": "sojourn", "name": "소전", "role": "damage", "archetype": "원거리 포격" },
+  { "id": "genji", "name": "겐지", "role": "damage", "archetype": "근접 플랭커", "archetype_category": "측면 공격가", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/156b12c20b1aea872c1eeb5bb37a7de1047b2ab30ecefd0663a8925badde1ea8.png" },
+  { "id": "widowmaker", "name": "위도우메이커", "role": "damage", "archetype": "저격수", "archetype_category": "명사수", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6e4702b45f196aaf51555cf57327322721f45458b17f5f0643ed008a88378259.png" },
+  { "id": "tracer", "name": "트레이서", "role": "damage", "archetype": "고기동 교란", "archetype_category": "측면 공격가", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4504f6f15cb3feaa92ecd38e01dcf751cb5abdac2e0bb52d0555727e53277502.png" },
+  { "id": "sojourn", "name": "소전", "role": "damage", "archetype": "원거리 포격", "archetype_category": "명사수", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/82b8c1b8765dcb9a0ba16e343c3516bf324c771ac81e9878473280216e70a889.png" },
 
-  { "id": "ana", "name": "아나", "role": "support", "archetype": "디나이얼 지원" },
-  { "id": "moira", "name": "모이라", "role": "support", "archetype": "근접 유지 지원" },
-  { "id": "kiriko", "name": "키리코", "role": "support", "archetype": "정찰 지원" },
-  { "id": "lucio", "name": "루시우", "role": "support", "archetype": "기동 지원" },
-  { "id": "baptiste", "name": "바티스트", "role": "support", "archetype": "생존 지원" },
-  { "id": "zenyatta", "name": "젠야타", "role": "support", "archetype": "원거리 지원" }
+  { "id": "ana", "name": "아나", "role": "support", "archetype": "디나이얼 지원", "archetype_category": "전술가", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/985b06beae46b7ba3ca87d1512d0fc62ca7f206ceca58ef16fc44d43a1cc84ed.png" },
+  { "id": "moira", "name": "모이라", "role": "support", "archetype": "근접 유지 지원", "archetype_category": "의무관", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f48f8485056d5d00dad195859188d23e50f7126b8b08b5646f46ef1b42f5e1de.png" },
+  { "id": "kiriko", "name": "키리코", "role": "support", "archetype": "정찰 지원", "archetype_category": "의무관", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/408603fe037e8576078eaac5eab2fb251489ced4003b11f5f522776d43d0b83d.png" },
+  { "id": "lucio", "name": "루시우", "role": "support", "archetype": "기동 지원", "archetype_category": "전술가", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/040bb13f5123ab93faad2f95627ba184608aef4b2469a4d3003859c7087df044.png" },
+  { "id": "baptiste", "name": "바티스트", "role": "support", "archetype": "생존 지원", "archetype_category": "전술가", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d4e6f1ca45d9f88fa89260787397f141a6f007b14e5b26698883b6a17bab9680.png" },
+  { "id": "zenyatta", "name": "젠야타", "role": "support", "archetype": "원거리 지원", "archetype_category": "전술가", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7d1546b1541a8afc39353f9337a408d6275a141b0432b7e560ef61579996b0fc.png" }
 ]
