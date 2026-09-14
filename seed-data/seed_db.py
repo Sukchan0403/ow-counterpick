@@ -34,7 +34,8 @@ CREATE TABLE IF NOT EXISTS heroes (
 CREATE TABLE IF NOT EXISTS maps (
     id TEXT PRIMARY KEY,
     name TEXT NOT NULL,
-    mode TEXT NOT NULL
+    mode TEXT NOT NULL,
+    image_url TEXT NOT NULL DEFAULT ''
 );
 
 CREATE TABLE IF NOT EXISTS counter_relations (
@@ -90,13 +91,17 @@ def main():
     if "archetype_category" not in existing_cols:
         conn.execute("ALTER TABLE heroes ADD COLUMN archetype_category TEXT NOT NULL DEFAULT ''")
 
+    existing_map_cols = {row[1] for row in conn.execute("PRAGMA table_info(maps)")}
+    if "image_url" not in existing_map_cols:
+        conn.execute("ALTER TABLE maps ADD COLUMN image_url TEXT NOT NULL DEFAULT ''")
+
     conn.executemany(
         "INSERT OR REPLACE INTO heroes (id, name, role, archetype, icon_url, archetype_category) "
         "VALUES (:id, :name, :role, :archetype, :icon_url, :archetype_category)",
         heroes,
     )
     conn.executemany(
-        "INSERT OR REPLACE INTO maps (id, name, mode) VALUES (:id, :name, :mode)",
+        "INSERT OR REPLACE INTO maps (id, name, mode, image_url) VALUES (:id, :name, :mode, :image_url)",
         maps,
     )
     conn.executemany(

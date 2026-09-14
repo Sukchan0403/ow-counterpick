@@ -108,6 +108,7 @@ class MapOut(BaseModel):
     id: str
     name: str
     mode: str
+    image_url: str = Field(default="", description="맵 스크린샷 URL. OverFast API에서 확보해 시드에 저장.")
     data_richness: DataRichness = Field(
         description=(
             "MapPicker.dc.html의 '데이터 풍부'/'데이터 보강 중' 배지. 저장된 값이 아니라 "

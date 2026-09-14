@@ -16,6 +16,7 @@ export interface MapInfo {
   id: string;
   name: string;
   mode: string; // 백엔드 원본 값은 영문 enum("hybrid"/"escort"/"control") — 표시할 땐 MODE_LABEL로 변환
+  image_url: string;
   data_richness: DataRichness;
 }
 
@@ -85,6 +86,9 @@ export const MODE_LABEL: Record<string, string> = {
   hybrid: "혼합",
   escort: "호위",
   control: "점령",
+  clash: "격돌",
+  push: "밀기",
+  flashpoint: "플래시포인트",
 };
 
 export const RICHNESS_LABEL: Record<DataRichness, string> = {

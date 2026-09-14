@@ -24,7 +24,8 @@ CREATE TABLE heroes (
     archetype_category TEXT NOT NULL DEFAULT ''
 );
 CREATE TABLE maps (
-    id TEXT PRIMARY KEY, name TEXT NOT NULL, mode TEXT NOT NULL
+    id TEXT PRIMARY KEY, name TEXT NOT NULL, mode TEXT NOT NULL,
+    image_url TEXT NOT NULL DEFAULT ''
 );
 CREATE TABLE counter_relations (
     hero_id TEXT NOT NULL REFERENCES heroes(id),
@@ -82,8 +83,11 @@ _conn.executemany(
     ],
 )
 _conn.executemany(
-    "INSERT INTO maps VALUES (?, ?, ?)",
-    [("eichenwalde", "아이헨발데", "혼합"), ("kings_row", "왕의 길", "혼합")],
+    "INSERT INTO maps VALUES (?, ?, ?, ?)",
+    [
+        ("eichenwalde", "아이헨발데", "혼합", "https://overfast-api.tekrop.fr/static/maps/eichenwalde.jpg"),
+        ("kings_row", "왕의 길", "혼합", "https://overfast-api.tekrop.fr/static/maps/kings-row.jpg"),
+    ],
 )
 _conn.executemany(
     "INSERT INTO counter_relations VALUES (?, ?, ?)",

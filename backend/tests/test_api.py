@@ -21,6 +21,7 @@ def test_get_maps(client):
     maps = {m["id"]: m for m in res.json()}
     assert maps["eichenwalde"]["data_richness"] == "growing"
     assert maps["kings_row"]["data_richness"] == "rich"
+    assert maps["eichenwalde"]["image_url"].startswith("https://overfast-api.tekrop.fr/")
 
 
 def test_get_meta(client):

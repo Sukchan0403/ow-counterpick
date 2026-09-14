@@ -151,8 +151,8 @@
 
 | 테이블 | 컬럼 | 설명 |
 |---|---|---|
-| `heroes` | id, name, role, archetype | 영웅 목록 (역할: 탱커/딜러/힐러). `archetype`은 목업 대조 후 추가된 컬럼 (예: "방벽 수문장") — 초안 단계에선 `tagline`으로 불렀으나 실제 구현에서 `archetype`으로 확정 |
-| `maps` | id, name, mode | 맵 목록 (모드는 참고용 메타데이터). `data_richness`는 컬럼이 아니라 `map_hero_ratings` 등록 건수로 API 응답 시점에 계산 |
+| `heroes` | id, name, role, archetype, icon_url, archetype_category | 영웅 목록 (역할: 탱커/딜러/힐러). `archetype`은 목업 대조 후 추가된 컬럼 (예: "방벽 수문장") — 초안 단계에선 `tagline`으로 불렀으나 실제 구현에서 `archetype`으로 확정 |
+| `maps` | id, name, mode, image_url | 맵 목록 (모드는 참고용 메타데이터). `image_url`(2026-09-14 추가)은 OverFast API에서 확보한 맵 스크린샷 URL. `data_richness`는 컬럼이 아니라 `map_hero_ratings` 등록 건수로 API 응답 시점에 계산 |
 | `counter_relations` | hero_id, countered_hero_id, reason | hero_id가 countered_hero_id를 카운터함 |
 | `synergy_relations` | hero_id, synergy_hero_id, reason | 두 영웅이 시너지가 좋음 |
 | `map_hero_ratings` | map_id, hero_id, rating, reason | 맵에서 영웅의 강함/보통/약함 평가. "보통"도 검토완료 표시를 위해 명시적으로 행을 기록한다 (건너뛰지 않음) |
@@ -241,17 +241,20 @@ Map {
   mode: string              // 저장값은 영문 enum: "control" | "clash" | "escort" |
                             // "hybrid" | "flashpoint" | "push" (총 6종). 화면엔
                             // 프론트가 frontend/src/lib/types.ts의 MODE_LABEL로
-                            // 한글 변환해서 보여준다("점령"/"쟁탈"/"호위"/"혼합"/
+                            // 한글 변환해서 보여준다("점령"/"격돌"/"호위"/"혼합"/
                             // "플래시포인트"/"밀기") — 초안의 "모드는 한글 문자열"
-                            // 이라던 가정은 틀렸었음.
-                            // 주의: 맵 선택 모달 목업 대조 결과 "clash"/"flashpoint"/
-                            // "push" 3종이 기존 문서(3종만 기재)에서 누락돼있던 걸
-                            // 발견해 추가함. `maps` 테이블엔 6종 모드의 맵이 전부
-                            // 등록돼 있으나, 쟁탈/플래시포인트/밀기 맵들은
-                            // `map_hero_ratings` 큐레이션이 아직 안 끝나 목업에서
-                            // "데이터 보강 중" 배지로 표시됨 — 시드 데이터를
-                            // 잘 알려진 관계부터 채워나간다는 기존 원칙대로
-                            // 진행 중인 정상 상태.
+                            // 이라던 가정은 틀렸었음. (2026-09-14: 위 댓글이 오래
+                            // "쟁탈"로 잘못 적어뒀던 것도 "격돌"로 정정)
+                            // 2026-09-14: `maps` 테이블에 6종 모드 맵 14개(격돌
+                            // 2·밀기 2·플래시포인트 2 신규 추가, OverFast API
+                            // 기준)가 전부 실제로 등록됨 — 격돌/밀기/플래시포인트
+                            // 맵들은 `map_hero_ratings` 큐레이션이 아직 안 끝나
+                            // "데이터 보강 중" 배지로 표시됨(정상 진행 상태).
+  image_url: string        // 맵 스크린샷 URL. OverFast API(overfast-api.tekrop.fr)에서
+                            // 확보해 시드에 저장(2026-09-14 추가, heroes.icon_url과
+                            // 같은 패턴). 없으면 빈 문자열 — 프론트가 단색 배경으로
+                            // 폴백(HeroAvatar의 onError 폴백과 달리, CSS
+                            // backgroundImage/backgroundColor 레이어링만으로 처리).
   data_richness: "rich" | "growing"   // 저장값 아님. map_hero_ratings에 등록된 이
                                        // 맵의 행 수가 MAP_DATA_RICH_THRESHOLD(현재
                                        // 3) 이상이면 "rich", 미만이면 "growing".
@@ -406,7 +409,7 @@ RecommendationResponse {
 | 맵 선택 모달의 "데이터 풍부" / "데이터 보강 중" 그룹 배지 | 없음 | `Map.data_richness` 필드 추가(저장값 아닌 계산값 — `map_hero_ratings` 등록 건수 기준). 프론트는 그룹 내 최소값 기준으로 배지 표시 |
 | 헤더의 "시즌 4 시드 데이터 · v0.3" 배지 | 없음 | `GET /api/meta` 엔드포인트 신규 추가 (`config.SEED_SEASON`/`SEED_DATA_VERSION` 상수 반환) |
 | 맵 버튼의 모드 표시("아이헨발데 · 혼합") | 프론트 버그: `mode`가 영문 enum(`hybrid` 등)인데 그대로 렌더링해서 "아이헨발데 · hybrid"처럼 영한 혼용될 뻔함 | 실제 API 응답을 curl로 확인해 발견. `frontend/src/lib/types.ts`에 `MODE_LABEL`/`modeLabel()` 추가해 표시 시점에 한글 변환 |
-| 맵 선택 모달의 모드 그룹 6종(점령·쟁탈·호위·혼합·플래시포인트·밀기, 14개 맵) | 스키마 문서엔 `mode` enum이 3종("hybrid"/"escort"/"control")만 기재돼 있어 "clash"/"flashpoint"/"push" 3종 누락 | `Map.mode` enum 설명에 6종 전부 추가. `maps` 테이블엔 6종 맵이 모두 등록돼 있음 — 쟁탈/플래시포인트/밀기 맵은 `map_hero_ratings` 큐레이션이 아직 안 끝나 "데이터 보강 중"으로 표시되는 정상 진행 상태(별도 이슈 아님) |
+| 맵 선택 모달의 모드 그룹 6종(점령·격돌·호위·혼합·플래시포인트·밀기, 14개 맵) | 스키마 문서엔 `mode` enum이 3종("hybrid"/"escort"/"control")만 기재돼 있어 "clash"/"flashpoint"/"push" 3종 누락 | `Map.mode` enum 설명에 6종 전부 추가. `maps` 테이블엔 6종 맵이 모두 등록돼 있음(2026-09-14, image_url 포함) — 격돌/플래시포인트/밀기 맵은 `map_hero_ratings` 큐레이션이 아직 안 끝나 "데이터 보강 중"으로 표시되는 정상 진행 상태(별도 이슈 아님) |
 | "드래프트 시뮬레이션" 상단 탭 | 설계 문서에 "추후 별도 스펙"으로 이미 범위 밖 명시됨 | 조치 불필요 |
 | 입력 폼 검증 오류 문구 (빈 포지션/맵 필수) | 에러 처리 표에 프론트 검증으로만 명시 | 422 상태 코드 + 응답 예시로 백엔드 방어 검증 명시. 실제 구현엔 알 수 없는 hero_id/map_id를 걸러내는 400도 추가로 존재 |
 

@@ -55,9 +55,15 @@ export function MapPickerModal({ maps, selectedId, onSelect, onClose }: Props) {
                       selectedId === map.id ? styles.cardSelected : ""
                     }`}
                     style={{
-                      background: `linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.55) 100%), ${colorForMap(
-                        map.id,
-                      )}`,
+                      // 실제 맵 스크린샷을 배경으로 쓰고, 로드 전/실패 시엔 아래 깔린
+                      // backgroundColor(colorForMap)가 그대로 드러난다 — <img onError> 같은
+                      // 별도 처리 없이 CSS 레이어링만으로 안전한 폴백이 된다.
+                      backgroundColor: colorForMap(map.id),
+                      backgroundImage: map.image_url
+                        ? `linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.55) 100%), url(${map.image_url})`
+                        : `linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.55) 100%)`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
                     }}
                     onClick={() => {
                       onSelect(map.id);

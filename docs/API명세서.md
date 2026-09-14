@@ -46,10 +46,13 @@
 {
   id: string
   name: string
-  mode: string                 // 저장값은 영문 enum. 현재 시드 데이터에는
-                                // "control" | "escort" | "hybrid" 3종만 등록돼
-                                // 있음 (design.md에 "clash"/"flashpoint"/"push"
-                                // 3종 추가 예정이 계획돼 있으나 아직 시드 미반영)
+  mode: string                 // 저장값은 영문 enum: "control" | "escort" | "hybrid" |
+                                // "clash" | "push" | "flashpoint" (6종 전부 시드 등록됨,
+                                // 2026-09-14 갱신 — clash/push/flashpoint는 아직
+                                // map_hero_ratings 큐레이션 전이라 growing 고정)
+  image_url: string            // 맵 스크린샷 URL. OverFast API(overfast-api.tekrop.fr)에서
+                                // 확보해 시드에 저장. 없으면 빈 문자열(프론트가 단색
+                                // 배경으로 폴백).
   data_richness: "rich" | "growing"
 }
 ```
@@ -164,8 +167,9 @@ DB 조회 없이 `config.SEED_SEASON`/`config.SEED_DATA_VERSION` 상수를 그�
 
 ## 참고 — 아직 남은 갭
 
-- 맵 6개 모드 중 `clash`/`flashpoint`/`push` 3개는 아직 `maps.json`에 시드
-  데이터가 없다 (`hybrid`/`escort`/`control`만 존재).
+- 6개 모드 맵은 전부 시드에 등록됐지만(2026-09-14), `clash`/`push`/`flashpoint`
+  맵들은 `map_hero_ratings` 큐레이션이 아직 없어 `data_richness`가 항상
+  `growing`이다.
 - `MUST_PICK_PERCENTAGE_THRESHOLD`(90)는 아직 실제 시드 데이터 기준 실증
   검증 전이다 — `backend/scripts/audit_must_pick_distribution.py`로 분포를
   확인한 뒤 조정 여부를 판단해야 한다.

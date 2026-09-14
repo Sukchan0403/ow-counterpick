@@ -9,6 +9,12 @@ export const MAP_COLORS: Record<string, string> = {
   junkertown: "#5a4a2b",
   ilios: "#2f4a5a",
   oasis: "#3a5a4f",
+  hanaoka: "#5a2f3a",
+  throne_of_anubis: "#5a4a2f",
+  colosseo: "#4a2f3a",
+  new_queen_street: "#2f3a5a",
+  suravasa: "#2f5a4f",
+  new_junk_city: "#5a3a2f",
 };
 
 const FALLBACK_COLORS = ["#2b4a3f", "#3a3f52", "#4a3a2b", "#3f5a4a"];

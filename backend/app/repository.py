@@ -27,10 +27,10 @@ def fetch_all_maps_with_richness(conn: sqlite3.Connection) -> list[dict]:
     '데이터 풍부'/'데이터 보강 중' 배지)."""
     rows = conn.execute(
         """
-        SELECT m.id, m.name, m.mode, COUNT(r.hero_id) AS rating_count
+        SELECT m.id, m.name, m.mode, m.image_url, COUNT(r.hero_id) AS rating_count
         FROM maps m
         LEFT JOIN map_hero_ratings r ON r.map_id = m.id
-        GROUP BY m.id, m.name, m.mode
+        GROUP BY m.id, m.name, m.mode, m.image_url
         """
     ).fetchall()
     return [
@@ -38,6 +38,7 @@ def fetch_all_maps_with_richness(conn: sqlite3.Connection) -> list[dict]:
             "id": row["id"],
             "name": row["name"],
             "mode": row["mode"],
+            "image_url": row["image_url"],
             "data_richness": "rich" if row["rating_count"] >= MAP_DATA_RICH_THRESHOLD else "growing",
         }
         for row in rows
