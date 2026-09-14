@@ -137,8 +137,9 @@ def test_recommendations_unknown_map_returns_400(client):
 
 
 def test_recommendations_missing_required_field_returns_422(client):
-    """empty_position/map_id 미입력 -> pydantic 검증 실패(422). 프론트에서
-    막아야 하는 케이스지만 백엔드도 클라이언트를 신뢰하지 않고 막아야 한다."""
+    """map_id 미입력 -> pydantic 검증 실패(422). empty_position은 이제 선택 필드라
+    빠져도 422를 유발하지 않는다 — 프론트에서 막아야 하는 케이스지만 백엔드도
+    클라이언트를 신뢰하지 않고 막아야 한다."""
     res = client.post("/api/recommendations", json={"enemy_heroes": [], "our_heroes": []})
     assert res.status_code == 422
 
@@ -256,3 +257,46 @@ def test_recommendation_includes_icon_url_and_archetype_category(client):
     kiriko_row = next(r for r in body["recommendations"] if r["hero_id"] == "kiriko")
     assert kiriko_row["icon_url"].startswith("https://d15f34w2p8l1cc.cloudfront.net/")
     assert kiriko_row["archetype_category"] == "의무관"
+
+
+def test_recommendations_infers_empty_position_from_our_heroes(client):
+    """empty_position을 생략하고 우리 팀 4명(탱커1·딜러2·힐러1)만 주면,
+    부족한 힐러 자리를 자동으로 판단해서 그 역할의 후보만 추천해야 한다."""
+    res = client.post(
+        "/api/recommendations",
+        json={
+            "enemy_heroes": [],
+            "our_heroes": ["reinhardt", "genji", "widowmaker", "ana"],
+            "map_id": "eichenwalde",
+        },
+    )
+    assert res.status_code == 200
+    body = res.json()
+    assert body["empty_position"] == "support"
+    assert all(r["role"] == "support" for r in body["recommendations"])
+
+
+def test_recommendations_auto_infer_requires_exactly_four_our_heroes(client):
+    """empty_position 생략 + our_heroes가 4명이 아니면 자동 판단이 불가능하므로 400."""
+    res = client.post(
+        "/api/recommendations",
+        json={
+            "enemy_heroes": [],
+            "our_heroes": ["ana"],
+            "map_id": "eichenwalde",
+        },
+    )
+    assert res.status_code == 400
+
+
+def test_recommendations_auto_infer_rejects_invalid_composition(client):
+    """힐러 3명처럼 표준 조합(1·2·2)의 정원을 초과한 구성은 400."""
+    res = client.post(
+        "/api/recommendations",
+        json={
+            "enemy_heroes": [],
+            "our_heroes": ["kiriko", "lucio", "moira", "genji"],
+            "map_id": "eichenwalde",
+        },
+    )
+    assert res.status_code == 400

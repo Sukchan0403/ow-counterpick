@@ -3,13 +3,14 @@
 import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import { HeroPickerPanel } from "@/components/HeroPickerPanel";
-import { RoleSelectPanel } from "@/components/RoleSelectPanel";
 import { MapPickerModal } from "@/components/MapPickerModal";
 import { ResultsPanel } from "@/components/ResultsPanel";
 import { ErrorScreen } from "@/components/ErrorScreen";
 import { fetchHeroes, fetchMaps, fetchMeta, postRecommendations, ApiValidationError } from "@/lib/api";
-import type { Hero, MapInfo, MetaInfo, Role, RecommendationResponse } from "@/lib/types";
+import type { Hero, MapInfo, MetaInfo, RecommendationResponse } from "@/lib/types";
 import { modeLabel } from "@/lib/types";
+
+const OUR_TEAM_SIZE = 4;
 
 type CatalogState = "loading" | "ready" | "error";
 type SubmitPhase = "idle" | "loading" | "success" | "error";
@@ -22,7 +23,6 @@ export default function Home() {
 
   const [enemyHeroes, setEnemyHeroes] = useState<string[]>([]);
   const [ourHeroes, setOurHeroes] = useState<string[]>([]);
-  const [emptyPosition, setEmptyPosition] = useState<Role | null>(null);
   const [mapId, setMapId] = useState<string | null>(null);
   const [mapPickerOpen, setMapPickerOpen] = useState(false);
   const [showValidation, setShowValidation] = useState(false);
@@ -63,7 +63,7 @@ export default function Home() {
   }, []);
 
   async function handleSubmit() {
-    if (!emptyPosition || !mapId) {
+    if (ourHeroes.length !== OUR_TEAM_SIZE || !mapId) {
       setShowValidation(true);
       return;
     }
@@ -74,7 +74,6 @@ export default function Home() {
       const res = await postRecommendations({
         enemy_heroes: enemyHeroes,
         our_heroes: ourHeroes,
-        empty_position: emptyPosition,
         map_id: mapId,
       });
       setResult(res);
@@ -121,25 +120,18 @@ export default function Home() {
               onChange={setEnemyHeroes}
             />
             <HeroPickerPanel
-              title="우리 팀 픽"
+              title="우리 팀 픽 (4명 모두)"
               heroes={heroes}
               selectedIds={ourHeroes}
-              maxCount={4}
+              maxCount={OUR_TEAM_SIZE}
               onChange={setOurHeroes}
             />
           </div>
-
-          <div className={styles.section}>
-            <span className={styles.sectionLabel}>빈 포지션</span>
-            <RoleSelectPanel
-              value={emptyPosition}
-              onChange={setEmptyPosition}
-              hasError={showValidation}
-            />
-            {showValidation && !emptyPosition && (
-              <div className={styles.errorText}>빈 포지션을 선택해주세요.</div>
-            )}
-          </div>
+          {showValidation && ourHeroes.length !== OUR_TEAM_SIZE && (
+            <div className={styles.errorText}>
+              우리 팀 픽 4명을 모두 선택해주세요 — 남은 포지션은 자동으로 판단됩니다.
+            </div>
+          )}
 
           <div className={styles.section}>
             <span className={styles.sectionLabel}>맵</span>
@@ -187,7 +179,11 @@ export default function Home() {
 
       {submitPhase === "success" && result && (
         <>
-          <ResultsPanel recommendations={result.recommendations} notice={result.notice} />
+          <ResultsPanel
+            recommendations={result.recommendations}
+            emptyPosition={result.empty_position}
+            notice={result.notice}
+          />
           <button type="button" className={styles.resetLink} onClick={() => setSubmitPhase("idle")}>
             ← 입력으로 돌아가기
           </button>

@@ -1,16 +1,21 @@
-import type { HeroRecommendation } from "@/lib/types";
+import type { HeroRecommendation, Role } from "@/lib/types";
 import { ROLE_LABEL } from "@/lib/types";
 import { HeroAvatar } from "./HeroAvatar";
 import styles from "./ResultsPanel.module.css";
 
 interface Props {
   recommendations: HeroRecommendation[];
+  emptyPosition: Role;
   notice: string | null;
 }
 
-export function ResultsPanel({ recommendations, notice }: Props) {
+export function ResultsPanel({ recommendations, emptyPosition, notice }: Props) {
   return (
     <div>
+      <div className={styles.inferredPosition}>
+        부족한 포지션 · <strong>{ROLE_LABEL[emptyPosition]}</strong>
+      </div>
+
       {notice && <div className={styles.notice}>{notice}</div>}
 
       <div className={styles.legend}>

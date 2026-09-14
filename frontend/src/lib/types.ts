@@ -22,7 +22,8 @@ export interface MapInfo {
 export interface RecommendationRequest {
   enemy_heroes: string[];
   our_heroes: string[];
-  empty_position: Role;
+  // 생략하면 백엔드가 our_heroes 4명의 역할 구성으로 빈 포지션을 자동 판단한다.
+  empty_position?: Role;
   map_id: string;
 }
 
@@ -50,6 +51,8 @@ export interface HeroRecommendation {
 
 export interface RecommendationResponse {
   recommendations: HeroRecommendation[];
+  // 실제로 추천에 쓰인 포지션 — 요청에서 생략됐으면 자동 판단된 값.
+  empty_position: Role;
   notice: string | null;
 }
 

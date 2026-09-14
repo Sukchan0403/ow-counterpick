@@ -200,11 +200,14 @@
 | GET | `/api/meta` | 시드 데이터 시즌/버전 정보 (헤더 배지용) | - | `Meta` | 200, 502 |
 | POST | `/api/recommendations` | 빈 포지션 추천 영웅 순위 조회 | `RecommendationRequest` | `RecommendationResponse` | 200, 400, 422, 502 |
 
-- **422**: `empty_position` 또는 `map_id`가 요청 본문에 아예 없을 때 (pydantic 검증
-  실패). 목업의 입력 검증 오류 화면은 프론트에서 먼저 막지만, 백엔드도 방어적으로
-  동일 검증을 한다.
+- **422**: `map_id`가 요청 본문에 아예 없을 때 (pydantic 검증 실패). `empty_position`은
+  2026-09-14 변경으로 선택 필드가 돼서 빠져도 422를 유발하지 않는다(아래
+  "빈 포지션 자동 판단" 참고). 목업의 입력 검증 오류 화면은 프론트에서 먼저
+  막지만, 백엔드도 방어적으로 동일 검증을 한다.
 - **400**: 요청 본문 형식은 맞지만 `enemy_heroes`/`our_heroes`/`map_id`에 DB에 없는
-  id가 섞여 있을 때 (예: 오타, 삭제된 영웅 id).
+  id가 섞여 있을 때 (예: 오타, 삭제된 영웅 id). `empty_position`을 생략했는데
+  `our_heroes`가 4명이 아니거나, 4명이어도 표준 조합(탱커1·딜러2·힐러2)으로
+  설명되지 않는 구성(예: 탱커 2명, 또는 두 역할이 동시에 부족)일 때도 400.
 - **502**: 예상 못 한 서버 오류. `BackendError.dc.html` 화면("잠시 후 다시
   시도해주세요" + 재시도 버튼)과 매칭.
 
@@ -282,16 +285,43 @@ DB 조회 없이 `config.py`의 `SEED_SEASON`/`SEED_DATA_VERSION` 상수를 그�
 RecommendationRequest {
   enemy_heroes: string[]    // 상대 팀이 픽한 영웅 id 목록, 0~5개 (선택 사항)
   our_heroes: string[]      // 우리 팀이 이미 픽한 영웅 id 목록, 0~4개 (선택 사항)
-  empty_position: "tank" | "damage" | "support"   // 필수
+  empty_position?: "tank" | "damage" | "support"   // 선택 (2026-09-14 변경 — 아래 참고)
   map_id: string                                   // 필수
 }
 ```
 주의: 초안엔 `enemy_team`/`ally_team`으로 썼으나 실제 구현은
 `enemy_heroes`/`our_heroes`로 확정.
 
+### 빈 포지션 자동 판단 (2026-09-14 변경)
+
+**배경**: 실사용 테스트에서 두 가지 문제가 지적됐다 — (1) `our_heroes`의 역할
+구성에 아무 제약이 없어서 탱커 4명처럼 비현실적인 조합도 그대로 받아들여졌고,
+(2) 급박한 실전 밴프준 상황에서 "우리 팀 픽"과 별개로 "빈 포지션"을 매번
+수동으로 또 선택해야 하는 게 불필요한 단계였다. 사용자는 이미 자기 팀에 어떤
+역할이 빠졌는지 알고 있으므로(그게 바로 자신이 채울 자리이므로), 그 정보를
+다시 입력받을 필요가 없다.
+
+**해결**: `empty_position`을 필수에서 선택으로 바꿨다.
+- 값을 명시하면 기존과 동일하게 그 포지션 기준으로 추천한다(하위 호환 —
+  `our_heroes`가 4명 미만인 "이른 단계" 시나리오에서 여전히 유용).
+- 생략하면 `our_heroes`가 **정확히 4명**이어야 하고, 그 4명의 role을
+  `config.TEAM_ROLE_COMPOSITION`(탱커1·딜러2·힐러2, 표준 5인 조합) 기준과
+  비교해 정확히 한 역할만 1명 부족하면 그 역할을 빈 포지션으로 자동 채택한다
+  (`backend/app/composition.py`의 `infer_empty_position`). 4명이 아니거나,
+  조합이 표준으로 설명 안 되면(정원 초과, 또는 두 역할이 동시에 부족) 400으로
+  막고 어떻게 고쳐야 하는지 안내한다.
+- 프론트(`frontend/src/app/page.tsx`)는 이 변경에 맞춰 "빈 포지션" 수동 선택
+  UI(`RoleSelectPanel`)를 완전히 없앴다 — "우리 팀 픽 (4명 모두)"만 채우면
+  끝. 응답의 `empty_position` 필드(아래 참고)로 실제 적용된 포지션을 결과
+  화면 상단에 표시한다.
+
 **POST /api/recommendations — RecommendationResponse**
 ```
 RecommendationResponse {
+  empty_position: "tank" | "damage" | "support"   // 실제로 추천에 쓰인 포지션.
+                                                    // 요청에서 생략됐으면 자동
+                                                    // 판단된 값 (위 "빈 포지션
+                                                    // 자동 판단" 참고).
   recommendations: [
     {
       hero_id: string
@@ -332,14 +362,16 @@ RecommendationResponse {
                           // 제한적임을 알리는 안내 문구.
 }
 ```
-주의: 초안엔 응답 최상위에 `position` 필드가 있었으나, 요청의 `empty_position`을
-프론트가 이미 들고 있어서 응답에서 반복하지 않기로 했다(불필요한 중복 제거).
+주의: 초안엔 응답 최상위에 `position` 필드가 없다고 봤었으나(요청의
+`empty_position`을 프론트가 이미 들고 있어서 불필요한 중복이라 판단), 2026-09-14
+변경으로 `empty_position`이 요청에서 생략 가능해지면서 프론트가 "실제로 어느
+포지션이 적용됐는지" 알 방법이 응답 말고는 없어졌다 — 그래서 응답에
+`empty_position`을 다시 추가했다.
 
-**422 응답 예시** (empty_position/map_id 미입력)
+**422 응답 예시** (map_id 미입력)
 ```
 {
   "detail": [
-    { "loc": ["body", "empty_position"], "msg": "field required", "type": "value_error.missing" },
     { "loc": ["body", "map_id"], "msg": "field required", "type": "value_error.missing" }
   ]
 }

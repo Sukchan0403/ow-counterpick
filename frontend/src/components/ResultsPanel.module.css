@@ -1,3 +1,13 @@
+.inferredPosition {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.inferredPosition strong {
+  color: var(--text);
+}
+
 .notice {
   background: var(--accent-dim);
   border: 1px solid var(--accent);

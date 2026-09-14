@@ -1,6 +1,7 @@
 """POST /api/recommendations — 스펙의 핵심 엔드포인트."""
 from fastapi import APIRouter, HTTPException
 
+from app.composition import InvalidTeamCompositionError, infer_empty_position
 from app.database import db_session
 from app.models import (
     HeroRecommendation,
@@ -52,8 +53,27 @@ def post_recommendations(payload: RecommendationRequest):
         # 상대 팀 픽까지 제외하면 안 된다.
         already_picked = set(payload.our_heroes)
 
+        # --- 빈 포지션 결정: 명시적으로 안 왔으면 our_heroes 4명의 역할 구성으로
+        # 자동 판단한다 (급박한 실전 상황에서 사용자가 직접 골라야 했던 단계를 없앰) ---
+        if payload.empty_position is not None:
+            empty_position = payload.empty_position
+        else:
+            if len(payload.our_heroes) != 4:
+                raise HTTPException(
+                    status_code=400,
+                    detail=(
+                        "포지션을 자동으로 판단하려면 우리 팀 픽 4명을 모두 입력하거나, "
+                        "빈 포지션을 직접 선택해주세요."
+                    ),
+                )
+            our_hero_roles = [r["role"] for r in fetch_heroes_by_ids(conn, payload.our_heroes)]
+            try:
+                empty_position = infer_empty_position(our_hero_roles)
+            except InvalidTeamCompositionError as exc:
+                raise HTTPException(status_code=400, detail=exc.message) from exc
+
         # --- 후보 조회: 빈 포지션에 해당하는, 아직 안 나온 영웅 전부 ---
-        role_heroes = fetch_heroes_by_role(conn, payload.empty_position)
+        role_heroes = fetch_heroes_by_role(conn, empty_position)
         candidates = [
             {
                 "id": r["id"],
@@ -138,4 +158,6 @@ def post_recommendations(payload: RecommendationRequest):
     if not payload.enemy_heroes and not payload.our_heroes:
         notice = NO_PICKS_NOTICE
 
-    return RecommendationResponse(recommendations=recommendations, notice=notice)
+    return RecommendationResponse(
+        recommendations=recommendations, empty_position=empty_position, notice=notice
+    )

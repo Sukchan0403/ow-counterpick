@@ -19,7 +19,14 @@ class RecommendationRequest(BaseModel):
     our_heroes: list[str] = Field(
         default_factory=list, description="우리 팀이 이미 픽한 영웅 id 목록 (최대 4)"
     )
-    empty_position: Role = Field(description="채워야 할 빈 포지션")
+    empty_position: Role | None = Field(
+        default=None,
+        description=(
+            "채워야 할 빈 포지션. 생략하면 our_heroes 4명의 역할 구성(1탱커·2딜러·2힐러 "
+            "기준으로 정확히 한 자리가 빈 경우)을 보고 자동으로 판단한다 — 이 경우 "
+            "our_heroes가 정확히 4명이어야 한다."
+        ),
+    )
     map_id: str = Field(description="맵 id")
 
 
@@ -70,6 +77,9 @@ class HeroRecommendation(BaseModel):
 
 class RecommendationResponse(BaseModel):
     recommendations: list[HeroRecommendation]
+    empty_position: Role = Field(
+        description="실제로 추천에 사용된 포지션. 요청에서 생략됐으면 자동 판단된 값."
+    )
     notice: str | None = Field(
         default=None,
         description="상대/우리 팀 픽 정보가 없을 때 등 추천 근거가 제한적임을 알리는 안내 문구",

@@ -51,6 +51,10 @@ MUST_PICK_PERCENTAGE_THRESHOLD = 90
 # 해당 맵에 큐레이션된 map_hero_ratings row 수가 이 값 이상이면 "rich".
 MAP_DATA_RICH_THRESHOLD = 3
 
+# 오버워치 표준 5인 조합(1탱커·2딜러·2힐러). our_heroes 4명의 역할 구성과 비교해
+# 빈 포지션을 자동으로 판단할 때 이 기준을 쓴다 (empty_position을 생략한 요청).
+TEAM_ROLE_COMPOSITION = {"tank": 1, "damage": 2, "support": 2}
+
 # 목업(Main.dc.html) 헤더의 "시즌 4 시드 데이터 · v0.3" 배지용 값.
 # 시드 데이터를 갱신할 때마다 이 값도 같이 올려주면 됨 — DB에 저장하는 값이
 # 아니라 배포 시점의 시드 데이터 버전을 코드에서 직접 표기하는 정적 메타데이터.

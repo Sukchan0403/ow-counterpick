@@ -19,9 +19,12 @@
 | GET | `/api/meta` | 시드 데이터 시즌/버전 정보 | - | `Meta` | 200, 502 |
 | POST | `/api/recommendations` | 빈 포지션 추천 영웅 순위 조회 | `RecommendationRequest` | `RecommendationResponse` | 200, 400, 422, 502 |
 
-- **422**: `empty_position` 또는 `map_id`가 요청 본문에 아예 없을 때 (pydantic 검증 실패)
+- **422**: `map_id`가 요청 본문에 아예 없을 때 (pydantic 검증 실패). `empty_position`은
+  선택 필드라 생략해도 422가 나지 않음.
 - **400**: 요청 형식은 맞지만 `enemy_heroes`/`our_heroes`/`map_id`에 존재하지 않는 id가
-  섞여 있거나, 팀 인원 제한(상대 5명/우리 4명)을 초과했을 때
+  섞여 있거나, 팀 인원 제한(상대 5명/우리 4명)을 초과했을 때. `empty_position`을
+  생략했는데 `our_heroes`가 정확히 4명이 아니거나, 4명이어도 표준 조합
+  (탱커1·딜러2·힐러2)으로 설명 안 되는 구성일 때도 400.
 - **502**: 예상 못 한 서버 오류 (`main.py`의 전역 예외 핸들러가 통일 처리)
 
 ## 스키마
@@ -67,7 +70,7 @@ DB 조회 없이 `config.SEED_SEASON`/`config.SEED_DATA_VERSION` 상수를 그�
 {
   enemy_heroes: string[]   // 상대 팀 픽 영웅 id, 0~5개 (선택)
   our_heroes: string[]     // 우리 팀 픽 영웅 id, 0~4개 (선택)
-  empty_position: "tank" | "damage" | "support"   // 필수
+  empty_position?: "tank" | "damage" | "support"   // 선택. 생략하면 아래 자동 판단
   map_id: string                                   // 필수
 }
 ```
@@ -75,9 +78,17 @@ DB 조회 없이 `config.SEED_SEASON`/`config.SEED_DATA_VERSION` 상수를 그�
 영웅이라도 우리 팀 후보에서 제외되지 않는다(미러 픽 허용). 후보에서 제외되는 건
 `our_heroes`에 이미 들어있는 영웅뿐이다.
 
+**빈 포지션 자동 판단**: `empty_position`을 생략하면 `our_heroes`가 정확히
+4명이어야 하고, `config.TEAM_ROLE_COMPOSITION`(탱커1·딜러2·힐러2) 기준으로
+정확히 한 역할만 1명 부족할 때 그 역할을 자동 채택한다
+(`backend/app/composition.py`). 4명이 아니거나 구성이 표준으로 설명 안 되면
+(정원 초과, 또는 두 역할이 동시에 부족) 400.
+
 ### RecommendationResponse (`POST /api/recommendations` 응답 본문)
 ```
 {
+  empty_position: "tank" | "damage" | "support"  // 실제로 추천에 쓰인 포지션.
+                                                   // 요청에서 생략됐으면 자동 판단된 값
   recommendations: [
     {
       hero_id: string
@@ -138,7 +149,7 @@ DB 조회 없이 `config.SEED_SEASON`/`config.SEED_DATA_VERSION` 상수를 그�
 
 **422** (필수 필드 누락)
 ```json
-{ "detail": [ { "loc": ["body", "empty_position"], "msg": "field required" } ] }
+{ "detail": [ { "loc": ["body", "map_id"], "msg": "field required" } ] }
 ```
 
 **400** (존재하지 않는 영웅/맵 id, 또는 팀 인원 초과)
