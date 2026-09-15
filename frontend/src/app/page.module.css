@@ -2,7 +2,7 @@
   min-height: 100vh;
   max-width: 720px;
   margin: 0 auto;
-  padding: 24px 20px 60px;
+  padding: 14px 20px 60px;
 }
 
 .header {
@@ -10,7 +10,7 @@
   align-items: baseline;
   justify-content: space-between;
   gap: 8px;
-  margin-bottom: 4px;
+  margin-bottom: 12px;
 }
 
 .metaBadge {
@@ -39,12 +39,6 @@
 
 .wordmarkAccent {
   color: var(--accent);
-}
-
-.subtitle {
-  font-size: 13px;
-  color: var(--text-muted);
-  margin-bottom: 24px;
 }
 
 .section {

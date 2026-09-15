@@ -109,7 +109,6 @@ export default function Home() {
           </span>
         )}
       </div>
-      <div className={styles.subtitle}>실시간 밴프준 보조 (개인 포트폴리오 프로젝트)</div>
 
       {catalogState === "loading" && <div className={styles.centerNote}>불러오는 중...</div>}
 
