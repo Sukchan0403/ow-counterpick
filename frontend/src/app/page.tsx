@@ -13,6 +13,7 @@ import type { Hero, MapInfo, MetaInfo, RecommendationResponse, Role } from "@/li
 import { modeLabel } from "@/lib/types";
 
 const OUR_TEAM_SIZE = 4;
+const ENEMY_TEAM_SIZE = 5;
 // 오버워치 역할 고정 큐 표준 조합(탱커1·딜러2·힐러2) — backend/app/config.py의
 // TEAM_ROLE_COMPOSITION과 동일 값. 선택창 자체에서 이 정원을 넘는 역할은
 // 고를 수 없게 막아서, 애초에 표준 조합이 아닌 팀 구성이 만들어지지 않게 한다.
@@ -37,9 +38,9 @@ export default function Home() {
   const [validationMessage, setValidationMessage] = useState<string | null>(null);
   const [result, setResult] = useState<RecommendationResponse | null>(null);
 
-  // 우리 팀 4명 + 맵이 다 채워지면 버튼 없이 바로 추천을 보여준다. 이 입력
-  // 조합으로 이미 요청을 보낸 적 있으면(예: "입력으로 돌아가기"만 누르고 아무것도
-  // 안 바꿨을 때) 똑같은 요청을 또 자동으로 쏘지 않도록 마지막으로 제출한
+  // 우리 팀 4명 + 상대 팀 5명 + 맵이 다 채워지면 버튼 없이 바로 추천을 보여준다.
+  // 이 입력 조합으로 이미 요청을 보낸 적 있으면(예: "입력으로 돌아가기"만 누르고
+  // 아무것도 안 바꿨을 때) 똑같은 요청을 또 자동으로 쏘지 않도록 마지막으로 제출한
   // 입력의 서명을 기억해둔다.
   const lastSubmittedKeyRef = useRef<string | null>(null);
 
@@ -97,7 +98,10 @@ export default function Home() {
 
   useEffect(() => {
     if (catalogState !== "ready") return;
-    if (ourHeroes.length !== OUR_TEAM_SIZE || !mapId) return;
+    // 우리 팀뿐 아니라 상대 팀도 5명이 다 채워졌을 때만 자동 제출한다 — 이 조건이
+    // 없으면 결과 화면에서 "입력으로 돌아가기"로 나온 뒤 상대 픽 하나를 지우는
+    // 순간(우리 팀·맵은 그대로 채워진 상태) 바로 다시 추천으로 넘어가버린다.
+    if (ourHeroes.length !== OUR_TEAM_SIZE || enemyHeroes.length !== ENEMY_TEAM_SIZE || !mapId) return;
     if (submitPhase === "loading") return;
 
     const key = JSON.stringify({
@@ -150,7 +154,7 @@ export default function Home() {
               onChangeActiveTeam={setActiveTeam}
               enemyIds={enemyHeroes}
               ourIds={ourHeroes}
-              enemyMax={5}
+              enemyMax={ENEMY_TEAM_SIZE}
               ourMax={OUR_TEAM_SIZE}
               roleLimits={TEAM_ROLE_LIMITS}
               onChangeEnemy={setEnemyHeroes}
