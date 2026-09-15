@@ -1,0 +1,133 @@
+.teamToggle {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.teamButton {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.teamButtonActive {
+  border-color: var(--accent);
+  color: var(--text);
+  background: var(--accent-dim);
+}
+
+.teamButtonError {
+  border-color: var(--red);
+}
+
+.legend {
+  display: flex;
+  gap: 14px;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.legendDot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.roleGroup {
+  margin-bottom: 10px;
+}
+
+.roleLabel {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.archetypeGroup {
+  margin-bottom: 10px;
+}
+
+.archetypeLabel {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.heroGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.heroButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s;
+}
+
+.heroButton:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.heroButton:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.markedEnemy {
+  border-color: var(--blue);
+  background: color-mix(in srgb, var(--blue) 12%, var(--surface-2));
+}
+
+.markedOur {
+  border-color: var(--green);
+  background: color-mix(in srgb, var(--green) 12%, var(--surface-2));
+}
+
+.heroName {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dotEnemy,
+.dotOur {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--bg);
+}
+
+.dotEnemy {
+  top: -2px;
+  right: -2px;
+  background: var(--blue);
+}
+
+.dotOur {
+  bottom: -2px;
+  right: -2px;
+  background: var(--green);
+}
