@@ -53,5 +53,6 @@
   { "id": "mizuki", "name": "미즈키", "role": "support", "archetype": "속박 사슬 지원", "archetype_category": "생존왕", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a9733c2367e0cbd70b9316fd2e1e17028653ec56d0051ea6ff098531dc4f99fc.png" },
   { "id": "moira", "name": "모이라", "role": "support", "archetype": "근접 유지 지원", "archetype_category": "의무관", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f48f8485056d5d00dad195859188d23e50f7126b8b08b5646f46ef1b42f5e1de.png" },
   { "id": "wuyang", "name": "우양", "role": "support", "archetype": "치유 파도 지원", "archetype_category": "생존왕", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4959500b495b35c0908be2abda56b53f2601b2c5cc39a1cfde8df1bffd38d66d.png" },
-  { "id": "zenyatta", "name": "젠야타", "role": "support", "archetype": "원거리 지원", "archetype_category": "전술가", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7d1546b1541a8afc39353f9337a408d6275a141b0432b7e560ef61579996b0fc.png" }
+  { "id": "zenyatta", "name": "젠야타", "role": "support", "archetype": "원거리 지원", "archetype_category": "전술가", "icon_url": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7d1546b1541a8afc39353f9337a408d6275a141b0432b7e560ef61579996b0fc.png" },
+  { "id": "doctrine", "name": "독트린", "role": "support", "archetype": "강화 충전 지원", "archetype_category": "생존왕", "icon_url": "" }
 ]

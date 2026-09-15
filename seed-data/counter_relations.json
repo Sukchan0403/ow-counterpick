@@ -723,5 +723,15 @@
     "hero_id": "hazard",
     "countered_hero_id": "widowmaker",
     "reason": "돌진형 이동기로 저격 사거리를 순식간에 좁힘"
+  },
+  {
+    "hero_id": "doctrine",
+    "countered_hero_id": "genji",
+    "reason": "은신 기동의 피해 감소로 근접 다이브 버스트를 버텨내며 중거리에서 반격"
+  },
+  {
+    "hero_id": "doctrine",
+    "countered_hero_id": "zarya",
+    "reason": "심판 궁극기로 최대 체력을 깎아내 에너지 축적형 탱커의 생존력을 무력화"
   }
 ]

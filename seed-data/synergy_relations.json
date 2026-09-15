@@ -393,5 +393,15 @@
     "hero_id": "bastion",
     "synergy_hero_id": "reinhardt",
     "reason": "방벽 뒤에서 안전하게 탱크 모드 화망을 전개할 수 있음"
+  },
+  {
+    "hero_id": "doctrine",
+    "synergy_hero_id": "genji",
+    "reason": "활력 드론으로 공격 속도와 회복량을 동시에 버프해 다이브 딜러의 지속 화력을 높임"
+  },
+  {
+    "hero_id": "doctrine",
+    "synergy_hero_id": "reinhardt",
+    "reason": "심판 궁극기의 최대 체력 증가 효과가 방벽 브롤 조합의 생존력을 크게 높임"
   }
 ]
