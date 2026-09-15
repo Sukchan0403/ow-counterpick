@@ -553,5 +553,115 @@
     "hero_id": "illari",
     "countered_hero_id": "sombra",
     "reason": "궤도 이탈로 해킹 시도를 피하고 태양 소총 화력으로 역으로 압박"
+  },
+  {
+    "hero_id": "baptiste",
+    "countered_hero_id": "bastion",
+    "reason": "불사조 광선탄으로 고정 화력의 버스트를 무효화하고 전진 가능"
+  },
+  {
+    "hero_id": "baptiste",
+    "countered_hero_id": "tracer",
+    "reason": "회복 광선총 대신 공격 사격으로 트레이서의 저체력을 빠르게 처치 가능"
+  },
+  {
+    "hero_id": "kiriko",
+    "countered_hero_id": "sombra",
+    "reason": "스즈로 해킹 상태를 즉시 해제해 무력화 효과를 무효화"
+  },
+  {
+    "hero_id": "kiriko",
+    "countered_hero_id": "mei",
+    "reason": "스즈로 빙결 상태를 즉시 해제해 얼음벽 콤보를 무력화"
+  },
+  {
+    "hero_id": "lucio",
+    "countered_hero_id": "torbjorn",
+    "reason": "벽타기 기동으로 포탑의 사거리를 벗어나며 견제"
+  },
+  {
+    "hero_id": "lucio",
+    "countered_hero_id": "doomfist",
+    "reason": "벽타기와 부스트 기동으로 강타 콤보의 진입 각을 지속적으로 회피"
+  },
+  {
+    "hero_id": "moira",
+    "countered_hero_id": "widowmaker",
+    "reason": "환영 질주로 저격 사선을 회피하며 접근"
+  },
+  {
+    "hero_id": "moira",
+    "countered_hero_id": "genji",
+    "reason": "생체 구슬과 자힐로 근접 다이브 대미지를 버텨냄"
+  },
+  {
+    "hero_id": "sojourn",
+    "countered_hero_id": "torbjorn",
+    "reason": "충전 사격 한 방으로 포탑을 파괴"
+  },
+  {
+    "hero_id": "sojourn",
+    "countered_hero_id": "bastion",
+    "reason": "충전 사격으로 고정 화력의 체력을 빠르게 깎음"
+  },
+  {
+    "hero_id": "zenyatta",
+    "countered_hero_id": "bastion",
+    "reason": "원거리 조화·부조화 구슬로 고정형 딜러의 사거리 밖에서 견제"
+  },
+  {
+    "hero_id": "zenyatta",
+    "countered_hero_id": "symmetra",
+    "reason": "긴 사거리로 감시 포탑 범위 밖에서 안전하게 견제"
+  },
+  {
+    "hero_id": "wuyang",
+    "countered_hero_id": "genji",
+    "reason": "전방 물결로 밀쳐내 근접 다이브를 저지"
+  },
+  {
+    "hero_id": "anran",
+    "countered_hero_id": "mercy",
+    "reason": "고기동 접근으로 후열의 메르시를 직접 압박"
+  },
+  {
+    "hero_id": "emre",
+    "countered_hero_id": "bastion",
+    "reason": "정조준 사격으로 고정 화력을 안전 거리에서 처치"
+  },
+  {
+    "hero_id": "freja",
+    "countered_hero_id": "zenyatta",
+    "reason": "폭발성 올가미로 이동기 없는 목표를 구속해 확정 처치"
+  },
+  {
+    "hero_id": "shion",
+    "countered_hero_id": "torbjorn",
+    "reason": "오토바이 기동으로 포탑 사거리를 회피하며 접근"
+  },
+  {
+    "hero_id": "sierra",
+    "countered_hero_id": "mercy",
+    "reason": "표식 추적 사격으로 회피 기동에도 지속적으로 피해를 줌"
+  },
+  {
+    "hero_id": "vendetta",
+    "countered_hero_id": "zenyatta",
+    "reason": "근접 대검 연계로 이동기 없는 목표를 빠르게 처치"
+  },
+  {
+    "hero_id": "mizuki",
+    "countered_hero_id": "genji",
+    "reason": "속박 사슬로 근접 다이브의 이동기를 봉쇄"
+  },
+  {
+    "hero_id": "bastion",
+    "countered_hero_id": "zenyatta",
+    "reason": "탱크 모드의 화망으로 이동기 없는 젠야타를 빠르게 제압"
+  },
+  {
+    "hero_id": "hazard",
+    "countered_hero_id": "zenyatta",
+    "reason": "가시 박힌 벽으로 퇴로를 막고 돌진해 이동기 없는 목표를 처치"
   }
 ]

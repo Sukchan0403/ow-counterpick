@@ -253,5 +253,85 @@
     "hero_id": "illari",
     "synergy_hero_id": "genji",
     "reason": "치유 기둥이 원거리에서도 지속적으로 다이브 딜러를 회복시킴"
+  },
+  {
+    "hero_id": "baptiste",
+    "synergy_hero_id": "genji",
+    "reason": "불사조 광선탄이 무리한 다이브 이후 생존을 보장"
+  },
+  {
+    "hero_id": "kiriko",
+    "synergy_hero_id": "genji",
+    "reason": "순간이동으로 다이브한 겐지에게 즉시 합류해 지원"
+  },
+  {
+    "hero_id": "lucio",
+    "synergy_hero_id": "reinhardt",
+    "reason": "속도 부스트로 방벽 돌진 타이밍을 앞당김"
+  },
+  {
+    "hero_id": "moira",
+    "synergy_hero_id": "zarya",
+    "reason": "그래비톤 서지에 걸린 적에게 광역 구슬로 확정 대미지"
+  },
+  {
+    "hero_id": "sojourn",
+    "synergy_hero_id": "lucio",
+    "reason": "속도 부스트로 활공 이동과 재포지셔닝을 더 빠르게"
+  },
+  {
+    "hero_id": "zenyatta",
+    "synergy_hero_id": "genji",
+    "reason": "부조화 표식으로 겐지의 다이브 처치 속도를 끌어올림"
+  },
+  {
+    "hero_id": "wuyang",
+    "synergy_hero_id": "reinhardt",
+    "reason": "치유의 물결로 방벽 브롤 조합의 유지력을 높임"
+  },
+  {
+    "hero_id": "anran",
+    "synergy_hero_id": "lucio",
+    "reason": "속도 부스트로 화염 부채 암살 타이밍을 극대화"
+  },
+  {
+    "hero_id": "emre",
+    "synergy_hero_id": "baptiste",
+    "reason": "불사조 광선탄이 생체병기 변신 궁극기 사용 타이밍의 생존을 보장"
+  },
+  {
+    "hero_id": "freja",
+    "synergy_hero_id": "ana",
+    "reason": "나노 강화로 올가미 구속 이후 폭발 화력을 증폭"
+  },
+  {
+    "hero_id": "shion",
+    "synergy_hero_id": "lucio",
+    "reason": "속도 부스트가 오토바이 기동력과 겹쳐 더 빠른 측면 압박"
+  },
+  {
+    "hero_id": "sierra",
+    "synergy_hero_id": "ana",
+    "reason": "나노 강화로 표식 추적 사격의 화력을 증폭"
+  },
+  {
+    "hero_id": "vendetta",
+    "synergy_hero_id": "lucio",
+    "reason": "속도 부스트로 대검 근접 콤보 진입 타이밍을 앞당김"
+  },
+  {
+    "hero_id": "jetpack_cat",
+    "synergy_hero_id": "genji",
+    "reason": "생명줄로 겐지를 원하는 다이브 타이밍에 전선까지 끌어올림"
+  },
+  {
+    "hero_id": "juno",
+    "synergy_hero_id": "tracer",
+    "reason": "이동속도 증가로 트레이서의 기동 다이브 타이밍을 더욱 앞당김"
+  },
+  {
+    "hero_id": "hazard",
+    "synergy_hero_id": "lucio",
+    "reason": "속도 부스트로 돌진형 개시 타이밍을 앞당김"
   }
 ]
