@@ -508,5 +508,17 @@
     "hero_id": "wuyang",
     "rating": "강함",
     "reason": "수직 지형에서 물 위 이동으로 다양한 각도로 접근하기 좋음"
+  },
+  {
+    "map_id": "throne_of_anubis",
+    "hero_id": "dva",
+    "rating": "강함",
+    "reason": "개방된 첫 구간 마당에서 부스터 다이브 각을 잡기 좋음"
+  },
+  {
+    "map_id": "throne_of_anubis",
+    "hero_id": "reinhardt",
+    "rating": "강함",
+    "reason": "신전 내부 좁은 통로에서 방벽 브롤을 살리기 좋음"
   }
 ]

@@ -688,5 +688,40 @@
     "hero_id": "ramattra",
     "countered_hero_id": "junkrat",
     "reason": "보이드 방벽으로 곡사 폭발물을 막아냄"
+  },
+  {
+    "hero_id": "emre",
+    "countered_hero_id": "symmetra",
+    "reason": "3연발 사격으로 감시 포탑을 빠르게 파괴"
+  },
+  {
+    "hero_id": "freja",
+    "countered_hero_id": "mei",
+    "reason": "빠른 사격 속도로 얼음벽을 올리기 전에 구속"
+  },
+  {
+    "hero_id": "shion",
+    "countered_hero_id": "ana",
+    "reason": "오토바이 기동으로 수면총 견제를 회피하며 접근"
+  },
+  {
+    "hero_id": "sierra",
+    "countered_hero_id": "genji",
+    "reason": "표식을 부착하면 반사와 무관하게 사격이 계속 추적함"
+  },
+  {
+    "hero_id": "vendetta",
+    "countered_hero_id": "mei",
+    "reason": "검으로 막기 능력으로 얼음벽 콤보의 피해를 완화하며 접근"
+  },
+  {
+    "hero_id": "anran",
+    "countered_hero_id": "torbjorn",
+    "reason": "고기동 접근으로 포탑의 사거리를 벗어나 근접 압박"
+  },
+  {
+    "hero_id": "hazard",
+    "countered_hero_id": "widowmaker",
+    "reason": "돌진형 이동기로 저격 사거리를 순식간에 좁힘"
   }
 ]
