@@ -99,9 +99,13 @@
 더 단순한 구조다. 프론트엔드는 Vercel, 백엔드는 Render/Railway 등에
 배포하는 걸 가정한다.
 
-**폴더 구조**: 5주차에 백엔드/프론트엔드를 각각 별도 Docker 컨테이너로
-분리할 예정이므로, 모든 백엔드(FastAPI) 코드는 반드시 `backend/` 폴더
-안에 스캐폴딩한다 (프론트엔드는 `frontend/`).
+**폴더 구조**: 백엔드/프론트엔드를 각각 별도 Docker 컨테이너로 분리할
+예정이었으므로, 모든 백엔드(FastAPI) 코드는 반드시 `backend/` 폴더 안에
+스캐폴딩한다 (프론트엔드는 `frontend/`). **2026-09-15 완료**:
+`backend/Dockerfile`/`frontend/Dockerfile`/`docker-compose.yml` 추가,
+`docker compose up --build`로 로컬에서 두 컨테이너가 실제로 통신하는 것까지
+확인함. 아직 실제 클라우드 배포(Vercel/Render/Railway)는 안 함 — 로컬
+컨테이너 실행까지만 완료된 상태.
 
 ## 컴포넌트
 

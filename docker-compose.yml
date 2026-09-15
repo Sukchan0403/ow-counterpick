@@ -1,0 +1,21 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        # 브라우저(호스트)에서 접속하므로 컨테이너 내부 서비스명이 아니라
+        # 호스트에 노출된 포트를 가리켜야 한다. NEXT_PUBLIC_* 값은 빌드 타임에
+        # 박히므로 build.args로 넘긴다 (environment로는 반영 안 됨).
+        NEXT_PUBLIC_API_BASE_URL: http://localhost:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend

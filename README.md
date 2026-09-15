@@ -43,12 +43,28 @@ flowchart LR
 ├── backend/      # FastAPI 서버 (점수 계산 로직 + REST API)
 ├── frontend/     # Next.js 클라이언트
 ├── seed-data/    # 큐레이션된 영웅/맵/카운터/시너지 JSON + SQLite 시드 스크립트
-└── docs/         # 설계 스펙, API 명세서
+├── docs/         # 설계 스펙, API 명세서
+└── docker-compose.yml
 ```
 
 ## 🚀 시작하기
 
-### 백엔드 (FastAPI)
+### Docker로 한 번에 실행
+
+```bash
+docker compose up --build
+```
+
+프론트엔드 `http://localhost:3000`, 백엔드 `http://localhost:8000`에서 바로 뜹니다.
+`backend/Dockerfile`은 저장소 루트를 빌드 컨텍스트로 써서 `seed-data/overwatch.db`를
+같이 담고, `frontend/Dockerfile`은 Next.js standalone 출력으로 이미지를 가볍게
+만듭니다. 프론트가 다른 주소의 백엔드를 보게 하려면 빌드 시
+`NEXT_PUBLIC_API_BASE_URL`을 바꿔주세요(런타임 환경변수가 아니라 빌드 인자입니다 —
+`docker-compose.yml`의 `frontend.build.args` 참고).
+
+### 또는 직접 실행
+
+#### 백엔드 (FastAPI)
 
 ```bash
 cd backend
@@ -64,7 +80,7 @@ uvicorn app.main:app --reload --port 8000
 
 `http://127.0.0.1:8000/docs`에서 Swagger UI로 바로 테스트할 수 있습니다.
 
-### 프론트엔드 (Next.js)
+#### 프론트엔드 (Next.js)
 
 ```bash
 cd frontend
@@ -106,8 +122,14 @@ pytest -v
 ## 🗺️ 로드맵
 
 - [x] MVP: 카운터/시너지/맵 점수 기반 실시간 밴프준 추천
-- [ ] 결측치 3단 상태(미검토 / 검토완료-중립 / 검토완료-값있음) 반영
-- [ ] 영웅 아이콘 · 아키타입 카테고리 그룹 UI
+- [x] 결측치 3단 상태(미검토 / 검토완료-중립 / 검토완료-값있음) 반영
+- [x] 영웅 아이콘 · 아키타입 카테고리 그룹 UI
+- [x] 전체 영웅(53종) · 전체 모드 맵(32개) 카탈로그 확장
+- [x] 빈 포지션 자동 판단 (팀 구성만으로), 클릭 한 번짜리 상대/우리 팀 선택 UI
+- [x] Docker 컨테이너화
+- [ ] 나머지 52명 영웅의 카운터/시너지/맵 관계 데이터 큐레이션 (현재 D.Va만 완료)
+- [ ] 실제 배포 (Vercel/Render/Railway 등)
+- [ ] 프론트엔드 자동 테스트
 - [ ] 사전 드래프트 시뮬레이션 모드
 - [ ] 통계 기반 매치업 엔진 (충분한 크라우드소싱 데이터 확보 후)
 
