@@ -65,11 +65,6 @@
     "reason": "속도 부스트로 대시 진입 타이밍을 극대화하고 벽타기 이동 경로가 잘 맞음"
   },
   {
-    "hero_id": "zenyatta",
-    "synergy_hero_id": "reinhardt",
-    "reason": "방벽 뒤에서 안전하게 부조화 표식을 걸어 처치 속도를 끌어올리는 포킹 조합"
-  },
-  {
     "hero_id": "dva",
     "synergy_hero_id": "mei",
     "reason": "얼음벽으로 디바의 다이브 퇴로를 차단해 상대를 가두는 협공"
@@ -403,5 +398,15 @@
     "hero_id": "doctrine",
     "synergy_hero_id": "reinhardt",
     "reason": "심판 궁극기의 최대 체력 증가 효과가 방벽 브롤 조합의 생존력을 크게 높임"
+  },
+  {
+    "hero_id": "mizuki",
+    "synergy_hero_id": "reaper",
+    "reason": "속박 사슬로 묶은 대상에게 리퍼가 근접 산탄을 확정으로 꽂아넣는 조합"
+  },
+  {
+    "hero_id": "mizuki",
+    "synergy_hero_id": "hanzo",
+    "reason": "속박 사슬로 묶은 대상에게 한조가 사격을 확정으로 명중시키는 조합"
   }
 ]

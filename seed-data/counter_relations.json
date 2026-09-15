@@ -733,5 +733,45 @@
     "hero_id": "doctrine",
     "countered_hero_id": "zarya",
     "reason": "심판 궁극기로 최대 체력을 깎아내 에너지 축적형 탱커의 생존력을 무력화"
+  },
+  {
+    "hero_id": "ana",
+    "countered_hero_id": "juno",
+    "reason": "수면총으로 활공 부스트 이탈이나 궤도 광선 채널링을 끊을 수 있음"
+  },
+  {
+    "hero_id": "widowmaker",
+    "countered_hero_id": "juno",
+    "reason": "개활지에서 비행하는 주노를 사거리 우위로 저격하기 좋음"
+  },
+  {
+    "hero_id": "sombra",
+    "countered_hero_id": "juno",
+    "reason": "해킹으로 활공 부스트와 궤도 광선을 무력화해 생존기를 지움"
+  },
+  {
+    "hero_id": "juno",
+    "countered_hero_id": "pharah",
+    "reason": "펄사 어뢰의 유도 성능과 비행 기동으로 공중전에서 대등하게 맞대응"
+  },
+  {
+    "hero_id": "symmetra",
+    "countered_hero_id": "domina",
+    "reason": "충전된 광선이 세그먼트 방벽 타일을 빠르게 녹여버림"
+  },
+  {
+    "hero_id": "genji",
+    "countered_hero_id": "domina",
+    "reason": "반사로 포톤 매그넘 사격을 그대로 되돌려보냄"
+  },
+  {
+    "hero_id": "sombra",
+    "countered_hero_id": "domina",
+    "reason": "해킹으로 방벽 배열과 음파 반발장치를 무력화함"
+  },
+  {
+    "hero_id": "domina",
+    "countered_hero_id": "zarya",
+    "reason": "긴 사거리에서 지속적으로 견제해 자리야가 에너지를 모을 기회를 주지 않음"
   }
 ]

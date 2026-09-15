@@ -520,5 +520,131 @@
     "hero_id": "reinhardt",
     "rating": "강함",
     "reason": "신전 내부 좁은 통로에서 방벽 브롤을 살리기 좋음"
+  },
+  {
+    "map_id": "watchpoint_gibraltar",
+    "hero_id": "juno",
+    "rating": "강함",
+    "reason": "개방된 공중 공간이 많아 활공 기동으로 자유롭게 전장을 누비기 좋음"
+  },
+  {
+    "map_id": "eichenwalde",
+    "hero_id": "juno",
+    "rating": "강함",
+    "reason": "2번째 포인트 주변 고지대와 개방된 공중 공간을 활공 기동으로 자유롭게 활용 가능"
+  },
+  {
+    "map_id": "throne_of_anubis",
+    "hero_id": "juno",
+    "rating": "약함",
+    "reason": "신전 내부의 좁은 통로 구간이 많아 활공 기동의 이점을 살리기 어려움"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "hazard",
+    "rating": "강함",
+    "reason": "가시 장벽으로 좁은 실내 통로의 진입로를 봉쇄하며 초반 교전을 유리하게 이끌기 좋음"
+  },
+  {
+    "map_id": "route_66",
+    "hero_id": "hazard",
+    "rating": "약함",
+    "reason": "직선 구간이 길어 접근하기 전에 장거리 견제에 계속 노출됨"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "anran",
+    "rating": "강함",
+    "reason": "측면 플랭크 루트가 많아 후열까지 침투해 화상 콤보를 꽂아넣기 좋음"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "anran",
+    "rating": "약함",
+    "reason": "긴 직선 사거리에 노출된 채로 접근해야 해 콤보 진입이 어려움"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "emre",
+    "rating": "강함",
+    "reason": "직선 구간에서 3점사 사격으로 정확한 견제 화력을 넣기 좋음"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "emre",
+    "rating": "약함",
+    "reason": "실내 근접전 구간이 많아 중거리 교전 거리를 유지하기 어려움"
+  },
+  {
+    "map_id": "ilios",
+    "hero_id": "freja",
+    "rating": "강함",
+    "reason": "개활지와 고지대가 많아 폭발 볼트 견제각을 잡기 좋음"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "freja",
+    "rating": "약함",
+    "reason": "실내 근접전 구간이 많아 견제 사거리를 확보하기 어려움"
+  },
+  {
+    "map_id": "route_66",
+    "hero_id": "shion",
+    "rating": "강함",
+    "reason": "직선 구간이 길어 오토바이 기동으로 질주하며 측면을 압박하기 좋음"
+  },
+  {
+    "map_id": "lijiang_tower",
+    "hero_id": "shion",
+    "rating": "약함",
+    "reason": "실내 좁은 통로 구간이 많아 오토바이 기동 공간이 부족함"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "sierra",
+    "rating": "강함",
+    "reason": "직선 구간에서 추적 사격으로 지속적인 견제 화력을 넣기 좋음"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "sierra",
+    "rating": "약함",
+    "reason": "실내 근접전 구간이 많아 추적 사격의 사거리를 살리기 어려움"
+  },
+  {
+    "map_id": "eichenwalde",
+    "hero_id": "vendetta",
+    "rating": "강함",
+    "reason": "좁은 측면 골목을 통해 안전하게 거리를 좁혀 근접 콤보를 꽂아넣기 좋음"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "vendetta",
+    "rating": "약함",
+    "reason": "직선 구간이 길어 접근하는 동안 장거리 견제에 계속 노출됨"
+  },
+  {
+    "map_id": "watchpoint_gibraltar",
+    "hero_id": "jetpack_cat",
+    "rating": "강함",
+    "reason": "개방된 공중 공간이 많아 비행으로 아군을 견인하며 자유롭게 기동하기 좋음"
+  },
+  {
+    "map_id": "throne_of_anubis",
+    "hero_id": "jetpack_cat",
+    "rating": "약함",
+    "reason": "신전 내부의 좁은 통로 구간이 많아 비행 기동 공간이 부족함"
+  },
+  {
+    "map_id": "ilios",
+    "hero_id": "domina",
+    "rating": "강함",
+    "reason": "개활지와 고지대가 많아 장거리 포톤 매그넘 포킹 각을 잡기 좋음"
+  },
+  {
+    "map_id": "eichenwalde",
+    "hero_id": "domina",
+    "rating": "약함",
+    "reason": "좁은 측면 골목이 많아 기동기 없는 포지션을 우회당하기 쉬움"
   }
 ]
