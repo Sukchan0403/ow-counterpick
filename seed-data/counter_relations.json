@@ -663,5 +663,30 @@
     "hero_id": "hazard",
     "countered_hero_id": "zenyatta",
     "reason": "가시 박힌 벽으로 퇴로를 막고 돌진해 이동기 없는 목표를 처치"
+  },
+  {
+    "hero_id": "dmon",
+    "countered_hero_id": "torbjorn",
+    "reason": "파워 배리어로 포탑 화망을 막아내며 돌진 강타로 접근"
+  },
+  {
+    "hero_id": "dmon",
+    "countered_hero_id": "bastion",
+    "reason": "파워 배리어로 고정 화력을 막아내고 돌진 강타로 접근해 처치"
+  },
+  {
+    "hero_id": "dmon",
+    "countered_hero_id": "widowmaker",
+    "reason": "추진기로 저격 사선을 회피하며 빠르게 거리를 좁힘"
+  },
+  {
+    "hero_id": "ramattra",
+    "countered_hero_id": "pharah",
+    "reason": "보이드 방벽으로 공중 로켓 공격을 막아내고 게걸스러운 소용돌이로 강제로 끌어내림"
+  },
+  {
+    "hero_id": "ramattra",
+    "countered_hero_id": "junkrat",
+    "reason": "보이드 방벽으로 곡사 폭발물을 막아냄"
   }
 ]

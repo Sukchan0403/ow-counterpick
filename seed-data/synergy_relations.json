@@ -333,5 +333,15 @@
     "hero_id": "hazard",
     "synergy_hero_id": "lucio",
     "reason": "속도 부스트로 돌진형 개시 타이밍을 앞당김"
+  },
+  {
+    "hero_id": "dmon",
+    "synergy_hero_id": "baptiste",
+    "reason": "불사조 광선탄이 돌진 강타 진입 타이밍의 생존을 보장"
+  },
+  {
+    "hero_id": "ramattra",
+    "synergy_hero_id": "baptiste",
+    "reason": "불사조 광선탄이 실체화 상태의 저돌적인 근접전 생존을 보장"
   }
 ]
