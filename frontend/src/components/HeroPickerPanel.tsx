@@ -16,6 +16,9 @@ interface Props {
   // 순간 그 역할 영웅 버튼이 전부 비활성화된다 — 표준 조합에 안 맞는 구성
   // 자체를 선택 단계에서 막기 위함.
   roleLimits?: Partial<Record<Role, number>>;
+  // true면 바깥 패널 박스(배경/테두리/패딩)와 제목/카운트 헤더를 생략한다 —
+  // HeroPickerModal처럼 이미 자기 모달 헤더가 있는 컨테이너 안에 넣을 때 사용.
+  bare?: boolean;
 }
 
 export function HeroPickerPanel({
@@ -25,6 +28,7 @@ export function HeroPickerPanel({
   maxCount,
   onChange,
   roleLimits,
+  bare = false,
 }: Props) {
   const atMax = selectedIds.length >= maxCount;
 
@@ -65,13 +69,15 @@ export function HeroPickerPanel({
   }
 
   return (
-    <div className={styles.panel}>
-      <div className={styles.header}>
-        <span className={styles.title}>{title}</span>
-        <span className={styles.count}>
-          {selectedIds.length}/{maxCount}
-        </span>
-      </div>
+    <div className={bare ? undefined : styles.panel}>
+      {!bare && (
+        <div className={styles.header}>
+          <span className={styles.title}>{title}</span>
+          <span className={styles.count}>
+            {selectedIds.length}/{maxCount}
+          </span>
+        </div>
+      )}
 
       {ROLE_ORDER.map((role) => {
         const roleHeroes = heroes.filter((h) => h.role === role);

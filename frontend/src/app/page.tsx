@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import styles from "./page.module.css";
-import { HeroPickerPanel } from "@/components/HeroPickerPanel";
+import { HeroSummaryRow } from "@/components/HeroSummaryRow";
+import { HeroPickerModal } from "@/components/HeroPickerModal";
 import { MapPickerModal } from "@/components/MapPickerModal";
 import { ResultsPanel } from "@/components/ResultsPanel";
 import { ErrorScreen } from "@/components/ErrorScreen";
@@ -29,6 +30,8 @@ export default function Home() {
   const [ourHeroes, setOurHeroes] = useState<string[]>([]);
   const [mapId, setMapId] = useState<string | null>(null);
   const [mapPickerOpen, setMapPickerOpen] = useState(false);
+  const [enemyPickerOpen, setEnemyPickerOpen] = useState(false);
+  const [ourPickerOpen, setOurPickerOpen] = useState(false);
   const [showValidation, setShowValidation] = useState(false);
 
   const [submitPhase, setSubmitPhase] = useState<SubmitPhase>("idle");
@@ -115,28 +118,54 @@ export default function Home() {
 
       {catalogState === "ready" && submitPhase !== "error" && submitPhase !== "success" && (
         <>
-          <div className={styles.grid}>
-            <HeroPickerPanel
+          <div className={styles.section}>
+            <HeroSummaryRow
+              title="상대 팀 픽"
+              heroes={heroes}
+              selectedIds={enemyHeroes}
+              maxCount={5}
+              onRemove={(id) => setEnemyHeroes(enemyHeroes.filter((h) => h !== id))}
+              onOpenPicker={() => setEnemyPickerOpen(true)}
+            />
+          </div>
+          <div className={styles.section}>
+            <HeroSummaryRow
+              title="우리 팀 픽 (4명 모두)"
+              heroes={heroes}
+              selectedIds={ourHeroes}
+              maxCount={OUR_TEAM_SIZE}
+              onRemove={(id) => setOurHeroes(ourHeroes.filter((h) => h !== id))}
+              onOpenPicker={() => setOurPickerOpen(true)}
+              hasError={showValidation && ourHeroes.length !== OUR_TEAM_SIZE}
+            />
+            {showValidation && ourHeroes.length !== OUR_TEAM_SIZE && (
+              <div className={styles.errorText}>
+                우리 팀 픽 4명을 모두 선택해주세요 — 남은 포지션은 자동으로 판단됩니다.
+              </div>
+            )}
+          </div>
+
+          {enemyPickerOpen && (
+            <HeroPickerModal
               title="상대 팀 픽"
               heroes={heroes}
               selectedIds={enemyHeroes}
               maxCount={5}
               roleLimits={TEAM_ROLE_LIMITS}
               onChange={setEnemyHeroes}
+              onClose={() => setEnemyPickerOpen(false)}
             />
-            <HeroPickerPanel
-              title="우리 팀 픽 (4명 모두)"
+          )}
+          {ourPickerOpen && (
+            <HeroPickerModal
+              title="우리 팀 픽"
               heroes={heroes}
               selectedIds={ourHeroes}
               maxCount={OUR_TEAM_SIZE}
               roleLimits={TEAM_ROLE_LIMITS}
               onChange={setOurHeroes}
+              onClose={() => setOurPickerOpen(false)}
             />
-          </div>
-          {showValidation && ourHeroes.length !== OUR_TEAM_SIZE && (
-            <div className={styles.errorText}>
-              우리 팀 픽 4명을 모두 선택해주세요 — 남은 포지션은 자동으로 판단됩니다.
-            </div>
           )}
 
           <div className={styles.section}>
