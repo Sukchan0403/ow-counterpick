@@ -70,30 +70,8 @@
   cursor: pointer;
 }
 
-.mapButtonError {
-  border-color: var(--red);
-}
-
 .mapButtonPlaceholder {
   color: var(--text-muted);
-}
-
-.submitButton {
-  width: 100%;
-  background: var(--accent);
-  color: var(--accent-on);
-  border: none;
-  border-radius: var(--radius);
-  padding: 14px;
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
-  margin-top: 8px;
-}
-
-.submitButton:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
 }
 
 .resetLink {

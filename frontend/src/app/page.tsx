@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./page.module.css";
 import { SharedHeroGrid } from "@/components/SharedHeroGrid";
 import type { Team } from "@/components/SharedHeroGrid";
@@ -31,11 +31,16 @@ export default function Home() {
   const [mapId, setMapId] = useState<string | null>(null);
   const [mapPickerOpen, setMapPickerOpen] = useState(false);
   const [activeTeam, setActiveTeam] = useState<Team>("enemy");
-  const [showValidation, setShowValidation] = useState(false);
 
   const [submitPhase, setSubmitPhase] = useState<SubmitPhase>("idle");
   const [validationMessage, setValidationMessage] = useState<string | null>(null);
   const [result, setResult] = useState<RecommendationResponse | null>(null);
+
+  // 우리 팀 4명 + 맵이 다 채워지면 버튼 없이 바로 추천을 보여준다. 이 입력
+  // 조합으로 이미 요청을 보낸 적 있으면(예: "입력으로 돌아가기"만 누르고 아무것도
+  // 안 바꿨을 때) 똑같은 요청을 또 자동으로 쏘지 않도록 마지막으로 제출한
+  // 입력의 서명을 기억해둔다.
+  const lastSubmittedKeyRef = useRef<string | null>(null);
 
   async function loadCatalog() {
     try {
@@ -69,18 +74,13 @@ export default function Home() {
   }, []);
 
   async function handleSubmit() {
-    if (ourHeroes.length !== OUR_TEAM_SIZE || !mapId) {
-      setShowValidation(true);
-      return;
-    }
-    setShowValidation(false);
     setValidationMessage(null);
     setSubmitPhase("loading");
     try {
       const res = await postRecommendations({
         enemy_heroes: enemyHeroes,
         our_heroes: ourHeroes,
-        map_id: mapId,
+        map_id: mapId!,
       });
       setResult(res);
       setSubmitPhase("success");
@@ -93,6 +93,29 @@ export default function Home() {
       }
     }
   }
+
+  useEffect(() => {
+    if (catalogState !== "ready") return;
+    if (ourHeroes.length !== OUR_TEAM_SIZE || !mapId) return;
+    if (submitPhase === "loading") return;
+
+    const key = JSON.stringify({
+      enemy: [...enemyHeroes].sort(),
+      our: [...ourHeroes].sort(),
+      mapId,
+    });
+    if (lastSubmittedKeyRef.current === key) return;
+
+    lastSubmittedKeyRef.current = key;
+    handleSubmit();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [catalogState, enemyHeroes, ourHeroes, mapId, submitPhase]);
+
+  useEffect(() => {
+    if (submitPhase === "success") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [submitPhase]);
 
   const selectedMap = maps.find((m) => m.id === mapId) ?? null;
 
@@ -128,22 +151,14 @@ export default function Home() {
               roleLimits={TEAM_ROLE_LIMITS}
               onChangeEnemy={setEnemyHeroes}
               onChangeOur={setOurHeroes}
-              ourHasError={showValidation && ourHeroes.length !== OUR_TEAM_SIZE}
             />
-            {showValidation && ourHeroes.length !== OUR_TEAM_SIZE && (
-              <div className={styles.errorText}>
-                우리 팀 픽 4명을 모두 선택해주세요 — 남은 포지션은 자동으로 판단됩니다.
-              </div>
-            )}
           </div>
 
           <div className={styles.section}>
             <span className={styles.sectionLabel}>맵</span>
             <button
               type="button"
-              className={`${styles.mapButton} ${
-                showValidation && !mapId ? styles.mapButtonError : ""
-              }`}
+              className={styles.mapButton}
               onClick={() => setMapPickerOpen(true)}
             >
               {selectedMap ? (
@@ -152,21 +167,13 @@ export default function Home() {
                 <span className={styles.mapButtonPlaceholder}>맵을 선택해주세요</span>
               )}
             </button>
-            {showValidation && !mapId && (
-              <div className={styles.errorText}>맵을 선택해주세요.</div>
-            )}
           </div>
 
           {validationMessage && <div className={styles.errorText}>{validationMessage}</div>}
 
-          <button
-            type="button"
-            className={styles.submitButton}
-            onClick={handleSubmit}
-            disabled={submitPhase === "loading"}
-          >
-            {submitPhase === "loading" ? "분석 중..." : "추천 영웅 보기"}
-          </button>
+          {submitPhase === "loading" && (
+            <div className={styles.centerNote}>분석 중...</div>
+          )}
 
           {mapPickerOpen && (
             <MapPickerModal

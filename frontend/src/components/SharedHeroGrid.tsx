@@ -19,7 +19,6 @@ interface Props {
   roleLimits?: Partial<Record<Role, number>>;
   onChangeEnemy: (ids: string[]) => void;
   onChangeOur: (ids: string[]) => void;
-  ourHasError?: boolean;
 }
 
 // 급박한 실전 상황에서 타이핑(오타 위험)도, 모달 열고 닫기도 없이 — 그리드
@@ -37,7 +36,6 @@ export function SharedHeroGrid({
   roleLimits,
   onChangeEnemy,
   onChangeOur,
-  ourHasError,
 }: Props) {
   const activeIds = activeTeam === "enemy" ? enemyIds : ourIds;
   const activeMax = activeTeam === "enemy" ? enemyMax : ourMax;
@@ -98,9 +96,7 @@ export function SharedHeroGrid({
         </button>
         <button
           type="button"
-          className={`${styles.teamButton} ${activeTeam === "our" ? styles.teamButtonActive : ""} ${
-            ourHasError ? styles.teamButtonError : ""
-          }`}
+          className={`${styles.teamButton} ${activeTeam === "our" ? styles.teamButtonActive : ""}`}
           onClick={() => onChangeActiveTeam("our")}
         >
           우리 팀 {ourIds.length}/{ourMax}

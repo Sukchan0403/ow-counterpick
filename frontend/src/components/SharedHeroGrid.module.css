@@ -22,10 +22,6 @@
   background: var(--accent-dim);
 }
 
-.teamButtonError {
-  border-color: var(--red);
-}
-
 .legend {
   display: flex;
   gap: 14px;
