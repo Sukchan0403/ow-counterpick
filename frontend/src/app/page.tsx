@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./page.module.css";
 import { SharedHeroGrid } from "@/components/SharedHeroGrid";
 import type { Team } from "@/components/SharedHeroGrid";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { MapPickerModal } from "@/components/MapPickerModal";
 import { ResultsPanel } from "@/components/ResultsPanel";
 import { ErrorScreen } from "@/components/ErrorScreen";
@@ -125,12 +126,15 @@ export default function Home() {
         <span className={styles.wordmark}>
           COUNTERPICK<span className={styles.wordmarkAccent}>.GG</span>
         </span>
-        {meta && (
-          <span className={styles.metaBadge}>
-            <span className={styles.metaBadgeDot} />
-            {meta.season} 시드 데이터 · {meta.data_version}
-          </span>
-        )}
+        <div className={styles.headerRight}>
+          {meta && (
+            <span className={styles.metaBadge}>
+              <span className={styles.metaBadgeDot} />
+              {meta.season} 시드 데이터 · {meta.data_version}
+            </span>
+          )}
+          <ThemeToggle />
+        </div>
       </div>
 
       {catalogState === "loading" && <div className={styles.centerNote}>불러오는 중...</div>}

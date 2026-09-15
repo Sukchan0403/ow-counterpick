@@ -1,5 +1,11 @@
 /* 디자인 토큰: Claude Design 목업(OWTICS.GG 스타일 리스타일 버전)이랑 맞춘 값.
-   실제 색상 hex는 목업 캔버스에서 쓰던 값을 재사용. */
+   실제 색상 hex는 목업 캔버스에서 쓰던 값을 재사용.
+
+   이 앱은 다크 테마가 기본/고정 디자인이다 — 시스템 설정(prefers-color-scheme)을
+   따라가지 않고, 오직 [data-theme="light"]가 <html>에 명시적으로 붙어있을 때만
+   라이트 팔레트로 전환한다 (헤더의 토글 버튼, layout.tsx의 FOUC 방지 스크립트
+   참고). 색상은 전부 이 토큰으로만 참조하고 컴포넌트 CSS에 직접 hex를 쓰지
+   않는다 — 그래야 여기 팔레트만 바꿔도 앱 전체가 따라온다. */
 :root {
   --bg: #0a0a0c;
   --bg-header: #050506;
@@ -25,6 +31,31 @@
   color-scheme: dark;
 }
 
+/* 라이트 모드: 단순히 다크 값을 뒤집은 게 아니라, 흰 배경에서도 accent/blue/green이
+   충분한 대비를 갖도록 채도·명도를 따로 조정했다 (예: 밝은 주황 #ff8a3d는 흰
+   배경 위 텍스트로 쓰면 대비가 부족해서 더 짙은 #d1650f로). */
+:root[data-theme="light"] {
+  --bg: #f7f6f3;
+  --bg-header: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #eeece7;
+  --border: #ddd9d1;
+
+  --text: #1c1b19;
+  --text-muted: #6f6b63;
+
+  --accent: #d1650f;
+  --accent-on: #fffaf3;
+  --accent-dim: rgba(209, 101, 15, 0.14);
+
+  --red: #c81e3a;
+  --red-dim: rgba(200, 30, 58, 0.12);
+  --blue: #2f6fe0;
+  --green: #1f9e63;
+
+  color-scheme: light;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -37,6 +68,7 @@ body {
   color: var(--text);
   font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", -apple-system,
     BlinkMacSystemFont, sans-serif;
+  transition: background 0.15s, color 0.15s;
 }
 
 a {
