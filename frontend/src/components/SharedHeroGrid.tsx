@@ -89,14 +89,18 @@ export function SharedHeroGrid({
       <div className={styles.teamToggle}>
         <button
           type="button"
-          className={`${styles.teamButton} ${activeTeam === "enemy" ? styles.teamButtonActive : ""}`}
+          className={`${styles.teamButton} ${styles.teamButtonEnemy} ${
+            activeTeam === "enemy" ? styles.teamButtonActive : ""
+          }`}
           onClick={() => onChangeActiveTeam("enemy")}
         >
           상대 팀 {enemyIds.length}/{enemyMax}
         </button>
         <button
           type="button"
-          className={`${styles.teamButton} ${activeTeam === "our" ? styles.teamButtonActive : ""}`}
+          className={`${styles.teamButton} ${styles.teamButtonOur} ${
+            activeTeam === "our" ? styles.teamButtonActive : ""
+          }`}
           onClick={() => onChangeActiveTeam("our")}
         >
           우리 팀 {ourIds.length}/{ourMax}

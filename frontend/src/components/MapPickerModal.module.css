@@ -91,8 +91,15 @@
   font-size: 13px;
   font-weight: 600;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  transition: transform 0.12s, border-color 0.12s;
 }
 
-.cardSelected {
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--text-muted);
+}
+
+.cardSelected,
+.cardSelected:hover {
   border-color: var(--accent);
 }

@@ -37,12 +37,20 @@
 .row {
   display: flex;
   gap: 14px;
-  padding: 14px 4px;
+  padding: 14px 10px;
+  margin: 0 -10px;
   border-bottom: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: background 0.15s;
 }
 
 .row:first-child {
   padding-top: 4px;
+}
+
+.rowTop1 {
+  background: var(--accent-dim);
+  border-bottom-color: transparent;
 }
 
 .rank {

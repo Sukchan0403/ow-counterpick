@@ -68,6 +68,11 @@
   color: var(--text);
   font-size: 14px;
   cursor: pointer;
+  transition: border-color 0.12s;
+}
+
+.mapButton:hover {
+  border-color: var(--accent);
 }
 
 .mapButtonPlaceholder {

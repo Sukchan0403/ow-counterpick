@@ -14,12 +14,25 @@
   font-weight: 600;
   color: var(--text-muted);
   cursor: pointer;
+  transition: border-color 0.12s, background 0.12s, color 0.12s;
 }
 
-.teamButtonActive {
-  border-color: var(--accent);
+.teamButton:hover:not(.teamButtonActive) {
+  border-color: var(--text-muted);
+}
+
+/* 토글의 활성 색은 그리드 점(dotEnemy/dotOur)·범례와 같은 파랑/초록을 써서,
+   "지금 어느 팀을 클릭하는 중인지"가 그리드 전체에서 하나의 색으로 이어지게 함. */
+.teamButtonEnemy.teamButtonActive {
+  border-color: var(--blue);
   color: var(--text);
-  background: var(--accent-dim);
+  background: color-mix(in srgb, var(--blue) 16%, var(--surface));
+}
+
+.teamButtonOur.teamButtonActive {
+  border-color: var(--green);
+  color: var(--text);
+  background: color-mix(in srgb, var(--green) 16%, var(--surface));
 }
 
 .legend {
