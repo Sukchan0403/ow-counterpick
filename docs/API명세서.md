@@ -168,6 +168,9 @@ DB 조회 없이 `config.SEED_SEASON`/`config.SEED_DATA_VERSION` 상수를 그�
 
 ## 참고 — 아직 남은 갭
 
+- 전체 영웅 53종이 전부 시드에 등록됐지만(2026-09-14, OverFast API 기준), 카운터/
+  시너지 관계 큐레이션은 최초 15종에만 돼 있다 — 새로 추가된 38종은 `reasons`가
+  비고 `data_gaps`에 "미검토"만 뜬다(정상 동작, 결측치 3단 상태 참고).
 - 6개 모드 32개 맵이 전부 시드에 등록됐지만(2026-09-14, 나무위키/OverFast API
   기준), `map_hero_ratings` 큐레이션은 최초 8개 맵(혼합 3·호위 3·점령 2)에만
   돼 있다 — 새로 추가된 24개 맵은 `data_richness`가 항상 `growing`이다.
