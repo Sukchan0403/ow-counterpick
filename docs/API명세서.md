@@ -176,18 +176,26 @@ DB 조회 없이 `config.SEED_SEASON`/`config.SEED_DATA_VERSION` 상수를 그�
 
 ## 참고 — 아직 남은 갭
 
-- 전체 영웅 53종이 전부 시드에 등록됐지만(2026-09-14, OverFast API 기준), 카운터/
-  시너지 관계 큐레이션은 최초 15종에만 돼 있다 — 새로 추가된 38종은 `reasons`가
-  비고 `data_gaps`에 "미검토"만 뜬다(정상 동작, 결측치 3단 상태 참고).
-- 6개 모드 32개 맵이 전부 시드에 등록됐지만(2026-09-14, 나무위키/OverFast API
-  기준), `map_hero_ratings` 큐레이션은 최초 8개 맵(혼합 3·호위 3·점령 2)에만
-  돼 있다 — 새로 추가된 24개 맵은 `data_richness`가 항상 `growing`이다.
-- `neon_junction`(혼합)은 OverFast API 스크린샷이 계속 404라서(2026-09-15
-  기준으로도 안 고쳐짐 — 이번 시즌 신규 맵이라 아직 캐싱이 안 된 것으로 추정),
-  사용자가 직접 캡처한 스크린샷을 받아 `frontend/public/maps/neon_junction.png`로
-  넣고 `image_url`을 상대 경로(`/maps/neon_junction.png`)로 지정했다. 다른 31개
-  맵은 전부 외부 CDN(OverFast API) 핫링크인데 이 맵만 예외적으로 로컬 정적
-  파일이다 — OverFast가 나중에 정식으로 캐싱하면 다시 외부 URL로 되돌려도 됨.
+- 전체 영웅 54종(2026-09-15 기준) 전원이 카운터/시너지 관계를 최소 1건 이상
+  갖고 있다 — 초기엔 15종에만 데이터가 있었지만 이후 여러 차례 큐레이션을
+  거치며 채워졌다. 다만 밀도는 영웅마다 다르다(D.Va처럼 전체 로스터·전체
+  맵을 상대로 촘촘히 채운 경우도 있고, 최신 영웅은 2~4건 정도로 얕은 경우도
+  있음) — 여전히 데이터에 없는 조합은 `data_gaps`에 "미검토"로 정상 노출된다
+  (결측치 3단 상태 참고).
+- 6개 모드 32개 맵 중 31개가 `map_hero_ratings`를 최소 1건 이상 갖고 있다
+  (`hanaoka`만 예외 — 신작이라 확신 있는 지형 정보가 없어 의도적으로 비워둠).
+  다만 맵당 평가 밀도도 영웅마다 편차가 크다.
+- `neon_junction`(혼합)은 OverFast API 스크린샷이 계속 404라서(신규 맵이라
+  아직 캐싱이 안 된 것으로 추정), 사용자가 직접 캡처한 스크린샷을 받아
+  `frontend/public/maps/neon_junction.png`로 넣고 `image_url`을 상대 경로
+  (`/maps/neon_junction.png`)로 지정했다. 다른 31개 맵은 전부 외부 CDN
+  (OverFast API) 핫링크인데 이 맵만 예외적으로 로컬 정적 파일이다.
+- `doctrine`(지원, 2026-09-15 추가)은 정식 출시(2026-10-06) 전 사전체험
+  단계라 OverFast API에 아직 없다 — `icon_url`이 다른 영웅들처럼 Blizzard
+  CDN(`d15f34w2p8l1cc.cloudfront.net`)이 아니라 나무위키 이미지 CDN
+  (`i.namu.wiki`) 링크다. 정식 출시 후 OverFast에 등록되면 다른 영웅들과
+  같은 CDN으로 맞춰도 됨. 맵 평가 데이터는 아직 없음(실전 포지셔닝 감각이
+  필요해 2일 된 영웅에 대해 판단하기 이름).
 - `MUST_PICK_PERCENTAGE_THRESHOLD`(90)는 아직 실제 시드 데이터 기준 실증
   검증 전이다 — `backend/scripts/audit_must_pick_distribution.py`로 분포를
   확인한 뒤 조정 여부를 판단해야 한다.
