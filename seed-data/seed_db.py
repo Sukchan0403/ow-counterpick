@@ -95,6 +95,17 @@ def main():
     if "image_url" not in existing_map_cols:
         conn.execute("ALTER TABLE maps ADD COLUMN image_url TEXT NOT NULL DEFAULT ''")
 
+    # JSON 파일이 유일한 소스여야 한다 — 과거에 시딩됐다가 JSON에서는 지워진 행이
+    # INSERT OR REPLACE만으로는 DB에 그대로 남아있는 문제(예: 이후에 "중립"으로
+    # 재판정된 카운터/시너지 관계가 옛 판정인 채로 유령처럼 남는 것)를 막기 위해,
+    # 매번 각 테이블을 비우고 JSON 내용으로 완전히 새로 채운다.
+    conn.execute("DELETE FROM heroes")
+    conn.execute("DELETE FROM maps")
+    conn.execute("DELETE FROM counter_relations")
+    conn.execute("DELETE FROM synergy_relations")
+    conn.execute("DELETE FROM map_hero_ratings")
+    conn.execute("DELETE FROM reviewed_neutral_pairs")
+
     conn.executemany(
         "INSERT OR REPLACE INTO heroes (id, name, role, archetype, icon_url, archetype_category) "
         "VALUES (:id, :name, :role, :archetype, :icon_url, :archetype_category)",

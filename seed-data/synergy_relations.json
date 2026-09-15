@@ -1,27 +1,107 @@
 [
-  { "hero_id": "reinhardt", "synergy_hero_id": "zarya", "reason": "방벽과 방벽을 나란히 세워 전선을 두껍게 만드는 이중 실드 브롤 조합" },
-  { "hero_id": "reinhardt", "synergy_hero_id": "baptiste", "reason": "불사조 광선탄이 화염 강타 진입 타이밍의 역실드를 커버해줌" },
-  { "hero_id": "reinhardt", "synergy_hero_id": "zenyatta", "reason": "방벽으로 자리를 잡고 부조화 표식으로 처치 속도를 끌어올리는 포킹 조합" },
-
-  { "hero_id": "orisa", "synergy_hero_id": "zarya", "reason": "두 개의 방벽으로 시야를 완전히 차단하는 이중 실드 포킹 조합" },
-  { "hero_id": "orisa", "synergy_hero_id": "baptiste", "reason": "투창 돌진 이후 불사조 광선탄으로 역콜을 방지" },
-
-  { "hero_id": "winston", "synergy_hero_id": "tracer", "reason": "둘 다 기동력이 높아 같은 타이밍에 후열로 진입·이탈이 가능한 다이브 축" },
-  { "hero_id": "winston", "synergy_hero_id": "genji", "reason": "도약과 이동기로 동시에 후열을 압박하는 전형적 다이브 코어" },
-
-  { "hero_id": "dva", "synergy_hero_id": "genji", "reason": "매트릭스로 진입로를 열어주고 겐지가 뒤이어 근접 버스트로 마무리" },
-
-  { "hero_id": "zarya", "synergy_hero_id": "genji", "reason": "그래비톤 서지 직후 용검으로 확정 광역딜을 넣는 대표적 궁극기 콤보" },
-
-  { "hero_id": "tracer", "synergy_hero_id": "sojourn", "reason": "둘 다 고기동 딜러라 교전 타이밍과 후퇴 루트를 맞추기 쉬움" },
-
-  { "hero_id": "ana", "synergy_hero_id": "zarya", "reason": "나노 강화를 받은 그래비톤 서지 이후 폭발적인 궁극기 대미지" },
-
-  { "hero_id": "moira", "synergy_hero_id": "tracer", "reason": "근접 유지력이 좋아 플랭커가 계속 앞으로 파고들어도 회복이 따라붙음" },
-
-  { "hero_id": "kiriko", "synergy_hero_id": "tracer", "reason": "순간이동으로 과감하게 앞서나간 트레이서에게 즉시 합류해 지원 가능" },
-
-  { "hero_id": "lucio", "synergy_hero_id": "genji", "reason": "속도 부스트로 대시 진입 타이밍을 극대화하고 벽타기 이동 경로가 잘 맞음" },
-
-  { "hero_id": "zenyatta", "synergy_hero_id": "reinhardt", "reason": "방벽 뒤에서 안전하게 부조화 표식을 걸어 처치 속도를 끌어올리는 포킹 조합" }
+  {
+    "hero_id": "reinhardt",
+    "synergy_hero_id": "zarya",
+    "reason": "방벽과 방벽을 나란히 세워 전선을 두껍게 만드는 이중 실드 브롤 조합"
+  },
+  {
+    "hero_id": "reinhardt",
+    "synergy_hero_id": "baptiste",
+    "reason": "불사조 광선탄이 화염 강타 진입 타이밍의 역실드를 커버해줌"
+  },
+  {
+    "hero_id": "reinhardt",
+    "synergy_hero_id": "zenyatta",
+    "reason": "방벽으로 자리를 잡고 부조화 표식으로 처치 속도를 끌어올리는 포킹 조합"
+  },
+  {
+    "hero_id": "orisa",
+    "synergy_hero_id": "zarya",
+    "reason": "두 개의 방벽으로 시야를 완전히 차단하는 이중 실드 포킹 조합"
+  },
+  {
+    "hero_id": "orisa",
+    "synergy_hero_id": "baptiste",
+    "reason": "투창 돌진 이후 불사조 광선탄으로 역콜을 방지"
+  },
+  {
+    "hero_id": "winston",
+    "synergy_hero_id": "tracer",
+    "reason": "둘 다 기동력이 높아 같은 타이밍에 후열로 진입·이탈이 가능한 다이브 축"
+  },
+  {
+    "hero_id": "winston",
+    "synergy_hero_id": "genji",
+    "reason": "도약과 이동기로 동시에 후열을 압박하는 전형적 다이브 코어"
+  },
+  {
+    "hero_id": "zarya",
+    "synergy_hero_id": "genji",
+    "reason": "그래비톤 서지 직후 용검으로 확정 광역딜을 넣는 대표적 궁극기 콤보"
+  },
+  {
+    "hero_id": "tracer",
+    "synergy_hero_id": "sojourn",
+    "reason": "둘 다 고기동 딜러라 교전 타이밍과 후퇴 루트를 맞추기 쉬움"
+  },
+  {
+    "hero_id": "ana",
+    "synergy_hero_id": "zarya",
+    "reason": "나노 강화를 받은 그래비톤 서지 이후 폭발적인 궁극기 대미지"
+  },
+  {
+    "hero_id": "moira",
+    "synergy_hero_id": "tracer",
+    "reason": "근접 유지력이 좋아 플랭커가 계속 앞으로 파고들어도 회복이 따라붙음"
+  },
+  {
+    "hero_id": "kiriko",
+    "synergy_hero_id": "tracer",
+    "reason": "순간이동으로 과감하게 앞서나간 트레이서에게 즉시 합류해 지원 가능"
+  },
+  {
+    "hero_id": "lucio",
+    "synergy_hero_id": "genji",
+    "reason": "속도 부스트로 대시 진입 타이밍을 극대화하고 벽타기 이동 경로가 잘 맞음"
+  },
+  {
+    "hero_id": "zenyatta",
+    "synergy_hero_id": "reinhardt",
+    "reason": "방벽 뒤에서 안전하게 부조화 표식을 걸어 처치 속도를 끌어올리는 포킹 조합"
+  },
+  {
+    "hero_id": "dva",
+    "synergy_hero_id": "mei",
+    "reason": "얼음벽으로 디바의 다이브 퇴로를 차단해 상대를 가두는 협공"
+  },
+  {
+    "hero_id": "dva",
+    "synergy_hero_id": "bastion",
+    "reason": "매트릭스로 진입로를 열어주고 고정 화력으로 마무리"
+  },
+  {
+    "hero_id": "dva",
+    "synergy_hero_id": "symmetra",
+    "reason": "텔레포터로 디바의 재진입 동선을 단축시켜 반복 다이브를 지원"
+  },
+  {
+    "hero_id": "dva",
+    "synergy_hero_id": "lucio",
+    "reason": "속도 부스트로 다이브 진입 타이밍을 극대화"
+  },
+  {
+    "hero_id": "dva",
+    "synergy_hero_id": "jetpack_cat",
+    "reason": "생명줄로 디바를 원하는 타이밍에 전선까지 끌어올려 다이브 지원"
+  },
+  {
+    "hero_id": "dva",
+    "synergy_hero_id": "kiriko",
+    "reason": "순간이동으로 과감하게 다이브한 디바에게 즉시 합류 지원"
+  },
+  {
+    "hero_id": "dva",
+    "synergy_hero_id": "juno",
+    "reason": "이동속도 증가로 다이브 진입과 이탈 타이밍을 동시에 지원"
+  }
 ]

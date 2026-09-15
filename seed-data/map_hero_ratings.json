@@ -1,34 +1,320 @@
 [
-  { "map_id": "eichenwalde", "hero_id": "winston", "rating": "강함", "reason": "2번째 포인트 주변 고지대를 도약으로 선점하기 좋음" },
-  { "map_id": "eichenwalde", "hero_id": "tracer", "rating": "강함", "reason": "좁은 측면 골목을 우회 경로로 활용하기 좋음" },
-  { "map_id": "eichenwalde", "hero_id": "dva", "rating": "강함", "reason": "고지대에서 후열로 뛰어들기 좋은 지형" },
-  { "map_id": "eichenwalde", "hero_id": "widowmaker", "rating": "약함", "reason": "장거리 사선을 낼 수 있는 개활지가 적음" },
-
-  { "map_id": "kings_row", "hero_id": "reinhardt", "rating": "강함", "reason": "2차 포인트 좁은 골목 구간을 방벽으로 틀어막기 좋음" },
-  { "map_id": "kings_row", "hero_id": "orisa", "rating": "강함", "reason": "장거리 직선 구간에서 스피어 견제 각이 잘 나옴" },
-  { "map_id": "kings_row", "hero_id": "tracer", "rating": "약함", "reason": "긴 직선 구간에서 원거리 견제에 노출되기 쉬움" },
-
-  { "map_id": "dorado", "hero_id": "widowmaker", "rating": "강함", "reason": "첫 구간 긴 직선 사거리를 활용하기 좋음" },
-  { "map_id": "dorado", "hero_id": "sojourn", "rating": "강함", "reason": "직선 구간에서 레일건 충전 사격 각이 잘 나옴" },
-  { "map_id": "dorado", "hero_id": "tracer", "rating": "약함", "reason": "장거리 견제 라인에 계속 노출됨" },
-
-  { "map_id": "havana", "hero_id": "widowmaker", "rating": "강함", "reason": "긴 거리 사선이 여러 구간에서 나옴" },
-  { "map_id": "havana", "hero_id": "zarya", "rating": "강함", "reason": "좁은 코너 구간에서 방벽 각을 잡기 좋음" },
-  { "map_id": "havana", "hero_id": "winston", "rating": "약함", "reason": "장거리 구간에서 접근 전 노출 시간이 김" },
-
-  { "map_id": "ilios", "hero_id": "winston", "rating": "강함", "reason": "수직 지형이 많아 도약 기동력을 살리기 좋음" },
-  { "map_id": "ilios", "hero_id": "tracer", "rating": "강함", "reason": "좁고 근접전 위주라 기동 딜러가 유리함" },
-  { "map_id": "ilios", "hero_id": "widowmaker", "rating": "약함", "reason": "긴 사거리를 낼 공간이 부족함" },
-
-  { "map_id": "oasis", "hero_id": "zarya", "rating": "강함", "reason": "시티센터의 좁은 구간에서 방벽 각을 잡기 좋음" },
-  { "map_id": "oasis", "hero_id": "zenyatta", "rating": "강함", "reason": "가든의 개활지에서 원거리 견제가 잘 통함" },
-  { "map_id": "oasis", "hero_id": "dva", "rating": "약함", "reason": "좁은 시티센터 구간에서 기동 공간이 제한됨" },
-
-  { "map_id": "junkertown", "hero_id": "tracer", "rating": "강함", "reason": "측면 플랭크 루트가 많아 기동 딜러가 활개치기 좋음" },
-  { "map_id": "junkertown", "hero_id": "baptiste", "rating": "강함", "reason": "고지대 점프 패드를 활용해 유리한 사거리를 확보하기 좋음" },
-  { "map_id": "junkertown", "hero_id": "zarya", "rating": "약함", "reason": "개활지가 많아 방벽 각을 잡기 어려움" },
-
-  { "map_id": "hollywood", "hero_id": "genji", "rating": "강함", "reason": "실내 구간이 많아 근접전으로 끌고 가기 좋음" },
-  { "map_id": "hollywood", "hero_id": "moira", "rating": "강함", "reason": "좁은 실내 구간에서 근접 유지력을 살리기 좋음" },
-  { "map_id": "hollywood", "hero_id": "widowmaker", "rating": "약함", "reason": "실내 구간이 많아 장거리 사선이 잘 안 나옴" }
+  {
+    "map_id": "eichenwalde",
+    "hero_id": "winston",
+    "rating": "강함",
+    "reason": "2번째 포인트 주변 고지대를 도약으로 선점하기 좋음"
+  },
+  {
+    "map_id": "eichenwalde",
+    "hero_id": "tracer",
+    "rating": "강함",
+    "reason": "좁은 측면 골목을 우회 경로로 활용하기 좋음"
+  },
+  {
+    "map_id": "eichenwalde",
+    "hero_id": "dva",
+    "rating": "강함",
+    "reason": "고지대에서 후열로 뛰어들기 좋은 지형"
+  },
+  {
+    "map_id": "eichenwalde",
+    "hero_id": "widowmaker",
+    "rating": "약함",
+    "reason": "장거리 사선을 낼 수 있는 개활지가 적음"
+  },
+  {
+    "map_id": "kings_row",
+    "hero_id": "reinhardt",
+    "rating": "강함",
+    "reason": "2차 포인트 좁은 골목 구간을 방벽으로 틀어막기 좋음"
+  },
+  {
+    "map_id": "kings_row",
+    "hero_id": "orisa",
+    "rating": "강함",
+    "reason": "장거리 직선 구간에서 스피어 견제 각이 잘 나옴"
+  },
+  {
+    "map_id": "kings_row",
+    "hero_id": "tracer",
+    "rating": "약함",
+    "reason": "긴 직선 구간에서 원거리 견제에 노출되기 쉬움"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "widowmaker",
+    "rating": "강함",
+    "reason": "첫 구간 긴 직선 사거리를 활용하기 좋음"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "sojourn",
+    "rating": "강함",
+    "reason": "직선 구간에서 레일건 충전 사격 각이 잘 나옴"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "tracer",
+    "rating": "약함",
+    "reason": "장거리 견제 라인에 계속 노출됨"
+  },
+  {
+    "map_id": "havana",
+    "hero_id": "widowmaker",
+    "rating": "강함",
+    "reason": "긴 거리 사선이 여러 구간에서 나옴"
+  },
+  {
+    "map_id": "havana",
+    "hero_id": "zarya",
+    "rating": "강함",
+    "reason": "좁은 코너 구간에서 방벽 각을 잡기 좋음"
+  },
+  {
+    "map_id": "havana",
+    "hero_id": "winston",
+    "rating": "약함",
+    "reason": "장거리 구간에서 접근 전 노출 시간이 김"
+  },
+  {
+    "map_id": "ilios",
+    "hero_id": "winston",
+    "rating": "강함",
+    "reason": "수직 지형이 많아 도약 기동력을 살리기 좋음"
+  },
+  {
+    "map_id": "ilios",
+    "hero_id": "tracer",
+    "rating": "강함",
+    "reason": "좁고 근접전 위주라 기동 딜러가 유리함"
+  },
+  {
+    "map_id": "ilios",
+    "hero_id": "widowmaker",
+    "rating": "약함",
+    "reason": "긴 사거리를 낼 공간이 부족함"
+  },
+  {
+    "map_id": "oasis",
+    "hero_id": "zarya",
+    "rating": "강함",
+    "reason": "시티센터의 좁은 구간에서 방벽 각을 잡기 좋음"
+  },
+  {
+    "map_id": "oasis",
+    "hero_id": "zenyatta",
+    "rating": "강함",
+    "reason": "가든의 개활지에서 원거리 견제가 잘 통함"
+  },
+  {
+    "map_id": "oasis",
+    "hero_id": "dva",
+    "rating": "강함",
+    "reason": "가든/시티센터 개활지에서 부스터로 측면 다이브 각을 잡기 좋음"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "tracer",
+    "rating": "강함",
+    "reason": "측면 플랭크 루트가 많아 기동 딜러가 활개치기 좋음"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "baptiste",
+    "rating": "강함",
+    "reason": "고지대 점프 패드를 활용해 유리한 사거리를 확보하기 좋음"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "zarya",
+    "rating": "약함",
+    "reason": "개활지가 많아 방벽 각을 잡기 어려움"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "genji",
+    "rating": "강함",
+    "reason": "실내 구간이 많아 근접전으로 끌고 가기 좋음"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "moira",
+    "rating": "강함",
+    "reason": "좁은 실내 구간에서 근접 유지력을 살리기 좋음"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "widowmaker",
+    "rating": "약함",
+    "reason": "실내 구간이 많아 장거리 사선이 잘 안 나옴"
+  },
+  {
+    "map_id": "busan",
+    "hero_id": "dva",
+    "rating": "강함",
+    "reason": "개활지와 고지대가 많아 부스터 기동으로 측면 압박하기 좋음"
+  },
+  {
+    "map_id": "ilios",
+    "hero_id": "dva",
+    "rating": "강함",
+    "reason": "짧은 교전 거리와 수직 지형이 부스터 다이브에 유리함"
+  },
+  {
+    "map_id": "route_66",
+    "hero_id": "dva",
+    "rating": "강함",
+    "reason": "곡선 구간이 많아 매트릭스로 견제를 흡수하며 화물을 호위하기 좋음"
+  },
+  {
+    "map_id": "watchpoint_gibraltar",
+    "hero_id": "dva",
+    "rating": "강함",
+    "reason": "개활지 구간에서 부스터로 측면 진입로를 만들기 좋음"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "dva",
+    "rating": "강함",
+    "reason": "좁은 첫 구간을 매트릭스로 버티며 화물 앞으로 전진하기 좋음"
+  },
+  {
+    "map_id": "rialto",
+    "hero_id": "dva",
+    "rating": "강함",
+    "reason": "수로를 낀 측면 루트로 부스터 다이브 진입로가 다양함"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "dva",
+    "rating": "강함",
+    "reason": "개활지가 많아 부스터로 우회 다이브 루트를 만들기 좋음"
+  },
+  {
+    "map_id": "numbani",
+    "hero_id": "dva",
+    "rating": "강함",
+    "reason": "넓은 첫 구간에서 매트릭스로 견제를 흡수하며 전진하기 좋음"
+  },
+  {
+    "map_id": "blizzard_world",
+    "hero_id": "dva",
+    "rating": "강함",
+    "reason": "실내외가 섞여 있어 매트릭스로 원거리 견제를 끊고 근접전으로 전환하기 좋음"
+  },
+  {
+    "map_id": "paraiso",
+    "hero_id": "dva",
+    "rating": "강함",
+    "reason": "굴곡진 골목 구조가 부스터 측면 진입에 유리함"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "dva",
+    "rating": "강함",
+    "reason": "실내 구간 전환이 많아 매트릭스로 견제를 끊고 근접전으로 전환하기 좋음"
+  },
+  {
+    "map_id": "colosseo",
+    "hero_id": "dva",
+    "rating": "강함",
+    "reason": "개활지 중심 구조라 부스터로 로봇 주변 측면 압박이 잘 통함"
+  },
+  {
+    "map_id": "runasapi",
+    "hero_id": "dva",
+    "rating": "강함",
+    "reason": "고지대와 개활지가 섞여 있어 다이브 진입 각이 다양함"
+  },
+  {
+    "map_id": "aatlis",
+    "hero_id": "dva",
+    "rating": "강함",
+    "reason": "구조물 사이 개방된 동선이 많아 부스터 측면 진입에 유리함"
+  },
+  {
+    "map_id": "antarctic_peninsula",
+    "hero_id": "dva",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "nepal",
+    "hero_id": "dva",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "lijiang_tower",
+    "hero_id": "dva",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "samoa",
+    "hero_id": "dva",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "shambali_monastery",
+    "hero_id": "dva",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "circuit_royal",
+    "hero_id": "dva",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "havana",
+    "hero_id": "dva",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "neon_junction",
+    "hero_id": "dva",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "midtown",
+    "hero_id": "dva",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "kings_row",
+    "hero_id": "dva",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "new_queen_street",
+    "hero_id": "dva",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "esperanca",
+    "hero_id": "dva",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "new_junk_city",
+    "hero_id": "dva",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "suravasa",
+    "hero_id": "dva",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  }
 ]
