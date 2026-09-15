@@ -376,5 +376,89 @@
     "hero_id": "domina",
     "rating": "보통",
     "reason": "아직 실전 데이터가 부족해 명확한 강약을 판단하기 이름"
+  },
+  {
+    "map_id": "numbani",
+    "hero_id": "doomfist",
+    "rating": "강함",
+    "reason": "좁은 골목과 고지대가 많아 강타 콤보 진입 각이 다양함"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "wrecking_ball",
+    "rating": "강함",
+    "reason": "고리형 지형이 많아 구체 모멘텀을 살리기 좋음"
+  },
+  {
+    "map_id": "rialto",
+    "hero_id": "hanzo",
+    "rating": "강함",
+    "reason": "수로를 낀 긴 사선이 여러 구간에서 나옴"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "ashe",
+    "rating": "강함",
+    "reason": "직선 구간이 길어 장거리 사격 각이 잘 나옴"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "cassidy",
+    "rating": "강함",
+    "reason": "직선 구간에서 리볼버 사거리를 살리기 좋음"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "torbjorn",
+    "rating": "강함",
+    "reason": "좁은 통로가 많아 포탑 배치 각이 잘 나옴"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "junkrat",
+    "rating": "강함",
+    "reason": "홈그라운드 지형이라 곡사 공격과 함정 배치를 살리기 좋음"
+  },
+  {
+    "map_id": "oasis",
+    "hero_id": "mei",
+    "rating": "강함",
+    "reason": "시티센터의 좁은 통로를 얼음벽으로 봉쇄하기 좋음"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "symmetra",
+    "rating": "강함",
+    "reason": "좁은 첫 구간에 포탑을 배치하고 텔레포터로 빠르게 재집결하기 좋음"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "soldier_76",
+    "rating": "강함",
+    "reason": "직선 구간에서 지속 화력을 살리기 좋음"
+  },
+  {
+    "map_id": "watchpoint_gibraltar",
+    "hero_id": "pharah",
+    "rating": "강함",
+    "reason": "개방된 공중 공간이 많아 로켓 공중전을 살리기 좋음"
+  },
+  {
+    "map_id": "numbani",
+    "hero_id": "echo",
+    "rating": "강함",
+    "reason": "개방된 공중 공간에서 비행 기동을 살리기 좋음"
+  },
+  {
+    "map_id": "kings_row",
+    "hero_id": "brigitte",
+    "rating": "강함",
+    "reason": "좁은 골목에서 근접 보호와 기절 콤보를 살리기 좋음"
+  },
+  {
+    "map_id": "ilios",
+    "hero_id": "illari",
+    "rating": "강함",
+    "reason": "개활지가 많아 태양 소총 견제 각을 잡기 좋음"
   }
 ]

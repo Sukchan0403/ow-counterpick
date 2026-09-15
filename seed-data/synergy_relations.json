@@ -183,5 +183,75 @@
     "hero_id": "domina",
     "synergy_hero_id": "baptiste",
     "reason": "불사조 광선탄이 재조립으로 공격적으로 버티는 도미나의 생존을 보장"
+  },
+  {
+    "hero_id": "doomfist",
+    "synergy_hero_id": "lucio",
+    "reason": "속도 부스트로 강타 콤보 진입·이탈 타이밍을 극대화"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "synergy_hero_id": "zarya",
+    "reason": "미네필드 궁극기가 그래비톤 서지에 걸린 적을 광역 전멸시킴"
+  },
+  {
+    "hero_id": "hanzo",
+    "synergy_hero_id": "widowmaker",
+    "reason": "둘 다 장거리 견제가 가능해 같은 사거리에서 동시에 압박"
+  },
+  {
+    "hero_id": "ashe",
+    "synergy_hero_id": "baptiste",
+    "reason": "불사조 광선탄이 밥 소환 타이밍의 생존을 보장"
+  },
+  {
+    "hero_id": "cassidy",
+    "synergy_hero_id": "zarya",
+    "reason": "섬광탄으로 기절시킨 대상에게 그래비톤 서지 콤보를 이어감"
+  },
+  {
+    "hero_id": "torbjorn",
+    "synergy_hero_id": "reinhardt",
+    "reason": "방벽 뒤에 포탑을 배치해 안전하게 지속 화력을 유지"
+  },
+  {
+    "hero_id": "junkrat",
+    "synergy_hero_id": "zarya",
+    "reason": "궁극기 타이어가 그래비톤 서지에 걸린 적을 확정 처치"
+  },
+  {
+    "hero_id": "mei",
+    "synergy_hero_id": "reinhardt",
+    "reason": "방벽과 얼음벽을 동시에 세워 좁은 공간을 완전히 장악"
+  },
+  {
+    "hero_id": "symmetra",
+    "synergy_hero_id": "reinhardt",
+    "reason": "텔레포터로 팀 전체가 빠르게 재집결할 수 있어 방벽 브롤 조합을 지원"
+  },
+  {
+    "hero_id": "soldier_76",
+    "synergy_hero_id": "lucio",
+    "reason": "속도 부스트로 돌격 소총 교전 포지션을 더 빠르게 잡음"
+  },
+  {
+    "hero_id": "pharah",
+    "synergy_hero_id": "zenyatta",
+    "reason": "부조화 표식이 걸린 목표를 로켓 런처로 빠르게 마무리"
+  },
+  {
+    "hero_id": "echo",
+    "synergy_hero_id": "ana",
+    "reason": "나노 강화로 집중 광선과 폭탄 화력을 증폭"
+  },
+  {
+    "hero_id": "brigitte",
+    "synergy_hero_id": "reinhardt",
+    "reason": "고무로 방벽 유지력을 높여 브롤 조합을 지속시킴"
+  },
+  {
+    "hero_id": "illari",
+    "synergy_hero_id": "genji",
+    "reason": "치유 기둥이 원거리에서도 지속적으로 다이브 딜러를 회복시킴"
   }
 ]

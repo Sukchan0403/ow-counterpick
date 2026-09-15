@@ -413,5 +413,145 @@
     "hero_id": "mauga",
     "countered_hero_id": "zenyatta",
     "reason": "케이지 파이트로 이동기 없는 젠야타를 가둬 확정 처치"
+  },
+  {
+    "hero_id": "doomfist",
+    "countered_hero_id": "zarya",
+    "reason": "지진 강타로 자리야가 빔을 지속하기 전에 끊어내고 강화 주먹으로 단숨에 처치"
+  },
+  {
+    "hero_id": "doomfist",
+    "countered_hero_id": "ana",
+    "reason": "손날 차단으로 견제를 막아내고 순식간에 거리를 좁혀 압박"
+  },
+  {
+    "hero_id": "doomfist",
+    "countered_hero_id": "widowmaker",
+    "reason": "강타 콤보로 저격수와의 거리를 순식간에 좁힘"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "countered_hero_id": "zenyatta",
+    "reason": "갈고리 스윙으로 이동기 없는 젠야타에게 순식간에 접근"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "countered_hero_id": "bastion",
+    "reason": "적응형 보호막으로 고정 화력을 버티고 말뚝박기로 진형을 흩뜨림"
+  },
+  {
+    "hero_id": "hanzo",
+    "countered_hero_id": "zenyatta",
+    "reason": "스톰 애로우 연사로 이동기 없는 젠야타를 빠르게 처치"
+  },
+  {
+    "hero_id": "hanzo",
+    "countered_hero_id": "reaper",
+    "reason": "음파 화살로 은신·침투 동선을 미리 파악해 접근을 견제"
+  },
+  {
+    "hero_id": "ashe",
+    "countered_hero_id": "torbjorn",
+    "reason": "다이너마이트로 포탑을 한 번에 파괴"
+  },
+  {
+    "hero_id": "ashe",
+    "countered_hero_id": "mercy",
+    "reason": "장거리 견제로 후열의 메르시를 압박"
+  },
+  {
+    "hero_id": "cassidy",
+    "countered_hero_id": "widowmaker",
+    "reason": "전투 구르기로 거리를 좁히고 섬광탄으로 조준 타이밍을 끊음"
+  },
+  {
+    "hero_id": "cassidy",
+    "countered_hero_id": "torbjorn",
+    "reason": "연발 사격으로 포탑을 빠르게 파괴"
+  },
+  {
+    "hero_id": "torbjorn",
+    "countered_hero_id": "genji",
+    "reason": "포탑의 지속 화력이 근접 다이브를 지속적으로 견제"
+  },
+  {
+    "hero_id": "torbjorn",
+    "countered_hero_id": "tracer",
+    "reason": "포탑이 점멸로 움직이는 트레이서를 지속적으로 추적 견제"
+  },
+  {
+    "hero_id": "junkrat",
+    "countered_hero_id": "reinhardt",
+    "reason": "곡사 화망이 방벽을 넘어가 뒤에 있는 목표에게도 피해를 줌"
+  },
+  {
+    "hero_id": "junkrat",
+    "countered_hero_id": "genji",
+    "reason": "강철 덫과 집속 지뢰로 근접 다이브 경로를 봉쇄"
+  },
+  {
+    "hero_id": "mei",
+    "countered_hero_id": "genji",
+    "reason": "얼음벽으로 퇴로를 끊고 냉각 광선으로 이동기를 무력화"
+  },
+  {
+    "hero_id": "mei",
+    "countered_hero_id": "bastion",
+    "reason": "얼음벽으로 고정 화력의 사선을 완전히 차단"
+  },
+  {
+    "hero_id": "symmetra",
+    "countered_hero_id": "genji",
+    "reason": "감시 포탑이 근접 다이브 경로에 지속 피해를 줘 견제"
+  },
+  {
+    "hero_id": "symmetra",
+    "countered_hero_id": "soldier_76",
+    "reason": "광자 보호막으로 헬릭스 로켓과 돌진을 막아냄"
+  },
+  {
+    "hero_id": "soldier_76",
+    "countered_hero_id": "torbjorn",
+    "reason": "꾸준한 사격으로 포탑을 안전 거리에서 파괴"
+  },
+  {
+    "hero_id": "soldier_76",
+    "countered_hero_id": "genji",
+    "reason": "생체 지대로 반사 타이밍 이후에도 팀을 유지시키며 견제 지속"
+  },
+  {
+    "hero_id": "pharah",
+    "countered_hero_id": "reinhardt",
+    "reason": "공중 기동으로 방벽의 사거리 밖에서 안전하게 견제"
+  },
+  {
+    "hero_id": "pharah",
+    "countered_hero_id": "roadhog",
+    "reason": "공중에서 사슬 갈고리 사거리 밖 안전 지대를 유지하며 견제"
+  },
+  {
+    "hero_id": "echo",
+    "countered_hero_id": "reinhardt",
+    "reason": "끈끈이 폭탄이 방벽을 넘어가 뒤쪽 목표에게도 피해를 줌"
+  },
+  {
+    "hero_id": "echo",
+    "countered_hero_id": "mercy",
+    "reason": "집중 광선으로 체력이 낮은 메르시를 빠르게 처치"
+  },
+  {
+    "hero_id": "brigitte",
+    "countered_hero_id": "genji",
+    "reason": "방패 강타 기절로 근접 다이브 타이밍을 끊음"
+  },
+  {
+    "hero_id": "brigitte",
+    "countered_hero_id": "doomfist",
+    "reason": "방패 강타로 강타 콤보 타이밍을 끊음"
+  },
+  {
+    "hero_id": "illari",
+    "countered_hero_id": "sombra",
+    "reason": "궤도 이탈로 해킹 시도를 피하고 태양 소총 화력으로 역으로 압박"
   }
 ]
