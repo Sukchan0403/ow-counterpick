@@ -22,6 +22,7 @@ from app.config import (
     PERCENTAGE_BASELINE,
     PERCENTAGE_SCALE,
     WEIGHT_COUNTER,
+    WEIGHT_COUNTERED_BY,
     WEIGHT_MAP_STRONG,
     WEIGHT_MAP_WEAK,
     WEIGHT_SYNERGY,
@@ -91,12 +92,18 @@ def score_candidates(
     ally_ids: list[str] | None = None,
     reviewed_neutral_counter_pairs: list[dict] | None = None,
     reviewed_neutral_synergy_pairs: list[dict] | None = None,
+    countered_by_rows: list[dict] | None = None,
     id_to_name: dict[str, str] | None = None,
 ) -> list[ScoredHero]:
     """candidates: [{id, name, role}, ...]
-    counter_rows: [{hero_id, countered_hero_id, reason}, ...] (hero_id == candidate)
+    counter_rows: [{hero_id, countered_hero_id, reason}, ...] (hero_id == candidate,
+        즉 "후보가 상대를 카운터함")
     synergy_rows: [{hero_id, synergy_hero_id, reason}, ...] (양방향 매칭된 결과라고 가정)
     map_rows: [{hero_id, rating, reason}, ...]
+    countered_by_rows: [{hero_id, countered_hero_id, reason}, ...] (hero_id == 상대,
+        countered_hero_id == 후보, 즉 "상대가 후보를 카운터함" — counter_rows와 반대
+        방향. 알려져 있으면 WEIGHT_COUNTERED_BY(음수)를 적용하고, 그 상대는
+        미검토가 아니라 이미 검토된 것으로 취급한다.
     """
     # 중복 id가 섞여 들어와도(예: 요청 payload에 같은 영웅이 두 번 들어옴)
     # data_gaps에 같은 영웅에 대한 메시지가 중복 생성되지 않도록 순서를
@@ -105,6 +112,7 @@ def score_candidates(
     ally_ids = list(dict.fromkeys(ally_ids or []))
     reviewed_neutral_counter_pairs = reviewed_neutral_counter_pairs or []
     reviewed_neutral_synergy_pairs = reviewed_neutral_synergy_pairs or []
+    countered_by_rows = countered_by_rows or []
     id_to_name = id_to_name or {}
 
     neutral_counter_set = {
@@ -131,6 +139,10 @@ def score_candidates(
 
     map_by_hero: dict[str, dict] = {row["hero_id"]: row for row in map_rows}
 
+    countered_by_hero: dict[str, list[dict]] = {}
+    for row in countered_by_rows:
+        countered_by_hero.setdefault(row["countered_hero_id"], []).append(row)
+
     results: list[ScoredHero] = []
     for candidate in candidates:
         cid = candidate["id"]
@@ -149,12 +161,22 @@ def score_candidates(
             scored.reasons.append(row["reason"])
             countered_enemy_ids.add(row["countered_hero_id"])
 
+        countered_by_enemy_ids: set[str] = set()
+        for row in countered_by_hero.get(cid, []):
+            scored.counter_score += WEIGHT_COUNTERED_BY
+            scored.reasons.append(row["reason"])
+            countered_by_enemy_ids.add(row["hero_id"])
+
         for enemy_id in enemy_ids:
             if enemy_id == cid:
                 # 미러 픽 허용 규칙상 후보가 상대 팀에도 있을 수 있음 — 자기 자신과의
                 # "카운터 관계"는 애초에 성립하지 않으므로 결측치로 취급하지 않는다.
                 continue
             if enemy_id in countered_enemy_ids:
+                continue
+            if enemy_id in countered_by_enemy_ids:
+                # 반대 방향(상대가 후보를 카운터함)으로 이미 검토된 관계 — 후보
+                # 입장에서 "카운터함"은 아니지만 미검토도 아니므로 데이터 갭이 아님.
                 continue
             if (cid, enemy_id) in neutral_counter_set:
                 continue

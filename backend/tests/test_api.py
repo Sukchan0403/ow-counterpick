@@ -244,6 +244,27 @@ def test_recommendations_data_gaps_for_unreviewed_synergy(client):
     assert rows["moira"]["data_gaps"] == ["아군 겐지와의 시너지 관계 미검토"]
 
 
+def test_recommendations_applies_negative_score_when_enemy_counters_candidate(client):
+    """conftest 시드: reinhardt가 genji를 카운터하는 행이 있음(반대 방향).
+    상대 팀에 라인하르트가 있으면, 겐지 후보는 그 행의 근거로 감점되고
+    "미검토"로 잘못 표시되면 안 된다."""
+    res = client.post(
+        "/api/recommendations",
+        json={
+            "enemy_heroes": ["reinhardt"],
+            "our_heroes": [],
+            "empty_position": "damage",
+            "map_id": "eichenwalde",
+        },
+    )
+    assert res.status_code == 200
+    rows = {r["hero_id"]: r for r in res.json()["recommendations"]}
+    genji_row = rows["genji"]
+    assert genji_row["score_breakdown"]["counter"] < 0
+    assert "화염 강타 한 방으로 즉시 처치 가능한 체력대" in genji_row["reasons"]
+    assert genji_row["data_gaps"] == []
+
+
 def test_recommendation_includes_icon_url_and_archetype_category(client):
     res = client.post(
         "/api/recommendations",

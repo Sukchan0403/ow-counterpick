@@ -4,7 +4,13 @@ DB 없이 순수하게 scoring.score_candidates()만 검증한다.
 """
 import math
 
-from app.config import PERCENTAGE_SCALE, WEIGHT_COUNTER, WEIGHT_MAP_STRONG, WEIGHT_SYNERGY
+from app.config import (
+    PERCENTAGE_SCALE,
+    WEIGHT_COUNTER,
+    WEIGHT_COUNTERED_BY,
+    WEIGHT_MAP_STRONG,
+    WEIGHT_SYNERGY,
+)
 from app.scoring import NEUTRAL_REASON, _particle_wa_gwa, score_candidates
 
 
@@ -125,6 +131,64 @@ def test_data_gaps_skips_enemy_already_matched_by_actual_counter_row():
         id_to_name={"widowmaker": "위도우메이커"},
     )
     by_id = {s.hero_id: s for s in result}
+    assert by_id["kiriko"].data_gaps == []
+
+
+def test_countered_by_enemy_applies_negative_weight_and_reason():
+    """상대가 후보를 카운터한다고 알려져 있으면(반대 방향), 후보의 counter_score에
+    WEIGHT_COUNTERED_BY(음수)가 적용되고 그 근거가 reasons에 담겨야 한다."""
+    candidates = make_candidates()
+    countered_by_rows = [
+        {"hero_id": "widowmaker", "countered_hero_id": "kiriko", "reason": "장거리 견제에 취약"}
+    ]
+    result = score_candidates(
+        candidates, [], [], [],
+        enemy_ids=["widowmaker"],
+        countered_by_rows=countered_by_rows,
+        id_to_name={"widowmaker": "위도우메이커"},
+    )
+    by_id = {s.hero_id: s for s in result}
+    assert by_id["kiriko"].counter_score == WEIGHT_COUNTERED_BY
+    assert by_id["kiriko"].reasons == ["장거리 견제에 취약"]
+
+
+def test_countered_by_enemy_is_not_a_data_gap():
+    """반대 방향으로라도 검토된 관계면 "미검토"가 아니다 — 후보가 그 상대를
+    카운터하는지는 몰라도, 그 상대가 후보를 카운터한다는 건 이미 알고 있으므로."""
+    candidates = make_candidates()
+    countered_by_rows = [
+        {"hero_id": "widowmaker", "countered_hero_id": "kiriko", "reason": "장거리 견제에 취약"}
+    ]
+    result = score_candidates(
+        candidates, [], [], [],
+        enemy_ids=["widowmaker"],
+        countered_by_rows=countered_by_rows,
+        id_to_name={"widowmaker": "위도우메이커"},
+    )
+    by_id = {s.hero_id: s for s in result}
+    assert by_id["kiriko"].data_gaps == []
+    # 이 관계를 모르는 다른 후보(모이라)는 여전히 미검토로 남아야 함
+    assert by_id["moira"].data_gaps == ["상대 위도우메이커와의 카운터 관계 미검토"]
+
+
+def test_counter_and_countered_by_can_offset_for_same_candidate():
+    """후보가 어떤 상대는 카운터하고 다른 상대에게는 카운터당하면, counter_score는
+    두 값의 순합이어야 한다(서로 상쇄 가능)."""
+    candidates = make_candidates()
+    counter_rows = [
+        {"hero_id": "kiriko", "countered_hero_id": "widowmaker", "reason": "스즈 무효화"}
+    ]
+    countered_by_rows = [
+        {"hero_id": "genji", "countered_hero_id": "kiriko", "reason": "근접 다이브에 취약"}
+    ]
+    result = score_candidates(
+        candidates, counter_rows, [], [],
+        enemy_ids=["widowmaker", "genji"],
+        countered_by_rows=countered_by_rows,
+        id_to_name={"widowmaker": "위도우메이커", "genji": "겐지"},
+    )
+    by_id = {s.hero_id: s for s in result}
+    assert by_id["kiriko"].counter_score == WEIGHT_COUNTER + WEIGHT_COUNTERED_BY
     assert by_id["kiriko"].data_gaps == []
 
 

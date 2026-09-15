@@ -35,10 +35,12 @@ export function ResultsPanel({ recommendations, emptyPosition, notice }: Props) 
 
       {recommendations.map((rec, i) => {
         const { counter, synergy, map } = rec.score_breakdown;
-        // 음수 맵 점수(약함)는 막대에 표시할 게 없으니 0으로 취급
+        // 음수 점수(맵 "약함", 또는 상대가 이 후보를 카운터하는 경우의 counter)는
+        // 막대에 표시할 게 없으니 0으로 취급
+        const positiveCounter = Math.max(counter, 0);
         const positiveMap = Math.max(map, 0);
-        const total = counter + synergy + positiveMap;
-        const counterPct = total > 0 ? (counter / total) * 100 : 0;
+        const total = positiveCounter + synergy + positiveMap;
+        const counterPct = total > 0 ? (positiveCounter / total) * 100 : 0;
         const synergyPct = total > 0 ? (synergy / total) * 100 : 0;
         const mapPct = total > 0 ? (positiveMap / total) * 100 : 0;
 

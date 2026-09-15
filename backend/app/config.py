@@ -22,6 +22,14 @@ DB_PATH = Path(os.environ.get("OW_DB_PATH", str(DEFAULT_DB_PATH)))
 # WEIGHT_SYNERGY + WEIGHT_MAP_STRONG)보다 항상 커야 한다. 지금 값 기준
 # 4*10+15=55이므로 60으로 설정 — 이 상수들을 조정할 때마다 이 부등식을 다시 확인할 것.
 WEIGHT_COUNTER = 60  # 카운터하는 상대 영웅 1명당
+
+# 반대로 "상대가 후보를 카운터함"이 알려진 경우의 감점. WEIGHT_COUNTER와 절댓값이
+# 같아야 한다 — 카운터 1건의 이득과 카운터당함 1건의 손해가 대칭이어야, 한쪽만
+# 있을 때의 영향력이 서로 같다(한쪽이 다른 쪽보다 더 세게/약하게 반영될 이유가
+# 없음). WEIGHT_COUNTER를 조정하면 이 값도 자동으로 같이 바뀌도록 상수 자체를
+# 참조해서 정의한다(별도 숫자로 하드코딩하지 않음).
+WEIGHT_COUNTERED_BY = -WEIGHT_COUNTER
+
 WEIGHT_SYNERGY = 10  # 시너지 좋은 아군 영웅 1명당
 WEIGHT_MAP_STRONG = 15  # 맵 평가 "강함"
 WEIGHT_MAP_WEAK = -15  # 맵 평가 "약함"

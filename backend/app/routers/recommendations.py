@@ -104,6 +104,15 @@ def post_recommendations(payload: RecommendationRequest):
             dict(r)
             for r in fetch_map_ratings_for_candidates(conn, candidate_ids, payload.map_id)
         ]
+        # "상대가 후보를 카운터함" (counter_rows와 반대 방향) — 같은 조회 함수를
+        # candidate_ids/enemy_heroes 인자만 뒤바꿔 호출하면 된다: hero_id가
+        # enemy_heroes 중 하나이고 countered_hero_id가 candidate_ids 중 하나인 행.
+        countered_by_rows = [
+            dict(r)
+            for r in fetch_counter_relations_for_candidates(
+                conn, payload.enemy_heroes, candidate_ids
+            )
+        ]
         reviewed_neutral_counter = [
             dict(r)
             for r in fetch_reviewed_neutral_pairs(
@@ -130,6 +139,7 @@ def post_recommendations(payload: RecommendationRequest):
         ally_ids=payload.our_heroes,
         reviewed_neutral_counter_pairs=reviewed_neutral_counter,
         reviewed_neutral_synergy_pairs=reviewed_neutral_synergy,
+        countered_by_rows=countered_by_rows,
         id_to_name=id_to_name,
     )
 
