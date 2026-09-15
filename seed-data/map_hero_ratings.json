@@ -316,5 +316,65 @@
     "hero_id": "dva",
     "rating": "보통",
     "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "kings_row",
+    "hero_id": "junker_queen",
+    "rating": "강함",
+    "reason": "좁은 골목 구간에서 칼날 투척과 근접 도끼 화력을 살리기 좋음"
+  },
+  {
+    "map_id": "ilios",
+    "hero_id": "sigma",
+    "rating": "강함",
+    "reason": "개활지와 고지대가 많아 바위 투척 포킹 각을 잡기 좋음"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "reaper",
+    "rating": "강함",
+    "reason": "실내 근접전 구간이 많아 산탄 화력을 살리기 좋음"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "sombra",
+    "rating": "강함",
+    "reason": "측면 플랭크 루트가 많아 은신 침투를 살리기 좋음"
+  },
+  {
+    "map_id": "numbani",
+    "hero_id": "venture",
+    "rating": "강함",
+    "reason": "지형이 복잡해 굴착 이동으로 우회 루트를 만들기 좋음"
+  },
+  {
+    "map_id": "eichenwalde",
+    "hero_id": "lifeweaver",
+    "rating": "강함",
+    "reason": "수직 지형이 많아 플랫폼 활용도가 높음"
+  },
+  {
+    "map_id": "watchpoint_gibraltar",
+    "hero_id": "mercy",
+    "rating": "강함",
+    "reason": "개방된 공중 공간이 많아 파라메르시 조합을 살리기 좋음"
+  },
+  {
+    "map_id": "route_66",
+    "hero_id": "roadhog",
+    "rating": "강함",
+    "reason": "직선 구간이 길어 갈고리 각을 잡기 좋음"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "mauga",
+    "rating": "강함",
+    "reason": "개활지가 많아 쌍기관총 근접 압박을 지속하기 좋음"
+  },
+  {
+    "map_id": "kings_row",
+    "hero_id": "domina",
+    "rating": "보통",
+    "reason": "아직 실전 데이터가 부족해 명확한 강약을 판단하기 이름"
   }
 ]

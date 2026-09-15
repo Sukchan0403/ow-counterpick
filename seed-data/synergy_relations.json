@@ -103,5 +103,85 @@
     "hero_id": "dva",
     "synergy_hero_id": "juno",
     "reason": "이동속도 증가로 다이브 진입과 이탈 타이밍을 동시에 지원"
+  },
+  {
+    "hero_id": "junker_queen",
+    "synergy_hero_id": "baptiste",
+    "reason": "불사조 광선탄이 여왕의 저돌적인 돌진 이후 생존을 보장해줌"
+  },
+  {
+    "hero_id": "junker_queen",
+    "synergy_hero_id": "kiriko",
+    "reason": "스즈로 여왕이 걸릴 수 있는 군중제어를 해제해 돌진 타이밍을 보장"
+  },
+  {
+    "hero_id": "sigma",
+    "synergy_hero_id": "zenyatta",
+    "reason": "부조화 표식으로 중력 붕괴에 걸린 적의 처치 속도를 극대화"
+  },
+  {
+    "hero_id": "sigma",
+    "synergy_hero_id": "ana",
+    "reason": "나노 강화로 바위 투척과 중력 붕괴 궁극기 대미지를 증폭"
+  },
+  {
+    "hero_id": "reaper",
+    "synergy_hero_id": "zarya",
+    "reason": "그래비톤 서지 직후 사신의 부름(광역 회전 사격)으로 확정 광역딜"
+  },
+  {
+    "hero_id": "reaper",
+    "synergy_hero_id": "lucio",
+    "reason": "속도 부스트로 측면 침투 타이밍을 앞당김"
+  },
+  {
+    "hero_id": "sombra",
+    "synergy_hero_id": "tracer",
+    "reason": "해킹으로 무력화된 상대를 트레이서가 바로 마무리"
+  },
+  {
+    "hero_id": "sombra",
+    "synergy_hero_id": "reaper",
+    "reason": "은신으로 동선을 가리고 해킹으로 무력화한 대상을 리퍼가 마무리"
+  },
+  {
+    "hero_id": "venture",
+    "synergy_hero_id": "lucio",
+    "reason": "속도 부스트가 벤처의 굴착 기동력과 겹쳐 끊임없는 압박 유지"
+  },
+  {
+    "hero_id": "lifeweaver",
+    "synergy_hero_id": "genji",
+    "reason": "무리하게 파고든 겐지를 생명의 은총으로 즉시 회수해 생존시킴"
+  },
+  {
+    "hero_id": "lifeweaver",
+    "synergy_hero_id": "widowmaker",
+    "reason": "생명의 꽃 플랫폼으로 위도우메이커에게 추가 고지대 사거리를 제공"
+  },
+  {
+    "hero_id": "mercy",
+    "synergy_hero_id": "pharah",
+    "reason": "피해 증폭이 파라의 로켓 공중전 화력을 극대화"
+  },
+  {
+    "hero_id": "mercy",
+    "synergy_hero_id": "reaper",
+    "reason": "피해 증폭이 리퍼의 근접 샷건 버스트를 극대화"
+  },
+  {
+    "hero_id": "roadhog",
+    "synergy_hero_id": "zenyatta",
+    "reason": "부조화 표식이 걸린 대상을 갈고리로 끌어와 확정 처치"
+  },
+  {
+    "hero_id": "mauga",
+    "synergy_hero_id": "baptiste",
+    "reason": "불사조 광선탄으로 케이지 파이트 돌진 이후 생존을 보장"
+  },
+  {
+    "hero_id": "domina",
+    "synergy_hero_id": "baptiste",
+    "reason": "불사조 광선탄이 재조립으로 공격적으로 버티는 도미나의 생존을 보장"
   }
 ]

@@ -313,5 +313,105 @@
     "hero_id": "brigitte",
     "countered_hero_id": "dva",
     "reason": "방패 강타 스턴으로 매트릭스 타이밍을 끊고 근접 버스트"
+  },
+  {
+    "hero_id": "junker_queen",
+    "countered_hero_id": "mercy",
+    "reason": "톱니 칼날의 상처 효과로 회복량을 대폭 낮춰 메르시의 힐 사이클을 무력화"
+  },
+  {
+    "hero_id": "junker_queen",
+    "countered_hero_id": "zarya",
+    "reason": "톱니 칼날로 방벽 뒤에 숨은 대상을 직접 끌어내 압박"
+  },
+  {
+    "hero_id": "junker_queen",
+    "countered_hero_id": "moira",
+    "reason": "상처 효과로 회복량이 지속적으로 감소하고, 사기충천 이동속도로 페이드 이후에도 추격 가능"
+  },
+  {
+    "hero_id": "sigma",
+    "countered_hero_id": "pharah",
+    "reason": "운동 부여로 로켓 발사체를 흡수해 공중 딜러의 화력을 무력화"
+  },
+  {
+    "hero_id": "sigma",
+    "countered_hero_id": "soldier_76",
+    "reason": "키네틱 그라운드로 헬릭스 로켓을 흡수해 화력을 무력화"
+  },
+  {
+    "hero_id": "sigma",
+    "countered_hero_id": "zarya",
+    "reason": "중력 붕괴 궁극기가 방벽을 무시하고 광역 기절을 걺"
+  },
+  {
+    "hero_id": "reaper",
+    "countered_hero_id": "zenyatta",
+    "reason": "이동기 없는 젠야타에게 유령 형태로 안전하게 접근해 확정 처치"
+  },
+  {
+    "hero_id": "reaper",
+    "countered_hero_id": "mercy",
+    "reason": "그림자 밟기로 후열에 있는 메르시에게 직접 접근해 처치"
+  },
+  {
+    "hero_id": "reaper",
+    "countered_hero_id": "moira",
+    "reason": "근접 샷건 화력이 모이라의 페이드 회복량보다 빨라 확정 처치 가능"
+  },
+  {
+    "hero_id": "sombra",
+    "countered_hero_id": "bastion",
+    "reason": "해킹으로 설치형 화력의 재장전/이동을 봉쇄"
+  },
+  {
+    "hero_id": "sombra",
+    "countered_hero_id": "mercy",
+    "reason": "해킹으로 수호 천사 이동과 부활을 잠깐 봉쇄해 확정 픽 기회를 만듦"
+  },
+  {
+    "hero_id": "sombra",
+    "countered_hero_id": "torbjorn",
+    "reason": "EMP로 포탑의 보호막을 무력화"
+  },
+  {
+    "hero_id": "venture",
+    "countered_hero_id": "widowmaker",
+    "reason": "굴착 대시로 저격수의 사거리를 순식간에 좁힘"
+  },
+  {
+    "hero_id": "venture",
+    "countered_hero_id": "ana",
+    "reason": "지하 굴착 이동으로 예측 불가능한 각으로 접근해 수면총 견제를 회피"
+  },
+  {
+    "hero_id": "lifeweaver",
+    "countered_hero_id": "junkrat",
+    "reason": "생명의 은총으로 아군을 즉시 안전지대로 끌어당겨 폭발형 궁극기 대미지를 무효화"
+  },
+  {
+    "hero_id": "mercy",
+    "countered_hero_id": "genji",
+    "reason": "확정 픽을 노리는 겐지의 처치를 부활로 무효화해 다이브 시도 자체를 무력화"
+  },
+  {
+    "hero_id": "roadhog",
+    "countered_hero_id": "widowmaker",
+    "reason": "사슬 갈고리로 후열에 있는 위도우메이커를 그대로 끌어와 확정 처치"
+  },
+  {
+    "hero_id": "roadhog",
+    "countered_hero_id": "ana",
+    "reason": "숨 고르기로 견제 대미지를 버티고 사슬 갈고리로 역으로 압박"
+  },
+  {
+    "hero_id": "mauga",
+    "countered_hero_id": "bastion",
+    "reason": "케이지 파이트로 도주를 막고 근접 화력으로 고정형 딜러를 제압"
+  },
+  {
+    "hero_id": "mauga",
+    "countered_hero_id": "zenyatta",
+    "reason": "케이지 파이트로 이동기 없는 젠야타를 가둬 확정 처치"
   }
 ]
