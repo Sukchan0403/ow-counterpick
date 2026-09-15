@@ -182,9 +182,12 @@ DB 조회 없이 `config.SEED_SEASON`/`config.SEED_DATA_VERSION` 상수를 그�
 - 6개 모드 32개 맵이 전부 시드에 등록됐지만(2026-09-14, 나무위키/OverFast API
   기준), `map_hero_ratings` 큐레이션은 최초 8개 맵(혼합 3·호위 3·점령 2)에만
   돼 있다 — 새로 추가된 24개 맵은 `data_richness`가 항상 `growing`이다.
-- `neon_junction`(혼합)은 OverFast API에 스크린샷 URL이 등록돼 있으나 실제
-  파일이 아직 404라서 `image_url`을 빈 문자열로 남겨뒀다 — 프론트가 단색
-  배경으로 폴백한다.
+- `neon_junction`(혼합)은 OverFast API 스크린샷이 계속 404라서(2026-09-15
+  기준으로도 안 고쳐짐 — 이번 시즌 신규 맵이라 아직 캐싱이 안 된 것으로 추정),
+  사용자가 직접 캡처한 스크린샷을 받아 `frontend/public/maps/neon_junction.png`로
+  넣고 `image_url`을 상대 경로(`/maps/neon_junction.png`)로 지정했다. 다른 31개
+  맵은 전부 외부 CDN(OverFast API) 핫링크인데 이 맵만 예외적으로 로컬 정적
+  파일이다 — OverFast가 나중에 정식으로 캐싱하면 다시 외부 URL로 되돌려도 됨.
 - `MUST_PICK_PERCENTAGE_THRESHOLD`(90)는 아직 실제 시드 데이터 기준 실증
   검증 전이다 — `backend/scripts/audit_must_pick_distribution.py`로 분포를
   확인한 뒤 조정 여부를 판단해야 한다.

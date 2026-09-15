@@ -96,8 +96,11 @@ DB 파일 자체를 읽고 쓰는 건 문제 없다.
   38개 영웅·24개 맵은 선택은 가능하지만 실제 추천 근거(`reasons`)는 없고
   `data_gaps`에 "미검토"로만 뜬다. 픽률·밴률이 높은 신규 영웅부터 우선순위를
   매겨 채워나가는 걸 추천.
-- `neon_junction`(네온 교차로)은 OverFast API 스크린샷이 아직 404라서 `image_url`이
-  비어있다 — 나중에 다시 확인해서 채워 넣을 것.
+- `neon_junction`(네온 교차로)은 OverFast API 스크린샷이 계속 404라서(2026-09-15),
+  사용자가 직접 캡처한 스크린샷을 `frontend/public/maps/neon_junction.png`로
+  대신 넣었다 — `image_url`이 다른 맵들과 달리 외부 URL이 아니라 상대 경로
+  (`/maps/neon_junction.png`)다. OverFast가 나중에 캐싱하면 다시 외부 URL로
+  되돌려도 무방.
 - `/topics` 프로젝트에 저장해둔 `오버워치-메타-노트.md`(아이치 티어리스트 요약)에
   "왜 밴당하는가"를 카운터형/짜증유발형/순수스탯형으로 구분한 관점이 있으니,
   `reason` 문구를 쓸 때 참고하면 좋다.
