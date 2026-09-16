@@ -322,3 +322,58 @@ def test_recommendations_auto_infer_rejects_invalid_composition(client):
         },
     )
     assert res.status_code == 400
+
+
+def test_get_heroes_lang_en_returns_localized_name_and_archetype(client):
+    res = client.get("/api/heroes", params={"lang": "en"})
+    assert res.status_code == 200
+    heroes = {h["id"]: h for h in res.json()}
+    assert heroes["kiriko"]["name"] == "Kiriko"
+    assert heroes["kiriko"]["archetype"] == "Recon Support"
+
+
+def test_get_maps_lang_ja_returns_localized_name(client):
+    res = client.get("/api/maps", params={"lang": "ja"})
+    assert res.status_code == 200
+    maps = {m["id"]: m for m in res.json()}
+    assert maps["kings_row"]["name"] == "キングスロウ"
+
+
+def test_recommendations_lang_en_localizes_hero_name_and_reason(client):
+    res = client.post(
+        "/api/recommendations",
+        json={
+            "enemy_heroes": ["widowmaker"],
+            "our_heroes": ["genji"],
+            "empty_position": "support",
+            "map_id": "eichenwalde",
+            "lang": "en",
+        },
+    )
+    assert res.status_code == 200
+    body = res.json()
+    top = next(r for r in body["recommendations"] if r["hero_id"] == "kiriko")
+    assert top["hero_name"] == "Kiriko"
+    assert top["reasons"] == ["Suzu cleanses the sniper's pressure"]
+
+
+def test_recommendations_lang_ja_localizes_data_gap_message(client):
+    """미검토 데이터 갭 문구도 lang에 맞춰 조립되는지 확인 (DB 컬럼이 아니라
+    scoring.py에서 직접 조립하는 문구라 별도 테스트가 필요함)."""
+    res = client.post(
+        "/api/recommendations",
+        json={
+            "enemy_heroes": ["genji"],
+            "our_heroes": ["reinhardt"],
+            "empty_position": "damage",
+            "map_id": "eichenwalde",
+            "lang": "ja",
+        },
+    )
+    assert res.status_code == 200
+    body = res.json()
+    widowmaker = next(r for r in body["recommendations"] if r["hero_id"] == "widowmaker")
+    assert widowmaker["data_gaps"] == [
+        "敵のゲンジとのカウンター関係は未検証",
+        "味方のラインハルトとのシナジー関係は未検証",
+    ]

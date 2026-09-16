@@ -10,6 +10,7 @@ from pydantic import BaseModel, Field
 
 Role = Literal["tank", "damage", "support"]
 DataRichness = Literal["rich", "growing"]
+Lang = Literal["ko", "en", "ja"]
 
 
 class RecommendationRequest(BaseModel):
@@ -28,6 +29,10 @@ class RecommendationRequest(BaseModel):
         ),
     )
     map_id: str = Field(description="맵 id")
+    lang: Lang = Field(
+        default="ko",
+        description="응답에 담길 영웅 이름/아키타입/근거 문구의 언어. hero_id/map_id 등 식별자는 언어와 무관하게 항상 동일.",
+    )
 
 
 class ScoreBreakdown(BaseModel):

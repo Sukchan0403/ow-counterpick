@@ -3,16 +3,16 @@ from fastapi import APIRouter
 
 from app import config
 from app.database import db_session
-from app.models import HeroOut, MapOut, MetaOut
+from app.models import HeroOut, Lang, MapOut, MetaOut
 from app.repository import fetch_all_heroes, fetch_all_maps_with_richness
 
 router = APIRouter(prefix="/api", tags=["catalog"])
 
 
 @router.get("/heroes", response_model=list[HeroOut])
-def get_heroes():
+def get_heroes(lang: Lang = "ko"):
     with db_session() as conn:
-        rows = fetch_all_heroes(conn)
+        rows = fetch_all_heroes(conn, lang=lang)
         return [
             HeroOut(
                 id=r["id"],
@@ -27,9 +27,9 @@ def get_heroes():
 
 
 @router.get("/maps", response_model=list[MapOut])
-def get_maps():
+def get_maps(lang: Lang = "ko"):
     with db_session() as conn:
-        rows = fetch_all_maps_with_richness(conn)
+        rows = fetch_all_maps_with_richness(conn, lang=lang)
         return [MapOut(**row) for row in rows]
 
 

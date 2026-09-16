@@ -21,22 +21,32 @@ CREATE TABLE heroes (
     role TEXT NOT NULL CHECK (role IN ('tank','damage','support')),
     archetype TEXT NOT NULL DEFAULT '',
     icon_url TEXT NOT NULL DEFAULT '',
-    archetype_category TEXT NOT NULL DEFAULT ''
+    archetype_category TEXT NOT NULL DEFAULT '',
+    name_en TEXT NOT NULL DEFAULT '',
+    name_ja TEXT NOT NULL DEFAULT '',
+    archetype_en TEXT NOT NULL DEFAULT '',
+    archetype_ja TEXT NOT NULL DEFAULT ''
 );
 CREATE TABLE maps (
     id TEXT PRIMARY KEY, name TEXT NOT NULL, mode TEXT NOT NULL,
-    image_url TEXT NOT NULL DEFAULT ''
+    image_url TEXT NOT NULL DEFAULT '',
+    name_en TEXT NOT NULL DEFAULT '',
+    name_ja TEXT NOT NULL DEFAULT ''
 );
 CREATE TABLE counter_relations (
     hero_id TEXT NOT NULL REFERENCES heroes(id),
     countered_hero_id TEXT NOT NULL REFERENCES heroes(id),
     reason TEXT NOT NULL,
+    reason_en TEXT NOT NULL DEFAULT '',
+    reason_ja TEXT NOT NULL DEFAULT '',
     PRIMARY KEY (hero_id, countered_hero_id)
 );
 CREATE TABLE synergy_relations (
     hero_id TEXT NOT NULL REFERENCES heroes(id),
     synergy_hero_id TEXT NOT NULL REFERENCES heroes(id),
     reason TEXT NOT NULL,
+    reason_en TEXT NOT NULL DEFAULT '',
+    reason_ja TEXT NOT NULL DEFAULT '',
     PRIMARY KEY (hero_id, synergy_hero_id)
 );
 CREATE TABLE map_hero_ratings (
@@ -44,6 +54,8 @@ CREATE TABLE map_hero_ratings (
     hero_id TEXT NOT NULL REFERENCES heroes(id),
     rating TEXT NOT NULL CHECK (rating IN ('강함','보통','약함')),
     reason TEXT NOT NULL,
+    reason_en TEXT NOT NULL DEFAULT '',
+    reason_ja TEXT NOT NULL DEFAULT '',
     PRIMARY KEY (map_id, hero_id)
 );
 CREATE TABLE reviewed_neutral_pairs (
@@ -57,62 +69,72 @@ CREATE TABLE reviewed_neutral_pairs (
 _conn = sqlite3.connect(str(_TEST_DB_PATH))
 _conn.executescript(_SCHEMA)
 _conn.executemany(
-    "INSERT INTO heroes VALUES (?, ?, ?, ?, ?, ?)",
+    "INSERT INTO heroes VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
     [
         ("kiriko", "키리코", "support", "정찰 지원",
          "https://d15f34w2p8l1cc.cloudfront.net/overwatch/408603fe037e8576078eaac5eab2fb251489ced4003b11f5f522776d43d0b83d.png",
-         "의무관"),
+         "의무관", "Kiriko", "キリコ", "Recon Support", "偵察サポート"),
         ("lucio", "루시우", "support", "기동 지원",
          "https://d15f34w2p8l1cc.cloudfront.net/overwatch/040bb13f5123ab93faad2f95627ba184608aef4b2469a4d3003859c7087df044.png",
-         "전술가"),
+         "전술가", "Lúcio", "ルシオ", "Mobility Support", "機動サポート"),
         ("moira", "모이라", "support", "근접 유지 지원",
          "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f48f8485056d5d00dad195859188d23e50f7126b8b08b5646f46ef1b42f5e1de.png",
-         "의무관"),
+         "의무관", "Moira", "モイラ", "Close-Range Sustain Support", "近接維持のサポート"),
         ("ana", "아나", "support", "디나이얼 지원",
          "https://d15f34w2p8l1cc.cloudfront.net/overwatch/985b06beae46b7ba3ca87d1512d0fc62ca7f206ceca58ef16fc44d43a1cc84ed.png",
-         "전술가"),
+         "전술가", "Ana", "アナ", "Denial Support", "ディナイアル・サポート"),
         ("widowmaker", "위도우메이커", "damage", "저격수",
          "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6e4702b45f196aaf51555cf57327322721f45458b17f5f0643ed008a88378259.png",
-         "명사수"),
+         "명사수", "Widowmaker", "ウィドウメイカー", "Sniper", "スナイパー"),
         ("genji", "겐지", "damage", "근접 플랭커",
          "https://d15f34w2p8l1cc.cloudfront.net/overwatch/156b12c20b1aea872c1eeb5bb37a7de1047b2ab30ecefd0663a8925badde1ea8.png",
-         "측면 공격가"),
+         "측면 공격가", "Genji", "ゲンジ", "Melee Flanker", "近接フランカー"),
         ("reinhardt", "라인하르트", "tank", "방벽 수문장",
          "https://d15f34w2p8l1cc.cloudfront.net/overwatch/551fbe070c16fdfcc17f7f1de63af22c53e7d2f1340fc2f3172441504527bc4e.png",
-         "강건한 자"),
+         "강건한 자", "Reinhardt", "ラインハルト", "Barrier Gatekeeper", "バリアの門番"),
     ],
 )
 _conn.executemany(
-    "INSERT INTO maps VALUES (?, ?, ?, ?)",
+    "INSERT INTO maps VALUES (?, ?, ?, ?, ?, ?)",
     [
-        ("eichenwalde", "아이헨발데", "혼합", "https://overfast-api.tekrop.fr/static/maps/eichenwalde.jpg"),
-        ("kings_row", "왕의 길", "혼합", "https://overfast-api.tekrop.fr/static/maps/kings-row.jpg"),
+        ("eichenwalde", "아이헨발데", "혼합", "https://overfast-api.tekrop.fr/static/maps/eichenwalde.jpg",
+         "Eichenwalde", "アイヘンヴァルデ"),
+        ("kings_row", "왕의 길", "혼합", "https://overfast-api.tekrop.fr/static/maps/kings-row.jpg",
+         "King's Row", "キングスロウ"),
     ],
 )
 _conn.executemany(
-    "INSERT INTO counter_relations VALUES (?, ?, ?)",
+    "INSERT INTO counter_relations VALUES (?, ?, ?, ?, ?)",
     [
-        ("kiriko", "widowmaker", "스즈로 저격 견제를 무효화"),
+        ("kiriko", "widowmaker", "스즈로 저격 견제를 무효화",
+         "Suzu cleanses the sniper's pressure", "鈴で狙撃の牽制を無効化"),
         # is_must_pick(percentage>=90) 테스트용: 카운터+시너지+맵 강함이 한 후보에 다 몰리는 경우
-        ("reinhardt", "genji", "화염 강타 한 방으로 즉시 처치 가능한 체력대"),
+        ("reinhardt", "genji", "화염 강타 한 방으로 즉시 처치 가능한 체력대",
+         "One Fire Strike is enough for an instant kill", "ファイヤーストライク一発で即座に処理できる体力帯"),
     ],
 )
 _conn.executemany(
-    "INSERT INTO synergy_relations VALUES (?, ?, ?)",
+    "INSERT INTO synergy_relations VALUES (?, ?, ?, ?, ?)",
     [
-        ("genji", "lucio", "속도 부스트로 진입 타이밍이 잘 맞음"),
-        ("reinhardt", "ana", "나노 강화를 받은 화염 강타로 확정 이니시"),
+        ("genji", "lucio", "속도 부스트로 진입 타이밍이 잘 맞음",
+         "Speed Boost lines up perfectly with his engage timing", "スピードブーストで突撃のタイミングがぴったり合う"),
+        ("reinhardt", "ana", "나노 강화를 받은 화염 강타로 확정 이니시",
+         "A Nano Boosted Fire Strike guarantees the engage", "ナノブーストを受けたファイヤーストライクで確実な奇襲"),
     ],
 )
 _conn.executemany(
-    "INSERT INTO map_hero_ratings VALUES (?, ?, ?, ?)",
+    "INSERT INTO map_hero_ratings VALUES (?, ?, ?, ?, ?, ?)",
     [
         # eichenwalde: 1건 -> data_richness "growing" (MAP_DATA_RICH_THRESHOLD=3 미만)
-        ("eichenwalde", "moira", "강함", "실내 구간에서 유지력 좋음"),
+        ("eichenwalde", "moira", "강함", "실내 구간에서 유지력 좋음",
+         "Good sustain in the indoor sections", "屋内区間で維持力を発揮しやすい"),
         # kings_row: 3건 -> data_richness "rich"
-        ("kings_row", "reinhardt", "강함", "좁은 골목 구간을 방벽으로 틀어막기 좋음"),
-        ("kings_row", "genji", "약함", "장거리 구간에서 견제에 노출되기 쉬움"),
-        ("kings_row", "moira", "강함", "실내 구간에서 유지력 좋음"),
+        ("kings_row", "reinhardt", "강함", "좁은 골목 구간을 방벽으로 틀어막기 좋음",
+         "Great for blocking the narrow alley with Barrier Field", "狭い路地をバリアフィールドで塞ぐのに向いている"),
+        ("kings_row", "genji", "약함", "장거리 구간에서 견제에 노출되기 쉬움",
+         "Easily exposed to poke in the long-range sections", "長距離区間で牽制に晒されやすい"),
+        ("kings_row", "moira", "강함", "실내 구간에서 유지력 좋음",
+         "Good sustain in the indoor sections", "屋内区間で維持力を発揮しやすい"),
     ],
 )
 _conn.executemany(

@@ -7,32 +7,54 @@ import sqlite3
 
 from app.config import MAP_DATA_RICH_THRESHOLD
 
-
-def fetch_all_heroes(conn: sqlite3.Connection) -> list[sqlite3.Row]:
-    return conn.execute(
-        "SELECT id, name, role, archetype, icon_url, archetype_category FROM heroes"
-    ).fetchall()
-
-
-def fetch_heroes_by_role(conn: sqlite3.Connection, role: str) -> list[sqlite3.Row]:
-    return conn.execute(
-        "SELECT id, name, role, archetype, icon_url, archetype_category FROM heroes WHERE role = ?",
-        (role,),
-    ).fetchall()
+# 다국어 지원: heroes/maps/counter_relations/synergy_relations/map_hero_ratings
+# 테이블에는 name/archetype/reason 각각 한국어(기본) 컬럼 옆에 _en/_ja 컬럼이
+# 따로 있다. lang="en"/"ja"일 때 그 컬럼을 대신 골라 기존 별칭(name, reason 등)
+# 그대로 내려주면, scoring.py 등 나머지 로직은 lang을 몰라도 그대로 동작한다.
+# COALESCE(NULLIF(...), 기본값)로 감싸서, 아직 번역이 안 채워진 행(빈 문자열)은
+# 조용히 한국어로 폴백한다 — 빈 텍스트가 그대로 노출되는 것보다 안전함.
+_LANG_SUFFIX = {"ko": "", "en": "_en", "ja": "_ja"}
 
 
-def fetch_all_maps_with_richness(conn: sqlite3.Connection) -> list[dict]:
+def _localized(base_col: str, lang: str) -> str:
+    suffix = _LANG_SUFFIX.get(lang, "")
+    if not suffix:
+        return base_col
+    return f"COALESCE(NULLIF({base_col}{suffix}, ''), {base_col})"
+
+
+def fetch_all_heroes(conn: sqlite3.Connection, lang: str = "ko") -> list[sqlite3.Row]:
+    query = f"""
+        SELECT id, {_localized("name", lang)} AS name, role,
+               {_localized("archetype", lang)} AS archetype,
+               icon_url, archetype_category
+        FROM heroes
+    """
+    return conn.execute(query).fetchall()
+
+
+def fetch_heroes_by_role(conn: sqlite3.Connection, role: str, lang: str = "ko") -> list[sqlite3.Row]:
+    query = f"""
+        SELECT id, {_localized("name", lang)} AS name, role,
+               {_localized("archetype", lang)} AS archetype,
+               icon_url, archetype_category
+        FROM heroes WHERE role = ?
+    """
+    return conn.execute(query, (role,)).fetchall()
+
+
+def fetch_all_maps_with_richness(conn: sqlite3.Connection, lang: str = "ko") -> list[dict]:
     """맵 목록 + 데이터 풍부도(data_richness). 저장된 값이 아니라 이 맵에 큐레이션된
     map_hero_ratings row 수를 세서 매 요청마다 계산한다 (MapPicker.dc.html의
     '데이터 풍부'/'데이터 보강 중' 배지)."""
-    rows = conn.execute(
-        """
-        SELECT m.id, m.name, m.mode, m.image_url, COUNT(r.hero_id) AS rating_count
+    name_col = _localized("m.name", lang)
+    query = f"""
+        SELECT m.id, {name_col} AS name, m.mode, m.image_url, COUNT(r.hero_id) AS rating_count
         FROM maps m
         LEFT JOIN map_hero_ratings r ON r.map_id = m.id
-        GROUP BY m.id, m.name, m.mode, m.image_url
-        """
-    ).fetchall()
+        GROUP BY m.id, m.name, m.name_en, m.name_ja, m.mode, m.image_url
+    """
+    rows = conn.execute(query).fetchall()
     return [
         {
             "id": row["id"],
@@ -56,7 +78,7 @@ def map_exists(conn: sqlite3.Connection, map_id: str) -> bool:
 
 
 def fetch_counter_relations_for_candidates(
-    conn: sqlite3.Connection, candidate_ids: list[str], enemy_ids: list[str]
+    conn: sqlite3.Connection, candidate_ids: list[str], enemy_ids: list[str], lang: str = "ko"
 ) -> list[sqlite3.Row]:
     """candidate_ids 중 누가 enemy_ids 중 누구를 카운터하는지.
 
@@ -70,7 +92,7 @@ def fetch_counter_relations_for_candidates(
     placeholders_c = ",".join("?" for _ in candidate_ids)
     placeholders_e = ",".join("?" for _ in enemy_ids)
     query = f"""
-        SELECT hero_id, countered_hero_id, reason
+        SELECT hero_id, countered_hero_id, {_localized("reason", lang)} AS reason
         FROM counter_relations
         WHERE hero_id IN ({placeholders_c})
           AND countered_hero_id IN ({placeholders_e})
@@ -79,7 +101,7 @@ def fetch_counter_relations_for_candidates(
 
 
 def fetch_synergy_relations_for_candidates(
-    conn: sqlite3.Connection, candidate_ids: list[str], ally_ids: list[str]
+    conn: sqlite3.Connection, candidate_ids: list[str], ally_ids: list[str], lang: str = "ko"
 ) -> list[sqlite3.Row]:
     """candidate_ids 중 누가 ally_ids 중 누구와 시너지가 좋은지.
 
@@ -92,7 +114,7 @@ def fetch_synergy_relations_for_candidates(
     placeholders_c = ",".join("?" for _ in candidate_ids)
     placeholders_a = ",".join("?" for _ in ally_ids)
     query = f"""
-        SELECT hero_id, synergy_hero_id, reason
+        SELECT hero_id, synergy_hero_id, {_localized("reason", lang)} AS reason
         FROM synergy_relations
         WHERE (hero_id IN ({placeholders_c}) AND synergy_hero_id IN ({placeholders_a}))
            OR (hero_id IN ({placeholders_a}) AND synergy_hero_id IN ({placeholders_c}))
@@ -103,24 +125,30 @@ def fetch_synergy_relations_for_candidates(
 
 
 def fetch_map_ratings_for_candidates(
-    conn: sqlite3.Connection, candidate_ids: list[str], map_id: str
+    conn: sqlite3.Connection, candidate_ids: list[str], map_id: str, lang: str = "ko"
 ) -> list[sqlite3.Row]:
     if not candidate_ids:
         return []
     placeholders = ",".join("?" for _ in candidate_ids)
     query = f"""
-        SELECT map_id, hero_id, rating, reason
+        SELECT map_id, hero_id, rating, {_localized("reason", lang)} AS reason
         FROM map_hero_ratings
         WHERE map_id = ? AND hero_id IN ({placeholders})
     """
     return conn.execute(query, (map_id, *candidate_ids)).fetchall()
 
 
-def fetch_heroes_by_ids(conn: sqlite3.Connection, hero_ids: list[str]) -> list[sqlite3.Row]:
+def fetch_heroes_by_ids(
+    conn: sqlite3.Connection, hero_ids: list[str], lang: str = "ko"
+) -> list[sqlite3.Row]:
     if not hero_ids:
         return []
     placeholders = ",".join("?" for _ in hero_ids)
-    query = f"SELECT id, name, role, archetype FROM heroes WHERE id IN ({placeholders})"
+    query = f"""
+        SELECT id, {_localized("name", lang)} AS name, role,
+               {_localized("archetype", lang)} AS archetype
+        FROM heroes WHERE id IN ({placeholders})
+    """
     return conn.execute(query, tuple(hero_ids)).fetchall()
 
 

@@ -30,6 +30,34 @@ from app.config import (
 
 NEUTRAL_REASON = "일반적으로 무난한 영웅"
 
+# 다국어 지원: data_gaps 문구와 "근거 없음" 기본 문구는 DB에 저장된 값이 아니라
+# 이 파일에서 직접 조립하는 UI 텍스트라, reason처럼 컬럼을 선택하는 방식이 아니라
+# 언어별 템플릿을 따로 둔다. 한국어만 "상대 겐지와의" 식 조사 처리가 필요해서
+# _particle_wa_gwa가 한국어 케이스에서만 쓰인다.
+_NEUTRAL_REASON_BY_LANG = {
+    "ko": "일반적으로 무난한 영웅",
+    "en": "A generally safe, well-rounded pick",
+    "ja": "特に癖のない、無難なヒーロー",
+}
+
+
+def _counter_gap_message(lang: str, enemy_name: str) -> str:
+    if lang == "en":
+        return f"Counter matchup vs. {enemy_name} not yet reviewed"
+    if lang == "ja":
+        return f"敵の{enemy_name}とのカウンター関係は未検証"
+    particle = _particle_wa_gwa(enemy_name)
+    return f"상대 {enemy_name}{particle}의 카운터 관계 미검토"
+
+
+def _synergy_gap_message(lang: str, ally_name: str) -> str:
+    if lang == "en":
+        return f"Synergy with {ally_name} not yet reviewed"
+    if lang == "ja":
+        return f"味方の{ally_name}とのシナジー関係は未検証"
+    particle = _particle_wa_gwa(ally_name)
+    return f"아군 {ally_name}{particle}의 시너지 관계 미검토"
+
 
 def _particle_wa_gwa(name: str) -> str:
     """이름 끝 글자의 받침 유무에 따라 "와"/"과" 조사를 고른다.
@@ -94,6 +122,7 @@ def score_candidates(
     reviewed_neutral_synergy_pairs: list[dict] | None = None,
     countered_by_rows: list[dict] | None = None,
     id_to_name: dict[str, str] | None = None,
+    lang: str = "ko",
 ) -> list[ScoredHero]:
     """candidates: [{id, name, role}, ...]
     counter_rows: [{hero_id, countered_hero_id, reason}, ...] (hero_id == candidate,
@@ -181,8 +210,7 @@ def score_candidates(
             if (cid, enemy_id) in neutral_counter_set:
                 continue
             enemy_name = id_to_name.get(enemy_id, enemy_id)
-            particle = _particle_wa_gwa(enemy_name)
-            scored.data_gaps.append(f"상대 {enemy_name}{particle}의 카운터 관계 미검토")
+            scored.data_gaps.append(_counter_gap_message(lang, enemy_name))
 
         # 시너지는 같은 관계 row가 중복으로 안 잡히도록 이미 처리한 상대 id를 추적
         seen_partners: set[str] = set()
@@ -200,8 +228,7 @@ def score_candidates(
             if (cid, ally_id) in neutral_synergy_set:
                 continue
             ally_name = id_to_name.get(ally_id, ally_id)
-            particle = _particle_wa_gwa(ally_name)
-            scored.data_gaps.append(f"아군 {ally_name}{particle}의 시너지 관계 미검토")
+            scored.data_gaps.append(_synergy_gap_message(lang, ally_name))
 
         map_row = map_by_hero.get(cid)
         if map_row is not None:
@@ -214,7 +241,7 @@ def score_candidates(
             # "보통"이면 map_score 0, 근거도 추가 안 함 (스펙: 근거에 표시하지 않음)
 
         if not scored.reasons:
-            scored.reasons.append(NEUTRAL_REASON)
+            scored.reasons.append(_NEUTRAL_REASON_BY_LANG.get(lang, NEUTRAL_REASON))
 
         results.append(scored)
 
