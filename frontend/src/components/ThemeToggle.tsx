@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import type { Locale } from "@/lib/i18n";
+import { getDictionary } from "@/lib/i18n";
 import styles from "./ThemeToggle.module.css";
 
 type Theme = "dark" | "light";
@@ -18,7 +20,8 @@ function applyTheme(theme: Theme) {
   }
 }
 
-export function ThemeToggle() {
+export function ThemeToggle({ locale }: { locale: Locale }) {
+  const t = getDictionary(locale);
   // layout.tsx의 인라인 스크립트가 하이드레이션 전에 이미 [data-theme]를 붙여뒀으니,
   // 마운트 시 그 값을 그대로 읽어와 React 상태와 실제 DOM을 일치시킨다.
   const [theme, setTheme] = useState<Theme>("dark");
@@ -42,8 +45,8 @@ export function ThemeToggle() {
       type="button"
       className={styles.button}
       onClick={toggle}
-      aria-label={theme === "dark" ? "라이트 모드로 전환" : "다크 모드로 전환"}
-      title={theme === "dark" ? "라이트 모드로 전환" : "다크 모드로 전환"}
+      aria-label={theme === "dark" ? t.switchToLight : t.switchToDark}
+      title={theme === "dark" ? t.switchToLight : t.switchToDark}
     >
       {theme === "dark" ? (
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

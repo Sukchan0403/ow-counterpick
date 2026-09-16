@@ -1,5 +1,6 @@
 import type { DataRichness, MapInfo } from "@/lib/types";
-import { RICHNESS_LABEL, modeLabel } from "@/lib/types";
+import type { Locale } from "@/lib/i18n";
+import { RICHNESS_LABEL, getDictionary, modeLabel } from "@/lib/i18n";
 import { colorForMap } from "@/lib/mapColors";
 import styles from "./MapPickerModal.module.css";
 
@@ -8,6 +9,7 @@ interface Props {
   selectedId: string | null;
   onSelect: (mapId: string) => void;
   onClose: () => void;
+  locale: Locale;
 }
 
 // 목업(MapPicker.dc.html)의 "데이터 풍부"/"데이터 보강 중" 태그는 맵 하나하나가 아니라
@@ -17,15 +19,16 @@ function groupRichness(modeMaps: MapInfo[]): DataRichness {
   return modeMaps.every((m) => m.data_richness === "rich") ? "rich" : "growing";
 }
 
-export function MapPickerModal({ maps, selectedId, onSelect, onClose }: Props) {
+export function MapPickerModal({ maps, selectedId, onSelect, onClose, locale }: Props) {
+  const t = getDictionary(locale);
   const modes = Array.from(new Set(maps.map((m) => m.mode)));
 
   return (
     <div className={styles.backdrop} onClick={onClose}>
       <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
         <div className={styles.modalHeader}>
-          <span className={styles.modalTitle}>맵 선택</span>
-          <button type="button" className={styles.closeButton} onClick={onClose} aria-label="닫기">
+          <span className={styles.modalTitle}>{t.mapPickerTitle}</span>
+          <button type="button" className={styles.closeButton} onClick={onClose} aria-label={t.close}>
             ×
           </button>
         </div>
@@ -37,14 +40,14 @@ export function MapPickerModal({ maps, selectedId, onSelect, onClose }: Props) {
             <div key={mode} className={styles.modeSection}>
               <div className={styles.modeHeader}>
                 <span>
-                  {modeLabel(mode)} · {modeMaps.length}개
+                  {modeLabel(locale, mode)} · {t.mapCount(modeMaps.length)}
                 </span>
                 <span
                   className={`${styles.dataTag} ${
                     richness === "rich" ? styles.dataTagRich : styles.dataTagGrowing
                   }`}
                 >
-                  {RICHNESS_LABEL[richness]}
+                  {RICHNESS_LABEL[locale][richness]}
                 </span>
               </div>
               <div className={styles.grid}>

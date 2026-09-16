@@ -1,5 +1,6 @@
 import type { HeroRecommendation, Role } from "@/lib/types";
-import { ROLE_LABEL } from "@/lib/types";
+import type { Locale } from "@/lib/i18n";
+import { ROLE_LABEL, getDictionary } from "@/lib/i18n";
 import { HeroAvatar } from "./HeroAvatar";
 import styles from "./ResultsPanel.module.css";
 
@@ -7,13 +8,16 @@ interface Props {
   recommendations: HeroRecommendation[];
   emptyPosition: Role;
   notice: string | null;
+  locale: Locale;
 }
 
-export function ResultsPanel({ recommendations, emptyPosition, notice }: Props) {
+export function ResultsPanel({ recommendations, emptyPosition, notice, locale }: Props) {
+  const t = getDictionary(locale);
   return (
     <div>
       <div className={styles.inferredPosition}>
-        부족한 포지션 · <strong>{ROLE_LABEL[emptyPosition]}</strong>
+        {t.inferredPositionPrefix}
+        <strong>{ROLE_LABEL[locale][emptyPosition]}</strong>
       </div>
 
       {notice && <div className={styles.notice}>{notice}</div>}
@@ -21,15 +25,15 @@ export function ResultsPanel({ recommendations, emptyPosition, notice }: Props) 
       <div className={styles.legend}>
         <span>
           <span className={styles.legendDot} style={{ background: "var(--blue)" }} />
-          카운터
+          {t.legendCounter}
         </span>
         <span>
           <span className={styles.legendDot} style={{ background: "var(--green)" }} />
-          시너지
+          {t.legendSynergy}
         </span>
         <span>
           <span className={styles.legendDot} style={{ background: "var(--accent)" }} />
-          맵
+          {t.legendMap}
         </span>
       </div>
 
@@ -58,11 +62,11 @@ export function ResultsPanel({ recommendations, emptyPosition, notice }: Props) 
             <div className={styles.main}>
               <div className={styles.nameRow}>
                 <span className={styles.heroName}>{rec.hero_name}</span>
-                {rec.is_must_pick && <span className={styles.mustPickBadge}>필수픽</span>}
-                <span className={styles.percentage}>추천 지수 {rec.percentage}</span>
+                {rec.is_must_pick && <span className={styles.mustPickBadge}>{t.mustPickBadge}</span>}
+                <span className={styles.percentage}>{t.recommendationScore(rec.percentage)}</span>
               </div>
               <div className={styles.archetype}>
-                {ROLE_LABEL[rec.role]} · {rec.archetype}
+                {ROLE_LABEL[locale][rec.role]} · {rec.archetype}
               </div>
               <div className={styles.pctBarTrack}>
                 <div className={styles.pctBarFill} style={{ width: `${rec.percentage}%` }} />
@@ -95,7 +99,8 @@ export function ResultsPanel({ recommendations, emptyPosition, notice }: Props) 
                 ))}
                 {rec.data_gaps.map((gap, idx) => (
                   <span key={`gap-${idx}`} className={`${styles.noteTag} ${styles.dataGapTag}`}>
-                    데이터 없음 · {gap}
+                    {t.noDataPrefix}
+                    {gap}
                   </span>
                 ))}
               </div>

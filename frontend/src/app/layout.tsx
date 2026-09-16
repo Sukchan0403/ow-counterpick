@@ -19,6 +19,10 @@ export const metadata: Metadata = {
     "overwatch counter pick",
   ],
   robots: { index: true, follow: true },
+  alternates: {
+    canonical: "/",
+    languages: { ko: "/", en: "/en", ja: "/ja" },
+  },
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,

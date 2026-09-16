@@ -1,10 +1,11 @@
 import type { Hero, Role } from "@/lib/types";
-import { ARCHETYPE_CATEGORY_ORDER, ROLE_LABEL } from "@/lib/types";
+import { ARCHETYPE_CATEGORY_ORDER } from "@/lib/types";
+import type { Locale } from "@/lib/i18n";
+import { ROLE_LABEL, archetypeCategoryLabel, getDictionary } from "@/lib/i18n";
 import { HeroAvatar } from "./HeroAvatar";
 import styles from "./SharedHeroGrid.module.css";
 
 const ROLE_ORDER: Role[] = ["tank", "damage", "support"];
-const UNCATEGORIZED_LABEL = "기타";
 
 export type Team = "enemy" | "our";
 
@@ -19,6 +20,7 @@ interface Props {
   roleLimits?: Partial<Record<Role, number>>;
   onChangeEnemy: (ids: string[]) => void;
   onChangeOur: (ids: string[]) => void;
+  locale: Locale;
 }
 
 // 급박한 실전 상황에서 타이핑(오타 위험)도, 모달 열고 닫기도 없이 — 그리드
@@ -36,7 +38,9 @@ export function SharedHeroGrid({
   roleLimits,
   onChangeEnemy,
   onChangeOur,
+  locale,
 }: Props) {
+  const t = getDictionary(locale);
   const activeIds = activeTeam === "enemy" ? enemyIds : ourIds;
   const activeMax = activeTeam === "enemy" ? enemyMax : ourMax;
   const onChangeActive = activeTeam === "enemy" ? onChangeEnemy : onChangeOur;
@@ -94,7 +98,7 @@ export function SharedHeroGrid({
           }`}
           onClick={() => onChangeActiveTeam("enemy")}
         >
-          상대 팀 {enemyIds.length}/{enemyMax}
+          {t.enemyTeam} {t.teamCount(enemyIds.length, enemyMax)}
         </button>
         <button
           type="button"
@@ -103,18 +107,18 @@ export function SharedHeroGrid({
           }`}
           onClick={() => onChangeActiveTeam("our")}
         >
-          우리 팀 {ourIds.length}/{ourMax}
+          {t.ourTeam} {t.teamCount(ourIds.length, ourMax)}
         </button>
       </div>
 
       <div className={styles.legend}>
         <span>
           <span className={styles.legendDot} style={{ background: "var(--blue)" }} />
-          상대 팀
+          {t.enemyTeam}
         </span>
         <span>
           <span className={styles.legendDot} style={{ background: "var(--green)" }} />
-          우리 팀
+          {t.ourTeam}
         </span>
       </div>
 
@@ -128,19 +132,17 @@ export function SharedHeroGrid({
         const groups: { label: string; heroes: Hero[] }[] = [
           ...knownCategories
             .map((category) => ({
-              label: category,
+              label: archetypeCategoryLabel(locale, category),
               heroes: roleHeroes.filter((h) => h.archetype_category === category),
             }))
             .filter((g) => g.heroes.length > 0),
-          ...(uncategorized.length > 0
-            ? [{ label: UNCATEGORIZED_LABEL, heroes: uncategorized }]
-            : []),
+          ...(uncategorized.length > 0 ? [{ label: t.uncategorized, heroes: uncategorized }] : []),
         ];
 
         return (
           <div key={role} className={styles.roleGroup}>
             <div className={styles.roleLabel}>
-              {ROLE_LABEL[role]}
+              {ROLE_LABEL[locale][role]}
               {roleLimits?.[role] !== undefined && activeIds.length > 0 && (
                 <span>
                   {" "}

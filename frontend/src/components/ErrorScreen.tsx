@@ -1,10 +1,14 @@
+import type { Locale } from "@/lib/i18n";
+import { getDictionary } from "@/lib/i18n";
 import styles from "./ErrorScreen.module.css";
 
 interface Props {
   onRetry: () => void;
+  locale: Locale;
 }
 
-export function ErrorScreen({ onRetry }: Props) {
+export function ErrorScreen({ onRetry, locale }: Props) {
+  const t = getDictionary(locale);
   return (
     <div className={styles.wrap}>
       <div className={styles.iconCircle} aria-hidden>
@@ -19,10 +23,10 @@ export function ErrorScreen({ onRetry }: Props) {
           <circle cx="12" cy="17" r="1" fill="var(--red)" />
         </svg>
       </div>
-      <div className={styles.heading}>일시적인 오류가 발생했어요</div>
-      <div className={styles.subtext}>오류 코드 502 · BAD GATEWAY</div>
+      <div className={styles.heading}>{t.errorHeading}</div>
+      <div className={styles.subtext}>{t.errorSubtext}</div>
       <button type="button" className={styles.retryButton} onClick={onRetry}>
-        다시 시도
+        {t.retry}
       </button>
     </div>
   );

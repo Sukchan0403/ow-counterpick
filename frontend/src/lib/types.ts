@@ -63,11 +63,9 @@ export interface MetaInfo {
   data_version: string;
 }
 
-export const ROLE_LABEL: Record<Role, string> = {
-  tank: "돌격",
-  damage: "공격",
-  support: "지원",
-};
+// ROLE_LABEL/MODE_LABEL/RICHNESS_LABEL/modeLabel은 표시 문구라 lib/i18n.ts로
+// 옮겨서 로케일별로 번역한다 — 이 파일엔 언어와 무관한 데이터 shape과 구조적
+// 상수(ARCHETYPE_CATEGORY_ORDER)만 남긴다.
 
 // 블리자드 공식 아키타입 카테고리 (역할별 유효값, 표시 순서 고정).
 // 스펙의 "UI 리디자인" 섹션 표 참고.
@@ -80,22 +78,3 @@ export const ARCHETYPE_CATEGORY_ORDER: Record<Role, string[]> = {
   damage: ["전문가", "수색가", "측면 공격가", "명사수"],
   support: ["전술가", "의무관", "생존왕"],
 };
-
-// 백엔드 maps.mode는 영문 enum으로 저장돼 있음 (seed-data/maps.json 참고) — 화면엔 한글로 표시.
-export const MODE_LABEL: Record<string, string> = {
-  hybrid: "혼합",
-  escort: "호위",
-  control: "점령",
-  clash: "격돌",
-  push: "밀기",
-  flashpoint: "플래시포인트",
-};
-
-export const RICHNESS_LABEL: Record<DataRichness, string> = {
-  rich: "데이터 풍부",
-  growing: "데이터 보강 중",
-};
-
-export function modeLabel(mode: string): string {
-  return MODE_LABEL[mode] ?? mode;
-}
