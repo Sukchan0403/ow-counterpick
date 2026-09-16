@@ -26,6 +26,22 @@
 - **검토완료-중립 마커 48건** (`reviewed_neutral_pairs.json`) — "결측치 3단 상태"의
   "검토했으나 유의미한 관계 없음" 상태를 표시하는 테이블.
 
+## 다국어(영어/일본어) 지원
+
+`heroes.json`(`name_en`/`name_ja`/`archetype_en`/`archetype_ja`), `maps.json`
+(`name_en`/`name_ja`), `counter_relations.json`/`synergy_relations.json`/
+`map_hero_ratings.json`(각 `reason_en`/`reason_ja`)에 한국어 원본 옆에 영어/일본어
+번역이 나란히 들어있다. 영웅 킷(스킬 이름 등)은 실제 오버워치 공식 로컬라이징
+용어를 쓰도록 신경 썼고, 2025~2026년 신규 영웅처럼 공식 로컬라이징이 불확실한
+경우는 메커니즘을 설명적으로 번역했지 지어내지 않았다(각 항목에 번역 결정 근거를
+커밋 메시지에 남겨둠). `archetype_category`/`role`/`mode`처럼 그룹핑용 내부
+식별자는 언어와 무관하게 항상 한국어 원본값 그대로이고, 화면 표시용 번역은
+프론트엔드(`frontend/src/lib/i18n.ts`)가 별도 사전으로 담당한다.
+
+새 카운터/시너지/맵 평가 데이터를 추가할 때는 `reason_en`/`reason_ja`도 같이
+채워야 한다 — 비워두면 API가 조용히 한국어로 폴백하기 때문에(`seed_db.py`의
+`with_i18n_defaults`), 당장 에러는 안 나지만 그 항목만 번역이 안 된 채로 남는다.
+
 ## 신규 영웅 큐레이션 시 유의할 점
 
 2026년에 새로 추가된 영웅(해저드·안란·엠레·프레야·시온·시에라·벤데타·제트팩 캣·

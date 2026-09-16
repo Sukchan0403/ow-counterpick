@@ -28,20 +28,28 @@ CREATE TABLE IF NOT EXISTS heroes (
     role TEXT NOT NULL CHECK (role IN ('tank', 'damage', 'support')),
     archetype TEXT NOT NULL DEFAULT '',
     icon_url TEXT NOT NULL DEFAULT '',
-    archetype_category TEXT NOT NULL DEFAULT ''
+    archetype_category TEXT NOT NULL DEFAULT '',
+    name_en TEXT NOT NULL DEFAULT '',
+    name_ja TEXT NOT NULL DEFAULT '',
+    archetype_en TEXT NOT NULL DEFAULT '',
+    archetype_ja TEXT NOT NULL DEFAULT ''
 );
 
 CREATE TABLE IF NOT EXISTS maps (
     id TEXT PRIMARY KEY,
     name TEXT NOT NULL,
     mode TEXT NOT NULL,
-    image_url TEXT NOT NULL DEFAULT ''
+    image_url TEXT NOT NULL DEFAULT '',
+    name_en TEXT NOT NULL DEFAULT '',
+    name_ja TEXT NOT NULL DEFAULT ''
 );
 
 CREATE TABLE IF NOT EXISTS counter_relations (
     hero_id TEXT NOT NULL REFERENCES heroes(id),
     countered_hero_id TEXT NOT NULL REFERENCES heroes(id),
     reason TEXT NOT NULL,
+    reason_en TEXT NOT NULL DEFAULT '',
+    reason_ja TEXT NOT NULL DEFAULT '',
     PRIMARY KEY (hero_id, countered_hero_id)
 );
 
@@ -49,6 +57,8 @@ CREATE TABLE IF NOT EXISTS synergy_relations (
     hero_id TEXT NOT NULL REFERENCES heroes(id),
     synergy_hero_id TEXT NOT NULL REFERENCES heroes(id),
     reason TEXT NOT NULL,
+    reason_en TEXT NOT NULL DEFAULT '',
+    reason_ja TEXT NOT NULL DEFAULT '',
     PRIMARY KEY (hero_id, synergy_hero_id)
 );
 
@@ -57,6 +67,8 @@ CREATE TABLE IF NOT EXISTS map_hero_ratings (
     hero_id TEXT NOT NULL REFERENCES heroes(id),
     rating TEXT NOT NULL CHECK (rating IN ('강함', '보통', '약함')),
     reason TEXT NOT NULL,
+    reason_en TEXT NOT NULL DEFAULT '',
+    reason_ja TEXT NOT NULL DEFAULT '',
     PRIMARY KEY (map_id, hero_id)
 );
 
@@ -90,10 +102,22 @@ def main():
         conn.execute("ALTER TABLE heroes ADD COLUMN icon_url TEXT NOT NULL DEFAULT ''")
     if "archetype_category" not in existing_cols:
         conn.execute("ALTER TABLE heroes ADD COLUMN archetype_category TEXT NOT NULL DEFAULT ''")
+    for col in ("name_en", "name_ja", "archetype_en", "archetype_ja"):
+        if col not in existing_cols:
+            conn.execute(f"ALTER TABLE heroes ADD COLUMN {col} TEXT NOT NULL DEFAULT ''")
 
     existing_map_cols = {row[1] for row in conn.execute("PRAGMA table_info(maps)")}
     if "image_url" not in existing_map_cols:
         conn.execute("ALTER TABLE maps ADD COLUMN image_url TEXT NOT NULL DEFAULT ''")
+    for col in ("name_en", "name_ja"):
+        if col not in existing_map_cols:
+            conn.execute(f"ALTER TABLE maps ADD COLUMN {col} TEXT NOT NULL DEFAULT ''")
+
+    for table in ("counter_relations", "synergy_relations", "map_hero_ratings"):
+        existing_rel_cols = {row[1] for row in conn.execute(f"PRAGMA table_info({table})")}
+        for col in ("reason_en", "reason_ja"):
+            if col not in existing_rel_cols:
+                conn.execute(f"ALTER TABLE {table} ADD COLUMN {col} TEXT NOT NULL DEFAULT ''")
 
     # JSON 파일이 유일한 소스여야 한다 — 과거에 시딩됐다가 JSON에서는 지워진 행이
     # INSERT OR REPLACE만으로는 DB에 그대로 남아있는 문제(예: 이후에 "중립"으로
@@ -106,31 +130,51 @@ def main():
     conn.execute("DELETE FROM map_hero_ratings")
     conn.execute("DELETE FROM reviewed_neutral_pairs")
 
+    # 다국어 필드(name_en/name_ja/archetype_en/archetype_ja/reason_en/reason_ja)는
+    # JSON에 아직 없는 행이 있을 수 있으니(번역 진행 중인 신규 데이터 등) .get()으로
+    # 기본값 ''을 채워 넣는다 — INSERT문이 파라미터 누락으로 죽지 않게 하기 위함.
+    def with_i18n_defaults(rows, keys):
+        out = []
+        for row in rows:
+            merged = dict(row)
+            for key in keys:
+                merged.setdefault(key, "")
+            out.append(merged)
+        return out
+
+    heroes = with_i18n_defaults(heroes, ["name_en", "name_ja", "archetype_en", "archetype_ja"])
+    maps = with_i18n_defaults(maps, ["name_en", "name_ja"])
+    counters = with_i18n_defaults(counters, ["reason_en", "reason_ja"])
+    synergies = with_i18n_defaults(synergies, ["reason_en", "reason_ja"])
+    map_ratings = with_i18n_defaults(map_ratings, ["reason_en", "reason_ja"])
+
     conn.executemany(
-        "INSERT OR REPLACE INTO heroes (id, name, role, archetype, icon_url, archetype_category) "
-        "VALUES (:id, :name, :role, :archetype, :icon_url, :archetype_category)",
+        """INSERT OR REPLACE INTO heroes
+           (id, name, role, archetype, icon_url, archetype_category, name_en, name_ja, archetype_en, archetype_ja)
+           VALUES (:id, :name, :role, :archetype, :icon_url, :archetype_category, :name_en, :name_ja, :archetype_en, :archetype_ja)""",
         heroes,
     )
     conn.executemany(
-        "INSERT OR REPLACE INTO maps (id, name, mode, image_url) VALUES (:id, :name, :mode, :image_url)",
+        """INSERT OR REPLACE INTO maps (id, name, mode, image_url, name_en, name_ja)
+           VALUES (:id, :name, :mode, :image_url, :name_en, :name_ja)""",
         maps,
     )
     conn.executemany(
         """INSERT OR REPLACE INTO counter_relations
-           (hero_id, countered_hero_id, reason)
-           VALUES (:hero_id, :countered_hero_id, :reason)""",
+           (hero_id, countered_hero_id, reason, reason_en, reason_ja)
+           VALUES (:hero_id, :countered_hero_id, :reason, :reason_en, :reason_ja)""",
         counters,
     )
     conn.executemany(
         """INSERT OR REPLACE INTO synergy_relations
-           (hero_id, synergy_hero_id, reason)
-           VALUES (:hero_id, :synergy_hero_id, :reason)""",
+           (hero_id, synergy_hero_id, reason, reason_en, reason_ja)
+           VALUES (:hero_id, :synergy_hero_id, :reason, :reason_en, :reason_ja)""",
         synergies,
     )
     conn.executemany(
         """INSERT OR REPLACE INTO map_hero_ratings
-           (map_id, hero_id, rating, reason)
-           VALUES (:map_id, :hero_id, :rating, :reason)""",
+           (map_id, hero_id, rating, reason, reason_en, reason_ja)
+           VALUES (:map_id, :hero_id, :rating, :reason, :reason_en, :reason_ja)""",
         map_ratings,
     )
     conn.executemany(

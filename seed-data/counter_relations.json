@@ -1,777 +1,157 @@
 [
-  {
-    "hero_id": "zarya",
-    "countered_hero_id": "genji",
-    "reason": "에너지 방벽이 겐지의 사격·용검 피해를 흡수하면서 동시에 자리야 에너지를 채워줌"
-  },
-  {
-    "hero_id": "ana",
-    "countered_hero_id": "genji",
-    "reason": "수면총으로 돌진(질풍참)이나 용검 이니시 타이밍을 그대로 끊을 수 있음"
-  },
-  {
-    "hero_id": "tracer",
-    "countered_hero_id": "widowmaker",
-    "reason": "점멸로 저격 사거리를 순식간에 좁혀 근접전으로 끌고 감"
-  },
-  {
-    "hero_id": "genji",
-    "countered_hero_id": "widowmaker",
-    "reason": "이중 점프·벽타기로 사거리를 좁히고, 조준 중엔 반사로 견제 가능"
-  },
-  {
-    "hero_id": "winston",
-    "countered_hero_id": "widowmaker",
-    "reason": "도약으로 단숨에 거리를 좁혀 실드 낀 채로 근접 압박"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "reinhardt",
-    "reason": "매트릭스로 화염 강타를 무효화하고 실드 뒤로 다이브 가능"
-  },
-  {
-    "hero_id": "winston",
-    "countered_hero_id": "reinhardt",
-    "reason": "도약으로 방벽을 우회해 후열을 직접 압박"
-  },
-  {
-    "hero_id": "tracer",
-    "countered_hero_id": "ana",
-    "reason": "점멸로 거리 좁히고 불규칙한 움직임으로 수면총 조준을 피함"
-  },
-  {
-    "hero_id": "genji",
-    "countered_hero_id": "ana",
-    "reason": "이동기로 생체 수류탄 사거리 밖에서 접근해 근접 압박"
-  },
-  {
-    "hero_id": "winston",
-    "countered_hero_id": "orisa",
-    "reason": "기동력으로 창/포탑 견제 사거리를 무시하고 후열로 직행"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "orisa",
-    "reason": "매트릭스로 포격 피해를 흡수하며 다이브로 압박"
-  },
-  {
-    "hero_id": "widowmaker",
-    "countered_hero_id": "winston",
-    "reason": "실드가 생기기 전에 장거리에서 선타를 넣을 수 있음"
-  },
-  {
-    "hero_id": "zarya",
-    "countered_hero_id": "winston",
-    "reason": "방벽+빔으로 실드 체력을 빠르게 녹여 도약 궁 활용을 막음"
-  },
-  {
-    "hero_id": "zarya",
-    "countered_hero_id": "dva",
-    "reason": "빔으로 매트릭스를 강제 소모시켜 이탈 타이밍을 앞당김"
-  },
-  {
-    "hero_id": "reinhardt",
-    "countered_hero_id": "dva",
-    "reason": "매트릭스가 빠진 순간 화염 강타로 확정 딜을 넣을 수 있음"
-  },
-  {
-    "hero_id": "genji",
-    "countered_hero_id": "zarya",
-    "reason": "반사와 이동기로 방벽 유지 시간을 버티고 그랩 콤보를 회피"
-  },
-  {
-    "hero_id": "tracer",
-    "countered_hero_id": "zarya",
-    "reason": "점멸로 그랩 각을 피하고 방벽 소모 전에 근접 버스트"
-  },
-  {
-    "hero_id": "reinhardt",
-    "countered_hero_id": "tracer",
-    "reason": "화염 강타 한 방으로 즉시 처치 가능한 체력대"
-  },
-  {
-    "hero_id": "orisa",
-    "countered_hero_id": "tracer",
-    "reason": "투창으로 저체력 플랭커를 원콤 처리"
-  },
-  {
-    "hero_id": "genji",
-    "countered_hero_id": "sojourn",
-    "reason": "반사로 충전 사격을 무력화하고 근접 압박"
-  },
-  {
-    "hero_id": "winston",
-    "countered_hero_id": "sojourn",
-    "reason": "기동력으로 충전 사격 타이밍을 주지 않고 근접전으로 전환"
-  },
-  {
-    "hero_id": "widowmaker",
-    "countered_hero_id": "moira",
-    "reason": "환영 질주 사거리 밖에서 선픽 가능"
-  },
-  {
-    "hero_id": "ana",
-    "countered_hero_id": "moira",
-    "reason": "수면총으로 회복 사이클을 끊고 생체 수류탄으로 치유량 감소"
-  },
-  {
-    "hero_id": "widowmaker",
-    "countered_hero_id": "kiriko",
-    "reason": "스즈로 상태이상은 지울 수 있어도 장거리 견제 자체는 피하기 어려움"
-  },
-  {
-    "hero_id": "zarya",
-    "countered_hero_id": "kiriko",
-    "reason": "방벽으로 근접 버스트를 막아 키리코의 카이팅을 무력화"
-  },
-  {
-    "hero_id": "widowmaker",
-    "countered_hero_id": "lucio",
-    "reason": "장거리 견제에 루시우가 힐 범위를 유지하며 접근하기 어려움"
-  },
-  {
-    "hero_id": "genji",
-    "countered_hero_id": "lucio",
-    "reason": "벽타기 기동력이 맞대응되어 회피 기동이 무의미해짐"
-  },
-  {
-    "hero_id": "genji",
-    "countered_hero_id": "baptiste",
-    "reason": "반사로 견제 사격을 막고 근접 거리로 파고듦"
-  },
-  {
-    "hero_id": "tracer",
-    "countered_hero_id": "baptiste",
-    "reason": "기동력으로 후열 포지션을 직접 노출시킴"
-  },
-  {
-    "hero_id": "genji",
-    "countered_hero_id": "zenyatta",
-    "reason": "이동기 없는 젠야타에게 근접 다이브가 그대로 들어감"
-  },
-  {
-    "hero_id": "tracer",
-    "countered_hero_id": "zenyatta",
-    "reason": "자체 생존기가 약해 플랭크 한 번에 무너지기 쉬움"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "wrecking_ball",
-    "reason": "매트릭스로 돌진 피해를 흡수하며 같은 다이브 타이밍에 맞대응 가능"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "hazard",
-    "reason": "매트릭스로 가시 발사체를 막아내며 근접전으로 전환"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "roadhog",
-    "reason": "매트릭스로 사슬탄과 산탄을 무효화해 고리 콤보를 무력화"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "mauga",
-    "reason": "매트릭스로 기관총 세례를 흡수하며 근접 교전을 피함"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "bastion",
-    "reason": "매트릭스로 고정 화력을 전부 흡수해 설치형 딜러를 무력화"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "soldier_76",
-    "reason": "매트릭스로 헬릭스 로켓과 주무기 탄막을 막아냄"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "emre",
-    "reason": "매트릭스로 정조준 사격을 무효화하고 접근전으로 전환"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "junkrat",
-    "reason": "매트릭스로 유탄 폭발 피해를 흡수해 설치 화망을 무력화"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "torbjorn",
-    "reason": "매트릭스로 포탑 화망을 전부 흡수"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "sierra",
-    "reason": "매트릭스로 추적 사격 피해를 흡수해 표식 콤보를 무력화"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "pharah",
-    "reason": "부스터로 동일한 공중 기동력을 맞대응하며 매트릭스로 로켓을 흡수"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "freja",
-    "reason": "매트릭스로 올가미 투사체를 흡수해 구속 콤보를 피함"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "shion",
-    "reason": "매트릭스로 오토바이 투척과 사격을 흡수"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "sojourn",
-    "reason": "매트릭스로 충전 사격 피해를 흡수해 처형 각을 지움"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "ashe",
-    "reason": "매트릭스로 다이너마이트와 사격 피해를 흡수"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "widowmaker",
-    "reason": "부스터 기동으로 저격 사거리를 순식간에 좁힘"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "cassidy",
-    "reason": "매트릭스로 리볼버 탄환을 흡수해 화력을 무력화"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "hanzo",
-    "reason": "매트릭스로 화살 사격을 흡수해 견제를 무력화"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "ana",
-    "reason": "부스터 기동으로 수면총 조준을 피하며 근접 압박"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "jetpack_cat",
-    "reason": "매트릭스로 견제 화력을 흡수하며 기동력으로 맞대응"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "zenyatta",
-    "reason": "이동기 없는 젠야타에게 부스터로 직접 다이브"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "mercy",
-    "reason": "부스터로 고공 회피 중인 메르시를 그대로 따라잡음"
-  },
-  {
-    "hero_id": "dva",
-    "countered_hero_id": "illari",
-    "reason": "매트릭스로 태양 화살을 흡수하며 포탑을 부숨"
-  },
-  {
-    "hero_id": "doomfist",
-    "countered_hero_id": "dva",
-    "reason": "궁극기 없는 타이밍에 강타로 접근해 단숨에 처치 가능한 체력대"
-  },
-  {
-    "hero_id": "ramattra",
-    "countered_hero_id": "dva",
-    "reason": "보이드 방벽으로 매트릭스 지속시간을 흘려보내고 실체화 상태로 근접 제압"
-  },
-  {
-    "hero_id": "mei",
-    "countered_hero_id": "dva",
-    "reason": "얼음벽으로 퇴로를 끊고 냉각광선으로 빙결시켜 확정 처치"
-  },
-  {
-    "hero_id": "symmetra",
-    "countered_hero_id": "dva",
-    "reason": "감속 지역과 광선으로 매트릭스가 없는 타이밍에 급속 처치"
-  },
-  {
-    "hero_id": "echo",
-    "countered_hero_id": "dva",
-    "reason": "복제로 디바 능력을 그대로 되돌려주고 폭탄 낙하로 견제"
-  },
-  {
-    "hero_id": "vendetta",
-    "countered_hero_id": "dva",
-    "reason": "광검 근접 콤보로 매트릭스 쿨타임 사이를 파고들어 처치"
-  },
-  {
-    "hero_id": "anran",
-    "countered_hero_id": "dva",
-    "reason": "고기동 접근 후 화염 부채 연타로 매트릭스 지속시간을 넘겨 마무리"
-  },
-  {
-    "hero_id": "mizuki",
-    "countered_hero_id": "dva",
-    "reason": "속박 사슬로 매트릭스 지속시간 중에도 이동을 봉쇄해 확정 처치"
-  },
-  {
-    "hero_id": "brigitte",
-    "countered_hero_id": "dva",
-    "reason": "방패 강타 스턴으로 매트릭스 타이밍을 끊고 근접 버스트"
-  },
-  {
-    "hero_id": "junker_queen",
-    "countered_hero_id": "mercy",
-    "reason": "톱니 칼날의 상처 효과로 회복량을 대폭 낮춰 메르시의 힐 사이클을 무력화"
-  },
-  {
-    "hero_id": "junker_queen",
-    "countered_hero_id": "zarya",
-    "reason": "톱니 칼날로 방벽 뒤에 숨은 대상을 직접 끌어내 압박"
-  },
-  {
-    "hero_id": "junker_queen",
-    "countered_hero_id": "moira",
-    "reason": "상처 효과로 회복량이 지속적으로 감소하고, 사기충천 이동속도로 페이드 이후에도 추격 가능"
-  },
-  {
-    "hero_id": "sigma",
-    "countered_hero_id": "pharah",
-    "reason": "운동 부여로 로켓 발사체를 흡수해 공중 딜러의 화력을 무력화"
-  },
-  {
-    "hero_id": "sigma",
-    "countered_hero_id": "soldier_76",
-    "reason": "키네틱 그라운드로 헬릭스 로켓을 흡수해 화력을 무력화"
-  },
-  {
-    "hero_id": "sigma",
-    "countered_hero_id": "zarya",
-    "reason": "중력 붕괴 궁극기가 방벽을 무시하고 광역 기절을 걺"
-  },
-  {
-    "hero_id": "reaper",
-    "countered_hero_id": "zenyatta",
-    "reason": "이동기 없는 젠야타에게 유령 형태로 안전하게 접근해 확정 처치"
-  },
-  {
-    "hero_id": "reaper",
-    "countered_hero_id": "mercy",
-    "reason": "그림자 밟기로 후열에 있는 메르시에게 직접 접근해 처치"
-  },
-  {
-    "hero_id": "reaper",
-    "countered_hero_id": "moira",
-    "reason": "근접 샷건 화력이 모이라의 페이드 회복량보다 빨라 확정 처치 가능"
-  },
-  {
-    "hero_id": "sombra",
-    "countered_hero_id": "bastion",
-    "reason": "해킹으로 설치형 화력의 재장전/이동을 봉쇄"
-  },
-  {
-    "hero_id": "sombra",
-    "countered_hero_id": "mercy",
-    "reason": "해킹으로 수호 천사 이동과 부활을 잠깐 봉쇄해 확정 픽 기회를 만듦"
-  },
-  {
-    "hero_id": "sombra",
-    "countered_hero_id": "torbjorn",
-    "reason": "EMP로 포탑의 보호막을 무력화"
-  },
-  {
-    "hero_id": "venture",
-    "countered_hero_id": "widowmaker",
-    "reason": "굴착 대시로 저격수의 사거리를 순식간에 좁힘"
-  },
-  {
-    "hero_id": "venture",
-    "countered_hero_id": "ana",
-    "reason": "지하 굴착 이동으로 예측 불가능한 각으로 접근해 수면총 견제를 회피"
-  },
-  {
-    "hero_id": "lifeweaver",
-    "countered_hero_id": "junkrat",
-    "reason": "생명의 은총으로 아군을 즉시 안전지대로 끌어당겨 폭발형 궁극기 대미지를 무효화"
-  },
-  {
-    "hero_id": "mercy",
-    "countered_hero_id": "genji",
-    "reason": "확정 픽을 노리는 겐지의 처치를 부활로 무효화해 다이브 시도 자체를 무력화"
-  },
-  {
-    "hero_id": "roadhog",
-    "countered_hero_id": "widowmaker",
-    "reason": "사슬 갈고리로 후열에 있는 위도우메이커를 그대로 끌어와 확정 처치"
-  },
-  {
-    "hero_id": "roadhog",
-    "countered_hero_id": "ana",
-    "reason": "숨 고르기로 견제 대미지를 버티고 사슬 갈고리로 역으로 압박"
-  },
-  {
-    "hero_id": "mauga",
-    "countered_hero_id": "bastion",
-    "reason": "케이지 파이트로 도주를 막고 근접 화력으로 고정형 딜러를 제압"
-  },
-  {
-    "hero_id": "mauga",
-    "countered_hero_id": "zenyatta",
-    "reason": "케이지 파이트로 이동기 없는 젠야타를 가둬 확정 처치"
-  },
-  {
-    "hero_id": "doomfist",
-    "countered_hero_id": "zarya",
-    "reason": "지진 강타로 자리야가 빔을 지속하기 전에 끊어내고 강화 주먹으로 단숨에 처치"
-  },
-  {
-    "hero_id": "doomfist",
-    "countered_hero_id": "ana",
-    "reason": "손날 차단으로 견제를 막아내고 순식간에 거리를 좁혀 압박"
-  },
-  {
-    "hero_id": "doomfist",
-    "countered_hero_id": "widowmaker",
-    "reason": "강타 콤보로 저격수와의 거리를 순식간에 좁힘"
-  },
-  {
-    "hero_id": "wrecking_ball",
-    "countered_hero_id": "zenyatta",
-    "reason": "갈고리 스윙으로 이동기 없는 젠야타에게 순식간에 접근"
-  },
-  {
-    "hero_id": "wrecking_ball",
-    "countered_hero_id": "bastion",
-    "reason": "적응형 보호막으로 고정 화력을 버티고 말뚝박기로 진형을 흩뜨림"
-  },
-  {
-    "hero_id": "hanzo",
-    "countered_hero_id": "zenyatta",
-    "reason": "스톰 애로우 연사로 이동기 없는 젠야타를 빠르게 처치"
-  },
-  {
-    "hero_id": "hanzo",
-    "countered_hero_id": "reaper",
-    "reason": "음파 화살로 은신·침투 동선을 미리 파악해 접근을 견제"
-  },
-  {
-    "hero_id": "ashe",
-    "countered_hero_id": "torbjorn",
-    "reason": "다이너마이트로 포탑을 한 번에 파괴"
-  },
-  {
-    "hero_id": "ashe",
-    "countered_hero_id": "mercy",
-    "reason": "장거리 견제로 후열의 메르시를 압박"
-  },
-  {
-    "hero_id": "cassidy",
-    "countered_hero_id": "widowmaker",
-    "reason": "전투 구르기로 거리를 좁히고 섬광탄으로 조준 타이밍을 끊음"
-  },
-  {
-    "hero_id": "cassidy",
-    "countered_hero_id": "torbjorn",
-    "reason": "연발 사격으로 포탑을 빠르게 파괴"
-  },
-  {
-    "hero_id": "torbjorn",
-    "countered_hero_id": "genji",
-    "reason": "포탑의 지속 화력이 근접 다이브를 지속적으로 견제"
-  },
-  {
-    "hero_id": "torbjorn",
-    "countered_hero_id": "tracer",
-    "reason": "포탑이 점멸로 움직이는 트레이서를 지속적으로 추적 견제"
-  },
-  {
-    "hero_id": "junkrat",
-    "countered_hero_id": "reinhardt",
-    "reason": "곡사 화망이 방벽을 넘어가 뒤에 있는 목표에게도 피해를 줌"
-  },
-  {
-    "hero_id": "junkrat",
-    "countered_hero_id": "genji",
-    "reason": "강철 덫과 집속 지뢰로 근접 다이브 경로를 봉쇄"
-  },
-  {
-    "hero_id": "mei",
-    "countered_hero_id": "genji",
-    "reason": "얼음벽으로 퇴로를 끊고 냉각 광선으로 이동기를 무력화"
-  },
-  {
-    "hero_id": "mei",
-    "countered_hero_id": "bastion",
-    "reason": "얼음벽으로 고정 화력의 사선을 완전히 차단"
-  },
-  {
-    "hero_id": "symmetra",
-    "countered_hero_id": "genji",
-    "reason": "감시 포탑이 근접 다이브 경로에 지속 피해를 줘 견제"
-  },
-  {
-    "hero_id": "symmetra",
-    "countered_hero_id": "soldier_76",
-    "reason": "광자 보호막으로 헬릭스 로켓과 돌진을 막아냄"
-  },
-  {
-    "hero_id": "soldier_76",
-    "countered_hero_id": "torbjorn",
-    "reason": "꾸준한 사격으로 포탑을 안전 거리에서 파괴"
-  },
-  {
-    "hero_id": "soldier_76",
-    "countered_hero_id": "genji",
-    "reason": "생체 지대로 반사 타이밍 이후에도 팀을 유지시키며 견제 지속"
-  },
-  {
-    "hero_id": "pharah",
-    "countered_hero_id": "reinhardt",
-    "reason": "공중 기동으로 방벽의 사거리 밖에서 안전하게 견제"
-  },
-  {
-    "hero_id": "pharah",
-    "countered_hero_id": "roadhog",
-    "reason": "공중에서 사슬 갈고리 사거리 밖 안전 지대를 유지하며 견제"
-  },
-  {
-    "hero_id": "echo",
-    "countered_hero_id": "reinhardt",
-    "reason": "끈끈이 폭탄이 방벽을 넘어가 뒤쪽 목표에게도 피해를 줌"
-  },
-  {
-    "hero_id": "echo",
-    "countered_hero_id": "mercy",
-    "reason": "집중 광선으로 체력이 낮은 메르시를 빠르게 처치"
-  },
-  {
-    "hero_id": "brigitte",
-    "countered_hero_id": "genji",
-    "reason": "방패 강타 기절로 근접 다이브 타이밍을 끊음"
-  },
-  {
-    "hero_id": "brigitte",
-    "countered_hero_id": "doomfist",
-    "reason": "방패 강타로 강타 콤보 타이밍을 끊음"
-  },
-  {
-    "hero_id": "illari",
-    "countered_hero_id": "sombra",
-    "reason": "궤도 이탈로 해킹 시도를 피하고 태양 소총 화력으로 역으로 압박"
-  },
-  {
-    "hero_id": "baptiste",
-    "countered_hero_id": "bastion",
-    "reason": "불사조 광선탄으로 고정 화력의 버스트를 무효화하고 전진 가능"
-  },
-  {
-    "hero_id": "baptiste",
-    "countered_hero_id": "tracer",
-    "reason": "회복 광선총 대신 공격 사격으로 트레이서의 저체력을 빠르게 처치 가능"
-  },
-  {
-    "hero_id": "kiriko",
-    "countered_hero_id": "sombra",
-    "reason": "스즈로 해킹 상태를 즉시 해제해 무력화 효과를 무효화"
-  },
-  {
-    "hero_id": "kiriko",
-    "countered_hero_id": "mei",
-    "reason": "스즈로 빙결 상태를 즉시 해제해 얼음벽 콤보를 무력화"
-  },
-  {
-    "hero_id": "lucio",
-    "countered_hero_id": "torbjorn",
-    "reason": "벽타기 기동으로 포탑의 사거리를 벗어나며 견제"
-  },
-  {
-    "hero_id": "lucio",
-    "countered_hero_id": "doomfist",
-    "reason": "벽타기와 부스트 기동으로 강타 콤보의 진입 각을 지속적으로 회피"
-  },
-  {
-    "hero_id": "moira",
-    "countered_hero_id": "widowmaker",
-    "reason": "환영 질주로 저격 사선을 회피하며 접근"
-  },
-  {
-    "hero_id": "moira",
-    "countered_hero_id": "genji",
-    "reason": "생체 구슬과 자힐로 근접 다이브 대미지를 버텨냄"
-  },
-  {
-    "hero_id": "sojourn",
-    "countered_hero_id": "torbjorn",
-    "reason": "충전 사격 한 방으로 포탑을 파괴"
-  },
-  {
-    "hero_id": "sojourn",
-    "countered_hero_id": "bastion",
-    "reason": "충전 사격으로 고정 화력의 체력을 빠르게 깎음"
-  },
-  {
-    "hero_id": "zenyatta",
-    "countered_hero_id": "bastion",
-    "reason": "원거리 조화·부조화 구슬로 고정형 딜러의 사거리 밖에서 견제"
-  },
-  {
-    "hero_id": "zenyatta",
-    "countered_hero_id": "symmetra",
-    "reason": "긴 사거리로 감시 포탑 범위 밖에서 안전하게 견제"
-  },
-  {
-    "hero_id": "wuyang",
-    "countered_hero_id": "genji",
-    "reason": "전방 물결로 밀쳐내 근접 다이브를 저지"
-  },
-  {
-    "hero_id": "anran",
-    "countered_hero_id": "mercy",
-    "reason": "고기동 접근으로 후열의 메르시를 직접 압박"
-  },
-  {
-    "hero_id": "emre",
-    "countered_hero_id": "bastion",
-    "reason": "정조준 사격으로 고정 화력을 안전 거리에서 처치"
-  },
-  {
-    "hero_id": "freja",
-    "countered_hero_id": "zenyatta",
-    "reason": "폭발성 올가미로 이동기 없는 목표를 구속해 확정 처치"
-  },
-  {
-    "hero_id": "shion",
-    "countered_hero_id": "torbjorn",
-    "reason": "오토바이 기동으로 포탑 사거리를 회피하며 접근"
-  },
-  {
-    "hero_id": "sierra",
-    "countered_hero_id": "mercy",
-    "reason": "표식 추적 사격으로 회피 기동에도 지속적으로 피해를 줌"
-  },
-  {
-    "hero_id": "vendetta",
-    "countered_hero_id": "zenyatta",
-    "reason": "근접 대검 연계로 이동기 없는 목표를 빠르게 처치"
-  },
-  {
-    "hero_id": "mizuki",
-    "countered_hero_id": "genji",
-    "reason": "속박 사슬로 근접 다이브의 이동기를 봉쇄"
-  },
-  {
-    "hero_id": "bastion",
-    "countered_hero_id": "zenyatta",
-    "reason": "탱크 모드의 화망으로 이동기 없는 젠야타를 빠르게 제압"
-  },
-  {
-    "hero_id": "hazard",
-    "countered_hero_id": "zenyatta",
-    "reason": "가시 박힌 벽으로 퇴로를 막고 돌진해 이동기 없는 목표를 처치"
-  },
-  {
-    "hero_id": "dmon",
-    "countered_hero_id": "torbjorn",
-    "reason": "파워 배리어로 포탑 화망을 막아내며 돌진 강타로 접근"
-  },
-  {
-    "hero_id": "dmon",
-    "countered_hero_id": "bastion",
-    "reason": "파워 배리어로 고정 화력을 막아내고 돌진 강타로 접근해 처치"
-  },
-  {
-    "hero_id": "dmon",
-    "countered_hero_id": "widowmaker",
-    "reason": "추진기로 저격 사선을 회피하며 빠르게 거리를 좁힘"
-  },
-  {
-    "hero_id": "ramattra",
-    "countered_hero_id": "pharah",
-    "reason": "보이드 방벽으로 공중 로켓 공격을 막아내고 게걸스러운 소용돌이로 강제로 끌어내림"
-  },
-  {
-    "hero_id": "ramattra",
-    "countered_hero_id": "junkrat",
-    "reason": "보이드 방벽으로 곡사 폭발물을 막아냄"
-  },
-  {
-    "hero_id": "emre",
-    "countered_hero_id": "symmetra",
-    "reason": "3연발 사격으로 감시 포탑을 빠르게 파괴"
-  },
-  {
-    "hero_id": "freja",
-    "countered_hero_id": "mei",
-    "reason": "빠른 사격 속도로 얼음벽을 올리기 전에 구속"
-  },
-  {
-    "hero_id": "shion",
-    "countered_hero_id": "ana",
-    "reason": "오토바이 기동으로 수면총 견제를 회피하며 접근"
-  },
-  {
-    "hero_id": "sierra",
-    "countered_hero_id": "genji",
-    "reason": "표식을 부착하면 반사와 무관하게 사격이 계속 추적함"
-  },
-  {
-    "hero_id": "vendetta",
-    "countered_hero_id": "mei",
-    "reason": "검으로 막기 능력으로 얼음벽 콤보의 피해를 완화하며 접근"
-  },
-  {
-    "hero_id": "anran",
-    "countered_hero_id": "torbjorn",
-    "reason": "고기동 접근으로 포탑의 사거리를 벗어나 근접 압박"
-  },
-  {
-    "hero_id": "hazard",
-    "countered_hero_id": "widowmaker",
-    "reason": "돌진형 이동기로 저격 사거리를 순식간에 좁힘"
-  },
-  {
-    "hero_id": "doctrine",
-    "countered_hero_id": "genji",
-    "reason": "은신 기동의 피해 감소로 근접 다이브 버스트를 버텨내며 중거리에서 반격"
-  },
-  {
-    "hero_id": "doctrine",
-    "countered_hero_id": "zarya",
-    "reason": "심판 궁극기로 최대 체력을 깎아내 에너지 축적형 탱커의 생존력을 무력화"
-  },
-  {
-    "hero_id": "ana",
-    "countered_hero_id": "juno",
-    "reason": "수면총으로 활공 부스트 이탈이나 궤도 광선 채널링을 끊을 수 있음"
-  },
-  {
-    "hero_id": "widowmaker",
-    "countered_hero_id": "juno",
-    "reason": "개활지에서 비행하는 주노를 사거리 우위로 저격하기 좋음"
-  },
-  {
-    "hero_id": "sombra",
-    "countered_hero_id": "juno",
-    "reason": "해킹으로 활공 부스트와 궤도 광선을 무력화해 생존기를 지움"
-  },
-  {
-    "hero_id": "juno",
-    "countered_hero_id": "pharah",
-    "reason": "펄사 어뢰의 유도 성능과 비행 기동으로 공중전에서 대등하게 맞대응"
-  },
-  {
-    "hero_id": "symmetra",
-    "countered_hero_id": "domina",
-    "reason": "충전된 광선이 세그먼트 방벽 타일을 빠르게 녹여버림"
-  },
-  {
-    "hero_id": "genji",
-    "countered_hero_id": "domina",
-    "reason": "반사로 포톤 매그넘 사격을 그대로 되돌려보냄"
-  },
-  {
-    "hero_id": "sombra",
-    "countered_hero_id": "domina",
-    "reason": "해킹으로 방벽 배열과 음파 반발장치를 무력화함"
-  },
-  {
-    "hero_id": "domina",
-    "countered_hero_id": "zarya",
-    "reason": "긴 사거리에서 지속적으로 견제해 자리야가 에너지를 모을 기회를 주지 않음"
-  }
+  {"hero_id": "zarya", "countered_hero_id": "genji", "reason": "에너지 방벽이 겐지의 사격·용검 피해를 흡수하면서 동시에 자리야 에너지를 채워줌", "reason_en": "Her barrier absorbs Genji's gunfire and Dragonblade damage while charging Zarya's Energy at the same time", "reason_ja": "バリアがゲンジの射撃や龍撃剣のダメージを吸収しつつ、同時にザリアのエネルギーを溜められる"},
+  {"hero_id": "ana", "countered_hero_id": "genji", "reason": "수면총으로 돌진(질풍참)이나 용검 이니시 타이밍을 그대로 끊을 수 있음", "reason_en": "Sleep Dart can shut down Genji's Swift Strike engage or Dragonblade timing outright", "reason_ja": "スリープダートで迅雷斬の突進や龍撃剣の仕掛けタイミングをそのまま止められる"},
+  {"hero_id": "tracer", "countered_hero_id": "widowmaker", "reason": "점멸로 저격 사거리를 순식간에 좁혀 근접전으로 끌고 감", "reason_en": "Blink instantly closes sniper range and forces a close-quarters fight", "reason_ja": "ブリンクで狙撃の間合いを瞬時に詰め、近接戦に持ち込める"},
+  {"hero_id": "genji", "countered_hero_id": "widowmaker", "reason": "이중 점프·벽타기로 사거리를 좁히고, 조준 중엔 반사로 견제 가능", "reason_en": "Double Jump and Wall Climb close the distance, and Deflect punishes her while she's aiming", "reason_ja": "二段ジャンプと壁走りで距離を詰め、狙っている間は攻撃反射で牽制できる"},
+  {"hero_id": "winston", "countered_hero_id": "widowmaker", "reason": "도약으로 단숨에 거리를 좁혀 실드 낀 채로 근접 압박", "reason_en": "Jump Pack closes the gap instantly, pressuring her up close behind his Barrier Projector", "reason_ja": "ジャンプパックで一気に距離を詰め、シールドを構えたまま近接で圧力をかける"},
+  {"hero_id": "dva", "countered_hero_id": "reinhardt", "reason": "매트릭스로 화염 강타를 무효화하고 실드 뒤로 다이브 가능", "reason_en": "Defense Matrix nullifies Fire Strike, letting her dive past the barrier", "reason_ja": "防御マトリックスでファイヤーストライクを無効化し、バリアの奥までダイブできる"},
+  {"hero_id": "winston", "countered_hero_id": "reinhardt", "reason": "도약으로 방벽을 우회해 후열을 직접 압박", "reason_en": "Jump Pack bypasses the Barrier Field to pressure the backline directly", "reason_ja": "ジャンプパックでバリアフィールドを迂回し、後衛を直接圧迫する"},
+  {"hero_id": "tracer", "countered_hero_id": "ana", "reason": "점멸로 거리 좁히고 불규칙한 움직임으로 수면총 조준을 피함", "reason_en": "Blink closes the distance, and erratic movement dodges Sleep Dart aim", "reason_ja": "ブリンクで距離を詰め、不規則な動きでスリープダートの照準を避ける"},
+  {"hero_id": "genji", "countered_hero_id": "ana", "reason": "이동기로 생체 수류탄 사거리 밖에서 접근해 근접 압박", "reason_en": "His mobility lets him approach from outside Biotic Grenade range for close pressure", "reason_ja": "移動技でバイオティックグレネイドの射程外から接近し、近接で圧力をかける"},
+  {"hero_id": "winston", "countered_hero_id": "orisa", "reason": "기동력으로 창/포탑 견제 사거리를 무시하고 후열로 직행", "reason_en": "His mobility ignores the poke range of her spear and turrets, going straight for the backline", "reason_ja": "機動力で槍やタレットの牽制範囲を無視し、後衛へ直行できる"},
+  {"hero_id": "dva", "countered_hero_id": "orisa", "reason": "매트릭스로 포격 피해를 흡수하며 다이브로 압박", "reason_en": "Defense Matrix absorbs her bombardment damage while diving in for pressure", "reason_ja": "防御マトリックスで砲撃ダメージを吸収しつつ、ダイブで圧力をかける"},
+  {"hero_id": "widowmaker", "countered_hero_id": "winston", "reason": "실드가 생기기 전에 장거리에서 선타를 넣을 수 있음", "reason_en": "She can land a long-range shot before his Barrier Projector even goes up", "reason_ja": "シールドが張られる前に、長距離から先制の一撃を入れられる"},
+  {"hero_id": "zarya", "countered_hero_id": "winston", "reason": "방벽+빔으로 실드 체력을 빠르게 녹여 도약 궁 활용을 막음", "reason_en": "Her barrier plus beam quickly melts his shield health, denying his ultimate dive setup", "reason_ja": "バリアとビームでシールドの耐久を素早く削り、跳躍を活かした動きを封じる"},
+  {"hero_id": "zarya", "countered_hero_id": "dva", "reason": "빔으로 매트릭스를 강제 소모시켜 이탈 타이밍을 앞당김", "reason_en": "Her beam forces D.Va to burn Defense Matrix early, pushing up her disengage timing", "reason_ja": "ビームで防御マトリックスを強制的に消費させ、ディーバの離脱タイミングを早める"},
+  {"hero_id": "reinhardt", "countered_hero_id": "dva", "reason": "매트릭스가 빠진 순간 화염 강타로 확정 딜을 넣을 수 있음", "reason_en": "The instant Defense Matrix drops, Fire Strike lands guaranteed damage", "reason_ja": "防御マトリックスが切れた瞬間、ファイヤーストライクで確実にダメージを入れられる"},
+  {"hero_id": "genji", "countered_hero_id": "zarya", "reason": "반사와 이동기로 방벽 유지 시간을 버티고 그랩 콤보를 회피", "reason_en": "Deflect and his mobility let him outlast her barrier uptime and dodge grab combos", "reason_ja": "攻撃反射と移動技でバリアの持続時間をやり過ごし、掴み技のコンボを回避できる"},
+  {"hero_id": "tracer", "countered_hero_id": "zarya", "reason": "점멸로 그랩 각을 피하고 방벽 소모 전에 근접 버스트", "reason_en": "Blink dodges grab angles and lands a close-range burst before her barrier is used", "reason_ja": "ブリンクで掴みの角度を避け、バリアが張られる前に近接で瞬間火力を叩き込む"},
+  {"hero_id": "reinhardt", "countered_hero_id": "tracer", "reason": "화염 강타 한 방으로 즉시 처치 가능한 체력대", "reason_en": "A single Fire Strike can kill her outright given her low health pool", "reason_ja": "体力が低いため、ファイヤーストライク一発で即座に倒せる"},
+  {"hero_id": "orisa", "countered_hero_id": "tracer", "reason": "투창으로 저체력 플랭커를 원콤 처리", "reason_en": "Energy Javelin one-shots the low-health flanker", "reason_ja": "エナジージャベリンで体力の低いフランカーを一撃で処理できる"},
+  {"hero_id": "genji", "countered_hero_id": "sojourn", "reason": "반사로 충전 사격을 무력화하고 근접 압박", "reason_en": "Deflect neutralizes her charged Railgun shot while he closes in for pressure", "reason_ja": "攻撃反射でチャージショットを無力化しつつ、近接で圧力をかける"},
+  {"hero_id": "winston", "countered_hero_id": "sojourn", "reason": "기동력으로 충전 사격 타이밍을 주지 않고 근접전으로 전환", "reason_en": "His mobility denies her time to charge her shot, forcing a close-range fight", "reason_ja": "機動力でチャージショットの隙を与えず、近接戦に持ち込む"},
+  {"hero_id": "widowmaker", "countered_hero_id": "moira", "reason": "환영 질주 사거리 밖에서 선픽 가능", "reason_en": "She can pick Moira off from outside Fade range", "reason_ja": "フェイドの範囲外から先制で狙撃できる"},
+  {"hero_id": "ana", "countered_hero_id": "moira", "reason": "수면총으로 회복 사이클을 끊고 생체 수류탄으로 치유량 감소", "reason_en": "Sleep Dart interrupts her healing cycle, and Biotic Grenade reduces her healing further", "reason_ja": "スリープダートで回復サイクルを断ち切り、バイオティックグレネイドで回復量を下げる"},
+  {"hero_id": "widowmaker", "countered_hero_id": "kiriko", "reason": "스즈로 상태이상은 지울 수 있어도 장거리 견제 자체는 피하기 어려움", "reason_en": "Protection Suzu can cleanse status effects, but it's hard to avoid the long-range poke itself", "reason_ja": "スズの护りで状態異常は解除できても、長距離からの牽制そのものは避けにくい"},
+  {"hero_id": "zarya", "countered_hero_id": "kiriko", "reason": "방벽으로 근접 버스트를 막아 키리코의 카이팅을 무력화", "reason_en": "Her barrier blocks close-range burst, shutting down Kiriko's kiting", "reason_ja": "バリアで近接バーストを防ぎ、キリコの距離を取る立ち回りを無力化する"},
+  {"hero_id": "widowmaker", "countered_hero_id": "lucio", "reason": "장거리 견제에 루시우가 힐 범위를 유지하며 접근하기 어려움", "reason_en": "Her long-range poke makes it hard for Lúcio to approach while keeping his healing aura in range", "reason_ja": "長距離の牽制により、ルシオは回復範囲を保ったまま近づくのが難しくなる"},
+  {"hero_id": "genji", "countered_hero_id": "lucio", "reason": "벽타기 기동력이 맞대응되어 회피 기동이 무의미해짐", "reason_en": "His Wall Climb mobility matches Lúcio's own, making evasive movement pointless", "reason_ja": "壁走りの機動力が互角になるため、回避の動きが意味をなさなくなる"},
+  {"hero_id": "genji", "countered_hero_id": "baptiste", "reason": "반사로 견제 사격을 막고 근접 거리로 파고듦", "reason_en": "Deflect blocks his poke shots while Genji closes to melee range", "reason_ja": "攻撃反射で牽制射撃を防ぎつつ、近接距離まで踏み込む"},
+  {"hero_id": "tracer", "countered_hero_id": "baptiste", "reason": "기동력으로 후열 포지션을 직접 노출시킴", "reason_en": "Her mobility exposes his backline position directly", "reason_ja": "機動力で後衛のポジションを直接晒す"},
+  {"hero_id": "genji", "countered_hero_id": "zenyatta", "reason": "이동기 없는 젠야타에게 근접 다이브가 그대로 들어감", "reason_en": "With no mobility tool, Zenyatta is wide open to a direct melee dive", "reason_ja": "移動技を持たないゼニヤッタには近接ダイブがそのまま決まる"},
+  {"hero_id": "tracer", "countered_hero_id": "zenyatta", "reason": "자체 생존기가 약해 플랭크 한 번에 무너지기 쉬움", "reason_en": "His weak self-survivability means a single flank can take him down", "reason_ja": "自己防衛手段が弱く、一度のフランクで崩れやすい"},
+  {"hero_id": "dva", "countered_hero_id": "wrecking_ball", "reason": "매트릭스로 돌진 피해를 흡수하며 같은 다이브 타이밍에 맞대응 가능", "reason_en": "Defense Matrix absorbs his charge damage, letting her match his dive timing", "reason_ja": "防御マトリックスで突進ダメージを吸収し、同じダイブのタイミングで対抗できる"},
+  {"hero_id": "dva", "countered_hero_id": "hazard", "reason": "매트릭스로 가시 발사체를 막아내며 근접전으로 전환", "reason_en": "Defense Matrix blocks his spike projectiles, turning the fight into melee range", "reason_ja": "防御マトリックスで棘の弾を防ぎ、近接戦に持ち込む"},
+  {"hero_id": "dva", "countered_hero_id": "roadhog", "reason": "매트릭스로 사슬탄과 산탄을 무효화해 고리 콤보를 무력화", "reason_en": "Defense Matrix nullifies the Chain Hook and shotgun blast, shutting down his hook combo", "reason_ja": "防御マトリックスでチェインフックとショットガンを無効化し、フックコンボを封じる"},
+  {"hero_id": "dva", "countered_hero_id": "mauga", "reason": "매트릭스로 기관총 세례를 흡수하며 근접 교전을 피함", "reason_en": "Defense Matrix absorbs his machine-gun barrage while avoiding close-range engagements", "reason_ja": "防御マトリックスでマシンガンの掃射を吸収し、近接戦を回避する"},
+  {"hero_id": "dva", "countered_hero_id": "bastion", "reason": "매트릭스로 고정 화력을 전부 흡수해 설치형 딜러를 무력화", "reason_en": "Defense Matrix absorbs its stationary firepower entirely, neutralizing the turret-style DPS", "reason_ja": "防御マトリックスで据え置き型の火力をすべて吸収し、設置型ダメージディーラーを無力化する"},
+  {"hero_id": "dva", "countered_hero_id": "soldier_76", "reason": "매트릭스로 헬릭스 로켓과 주무기 탄막을 막아냄", "reason_en": "Defense Matrix blocks his Helix Rockets and primary-fire barrage", "reason_ja": "防御マトリックスでヘリックスロケットとメイン射撃の弾幕を防ぐ"},
+  {"hero_id": "dva", "countered_hero_id": "emre", "reason": "매트릭스로 정조준 사격을 무효화하고 접근전으로 전환", "reason_en": "Defense Matrix nullifies his aimed shots, forcing the fight into close range", "reason_ja": "防御マトリックスで照準射撃を無効化し、接近戦に持ち込む"},
+  {"hero_id": "dva", "countered_hero_id": "junkrat", "reason": "매트릭스로 유탄 폭발 피해를 흡수해 설치 화망을 무력화", "reason_en": "Defense Matrix absorbs his grenade explosion damage, neutralizing his area denial", "reason_ja": "防御マトリックスで榴弾の爆発ダメージを吸収し、設置による弾幕を無力化する"},
+  {"hero_id": "dva", "countered_hero_id": "torbjorn", "reason": "매트릭스로 포탑 화망을 전부 흡수", "reason_en": "Defense Matrix absorbs the turret's entire barrage", "reason_ja": "防御マトリックスでタレットの弾幕をすべて吸収する"},
+  {"hero_id": "dva", "countered_hero_id": "sierra", "reason": "매트릭스로 추적 사격 피해를 흡수해 표식 콤보를 무력화", "reason_en": "Defense Matrix absorbs Sierra's tracking-shot damage, neutralizing the mark combo", "reason_ja": "防御マトリックスで追跡射撃のダメージを吸収し、マークのコンボを無力化する"},
+  {"hero_id": "dva", "countered_hero_id": "pharah", "reason": "부스터로 동일한 공중 기동력을 맞대응하며 매트릭스로 로켓을 흡수", "reason_en": "Her Boosters match Pharah's aerial mobility while Defense Matrix absorbs her rockets", "reason_ja": "ブースターで互角の空中機動力を発揮しつつ、防御マトリックスでロケットを吸収する"},
+  {"hero_id": "dva", "countered_hero_id": "freja", "reason": "매트릭스로 올가미 투사체를 흡수해 구속 콤보를 피함", "reason_en": "Defense Matrix absorbs her snare projectile, avoiding the restraint combo", "reason_ja": "防御マトリックスで拘束具の弾を吸収し、拘束コンボを回避する"},
+  {"hero_id": "dva", "countered_hero_id": "shion", "reason": "매트릭스로 오토바이 투척과 사격을 흡수", "reason_en": "Defense Matrix absorbs the thrown motorcycle attack and gunfire", "reason_ja": "防御マトリックスでバイクの投擲と射撃を吸収する"},
+  {"hero_id": "dva", "countered_hero_id": "sojourn", "reason": "매트릭스로 충전 사격 피해를 흡수해 처형 각을 지움", "reason_en": "Defense Matrix absorbs the charged-shot damage, erasing her execute angle", "reason_ja": "防御マトリックスでチャージショットのダメージを吸収し、処刑の狙いを消す"},
+  {"hero_id": "dva", "countered_hero_id": "ashe", "reason": "매트릭스로 다이너마이트와 사격 피해를 흡수", "reason_en": "Defense Matrix absorbs Dynamite and gunfire damage", "reason_ja": "防御マトリックスでダイナマイトと射撃のダメージを吸収する"},
+  {"hero_id": "dva", "countered_hero_id": "widowmaker", "reason": "부스터 기동으로 저격 사거리를 순식간에 좁힘", "reason_en": "Booster mobility closes sniper range in an instant", "reason_ja": "ブースターの機動で狙撃の間合いを瞬時に詰める"},
+  {"hero_id": "dva", "countered_hero_id": "cassidy", "reason": "매트릭스로 리볼버 탄환을 흡수해 화력을 무력화", "reason_en": "Defense Matrix absorbs his revolver rounds, neutralizing his firepower", "reason_ja": "防御マトリックスでリボルバーの弾を吸収し、火力を無力化する"},
+  {"hero_id": "dva", "countered_hero_id": "hanzo", "reason": "매트릭스로 화살 사격을 흡수해 견제를 무력화", "reason_en": "Defense Matrix absorbs his arrows, neutralizing his poke", "reason_ja": "防御マトリックスで矢を吸収し、牽制を無力化する"},
+  {"hero_id": "dva", "countered_hero_id": "ana", "reason": "부스터 기동으로 수면총 조준을 피하며 근접 압박", "reason_en": "Booster mobility dodges Sleep Dart aim while pressuring at close range", "reason_ja": "ブースターの機動でスリープダートの照準を避けつつ、近接で圧力をかける"},
+  {"hero_id": "dva", "countered_hero_id": "jetpack_cat", "reason": "매트릭스로 견제 화력을 흡수하며 기동력으로 맞대응", "reason_en": "Defense Matrix absorbs the poke damage while her mobility matches Jetpack Cat's own", "reason_ja": "防御マトリックスで牽制火力を吸収しつつ、機動力で対抗する"},
+  {"hero_id": "dva", "countered_hero_id": "zenyatta", "reason": "이동기 없는 젠야타에게 부스터로 직접 다이브", "reason_en": "Boosters let her dive straight onto the mobility-less Zenyatta", "reason_ja": "移動技を持たないゼニヤッタに、ブースターで直接ダイブする"},
+  {"hero_id": "dva", "countered_hero_id": "mercy", "reason": "부스터로 고공 회피 중인 메르시를 그대로 따라잡음", "reason_en": "Boosters let her chase down Mercy even while she's evading at height", "reason_ja": "ブースターで高所を回避中のメルシーにもそのまま追いつける"},
+  {"hero_id": "dva", "countered_hero_id": "illari", "reason": "매트릭스로 태양 화살을 흡수하며 포탑을 부숨", "reason_en": "Defense Matrix absorbs her Solar Rifle shots while destroying her Healing Pylon", "reason_ja": "防御マトリックスでソーラーライフルの弾を吸収しつつ、ヒーリングパイロンを破壊する"},
+  {"hero_id": "doomfist", "countered_hero_id": "dva", "reason": "궁극기 없는 타이밍에 강타로 접근해 단숨에 처치 가능한 체력대", "reason_en": "With her ultimate on cooldown, his slam combo closes in and can burst her down in one go given her health pool", "reason_ja": "アルティメットのない隙にスラム技で接近し、一気に倒せる体力帯"},
+  {"hero_id": "ramattra", "countered_hero_id": "dva", "reason": "보이드 방벽으로 매트릭스 지속시간을 흘려보내고 실체화 상태로 근접 제압", "reason_en": "Void Barrier waits out her Defense Matrix duration, then he closes in and overwhelms her in Nemesis Form", "reason_ja": "ヴォイドバリアで防御マトリックスの持続時間をやり過ごし、ネメシスフォームで近接制圧する"},
+  {"hero_id": "mei", "countered_hero_id": "dva", "reason": "얼음벽으로 퇴로를 끊고 냉각광선으로 빙결시켜 확정 처치", "reason_en": "Ice Wall cuts off her escape, then the Endothermic Blaster freezes her for a guaranteed kill", "reason_ja": "アイスウォールで退路を断ち、エンドサーミックブラスターで凍結させて確実に仕留める"},
+  {"hero_id": "symmetra", "countered_hero_id": "dva", "reason": "감속 지역과 광선으로 매트릭스가 없는 타이밍에 급속 처치", "reason_en": "Her slowing field and beam quickly finish her off whenever Defense Matrix is down", "reason_ja": "減速エリアとビームで、防御マトリックスがない隙に素早く仕留める"},
+  {"hero_id": "echo", "countered_hero_id": "dva", "reason": "복제로 디바 능력을 그대로 되돌려주고 폭탄 낙하로 견제", "reason_en": "Duplicate turns D.Va's own kit against her, while Sticky Bombs add pressure", "reason_ja": "デュプリケートでディーバの能力をそのまま返し、スティッキーボムで牽制する"},
+  {"hero_id": "vendetta", "countered_hero_id": "dva", "reason": "광검 근접 콤보로 매트릭스 쿨타임 사이를 파고들어 처치", "reason_en": "A melee lightsaber combo slips through the gaps in her Defense Matrix cooldown for the kill", "reason_ja": "光剣の近接コンボで防御マトリックスのクールタイムの隙を突いて仕留める"},
+  {"hero_id": "anran", "countered_hero_id": "dva", "reason": "고기동 접근 후 화염 부채 연타로 매트릭스 지속시간을 넘겨 마무리", "reason_en": "After a high-mobility approach, repeated fan-fire strikes outlast her Defense Matrix duration for the finish", "reason_ja": "高機動で接近した後、炎の扇の連続攻撃で防御マトリックスの持続時間を超えて仕留める"},
+  {"hero_id": "mizuki", "countered_hero_id": "dva", "reason": "속박 사슬로 매트릭스 지속시간 중에도 이동을 봉쇄해 확정 처치", "reason_en": "Mizuki's binding chain locks down movement even during Defense Matrix, securing the kill", "reason_ja": "拘束の鎖で防御マトリックスの最中でも移動を封じ、確実に仕留める"},
+  {"hero_id": "brigitte", "countered_hero_id": "dva", "reason": "방패 강타 스턴으로 매트릭스 타이밍을 끊고 근접 버스트", "reason_en": "Shield Bash stun interrupts her Defense Matrix timing for a close-range burst", "reason_ja": "シールドバッシュのスタンで防御マトリックスのタイミングを断ち切り、近接でバースト火力を与える"},
+  {"hero_id": "junker_queen", "countered_hero_id": "mercy", "reason": "톱니 칼날의 상처 효과로 회복량을 대폭 낮춰 메르시의 힐 사이클을 무력화", "reason_en": "Jagged Blade's Wound effect sharply cuts healing received, shutting down Mercy's heal cycle", "reason_ja": "ジャギードブレードの傷跡効果で被回復量を大幅に下げ、メルシーの回復サイクルを無力化する"},
+  {"hero_id": "junker_queen", "countered_hero_id": "zarya", "reason": "톱니 칼날로 방벽 뒤에 숨은 대상을 직접 끌어내 압박", "reason_en": "Jagged Blade pulls targets hiding behind her barrier out into the open for pressure", "reason_ja": "ジャギードブレードでバリアの後ろに隠れた対象を直接引きずり出し、圧力をかける"},
+  {"hero_id": "junker_queen", "countered_hero_id": "moira", "reason": "상처 효과로 회복량이 지속적으로 감소하고, 사기충천 이동속도로 페이드 이후에도 추격 가능", "reason_en": "The Wound effect keeps reducing healing, and Adrenaline Rush's speed lets her chase Moira down even after a Fade", "reason_ja": "傷跡効果で回復量が継続的に減り、アドレナリンラッシュの移動速度でフェイドの後も追撃できる"},
+  {"hero_id": "sigma", "countered_hero_id": "pharah", "reason": "운동 부여로 로켓 발사체를 흡수해 공중 딜러의 화력을 무력화", "reason_en": "Kinetic Grasp absorbs her rocket projectiles, neutralizing the aerial DPS's firepower", "reason_ja": "キネティックグラスプでロケット弾を吸収し、空中ダメージディーラーの火力を無力化する"},
+  {"hero_id": "sigma", "countered_hero_id": "soldier_76", "reason": "키네틱 그라운드로 헬릭스 로켓을 흡수해 화력을 무력화", "reason_en": "Kinetic Grasp absorbs Helix Rockets, neutralizing his firepower", "reason_ja": "キネティックグラスプでヘリックスロケットを吸収し、火力を無力化する"},
+  {"hero_id": "sigma", "countered_hero_id": "zarya", "reason": "중력 붕괴 궁극기가 방벽을 무시하고 광역 기절을 걺", "reason_en": "His Gravitic Flux ultimate ignores barriers and stuns the whole area", "reason_ja": "グラビティックフラックスはバリアを無視して範囲全体をスタンさせる"},
+  {"hero_id": "reaper", "countered_hero_id": "zenyatta", "reason": "이동기 없는 젠야타에게 유령 형태로 안전하게 접근해 확정 처치", "reason_en": "Wraith Form lets him safely approach the mobility-less Zenyatta for a guaranteed kill", "reason_ja": "移動技のないゼニヤッタに、レイスフォームで安全に接近して確実に仕留める"},
+  {"hero_id": "reaper", "countered_hero_id": "mercy", "reason": "그림자 밟기로 후열에 있는 메르시에게 직접 접근해 처치", "reason_en": "Shadow Step lets him approach Mercy directly in the backline for the kill", "reason_ja": "シャドウステップで後衛のメルシーに直接接近して仕留める"},
+  {"hero_id": "reaper", "countered_hero_id": "moira", "reason": "근접 샷건 화력이 모이라의 페이드 회복량보다 빨라 확정 처치 가능", "reason_en": "His close-range shotgun burst outpaces what Moira can heal through Fade, securing the kill", "reason_ja": "近接のショットガン火力がモイラのフェイドによる回復を上回り、確実に仕留められる"},
+  {"hero_id": "sombra", "countered_hero_id": "bastion", "reason": "해킹으로 설치형 화력의 재장전/이동을 봉쇄", "reason_en": "Hack locks down the stationary DPS's reload and movement", "reason_ja": "ハックで設置型の火力のリロードや移動を封じる"},
+  {"hero_id": "sombra", "countered_hero_id": "mercy", "reason": "해킹으로 수호 천사 이동과 부활을 잠깐 봉쇄해 확정 픽 기회를 만듦", "reason_en": "Hack briefly disables Guardian Angel and Resurrect, creating a guaranteed pick opportunity", "reason_ja": "ハックでガーディアンエンジェルと蘇生を一時的に封じ、確実にピックできる機会を作る"},
+  {"hero_id": "sombra", "countered_hero_id": "torbjorn", "reason": "EMP로 포탑의 보호막을 무력화", "reason_en": "EMP strips the turret's shield", "reason_ja": "EMPでタレットのシールドを無力化する"},
+  {"hero_id": "venture", "countered_hero_id": "widowmaker", "reason": "굴착 대시로 저격수의 사거리를 순식간에 좁힘", "reason_en": "Drill Dash closes the sniper's range in an instant", "reason_ja": "ドリルダッシュで狙撃手の間合いを瞬時に詰める"},
+  {"hero_id": "venture", "countered_hero_id": "ana", "reason": "지하 굴착 이동으로 예측 불가능한 각으로 접근해 수면총 견제를 회피", "reason_en": "Burrowing underground lets Venture approach from unpredictable angles, dodging Sleep Dart", "reason_ja": "地中を掘り進む移動で予測不能な角度から接近し、スリープダートの牽制を避ける"},
+  {"hero_id": "lifeweaver", "countered_hero_id": "junkrat", "reason": "생명의 은총으로 아군을 즉시 안전지대로 끌어당겨 폭발형 궁극기 대미지를 무효화", "reason_en": "Life Grip instantly pulls an ally to safety, nullifying his explosive ultimate's damage", "reason_ja": "ライフグリップで味方を即座に安全地帯へ引き寄せ、爆発系アルティメットのダメージを無効化する"},
+  {"hero_id": "mercy", "countered_hero_id": "genji", "reason": "확정 픽을 노리는 겐지의 처치를 부활로 무효화해 다이브 시도 자체를 무력화", "reason_en": "Resurrect undoes the kill Genji was counting on, nullifying his dive attempt entirely", "reason_ja": "確実なピックを狙うゲンジの撃破を蘇生で無効化し、ダイブそのものを無力化する"},
+  {"hero_id": "roadhog", "countered_hero_id": "widowmaker", "reason": "사슬 갈고리로 후열에 있는 위도우메이커를 그대로 끌어와 확정 처치", "reason_en": "Chain Hook pulls Widowmaker straight out of the backline for a guaranteed kill", "reason_ja": "チェインフックで後衛のウィドウメイカーをそのまま引き寄せ、確実に仕留める"},
+  {"hero_id": "roadhog", "countered_hero_id": "ana", "reason": "숨 고르기로 견제 대미지를 버티고 사슬 갈고리로 역으로 압박", "reason_en": "Take a Breather absorbs her poke damage, then Chain Hook turns the tables", "reason_ja": "ブレイクタイムで牽制ダメージに耐え、チェインフックで逆に圧力をかける"},
+  {"hero_id": "mauga", "countered_hero_id": "bastion", "reason": "케이지 파이트로 도주를 막고 근접 화력으로 고정형 딜러를 제압", "reason_en": "Cage Fight cuts off its escape, and close-range firepower overwhelms the stationary DPS", "reason_ja": "ケージファイトで逃走を防ぎ、近接火力で設置型ダメージディーラーを制圧する"},
+  {"hero_id": "mauga", "countered_hero_id": "zenyatta", "reason": "케이지 파이트로 이동기 없는 젠야타를 가둬 확정 처치", "reason_en": "Cage Fight traps the mobility-less Zenyatta for a guaranteed kill", "reason_ja": "ケージファイトで移動技のないゼニヤッタを閉じ込め、確実に仕留める"},
+  {"hero_id": "doomfist", "countered_hero_id": "zarya", "reason": "지진 강타로 자리야가 빔을 지속하기 전에 끊어내고 강화 주먹으로 단숨에 처치", "reason_en": "Seismic Slam interrupts her before she can sustain her beam, and an empowered Rocket Punch finishes her instantly", "reason_ja": "サイズミックスラムでザリアがビームを維持する前に断ち切り、強化ロケットパンチで一気に仕留める"},
+  {"hero_id": "doomfist", "countered_hero_id": "ana", "reason": "손날 차단으로 견제를 막아내고 순식간에 거리를 좁혀 압박", "reason_en": "Power Block absorbs her poke, then he closes the distance instantly for pressure", "reason_ja": "パワーブロックで牽制を防ぎつつ、瞬時に距離を詰めて圧力をかける"},
+  {"hero_id": "doomfist", "countered_hero_id": "widowmaker", "reason": "강타 콤보로 저격수와의 거리를 순식간에 좁힘", "reason_en": "His slam combo closes the distance to the sniper in an instant", "reason_ja": "スラムのコンボで狙撃手との距離を瞬時に詰める"},
+  {"hero_id": "wrecking_ball", "countered_hero_id": "zenyatta", "reason": "갈고리 스윙으로 이동기 없는 젠야타에게 순식간에 접근", "reason_en": "Grappling Claw swings let him close on the mobility-less Zenyatta instantly", "reason_ja": "グラップリングクローのスイングで、移動技のないゼニヤッタに瞬時に接近する"},
+  {"hero_id": "wrecking_ball", "countered_hero_id": "bastion", "reason": "적응형 보호막으로 고정 화력을 버티고 말뚝박기로 진형을 흩뜨림", "reason_en": "Adaptive Shield tanks the stationary firepower, then Piledriver scatters the formation", "reason_ja": "アダプティブシールドで据え置き火力に耐え、パイルドライバーで陣形を崩す"},
+  {"hero_id": "hanzo", "countered_hero_id": "zenyatta", "reason": "스톰 애로우 연사로 이동기 없는 젠야타를 빠르게 처치", "reason_en": "Rapid-fire Storm Arrows quickly take down the mobility-less Zenyatta", "reason_ja": "ストームアローの連射で、移動技のないゼニヤッタを素早く仕留める"},
+  {"hero_id": "hanzo", "countered_hero_id": "reaper", "reason": "음파 화살로 은신·침투 동선을 미리 파악해 접근을 견제", "reason_en": "Sonic Arrow reveals his stealth/flank routes in advance, warding off his approach", "reason_ja": "ソニックアローで隠密や侵入の動線を事前に把握し、接近を牽制する"},
+  {"hero_id": "ashe", "countered_hero_id": "torbjorn", "reason": "다이너마이트로 포탑을 한 번에 파괴", "reason_en": "Dynamite destroys the turret in one hit", "reason_ja": "ダイナマイトでタレットを一撃で破壊する"},
+  {"hero_id": "ashe", "countered_hero_id": "mercy", "reason": "장거리 견제로 후열의 메르시를 압박", "reason_en": "Her long-range poke pressures Mercy in the backline", "reason_ja": "長距離の牽制で後衛のメルシーに圧力をかける"},
+  {"hero_id": "cassidy", "countered_hero_id": "widowmaker", "reason": "전투 구르기로 거리를 좁히고 섬광탄으로 조준 타이밍을 끊음", "reason_en": "Combat Roll closes the distance while Flashbang interrupts her aim timing", "reason_ja": "コンバットロールで距離を詰め、フラッシュバンで狙いのタイミングを崩す"},
+  {"hero_id": "cassidy", "countered_hero_id": "torbjorn", "reason": "연발 사격으로 포탑을 빠르게 파괴", "reason_en": "His rapid-fire shots quickly destroy the turret", "reason_ja": "連射でタレットを素早く破壊する"},
+  {"hero_id": "torbjorn", "countered_hero_id": "genji", "reason": "포탑의 지속 화력이 근접 다이브를 지속적으로 견제", "reason_en": "The turret's sustained fire continuously wards off his melee dives", "reason_ja": "タレットの継続的な火力が近接ダイブを常に牽制する"},
+  {"hero_id": "torbjorn", "countered_hero_id": "tracer", "reason": "포탑이 점멸로 움직이는 트레이서를 지속적으로 추적 견제", "reason_en": "The turret continuously tracks and harasses Tracer even as she Blinks around", "reason_ja": "タレットがブリンクで動き回るトレーサーを継続的に追尾し牽制する"},
+  {"hero_id": "junkrat", "countered_hero_id": "reinhardt", "reason": "곡사 화망이 방벽을 넘어가 뒤에 있는 목표에게도 피해를 줌", "reason_en": "His arcing fire sails over the barrier, damaging targets behind it too", "reason_ja": "弧を描く弾道がバリアを越え、後ろの目標にもダメージを与える"},
+  {"hero_id": "junkrat", "countered_hero_id": "genji", "reason": "강철 덫과 집속 지뢰로 근접 다이브 경로를 봉쇄", "reason_en": "Steel Trap and Concussion Mine block off his melee dive routes", "reason_ja": "スチールトラップとコンカッションマインで近接ダイブの経路を封じる"},
+  {"hero_id": "mei", "countered_hero_id": "genji", "reason": "얼음벽으로 퇴로를 끊고 냉각 광선으로 이동기를 무력화", "reason_en": "Ice Wall cuts off his retreat while the Endothermic Blaster shuts down his mobility", "reason_ja": "アイスウォールで退路を断ち、エンドサーミックブラスターで移動技を無力化する"},
+  {"hero_id": "mei", "countered_hero_id": "bastion", "reason": "얼음벽으로 고정 화력의 사선을 완전히 차단", "reason_en": "Ice Wall completely blocks the stationary DPS's line of fire", "reason_ja": "アイスウォールで据え置き火力の射線を完全に遮断する"},
+  {"hero_id": "symmetra", "countered_hero_id": "genji", "reason": "감시 포탑이 근접 다이브 경로에 지속 피해를 줘 견제", "reason_en": "Sentry Turrets deal continuous damage along his melee dive routes", "reason_ja": "セントリータレットが近接ダイブの経路に継続ダメージを与えて牽制する"},
+  {"hero_id": "symmetra", "countered_hero_id": "soldier_76", "reason": "광자 보호막으로 헬릭스 로켓과 돌진을 막아냄", "reason_en": "Photon Barrier blocks Helix Rockets and his Sprint approach", "reason_ja": "フォトンバリアでヘリックスロケットと突撃を防ぐ"},
+  {"hero_id": "soldier_76", "countered_hero_id": "torbjorn", "reason": "꾸준한 사격으로 포탑을 안전 거리에서 파괴", "reason_en": "His steady gunfire destroys the turret from a safe distance", "reason_ja": "安定した射撃で、安全な距離からタレットを破壊する"},
+  {"hero_id": "soldier_76", "countered_hero_id": "genji", "reason": "생체 지대로 반사 타이밍 이후에도 팀을 유지시키며 견제 지속", "reason_en": "Biotic Field keeps the team sustained even after his Deflect window, letting the poke continue", "reason_ja": "バイオティックフィールドで攻撃反射のタイミング後もチームを維持し、牽制を継続できる"},
+  {"hero_id": "pharah", "countered_hero_id": "reinhardt", "reason": "공중 기동으로 방벽의 사거리 밖에서 안전하게 견제", "reason_en": "Her aerial mobility lets her poke safely from outside the barrier's range", "reason_ja": "空中機動でバリアの範囲外から安全に牽制する"},
+  {"hero_id": "pharah", "countered_hero_id": "roadhog", "reason": "공중에서 사슬 갈고리 사거리 밖 안전 지대를 유지하며 견제", "reason_en": "She stays airborne outside Chain Hook range, poking from a safe zone", "reason_ja": "空中でチェインフックの範囲外の安全地帯を保ちながら牽制する"},
+  {"hero_id": "echo", "countered_hero_id": "reinhardt", "reason": "끈끈이 폭탄이 방벽을 넘어가 뒤쪽 목표에게도 피해를 줌", "reason_en": "Sticky Bombs sail over the barrier, damaging targets behind it too", "reason_ja": "スティッキーボムがバリアを越え、後ろの目標にもダメージを与える"},
+  {"hero_id": "echo", "countered_hero_id": "mercy", "reason": "집중 광선으로 체력이 낮은 메르시를 빠르게 처치", "reason_en": "Focusing Beam quickly takes down the low-health Mercy", "reason_ja": "フォーカシングビームで体力の低いメルシーを素早く仕留める"},
+  {"hero_id": "brigitte", "countered_hero_id": "genji", "reason": "방패 강타 기절로 근접 다이브 타이밍을 끊음", "reason_en": "Shield Bash's stun cuts off his melee dive timing", "reason_ja": "シールドバッシュのスタンで近接ダイブのタイミングを断ち切る"},
+  {"hero_id": "brigitte", "countered_hero_id": "doomfist", "reason": "방패 강타로 강타 콤보 타이밍을 끊음", "reason_en": "Shield Bash interrupts the timing of his slam combo", "reason_ja": "シールドバッシュでスラムコンボのタイミングを断ち切る"},
+  {"hero_id": "illari", "countered_hero_id": "sombra", "reason": "궤도 이탈로 해킹 시도를 피하고 태양 소총 화력으로 역으로 압박", "reason_en": "Evasive repositioning dodges her Hack attempts, then Solar Rifle firepower turns the pressure around", "reason_ja": "回避行動でハックを避け、ソーラーライフルの火力で逆に圧力をかける"},
+  {"hero_id": "baptiste", "countered_hero_id": "bastion", "reason": "불사조 광선탄으로 고정 화력의 버스트를 무효화하고 전진 가능", "reason_en": "Immortality Field nullifies burst damage from the stationary DPS, letting him push forward", "reason_ja": "イモータリティフィールドで据え置き火力のバーストを無効化し、前進できる"},
+  {"hero_id": "baptiste", "countered_hero_id": "tracer", "reason": "회복 광선총 대신 공격 사격으로 트레이서의 저체력을 빠르게 처치 가능", "reason_en": "Switching from his healing Biotic Launcher to damage fire, he can quickly finish off low-health Tracer", "reason_ja": "回復用のバイオティックランチャーの代わりに攻撃射撃に切り替え、体力の低いトレーサーを素早く仕留められる"},
+  {"hero_id": "kiriko", "countered_hero_id": "sombra", "reason": "스즈로 해킹 상태를 즉시 해제해 무력화 효과를 무효화", "reason_en": "Protection Suzu instantly cleanses Hack, nullifying its disabling effect", "reason_ja": "スズの护りでハック状態を即座に解除し、無力化効果を無効にする"},
+  {"hero_id": "kiriko", "countered_hero_id": "mei", "reason": "스즈로 빙결 상태를 즉시 해제해 얼음벽 콤보를 무력화", "reason_en": "Protection Suzu instantly cleanses freeze, nullifying the Ice Wall combo", "reason_ja": "スズの护りで凍結状態を即座に解除し、アイスウォールのコンボを無力化する"},
+  {"hero_id": "lucio", "countered_hero_id": "torbjorn", "reason": "벽타기 기동으로 포탑의 사거리를 벗어나며 견제", "reason_en": "Wall Ride mobility lets him poke from outside the turret's range", "reason_ja": "壁走りの機動でタレットの射程外から牽制する"},
+  {"hero_id": "lucio", "countered_hero_id": "doomfist", "reason": "벽타기와 부스트 기동으로 강타 콤보의 진입 각을 지속적으로 회피", "reason_en": "Wall Ride and his speed boost continually dodge the angles of his slam combo engage", "reason_ja": "壁走りとブーストの機動で、スラムコンボの侵入角度を常に回避する"},
+  {"hero_id": "moira", "countered_hero_id": "widowmaker", "reason": "환영 질주로 저격 사선을 회피하며 접근", "reason_en": "Fade dodges her sightline while closing in", "reason_ja": "フェイドで狙撃の射線を避けながら接近する"},
+  {"hero_id": "moira", "countered_hero_id": "genji", "reason": "생체 구슬과 자힐로 근접 다이브 대미지를 버텨냄", "reason_en": "Biotic Orb and self-healing let her outlast his melee dive damage", "reason_ja": "バイオティックオーブと自己回復で近接ダイブのダメージに耐える"},
+  {"hero_id": "sojourn", "countered_hero_id": "torbjorn", "reason": "충전 사격 한 방으로 포탑을 파괴", "reason_en": "A single charged shot destroys the turret", "reason_ja": "チャージショット一発でタレットを破壊する"},
+  {"hero_id": "sojourn", "countered_hero_id": "bastion", "reason": "충전 사격으로 고정 화력의 체력을 빠르게 깎음", "reason_en": "Charged shots quickly whittle down the stationary DPS's health", "reason_ja": "チャージショットで据え置き火力の体力を素早く削る"},
+  {"hero_id": "zenyatta", "countered_hero_id": "bastion", "reason": "원거리 조화·부조화 구슬로 고정형 딜러의 사거리 밖에서 견제", "reason_en": "Orb of Harmony and Orb of Discord poke the stationary DPS from outside its range", "reason_ja": "調和の球と不和の球による遠距離攻撃で、設置型ダメージディーラーの射程外から牽制する"},
+  {"hero_id": "zenyatta", "countered_hero_id": "symmetra", "reason": "긴 사거리로 감시 포탑 범위 밖에서 안전하게 견제", "reason_en": "His long range lets him poke safely from outside Sentry Turret range", "reason_ja": "長い射程でセントリータレットの範囲外から安全に牽制する"},
+  {"hero_id": "wuyang", "countered_hero_id": "genji", "reason": "전방 물결로 밀쳐내 근접 다이브를 저지", "reason_en": "A forward wave knocks him back, stopping his melee dive", "reason_ja": "前方への波状攻撃で押し出し、近接ダイブを阻止する"},
+  {"hero_id": "anran", "countered_hero_id": "mercy", "reason": "고기동 접근으로 후열의 메르시를 직접 압박", "reason_en": "A high-mobility approach lets Anran pressure Mercy directly in the backline", "reason_ja": "高機動での接近により、後衛のメルシーを直接圧迫する"},
+  {"hero_id": "emre", "countered_hero_id": "bastion", "reason": "정조준 사격으로 고정 화력을 안전 거리에서 처치", "reason_en": "Aimed shots take down the stationary DPS from a safe distance", "reason_ja": "照準射撃で、安全な距離から据え置き火力を仕留める"},
+  {"hero_id": "freja", "countered_hero_id": "zenyatta", "reason": "폭발성 올가미로 이동기 없는 목표를 구속해 확정 처치", "reason_en": "Her explosive snare restrains the mobility-less target for a guaranteed kill", "reason_ja": "爆発性の拘束具で移動技のない対象を拘束し、確実に仕留める"},
+  {"hero_id": "shion", "countered_hero_id": "torbjorn", "reason": "오토바이 기동으로 포탑 사거리를 회피하며 접근", "reason_en": "Motorcycle mobility dodges the turret's range while closing in", "reason_ja": "バイクの機動でタレットの射程を避けながら接近する"},
+  {"hero_id": "sierra", "countered_hero_id": "mercy", "reason": "표식 추적 사격으로 회피 기동에도 지속적으로 피해를 줌", "reason_en": "Sierra's tracking mark keeps dealing damage even through evasive movement", "reason_ja": "マークによる追跡射撃で、回避機動をしていても継続的にダメージを与える"},
+  {"hero_id": "vendetta", "countered_hero_id": "zenyatta", "reason": "근접 대검 연계로 이동기 없는 목표를 빠르게 처치", "reason_en": "Vendetta's melee greatsword combo quickly kills the mobility-less target", "reason_ja": "近接大剣の連撃で、移動技のない対象を素早く仕留める"},
+  {"hero_id": "mizuki", "countered_hero_id": "genji", "reason": "속박 사슬로 근접 다이브의 이동기를 봉쇄", "reason_en": "Mizuki's binding chain locks down the mobility used in his melee dive", "reason_ja": "拘束の鎖で近接ダイブの移動技を封じる"},
+  {"hero_id": "bastion", "countered_hero_id": "zenyatta", "reason": "탱크 모드의 화망으로 이동기 없는 젠야타를 빠르게 제압", "reason_en": "Tank Configuration's barrage quickly overwhelms the mobility-less Zenyatta", "reason_ja": "タンク形態の弾幕で、移動技のないゼニヤッタを素早く制圧する"},
+  {"hero_id": "hazard", "countered_hero_id": "zenyatta", "reason": "가시 박힌 벽으로 퇴로를 막고 돌진해 이동기 없는 목표를 처치", "reason_en": "Jagged Wall blocks the retreat, then he charges in to finish the mobility-less target", "reason_ja": "ジャギードウォールで退路を塞ぎ、突進して移動技のない対象を仕留める"},
+  {"hero_id": "dmon", "countered_hero_id": "torbjorn", "reason": "파워 배리어로 포탑 화망을 막아내며 돌진 강타로 접근", "reason_en": "Power Barrier blocks the turret's barrage while a charging slam closes the distance", "reason_ja": "パワーバリアでタレットの弾幕を防ぎつつ、突進スラムで接近する"},
+  {"hero_id": "dmon", "countered_hero_id": "bastion", "reason": "파워 배리어로 고정 화력을 막아내고 돌진 강타로 접근해 처치", "reason_en": "Power Barrier blocks the stationary firepower, then a charging slam closes in for the kill", "reason_ja": "パワーバリアで据え置き火力を防ぎ、突進スラムで接近して仕留める"},
+  {"hero_id": "dmon", "countered_hero_id": "widowmaker", "reason": "추진기로 저격 사선을 회피하며 빠르게 거리를 좁힘", "reason_en": "Thrusters dodge the sniper's line of fire while quickly closing the distance", "reason_ja": "スラスターで狙撃の射線を避けつつ、素早く距離を詰める"},
+  {"hero_id": "ramattra", "countered_hero_id": "pharah", "reason": "보이드 방벽으로 공중 로켓 공격을 막아내고 게걸스러운 소용돌이로 강제로 끌어내림", "reason_en": "Void Barrier blocks her aerial rocket fire, then Ravenous Vortex forcibly pulls her down", "reason_ja": "ヴォイドバリアで空中からのロケット攻撃を防ぎ、貪欲な渦で強制的に引きずり下ろす"},
+  {"hero_id": "ramattra", "countered_hero_id": "junkrat", "reason": "보이드 방벽으로 곡사 폭발물을 막아냄", "reason_en": "Void Barrier blocks his lobbed explosives", "reason_ja": "ヴォイドバリアで放物線状の爆発物を防ぐ"},
+  {"hero_id": "emre", "countered_hero_id": "symmetra", "reason": "3연발 사격으로 감시 포탑을 빠르게 파괴", "reason_en": "Emre's three-round burst quickly destroys Sentry Turrets", "reason_ja": "3点バーストで、セントリータレットを素早く破壊する"},
+  {"hero_id": "freja", "countered_hero_id": "mei", "reason": "빠른 사격 속도로 얼음벽을 올리기 전에 구속", "reason_en": "Her rapid fire rate restrains Mei before she can raise Ice Wall", "reason_ja": "速い連射でアイスウォールを張る前に拘束する"},
+  {"hero_id": "shion", "countered_hero_id": "ana", "reason": "오토바이 기동으로 수면총 견제를 회피하며 접근", "reason_en": "Motorcycle mobility dodges Sleep Dart poke while closing in", "reason_ja": "バイクの機動でスリープダートの牽制を避けながら接近する"},
+  {"hero_id": "sierra", "countered_hero_id": "genji", "reason": "표식을 부착하면 반사와 무관하게 사격이 계속 추적함", "reason_en": "Once Sierra's mark is attached, the shots keep tracking him regardless of Deflect", "reason_ja": "マークを付けると、攻撃反射とは無関係に射撃が追尾し続ける"},
+  {"hero_id": "vendetta", "countered_hero_id": "mei", "reason": "검으로 막기 능력으로 얼음벽 콤보의 피해를 완화하며 접근", "reason_en": "Vendetta's sword-parry ability softens the damage of the Ice Wall combo while closing in", "reason_ja": "剣で防ぐ能力でアイスウォールコンボのダメージを軽減しながら接近する"},
+  {"hero_id": "anran", "countered_hero_id": "torbjorn", "reason": "고기동 접근으로 포탑의 사거리를 벗어나 근접 압박", "reason_en": "A high-mobility approach escapes the turret's range for close-range pressure", "reason_ja": "高機動での接近でタレットの射程を外れ、近接で圧力をかける"},
+  {"hero_id": "hazard", "countered_hero_id": "widowmaker", "reason": "돌진형 이동기로 저격 사거리를 순식간에 좁힘", "reason_en": "His charging mobility tool closes sniper range in an instant", "reason_ja": "突進型の移動技で狙撃の間合いを瞬時に詰める"},
+  {"hero_id": "doctrine", "countered_hero_id": "genji", "reason": "은신 기동의 피해 감소로 근접 다이브 버스트를 버텨내며 중거리에서 반격", "reason_en": "Doctrine's stealth-mobility damage reduction absorbs the melee dive burst, then counters at mid-range", "reason_ja": "隠密機動によるダメージ軽減で近接ダイブのバーストに耐え、中距離で反撃する"},
+  {"hero_id": "doctrine", "countered_hero_id": "zarya", "reason": "심판 궁극기로 최대 체력을 깎아내 에너지 축적형 탱커의 생존력을 무력화", "reason_en": "Doctrine's ultimate cuts down max health, neutralizing the energy-stacking tank's survivability", "reason_ja": "アルティメットで最大体力を削り、エネルギー蓄積型タンクの生存力を無力化する"},
+  {"hero_id": "ana", "countered_hero_id": "juno", "reason": "수면총으로 활공 부스트 이탈이나 궤도 광선 채널링을 끊을 수 있음", "reason_en": "Sleep Dart can interrupt her Glide Boost escape or her Orbital Ray channel", "reason_ja": "スリープダートでグライドブーストによる離脱やオービタルレイのチャネリングを止められる"},
+  {"hero_id": "widowmaker", "countered_hero_id": "juno", "reason": "개활지에서 비행하는 주노를 사거리 우위로 저격하기 좋음", "reason_en": "Her range advantage makes it easy to snipe Juno as she flies through open ground", "reason_ja": "開けた場所を飛ぶジュノを、射程の優位を活かして狙撃しやすい"},
+  {"hero_id": "sombra", "countered_hero_id": "juno", "reason": "해킹으로 활공 부스트와 궤도 광선을 무력화해 생존기를 지움", "reason_en": "Hack disables Glide Boost and Orbital Ray, erasing her survival tools", "reason_ja": "ハックでグライドブーストとオービタルレイを無力化し、生存手段を消す"},
+  {"hero_id": "juno", "countered_hero_id": "pharah", "reason": "펄사 어뢰의 유도 성능과 비행 기동으로 공중전에서 대등하게 맞대응", "reason_en": "Pulsar Torpedoes' tracking and her flight mobility let her match Pharah evenly in the air", "reason_ja": "パルサートーピードの誘導性能と飛行機動で、空中戦において互角に渡り合える"},
+  {"hero_id": "symmetra", "countered_hero_id": "domina", "reason": "충전된 광선이 세그먼트 방벽 타일을 빠르게 녹여버림", "reason_en": "Her charged beam quickly melts through segmented barrier tiles", "reason_ja": "チャージされたビームがセグメント式バリアタイルを素早く溶かす"},
+  {"hero_id": "genji", "countered_hero_id": "domina", "reason": "반사로 포톤 매그넘 사격을 그대로 되돌려보냄", "reason_en": "Deflect sends her Photon Magnum shots straight back at her", "reason_ja": "攻撃反射でフォトンマグナムの射撃をそのまま跳ね返す"},
+  {"hero_id": "sombra", "countered_hero_id": "domina", "reason": "해킹으로 방벽 배열과 음파 반발장치를 무력화함", "reason_en": "Hack disables Domina's barrier array and sonic deflector device", "reason_ja": "ハックでバリア配列とソニックディフレクター装置を無力化する"},
+  {"hero_id": "domina", "countered_hero_id": "zarya", "reason": "긴 사거리에서 지속적으로 견제해 자리야가 에너지를 모을 기회를 주지 않음", "reason_en": "Continuous long-range poke denies Zarya any chance to build up Energy", "reason_ja": "長射程から継続的に牽制し、ザリアがエネルギーを溜める機会を与えない"}
 ]
