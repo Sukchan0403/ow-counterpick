@@ -4,14 +4,16 @@
 // (lib/api.ts, app/[locale 페이지]들 참고).
 import type { Role, DataRichness } from "./types";
 
-export type Locale = "ko" | "en" | "ja";
+export type Locale = "ko" | "en" | "ja" | "zh-cn" | "zh-tw";
 
-export const LOCALES: Locale[] = ["ko", "en", "ja"];
+export const LOCALES: Locale[] = ["ko", "en", "ja", "zh-cn", "zh-tw"];
 
 export const LOCALE_LABEL: Record<Locale, string> = {
   ko: "한국어",
   en: "English",
   ja: "日本語",
+  "zh-cn": "简体中文",
+  "zh-tw": "繁體中文",
 };
 
 // html lang 속성, Open Graph locale 등에 쓰는 BCP47 태그.
@@ -19,6 +21,8 @@ export const LOCALE_HTML_LANG: Record<Locale, string> = {
   ko: "ko",
   en: "en",
   ja: "ja",
+  "zh-cn": "zh-Hans",
+  "zh-tw": "zh-Hant",
 };
 
 interface Dictionary {
@@ -184,7 +188,85 @@ const ja: Dictionary = {
   apiRecommendationsFailed: "おすすめ結果を取得できませんでした。",
 };
 
-export const DICTIONARIES: Record<Locale, Dictionary> = { ko, en, ja };
+const zhCn: Dictionary = {
+  loading: "加载中...",
+  analyzing: "分析中...",
+  mapSectionLabel: "地图",
+  mapPlaceholder: "请选择地图",
+  backToInput: "← 返回选择",
+  metaBadge: (season, dataVersion) => `${season} 种子数据 · ${dataVersion}`,
+
+  enemyTeam: "敌方队伍",
+  ourTeam: "我方队伍",
+  teamCount: (count, max) => `${count}/${max}`,
+  uncategorized: "其他",
+
+  mapPickerTitle: "选择地图",
+  close: "关闭",
+  mapCount: (count) => `${count}张`,
+
+  inferredPositionPrefix: "缺少的位置 · ",
+  legendCounter: "克制",
+  legendSynergy: "配合",
+  legendMap: "地图",
+  mustPickBadge: "必选",
+  recommendationScore: (percentage) => `推荐指数 ${percentage}`,
+  noDataPrefix: "暂无数据 · ",
+
+  errorHeading: "发生了临时错误",
+  errorSubtext: "错误代码 502 · BAD GATEWAY",
+  retry: "重试",
+
+  switchToLight: "切换到浅色模式",
+  switchToDark: "切换到深色模式",
+
+  apiInvalidInput: "请检查输入内容。",
+  apiServerErrorStatus: (status) => `服务器错误 (状态码 ${status})`,
+  apiHeroesLoadFailed: "无法加载英雄列表。",
+  apiMapsLoadFailed: "无法加载地图列表。",
+  apiRecommendationsFailed: "无法获取推荐结果。",
+};
+
+const zhTw: Dictionary = {
+  loading: "載入中...",
+  analyzing: "分析中...",
+  mapSectionLabel: "地圖",
+  mapPlaceholder: "請選擇地圖",
+  backToInput: "← 返回選擇",
+  metaBadge: (season, dataVersion) => `${season} 種子資料 · ${dataVersion}`,
+
+  enemyTeam: "敵方隊伍",
+  ourTeam: "我方隊伍",
+  teamCount: (count, max) => `${count}/${max}`,
+  uncategorized: "其他",
+
+  mapPickerTitle: "選擇地圖",
+  close: "關閉",
+  mapCount: (count) => `${count}張`,
+
+  inferredPositionPrefix: "缺少的位置 · ",
+  legendCounter: "剋制",
+  legendSynergy: "搭配",
+  legendMap: "地圖",
+  mustPickBadge: "必選",
+  recommendationScore: (percentage) => `推薦指數 ${percentage}`,
+  noDataPrefix: "尚無資料 · ",
+
+  errorHeading: "發生暫時性錯誤",
+  errorSubtext: "錯誤代碼 502 · BAD GATEWAY",
+  retry: "重試",
+
+  switchToLight: "切換為淺色模式",
+  switchToDark: "切換為深色模式",
+
+  apiInvalidInput: "請檢查輸入內容。",
+  apiServerErrorStatus: (status) => `伺服器錯誤 (狀態碼 ${status})`,
+  apiHeroesLoadFailed: "無法載入英雄清單。",
+  apiMapsLoadFailed: "無法載入地圖清單。",
+  apiRecommendationsFailed: "無法取得推薦結果。",
+};
+
+export const DICTIONARIES: Record<Locale, Dictionary> = { ko, en, ja, "zh-cn": zhCn, "zh-tw": zhTw };
 
 export function getDictionary(locale: Locale): Dictionary {
   return DICTIONARIES[locale];
@@ -196,6 +278,8 @@ export const ROLE_LABEL: Record<Locale, Record<Role, string>> = {
   ko: { tank: "돌격", damage: "공격", support: "지원" },
   en: { tank: "Tank", damage: "Damage", support: "Support" },
   ja: { tank: "タンク", damage: "ダメージ", support: "サポート" },
+  "zh-cn": { tank: "坦克", damage: "输出", support: "支援" },
+  "zh-tw": { tank: "坦克", damage: "輸出", support: "支援" },
 };
 
 // 백엔드 maps.mode는 영문 enum 그대로 온다 — 표시할 때만 번역.
@@ -212,6 +296,14 @@ export const MODE_LABEL: Record<Locale, Record<string, string>> = {
     hybrid: "混合", escort: "護送", control: "制圧",
     clash: "衝突", push: "押し出し", flashpoint: "フラッシュポイント",
   },
+  "zh-cn": {
+    hybrid: "混合", escort: "护送", control: "占领",
+    clash: "冲突", push: "推进", flashpoint: "热点",
+  },
+  "zh-tw": {
+    hybrid: "混合", escort: "護送", control: "佔領",
+    clash: "衝突", push: "推進", flashpoint: "熱點",
+  },
 };
 
 export function modeLabel(locale: Locale, mode: string): string {
@@ -222,6 +314,8 @@ export const RICHNESS_LABEL: Record<Locale, Record<DataRichness, string>> = {
   ko: { rich: "데이터 풍부", growing: "데이터 보강 중" },
   en: { rich: "Rich data", growing: "Data growing" },
   ja: { rich: "データ充実", growing: "データ拡充中" },
+  "zh-cn": { rich: "数据丰富", growing: "数据完善中" },
+  "zh-tw": { rich: "資料豐富", growing: "資料完善中" },
 };
 
 // heroes.archetype_category는 백엔드가 항상 한국어 원본 값(예: "개시자")을
@@ -242,6 +336,16 @@ export const ARCHETYPE_CATEGORY_LABEL: Record<Locale, Record<string, string>> = 
     "개시자": "先駆者", "투사": "闘士", "강건한 자": "重戦士",
     "전문가": "スペシャリスト", "수색가": "偵察兵", "측면 공격가": "フランカー", "명사수": "マークスマン",
     "전술가": "戦術家", "의무관": "衛生兵", "생존왕": "サバイバー",
+  },
+  "zh-cn": {
+    "개시자": "先锋", "투사": "斗士", "강건한 자": "重装战士",
+    "전문가": "专家", "수색가": "侦察兵", "측면 공격가": "游走手", "명사수": "神射手",
+    "전술가": "战术家", "의무관": "战地医疗兵", "생존왕": "生存专家",
+  },
+  "zh-tw": {
+    "개시자": "先鋒", "투사": "鬥士", "강건한 자": "重裝戰士",
+    "전문가": "專家", "수색가": "偵察兵", "측면 공격가": "游走手", "명사수": "神射手",
+    "전술가": "戰術家", "의무관": "戰地醫療兵", "생존왕": "生存專家",
   },
 };
 

@@ -38,6 +38,8 @@ _NEUTRAL_REASON_BY_LANG = {
     "ko": "일반적으로 무난한 영웅",
     "en": "A generally safe, well-rounded pick",
     "ja": "特に癖のない、無難なヒーロー",
+    "zh-cn": "整体上是比较稳妥全面的英雄",
+    "zh-tw": "整體上是比較穩妥全面的英雄",
 }
 
 
@@ -46,6 +48,10 @@ def _counter_gap_message(lang: str, enemy_name: str) -> str:
         return f"Counter matchup vs. {enemy_name} not yet reviewed"
     if lang == "ja":
         return f"敵の{enemy_name}とのカウンター関係は未検証"
+    if lang == "zh-cn":
+        return f"与敌方{enemy_name}的克制关系尚未评估"
+    if lang == "zh-tw":
+        return f"與敵方{enemy_name}的克制關係尚未評估"
     particle = _particle_wa_gwa(enemy_name)
     return f"상대 {enemy_name}{particle}의 카운터 관계 미검토"
 
@@ -55,6 +61,10 @@ def _synergy_gap_message(lang: str, ally_name: str) -> str:
         return f"Synergy with {ally_name} not yet reviewed"
     if lang == "ja":
         return f"味方の{ally_name}とのシナジー関係は未検証"
+    if lang == "zh-cn":
+        return f"与我方{ally_name}的配合关系尚未评估"
+    if lang == "zh-tw":
+        return f"與我方{ally_name}的配合關係尚未評估"
     particle = _particle_wa_gwa(ally_name)
     return f"아군 {ally_name}{particle}의 시너지 관계 미검토"
 

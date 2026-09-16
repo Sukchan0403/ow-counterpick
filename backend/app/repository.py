@@ -13,7 +13,7 @@ from app.config import MAP_DATA_RICH_THRESHOLD
 # 그대로 내려주면, scoring.py 등 나머지 로직은 lang을 몰라도 그대로 동작한다.
 # COALESCE(NULLIF(...), 기본값)로 감싸서, 아직 번역이 안 채워진 행(빈 문자열)은
 # 조용히 한국어로 폴백한다 — 빈 텍스트가 그대로 노출되는 것보다 안전함.
-_LANG_SUFFIX = {"ko": "", "en": "_en", "ja": "_ja"}
+_LANG_SUFFIX = {"ko": "", "en": "_en", "ja": "_ja", "zh-cn": "_zh_cn", "zh-tw": "_zh_tw"}
 
 
 def _localized(base_col: str, lang: str) -> str:

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   alternates: {
     canonical: "/",
-    languages: { ko: "/", en: "/en", ja: "/ja" },
+    languages: { ko: "/", en: "/en", ja: "/ja", "zh-CN": "/zh-cn", "zh-TW": "/zh-tw" },
   },
   openGraph: {
     title: SITE_TITLE,

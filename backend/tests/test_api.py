@@ -377,3 +377,56 @@ def test_recommendations_lang_ja_localizes_data_gap_message(client):
         "敵のゲンジとのカウンター関係は未検証",
         "味方のラインハルトとのシナジー関係は未検証",
     ]
+
+
+def test_get_heroes_lang_zh_cn_returns_localized_name(client):
+    res = client.get("/api/heroes", params={"lang": "zh-cn"})
+    assert res.status_code == 200
+    heroes = {h["id"]: h for h in res.json()}
+    assert heroes["kiriko"]["name"] == "雾子"
+    assert heroes["kiriko"]["archetype"] == "侦察辅助"
+
+
+def test_get_maps_lang_zh_tw_returns_localized_name(client):
+    res = client.get("/api/maps", params={"lang": "zh-tw"})
+    assert res.status_code == 200
+    maps = {m["id"]: m for m in res.json()}
+    assert maps["kings_row"]["name"] == "國王大道"
+
+
+def test_recommendations_lang_zh_cn_localizes_hero_name_and_reason(client):
+    res = client.post(
+        "/api/recommendations",
+        json={
+            "enemy_heroes": ["widowmaker"],
+            "our_heroes": ["genji"],
+            "empty_position": "support",
+            "map_id": "eichenwalde",
+            "lang": "zh-cn",
+        },
+    )
+    assert res.status_code == 200
+    body = res.json()
+    top = next(r for r in body["recommendations"] if r["hero_id"] == "kiriko")
+    assert top["hero_name"] == "雾子"
+    assert top["reasons"] == ["用铃铛化解狙击手的压制"]
+
+
+def test_recommendations_lang_zh_tw_localizes_data_gap_message(client):
+    res = client.post(
+        "/api/recommendations",
+        json={
+            "enemy_heroes": ["genji"],
+            "our_heroes": ["reinhardt"],
+            "empty_position": "damage",
+            "map_id": "eichenwalde",
+            "lang": "zh-tw",
+        },
+    )
+    assert res.status_code == 200
+    body = res.json()
+    widowmaker = next(r for r in body["recommendations"] if r["hero_id"] == "widowmaker")
+    assert widowmaker["data_gaps"] == [
+        "與敵方源氏的克制關係尚未評估",
+        "與我方萊因哈特的配合關係尚未評估",
+    ]

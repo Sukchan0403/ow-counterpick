@@ -10,7 +10,7 @@ from pydantic import BaseModel, Field
 
 Role = Literal["tank", "damage", "support"]
 DataRichness = Literal["rich", "growing"]
-Lang = Literal["ko", "en", "ja"]
+Lang = Literal["ko", "en", "ja", "zh-cn", "zh-tw"]
 
 
 class RecommendationRequest(BaseModel):
