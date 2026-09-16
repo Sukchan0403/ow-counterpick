@@ -14,10 +14,20 @@
 
 | 메서드 | 경로 | 설명 | 요청 스키마 | 응답 스키마 | 상태 코드 |
 |---|---|---|---|---|---|
-| GET | `/api/heroes` | 영웅 목록 조회 | - | `Hero[]` | 200, 502 |
-| GET | `/api/maps` | 맵 목록 조회 | - | `Map[]` | 200, 502 |
+| GET | `/api/heroes` | 영웅 목록 조회 | `?lang=ko\|en\|ja` (선택) | `Hero[]` | 200, 502 |
+| GET | `/api/maps` | 맵 목록 조회 | `?lang=ko\|en\|ja` (선택) | `Map[]` | 200, 502 |
 | GET | `/api/meta` | 시드 데이터 시즌/버전 정보 | - | `Meta` | 200, 502 |
 | POST | `/api/recommendations` | 빈 포지션 추천 영웅 순위 조회 | `RecommendationRequest` | `RecommendationResponse` | 200, 400, 422, 502 |
+
+### 다국어(`lang`) 처리
+
+`heroes.name`/`archetype`, `maps.name`, `HeroRecommendation.reasons`/`data_gaps` 등
+DB에서 오는 표시용 텍스트는 `lang`에 따라 한국어(`ko`, 기본값)/영어(`en`)/일본어
+(`ja`) 중 하나로 내려온다. `hero_id`/`map_id`/`role`/`archetype_category`/`mode`
+같은 내부 식별자는 언어와 무관하게 항상 동일한 값(프론트가 자체 사전으로 번역)이며,
+번역이 비어있는 행은 조용히 한국어로 폴백한다(`backend/app/repository.py`의
+`_localized()` 참고). GET 엔드포인트는 쿼리 파라미터로, POST
+`/api/recommendations`는 요청 본문의 `lang` 필드로 받는다.
 
 - **422**: `map_id`가 요청 본문에 아예 없을 때 (pydantic 검증 실패). `empty_position`은
   선택 필드라 생략해도 422가 나지 않음.
@@ -76,6 +86,7 @@ DB 조회 없이 `config.SEED_SEASON`/`config.SEED_DATA_VERSION` 상수를 그�
   our_heroes: string[]     // 우리 팀 픽 영웅 id, 0~4개 (선택)
   empty_position?: "tank" | "damage" | "support"   // 선택. 생략하면 아래 자동 판단
   map_id: string                                   // 필수
+  lang?: "ko" | "en" | "ja"                        // 선택. 기본값 "ko" — 응답의 표시용 텍스트 언어
 }
 ```
 오버워치 룰상 "영웅 1인 1팀" 제한은 팀 내부에만 적용되므로, 상대 팀이 이미 픽한
