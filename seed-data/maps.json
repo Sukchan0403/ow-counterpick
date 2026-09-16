@@ -5,7 +5,9 @@
     "mode": "hybrid",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/eichenwalde.jpg",
     "name_en": "Eichenwalde",
-    "name_ja": "アイヘンヴァルデ"
+    "name_ja": "アイヘンヴァルデ",
+    "name_zh_cn": "艾兴瓦尔德",
+    "name_zh_tw": "愛西瓦德"
   },
   {
     "id": "kings_row",
@@ -13,7 +15,9 @@
     "mode": "hybrid",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/kings-row.jpg",
     "name_en": "King's Row",
-    "name_ja": "キングスロウ"
+    "name_ja": "キングスロウ",
+    "name_zh_cn": "国王大道",
+    "name_zh_tw": "國王大道"
   },
   {
     "id": "hollywood",
@@ -21,7 +25,9 @@
     "mode": "hybrid",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/hollywood.jpg",
     "name_en": "Hollywood",
-    "name_ja": "ハリウッド"
+    "name_ja": "ハリウッド",
+    "name_zh_cn": "好莱坞",
+    "name_zh_tw": "好萊塢"
   },
   {
     "id": "numbani",
@@ -29,7 +35,9 @@
     "mode": "hybrid",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/numbani.jpg",
     "name_en": "Numbani",
-    "name_ja": "ヌンバニ"
+    "name_ja": "ヌンバニ",
+    "name_zh_cn": "努巴尼",
+    "name_zh_tw": "努巴尼"
   },
   {
     "id": "midtown",
@@ -37,7 +45,9 @@
     "mode": "hybrid",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/midtown.jpg",
     "name_en": "Midtown",
-    "name_ja": "ミッドタウン"
+    "name_ja": "ミッドタウン",
+    "name_zh_cn": "中城",
+    "name_zh_tw": "中城"
   },
   {
     "id": "blizzard_world",
@@ -45,7 +55,9 @@
     "mode": "hybrid",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/blizzard-world.jpg",
     "name_en": "Blizzard World",
-    "name_ja": "ブリザードワールド"
+    "name_ja": "ブリザードワールド",
+    "name_zh_cn": "暴雪世界",
+    "name_zh_tw": "暴雪世界"
   },
   {
     "id": "paraiso",
@@ -53,7 +65,9 @@
     "mode": "hybrid",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/paraiso.jpg",
     "name_en": "Paraíso",
-    "name_ja": "パライソ"
+    "name_ja": "パライソ",
+    "name_zh_cn": "帕拉伊苏",
+    "name_zh_tw": "帕拉伊蘇"
   },
   {
     "id": "neon_junction",
@@ -61,7 +75,9 @@
     "mode": "hybrid",
     "image_url": "/maps/neon_junction.png",
     "name_en": "Neon Junction",
-    "name_ja": "ネオン・ジャンクション"
+    "name_ja": "ネオン・ジャンクション",
+    "name_zh_cn": "霓虹枢纽",
+    "name_zh_tw": "霓虹交叉口"
   },
   {
     "id": "dorado",
@@ -69,7 +85,9 @@
     "mode": "escort",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/dorado.jpg",
     "name_en": "Dorado",
-    "name_ja": "ドラド"
+    "name_ja": "ドラド",
+    "name_zh_cn": "多拉多",
+    "name_zh_tw": "多拉多"
   },
   {
     "id": "havana",
@@ -77,7 +95,9 @@
     "mode": "escort",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/havana.jpg",
     "name_en": "Havana",
-    "name_ja": "ハバナ"
+    "name_ja": "ハバナ",
+    "name_zh_cn": "哈瓦那",
+    "name_zh_tw": "哈瓦那"
   },
   {
     "id": "junkertown",
@@ -85,7 +105,9 @@
     "mode": "escort",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/junkertown.jpg",
     "name_en": "Junkertown",
-    "name_ja": "ジャンクタウン"
+    "name_ja": "ジャンクタウン",
+    "name_zh_cn": "渣客镇",
+    "name_zh_tw": "垃圾鎮"
   },
   {
     "id": "route_66",
@@ -93,7 +115,9 @@
     "mode": "escort",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/route-66.jpg",
     "name_en": "Route 66",
-    "name_ja": "ルート66"
+    "name_ja": "ルート66",
+    "name_zh_cn": "66号公路",
+    "name_zh_tw": "66號公路"
   },
   {
     "id": "watchpoint_gibraltar",
@@ -101,7 +125,9 @@
     "mode": "escort",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/watchpoint-gibraltar.jpg",
     "name_en": "Watchpoint: Gibraltar",
-    "name_ja": "ウォッチポイント:ジブラルタル"
+    "name_ja": "ウォッチポイント:ジブラルタル",
+    "name_zh_cn": "监测站：直布罗陀",
+    "name_zh_tw": "監測站:直布羅陀"
   },
   {
     "id": "rialto",
@@ -109,7 +135,9 @@
     "mode": "escort",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/rialto.jpg",
     "name_en": "Rialto",
-    "name_ja": "リアルト"
+    "name_ja": "リアルト",
+    "name_zh_cn": "里阿尔托",
+    "name_zh_tw": "里亞爾托"
   },
   {
     "id": "shambali_monastery",
@@ -117,7 +145,9 @@
     "mode": "escort",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/shambali-monastery.jpg",
     "name_en": "Shambali Monastery",
-    "name_ja": "シャンバリ修道院"
+    "name_ja": "シャンバリ修道院",
+    "name_zh_cn": "香巴里寺院",
+    "name_zh_tw": "香巴里寺院"
   },
   {
     "id": "circuit_royal",
@@ -125,7 +155,9 @@
     "mode": "escort",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/circuit-royal.jpg",
     "name_en": "Circuit Royal",
-    "name_ja": "サーキット・ロワイヤル"
+    "name_ja": "サーキット・ロワイヤル",
+    "name_zh_cn": "皇家赛道",
+    "name_zh_tw": "皇家賽道"
   },
   {
     "id": "ilios",
@@ -133,7 +165,9 @@
     "mode": "control",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/ilios.jpg",
     "name_en": "Ilios",
-    "name_ja": "イリオス"
+    "name_ja": "イリオス",
+    "name_zh_cn": "伊利奥斯",
+    "name_zh_tw": "伊利奧斯"
   },
   {
     "id": "oasis",
@@ -141,7 +175,9 @@
     "mode": "control",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/oasis.jpg",
     "name_en": "Oasis",
-    "name_ja": "オアシス"
+    "name_ja": "オアシス",
+    "name_zh_cn": "绿洲城",
+    "name_zh_tw": "綠洲城"
   },
   {
     "id": "antarctic_peninsula",
@@ -149,7 +185,9 @@
     "mode": "control",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/antarctic-peninsula.jpg",
     "name_en": "Antarctic Peninsula",
-    "name_ja": "南極半島"
+    "name_ja": "南極半島",
+    "name_zh_cn": "南极半岛",
+    "name_zh_tw": "南極半島"
   },
   {
     "id": "nepal",
@@ -157,7 +195,9 @@
     "mode": "control",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/nepal.jpg",
     "name_en": "Nepal",
-    "name_ja": "ネパール"
+    "name_ja": "ネパール",
+    "name_zh_cn": "尼泊尔",
+    "name_zh_tw": "尼泊爾"
   },
   {
     "id": "lijiang_tower",
@@ -165,7 +205,9 @@
     "mode": "control",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/lijiang-tower.jpg",
     "name_en": "Lijiang Tower",
-    "name_ja": "リジャンタワー"
+    "name_ja": "リジャンタワー",
+    "name_zh_cn": "漓江塔",
+    "name_zh_tw": "灕江天塔"
   },
   {
     "id": "busan",
@@ -173,7 +215,9 @@
     "mode": "control",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/busan.jpg",
     "name_en": "Busan",
-    "name_ja": "釜山"
+    "name_ja": "釜山",
+    "name_zh_cn": "釜山",
+    "name_zh_tw": "釜山"
   },
   {
     "id": "samoa",
@@ -181,7 +225,9 @@
     "mode": "control",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/samoa.jpg",
     "name_en": "Samoa",
-    "name_ja": "サモア"
+    "name_ja": "サモア",
+    "name_zh_cn": "萨摩亚",
+    "name_zh_tw": "薩摩亞"
   },
   {
     "id": "hanaoka",
@@ -189,7 +235,9 @@
     "mode": "clash",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/hanaoka.jpg",
     "name_en": "Hanaoka",
-    "name_ja": "花岡"
+    "name_ja": "花岡",
+    "name_zh_cn": "花冈",
+    "name_zh_tw": "花岡"
   },
   {
     "id": "throne_of_anubis",
@@ -197,7 +245,9 @@
     "mode": "clash",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/throne-of-anubis.jpg",
     "name_en": "Throne of Anubis",
-    "name_ja": "アヌビスの玉座"
+    "name_ja": "アヌビスの玉座",
+    "name_zh_cn": "阿努比斯的王座",
+    "name_zh_tw": "阿努比斯的王座"
   },
   {
     "id": "colosseo",
@@ -205,7 +255,9 @@
     "mode": "push",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/colosseo.jpg",
     "name_en": "Colosseo",
-    "name_ja": "コロッセオ"
+    "name_ja": "コロッセオ",
+    "name_zh_cn": "斗兽场",
+    "name_zh_tw": "鬥獸場"
   },
   {
     "id": "new_queen_street",
@@ -213,7 +265,9 @@
     "mode": "push",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/new-queen-street.jpg",
     "name_en": "New Queen Street",
-    "name_ja": "ニュークイーンストリート"
+    "name_ja": "ニュークイーンストリート",
+    "name_zh_cn": "新皇后街",
+    "name_zh_tw": "新皇后街"
   },
   {
     "id": "esperanca",
@@ -221,7 +275,9 @@
     "mode": "push",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/esperanca.jpg",
     "name_en": "Esperança",
-    "name_ja": "エスペランサ"
+    "name_ja": "エスペランサ",
+    "name_zh_cn": "埃斯佩兰萨",
+    "name_zh_tw": "埃斯佩蘭薩"
   },
   {
     "id": "runasapi",
@@ -229,7 +285,9 @@
     "mode": "push",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/runasapi.jpg",
     "name_en": "Runasapi",
-    "name_ja": "ルナサピ"
+    "name_ja": "ルナサピ",
+    "name_zh_cn": "鲁纳塞彼",
+    "name_zh_tw": "魯納塞彼"
   },
   {
     "id": "suravasa",
@@ -237,7 +295,9 @@
     "mode": "flashpoint",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/suravasa.jpg",
     "name_en": "Suravasa",
-    "name_ja": "スラヴァサ"
+    "name_ja": "スラヴァサ",
+    "name_zh_cn": "苏拉瓦萨",
+    "name_zh_tw": "蘇拉瓦薩"
   },
   {
     "id": "new_junk_city",
@@ -245,7 +305,9 @@
     "mode": "flashpoint",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/new-junk-city.jpg",
     "name_en": "New Junk City",
-    "name_ja": "ニュージャンクシティ"
+    "name_ja": "ニュージャンクシティ",
+    "name_zh_cn": "新渣客城",
+    "name_zh_tw": "新渣客城"
   },
   {
     "id": "aatlis",
@@ -253,6 +315,8 @@
     "mode": "flashpoint",
     "image_url": "https://overfast-api.tekrop.fr/static/maps/aatlis.jpg",
     "name_en": "Aatlis",
-    "name_ja": "アトリス"
+    "name_ja": "アトリス",
+    "name_zh_cn": "阿特利斯",
+    "name_zh_tw": "阿特利斯"
   }
 ]

@@ -4,573 +4,737 @@
     "synergy_hero_id": "zarya",
     "reason": "방벽과 방벽을 나란히 세워 전선을 두껍게 만드는 이중 실드 브롤 조합",
     "reason_en": "A double-shield brawl combo that lines up two barriers side by side to thicken the front line",
-    "reason_ja": "バリアを並べて設置し、前線を厚くするダブルシールドのブロール構成"
+    "reason_ja": "バリアを並べて設置し、前線を厚くするダブルシールドのブロール構成",
+    "reason_zh_cn": "护盾并排架设、加厚战线的双护盾强攻组合",
+    "reason_zh_tw": "護盾並排架設、加厚戰線的雙護盾強攻組合"
   },
   {
     "hero_id": "reinhardt",
     "synergy_hero_id": "baptiste",
     "reason": "불사조 광선탄이 화염 강타 진입 타이밍의 역실드를 커버해줌",
     "reason_en": "Immortality Field protects Reinhardt during the shield-down moment when he casts Fire Strike",
-    "reason_ja": "ファイアストライク発動でシールドが解除される瞬間を不死フィールドがカバーする"
+    "reason_ja": "ファイアストライク発動でシールドが解除される瞬間を不死フィールドがカバーする",
+    "reason_zh_cn": "维生力场能弥补烈焰打击开团瞬间失去护盾保护的空档",
+    "reason_zh_tw": "維生力場能彌補烈焰擊開團瞬間失去護盾保護的空檔"
   },
   {
     "hero_id": "reinhardt",
     "synergy_hero_id": "zenyatta",
     "reason": "방벽으로 자리를 잡고 부조화 표식으로 처치 속도를 끌어올리는 포킹 조합",
     "reason_en": "A poke combo where the barrier holds position while Orb of Discord speeds up kills",
-    "reason_ja": "バリアで位置を確保し、不和の宝珠で撃破速度を高めるポーク構成"
+    "reason_ja": "バリアで位置を確保し、不和の宝珠で撃破速度を高めるポーク構成",
+    "reason_zh_cn": "靠护盾稳住站位，用不和谐之球提升处决速度的消耗组合",
+    "reason_zh_tw": "靠護盾穩住站位，用紛亂之珠提升處決速度的消耗組合"
   },
   {
     "hero_id": "orisa",
     "synergy_hero_id": "zarya",
     "reason": "두 개의 방벽으로 시야를 완전히 차단하는 이중 실드 포킹 조합",
     "reason_en": "A double-shield poke combo that fully blocks line of sight with two barriers",
-    "reason_ja": "2枚のバリアで視界を完全に遮断するダブルシールドのポーク構成"
+    "reason_ja": "2枚のバリアで視界を完全に遮断するダブルシールドのポーク構成",
+    "reason_zh_cn": "用两面护盾彻底封锁视野的双护盾消耗组合",
+    "reason_zh_tw": "用兩面護盾徹底封鎖視野的雙護盾消耗組合"
   },
   {
     "hero_id": "orisa",
     "synergy_hero_id": "baptiste",
     "reason": "투창 돌진 이후 불사조 광선탄으로 역콜을 방지",
     "reason_en": "Immortality Field prevents a punish after Orisa's Javelin Spin engage",
-    "reason_ja": "ジャベリンスピンでの突撃後、不死フィールドで返り討ちを防ぐ"
+    "reason_ja": "ジャベリンスピンでの突撃後、不死フィールドで返り討ちを防ぐ",
+    "reason_zh_cn": "回旋标枪冲锋后用维生力场防止被反打",
+    "reason_zh_tw": "迴旋標槍衝鋒後用維生力場防止被反打"
   },
   {
     "hero_id": "winston",
     "synergy_hero_id": "tracer",
     "reason": "둘 다 기동력이 높아 같은 타이밍에 후열로 진입·이탈이 가능한 다이브 축",
     "reason_en": "Both have high mobility, forming a dive core that can enter and exit the backline at the same time",
-    "reason_ja": "両者とも機動力が高く、同じタイミングで後衛に飛び込み・離脱できるダイブ軸"
+    "reason_ja": "両者とも機動力が高く、同じタイミングで後衛に飛び込み・離脱できるダイブ軸",
+    "reason_zh_cn": "二者机动性都很高，能在同一时机突入并撤离后排的突袭核心",
+    "reason_zh_tw": "二者機動性都很高，能在同一時機突入並撤離後排的突擊核心"
   },
   {
     "hero_id": "winston",
     "synergy_hero_id": "genji",
     "reason": "도약과 이동기로 동시에 후열을 압박하는 전형적 다이브 코어",
     "reason_en": "A classic dive core pressuring the backline together using Winston's Leap and Genji's mobility",
-    "reason_ja": "ジャンプパックと移動スキルで同時に後衛を圧迫する典型的なダイブコア"
+    "reason_ja": "ジャンプパックと移動スキルで同時に後衛を圧迫する典型的なダイブコア",
+    "reason_zh_cn": "用跳跃装置与位移技能同时压制后排的典型突袭核心",
+    "reason_zh_tw": "用噴射跳躍與位移技能同時壓制後排的典型突擊核心"
   },
   {
     "hero_id": "zarya",
     "synergy_hero_id": "genji",
     "reason": "그래비톤 서지 직후 용검으로 확정 광역딜을 넣는 대표적 궁극기 콤보",
     "reason_en": "A signature ultimate combo landing guaranteed AoE damage with Dragonblade right after Graviton Surge",
-    "reason_ja": "重力子放出銃の直後に龍剣で確定の範囲ダメージを叩き込む代表的な合わせ技"
+    "reason_ja": "重力子放出銃の直後に龍剣で確定の範囲ダメージを叩き込む代表的な合わせ技",
+    "reason_zh_cn": "重力喷涌之后立刻用龙刃打出确定范围伤害的代表性大招连招",
+    "reason_zh_tw": "引力彈之後立刻用龍一文字打出確定範圍傷害的代表性大招連招"
   },
   {
     "hero_id": "tracer",
     "synergy_hero_id": "sojourn",
     "reason": "둘 다 고기동 딜러라 교전 타이밍과 후퇴 루트를 맞추기 쉬움",
     "reason_en": "Both are highly mobile damage dealers, making it easy to sync engage timing and retreat routes",
-    "reason_ja": "どちらも高機動のダメージディーラーで、交戦タイミングと撤退ルートを合わせやすい"
+    "reason_ja": "どちらも高機動のダメージディーラーで、交戦タイミングと撤退ルートを合わせやすい",
+    "reason_zh_cn": "二者都是高机动输出手，容易配合交战时机与撤退路线",
+    "reason_zh_tw": "二者都是高機動輸出手，容易配合交戰時機與撤退路線"
   },
   {
     "hero_id": "ana",
     "synergy_hero_id": "zarya",
     "reason": "나노 강화를 받은 그래비톤 서지 이후 폭발적인 궁극기 대미지",
     "reason_en": "Explosive ultimate damage when Nano Boost is applied right after Graviton Surge",
-    "reason_ja": "ナノブーストを受けた重力子放出銃で爆発的な大ダメージを与える"
+    "reason_ja": "ナノブーストを受けた重力子放出銃で爆発的な大ダメージを与える",
+    "reason_zh_cn": "纳米激素强化后的重力喷涌能打出爆发性大招伤害",
+    "reason_zh_tw": "奈米強化後的引力彈能打出爆發性大招傷害"
   },
   {
     "hero_id": "moira",
     "synergy_hero_id": "tracer",
     "reason": "근접 유지력이 좋아 플랭커가 계속 앞으로 파고들어도 회복이 따라붙음",
     "reason_en": "Strong close-range sustain keeps healing up with the flanker even as she keeps pushing forward",
-    "reason_ja": "近距離での回復力が高く、フランカーが前に出続けても回復が追いつく"
+    "reason_ja": "近距離での回復力が高く、フランカーが前に出続けても回復が追いつく",
+    "reason_zh_cn": "近战续航能力强，即使侧翼英雄持续深入敌阵也能跟上治疗",
+    "reason_zh_tw": "近戰續航能力強，即使側翼英雄持續深入敵陣也能跟上治療"
   },
   {
     "hero_id": "kiriko",
     "synergy_hero_id": "tracer",
     "reason": "순간이동으로 과감하게 앞서나간 트레이서에게 즉시 합류해 지원 가능",
     "reason_en": "Swift Step lets Kiriko instantly join a Tracer who has boldly pushed ahead to support her",
-    "reason_ja": "瞬影で大胆に飛び出したトレーサーにすぐ合流し、サポートできる"
+    "reason_ja": "瞬影で大胆に飛び出したトレーサーにすぐ合流し、サポートできる",
+    "reason_zh_cn": "用瞬步立刻与大胆突进的猎空会合支援",
+    "reason_zh_tw": "用瞬影步立刻與大膽突進的閃光會合支援"
   },
   {
     "hero_id": "lucio",
     "synergy_hero_id": "genji",
     "reason": "속도 부스트로 대시 진입 타이밍을 극대화하고 벽타기 이동 경로가 잘 맞음",
     "reason_en": "Speed Boost maximizes dash engage timing, and their wall-climbing paths line up well",
-    "reason_ja": "スピードブーストでダッシュの突入タイミングを最大化し、壁走りの移動経路も噛み合う"
+    "reason_ja": "スピードブーストでダッシュの突入タイミングを最大化し、壁走りの移動経路も噛み合う",
+    "reason_zh_cn": "速度增益能最大化突进时机，且与源氏的爬墙路线十分契合",
+    "reason_zh_tw": "速度增益能最大化突進時機，且與源氏的爬牆路線十分契合"
   },
   {
     "hero_id": "dva",
     "synergy_hero_id": "mei",
     "reason": "얼음벽으로 디바의 다이브 퇴로를 차단해 상대를 가두는 협공",
     "reason_en": "Ice Wall cuts off the enemy's escape route after D.Va dives in, trapping them in a pincer attack",
-    "reason_ja": "アイスウォールでD.Vaのダイブ後の退路を断ち、敵を閉じ込める挟撃"
+    "reason_ja": "アイスウォールでD.Vaのダイブ後の退路を断ち、敵を閉じ込める挟撃",
+    "reason_zh_cn": "用冰墙切断D.Va突袭的退路，形成围困对手的夹击",
+    "reason_zh_tw": "用冰牆切斷D.Va突擊的退路，形成圍困對手的夾擊"
   },
   {
     "hero_id": "dva",
     "synergy_hero_id": "bastion",
     "reason": "매트릭스로 진입로를 열어주고 고정 화력으로 마무리",
     "reason_en": "Defense Matrix opens up an entry path while Bastion's stationary firepower finishes the job",
-    "reason_ja": "ディフェンスマトリックスで突入路を開き、固定砲撃で仕留める"
+    "reason_ja": "ディフェンスマトリックスで突入路を開き、固定砲撃で仕留める",
+    "reason_zh_cn": "用防御矩阵开路，再靠固定火力收尾",
+    "reason_zh_tw": "用防護力場開路，再靠固定火力收尾"
   },
   {
     "hero_id": "dva",
     "synergy_hero_id": "symmetra",
     "reason": "텔레포터로 디바의 재진입 동선을 단축시켜 반복 다이브를 지원",
     "reason_en": "Teleporter shortens D.Va's path back in, supporting repeated dives",
-    "reason_ja": "テレポーターでD.Vaの再突入ルートを短縮し、繰り返しのダイブを支援する"
+    "reason_ja": "テレポーターでD.Vaの再突入ルートを短縮し、繰り返しのダイブを支援する",
+    "reason_zh_cn": "用传送器缩短D.Va的再突入路线，支援其反复突袭",
+    "reason_zh_tw": "用傳送器縮短D.Va的再突入路線，支援其反覆突擊"
   },
   {
     "hero_id": "dva",
     "synergy_hero_id": "lucio",
     "reason": "속도 부스트로 다이브 진입 타이밍을 극대화",
     "reason_en": "Speed Boost maximizes D.Va's dive engage timing",
-    "reason_ja": "スピードブーストでダイブの突入タイミングを最大化する"
+    "reason_ja": "スピードブーストでダイブの突入タイミングを最大化する",
+    "reason_zh_cn": "用速度增益最大化突袭切入时机",
+    "reason_zh_tw": "用速度增益最大化突擊切入時機"
   },
   {
     "hero_id": "dva",
     "synergy_hero_id": "jetpack_cat",
     "reason": "생명줄로 디바를 원하는 타이밍에 전선까지 끌어올려 다이브 지원",
     "reason_en": "Lifeline pulls D.Va to the front line at the desired moment, supporting the dive",
-    "reason_ja": "ライフラインで好きなタイミングにD.Vaを前線まで引き上げ、ダイブを支援する"
+    "reason_ja": "ライフラインで好きなタイミングにD.Vaを前線まで引き上げ、ダイブを支援する",
+    "reason_zh_cn": "用生命线在需要的时机把D.Va拉到前线，支援其突袭",
+    "reason_zh_tw": "用生命線在需要的時機把D.Va拉到前線，支援其突擊"
   },
   {
     "hero_id": "dva",
     "synergy_hero_id": "kiriko",
     "reason": "순간이동으로 과감하게 다이브한 디바에게 즉시 합류 지원",
     "reason_en": "Swift Step lets Kiriko instantly join a D.Va who dove in boldly",
-    "reason_ja": "瞬影で大胆にダイブしたD.Vaにすぐ合流して支援する"
+    "reason_ja": "瞬影で大胆にダイブしたD.Vaにすぐ合流して支援する",
+    "reason_zh_cn": "用瞬步立刻与大胆突袭的D.Va会合支援",
+    "reason_zh_tw": "用瞬影步立刻與大膽突擊的D.Va會合支援"
   },
   {
     "hero_id": "dva",
     "synergy_hero_id": "juno",
     "reason": "이동속도 증가로 다이브 진입과 이탈 타이밍을 동시에 지원",
     "reason_en": "Hyper Ring's movement speed boost supports both dive engage and disengage timing",
-    "reason_ja": "ハイパーリングの移動速度上昇でダイブの突入と離脱タイミングを同時に支援する"
+    "reason_ja": "ハイパーリングの移動速度上昇でダイブの突入と離脱タイミングを同時に支援する",
+    "reason_zh_cn": "用移动速度提升同时支援突袭的切入与撤离时机",
+    "reason_zh_tw": "用移動速度提升同時支援突擊的切入與撤離時機"
   },
   {
     "hero_id": "junker_queen",
     "synergy_hero_id": "baptiste",
     "reason": "불사조 광선탄이 여왕의 저돌적인 돌진 이후 생존을 보장해줌",
     "reason_en": "Immortality Field guarantees survival after Junker Queen's aggressive charge",
-    "reason_ja": "不死フィールドがジャンカークイーンの猪突猛進の後の生存を保証する"
+    "reason_ja": "不死フィールドがジャンカークイーンの猪突猛進の後の生存を保証する",
+    "reason_zh_cn": "维生力场能保障女王鲁莽突进后的生存",
+    "reason_zh_tw": "維生力場能保障女王魯莽突進後的生存"
   },
   {
     "hero_id": "junker_queen",
     "synergy_hero_id": "kiriko",
     "reason": "스즈로 여왕이 걸릴 수 있는 군중제어를 해제해 돌진 타이밍을 보장",
     "reason_en": "Suzu cleanses crowd control that could stop the Queen, guaranteeing her charge timing",
-    "reason_ja": "鈴でジャンカークイーンにかかる恐れのある行動阻害を解除し、突撃のタイミングを保証する"
+    "reason_ja": "鈴でジャンカークイーンにかかる恐れのある行動阻害を解除し、突撃のタイミングを保証する",
+    "reason_zh_cn": "用祓除铃解除女王可能中招的控制效果，保障突进时机",
+    "reason_zh_tw": "用祓除鈴解除女王可能中招的控制效果，保障突進時機"
   },
   {
     "hero_id": "sigma",
     "synergy_hero_id": "zenyatta",
     "reason": "부조화 표식으로 중력 붕괴에 걸린 적의 처치 속도를 극대화",
     "reason_en": "Orb of Discord maximizes kill speed on enemies caught in Gravitic Flux",
-    "reason_ja": "不和の宝珠で重力崩壊に捕らえた敵の撃破速度を最大化する"
+    "reason_ja": "不和の宝珠で重力崩壊に捕らえた敵の撃破速度を最大化する",
+    "reason_zh_cn": "用不和谐之球最大化重力乱流命中目标的处决速度",
+    "reason_zh_tw": "用紛亂之珠最大化重力流命中目標的處決速度"
   },
   {
     "hero_id": "sigma",
     "synergy_hero_id": "ana",
     "reason": "나노 강화로 바위 투척과 중력 붕괴 궁극기 대미지를 증폭",
     "reason_en": "Nano Boost amplifies damage from Accretion and the Gravitic Flux ultimate",
-    "reason_ja": "ナノブーストで集積と重力崩壊の与ダメージを増幅する"
+    "reason_ja": "ナノブーストで集積と重力崩壊の与ダメージを増幅する",
+    "reason_zh_cn": "用纳米激素增幅投掷岩石与重力乱流大招的伤害",
+    "reason_zh_tw": "用奈米強化增幅投擲岩石與重力流大招的傷害"
   },
   {
     "hero_id": "reaper",
     "synergy_hero_id": "zarya",
     "reason": "그래비톤 서지 직후 사신의 부름(광역 회전 사격)으로 확정 광역딜",
     "reason_en": "Guaranteed AoE damage with Death Blossom right after Graviton Surge",
-    "reason_ja": "重力子放出銃の直後にデスブロッサム(全方位射撃)で確定の範囲ダメージを与える"
+    "reason_ja": "重力子放出銃の直後にデスブロッサム(全方位射撃)で確定の範囲ダメージを与える",
+    "reason_zh_cn": "重力喷涌之后立刻用死亡绽放（范围旋转扫射）打出确定范围输出",
+    "reason_zh_tw": "引力彈之後立刻用死亡綻放（範圍旋轉掃射）打出確定範圍輸出"
   },
   {
     "hero_id": "reaper",
     "synergy_hero_id": "lucio",
     "reason": "속도 부스트로 측면 침투 타이밍을 앞당김",
     "reason_en": "Speed Boost speeds up Reaper's flanking timing",
-    "reason_ja": "スピードブーストでリーパーの側面奇襲のタイミングを早める"
+    "reason_ja": "スピードブーストでリーパーの側面奇襲のタイミングを早める",
+    "reason_zh_cn": "用速度增益提前侧翼渗透的时机",
+    "reason_zh_tw": "用速度增益提前側翼滲透的時機"
   },
   {
     "hero_id": "sombra",
     "synergy_hero_id": "tracer",
     "reason": "해킹으로 무력화된 상대를 트레이서가 바로 마무리",
     "reason_en": "Tracer immediately finishes off targets disabled by Hack",
-    "reason_ja": "ハックで無力化した相手をトレーサーがすぐに仕留める"
+    "reason_ja": "ハックで無力化した相手をトレーサーがすぐに仕留める",
+    "reason_zh_cn": "遭入侵压制的对手会被猎空立刻终结",
+    "reason_zh_tw": "遭駭入壓制的對手會被閃光立刻終結"
   },
   {
     "hero_id": "sombra",
     "synergy_hero_id": "reaper",
     "reason": "은신으로 동선을 가리고 해킹으로 무력화한 대상을 리퍼가 마무리",
     "reason_en": "Stealth conceals the approach, and Reaper finishes off targets disabled by Hack",
-    "reason_ja": "ステルスで動きを隠し、ハックで無力化した相手をリーパーが仕留める"
+    "reason_ja": "ステルスで動きを隠し、ハックで無力化した相手をリーパーが仕留める",
+    "reason_zh_cn": "用隐身掩盖行动路线，再让死神终结被入侵压制的目标",
+    "reason_zh_tw": "用隱身掩蓋行動路線，再讓死神終結被駭入壓制的目標"
   },
   {
     "hero_id": "venture",
     "synergy_hero_id": "lucio",
     "reason": "속도 부스트가 벤처의 굴착 기동력과 겹쳐 끊임없는 압박 유지",
     "reason_en": "Speed Boost stacks with Venture's burrowing mobility to maintain relentless pressure",
-    "reason_ja": "スピードブーストがベンチャーの掘削機動力と重なり、絶え間ない圧力を維持する"
+    "reason_ja": "スピードブーストがベンチャーの掘削機動力と重なり、絶え間ない圧力を維持する",
+    "reason_zh_cn": "速度增益与冒险家的钻头冲刺机动性叠加，维持不间断的压制",
+    "reason_zh_tw": "速度增益與無畏的鑽頭衝刺機動性疊加，維持不間斷的壓制"
   },
   {
     "hero_id": "lifeweaver",
     "synergy_hero_id": "genji",
     "reason": "무리하게 파고든 겐지를 생명의 은총으로 즉시 회수해 생존시킴",
     "reason_en": "Life Grip instantly pulls back an overextended Genji to keep him alive",
-    "reason_ja": "無理に深追いしたゲンジを命の抱擁ですぐに回収し、生存させる"
+    "reason_ja": "無理に深追いしたゲンジを命の抱擁ですぐに回収し、生存させる",
+    "reason_zh_cn": "用生命之握把过度深入的源氏立刻拉回，确保其生存",
+    "reason_zh_tw": "用賦生之握把過度深入的源氏立刻拉回，確保其生存"
   },
   {
     "hero_id": "lifeweaver",
     "synergy_hero_id": "widowmaker",
     "reason": "생명의 꽃 플랫폼으로 위도우메이커에게 추가 고지대 사거리를 제공",
     "reason_en": "Life Blossom's platform gives Widowmaker extra high-ground sightlines",
-    "reason_ja": "命の花のプラットフォームでウィドウメイカーに追加の高所射線を提供する"
+    "reason_ja": "命の花のプラットフォームでウィドウメイカーに追加の高所射線を提供する",
+    "reason_zh_cn": "用花瓣平台为黑百合提供额外的高地射程",
+    "reason_zh_tw": "用花瓣平台為奪命女提供額外的高地射程"
   },
   {
     "hero_id": "mercy",
     "synergy_hero_id": "pharah",
     "reason": "피해 증폭이 파라의 로켓 공중전 화력을 극대화",
     "reason_en": "Damage Boost maximizes Pharah's aerial rocket firepower",
-    "reason_ja": "ダメージブーストでファラの空中ロケット火力を最大化する"
+    "reason_ja": "ダメージブーストでファラの空中ロケット火力を最大化する",
+    "reason_zh_cn": "伤害加成能最大化法老之鹰的火箭空战火力",
+    "reason_zh_tw": "傷害加成能最大化法拉的火箭空戰火力"
   },
   {
     "hero_id": "mercy",
     "synergy_hero_id": "reaper",
     "reason": "피해 증폭이 리퍼의 근접 샷건 버스트를 극대화",
     "reason_en": "Damage Boost maximizes Reaper's close-range shotgun burst",
-    "reason_ja": "ダメージブーストでリーパーの近距離ショットガンバーストを最大化する"
+    "reason_ja": "ダメージブーストでリーパーの近距離ショットガンバーストを最大化する",
+    "reason_zh_cn": "伤害加成能最大化死神的近战霰弹爆发",
+    "reason_zh_tw": "傷害加成能最大化死神的近戰霰彈爆發"
   },
   {
     "hero_id": "roadhog",
     "synergy_hero_id": "zenyatta",
     "reason": "부조화 표식이 걸린 대상을 갈고리로 끌어와 확정 처치",
     "reason_en": "Roadhog hooks in a target marked by Orb of Discord for a guaranteed kill",
-    "reason_ja": "不和の宝珠がついた対象をフックで引き寄せ、確実に仕留める"
+    "reason_ja": "不和の宝珠がついた対象をフックで引き寄せ、確実に仕留める",
+    "reason_zh_cn": "用钩索拉回中了不和谐之球的目标，实现确定击杀",
+    "reason_zh_tw": "用鎖鍊鉤拉回中了紛亂之珠的目標，實現確定擊殺"
   },
   {
     "hero_id": "mauga",
     "synergy_hero_id": "baptiste",
     "reason": "불사조 광선탄으로 케이지 파이트 돌진 이후 생존을 보장",
     "reason_en": "Immortality Field guarantees survival after Mauga's Cage Fight engage",
-    "reason_ja": "不死フィールドがケージファイトでの突撃後の生存を保証する"
+    "reason_ja": "不死フィールドがケージファイトでの突撃後の生存を保証する",
+    "reason_zh_cn": "用维生力场保障牢笼之战突进后的生存",
+    "reason_zh_tw": "用維生力場保障鐵籠戰突進後的生存"
   },
   {
     "hero_id": "domina",
     "synergy_hero_id": "baptiste",
     "reason": "불사조 광선탄이 재조립으로 공격적으로 버티는 도미나의 생존을 보장",
     "reason_en": "Immortality Field guarantees survival for Domina, who aggressively holds the line with her self-reassembly ability",
-    "reason_ja": "不死フィールドが、再構成で攻撃的に踏みとどまるドミナの生存を保証する"
+    "reason_ja": "不死フィールドが、再構成で攻撃的に踏みとどまるドミナの生存を保証する",
+    "reason_zh_cn": "维生力场能保障靠重组硬撑输出的多米娜的生存",
+    "reason_zh_tw": "維生力場能保障靠重組硬撐輸出的多米娜的生存"
   },
   {
     "hero_id": "doomfist",
     "synergy_hero_id": "lucio",
     "reason": "속도 부스트로 강타 콤보 진입·이탈 타이밍을 극대화",
     "reason_en": "Speed Boost maximizes the engage and disengage timing for Doomfist's Seismic Slam combo",
-    "reason_ja": "スピードブーストでダムファイストのサイズミックスラムコンボの突入・離脱タイミングを最大化する"
+    "reason_ja": "スピードブーストでダムファイストのサイズミックスラムコンボの突入・離脱タイミングを最大化する",
+    "reason_zh_cn": "用速度增益最大化强力打击连招的切入与撤离时机",
+    "reason_zh_tw": "用速度增益最大化強力打擊連招的切入與撤離時機"
   },
   {
     "hero_id": "wrecking_ball",
     "synergy_hero_id": "zarya",
     "reason": "미네필드 궁극기가 그래비톤 서지에 걸린 적을 광역 전멸시킴",
     "reason_en": "Minefield wipes out enemies caught in Graviton Surge with area damage",
-    "reason_ja": "マインフィールドが重力子放出銃に捕らえた敵を範囲全滅させる"
+    "reason_ja": "マインフィールドが重力子放出銃に捕らえた敵を範囲全滅させる",
+    "reason_zh_cn": "地雷阵大招能把中了重力喷涌的敌人一举团灭",
+    "reason_zh_tw": "地雷陣大招能把中了引力彈的敵人一舉團滅"
   },
   {
     "hero_id": "hanzo",
     "synergy_hero_id": "widowmaker",
     "reason": "둘 다 장거리 견제가 가능해 같은 사거리에서 동시에 압박",
     "reason_en": "Both can poke from long range, pressuring enemies together at the same distance",
-    "reason_ja": "どちらも長距離牽制が可能で、同じ射程から同時にプレッシャーをかける"
+    "reason_ja": "どちらも長距離牽制が可能で、同じ射程から同時にプレッシャーをかける",
+    "reason_zh_cn": "二者都能进行远程牵制，可在同一射程内同时施压",
+    "reason_zh_tw": "二者都能進行遠程牽制，可在同一射程內同時施壓"
   },
   {
     "hero_id": "ashe",
     "synergy_hero_id": "baptiste",
     "reason": "불사조 광선탄이 밥 소환 타이밍의 생존을 보장",
     "reason_en": "Immortality Field guarantees survival when Ashe summons B.O.B.",
-    "reason_ja": "不死フィールドがB.O.B.召喚時の生存を保証する"
+    "reason_ja": "不死フィールドがB.O.B.召喚時の生存を保証する",
+    "reason_zh_cn": "维生力场能保障召唤鲍勃时的生存",
+    "reason_zh_tw": "維生力場能保障召喚鮑伯時的生存"
   },
   {
     "hero_id": "cassidy",
     "synergy_hero_id": "zarya",
     "reason": "섬광탄으로 기절시킨 대상에게 그래비톤 서지 콤보를 이어감",
     "reason_en": "Follows up a Flashbang stun with a Graviton Surge combo",
-    "reason_ja": "フラッシュバンでスタンさせた相手に重力子放出銃のコンボをつなげる"
+    "reason_ja": "フラッシュバンでスタンさせた相手に重力子放出銃のコンボをつなげる",
+    "reason_zh_cn": "用闪光弹击晕目标后，衔接重力喷涌连招",
+    "reason_zh_tw": "用閃光彈擊暈目標後，銜接引力彈連招"
   },
   {
     "hero_id": "torbjorn",
     "synergy_hero_id": "reinhardt",
     "reason": "방벽 뒤에 포탑을 배치해 안전하게 지속 화력을 유지",
     "reason_en": "Placing the turret behind the barrier keeps up safe, sustained firepower",
-    "reason_ja": "バリアの後ろにタレットを設置し、安全に継続火力を維持する"
+    "reason_ja": "バリアの後ろにタレットを設置し、安全に継続火力を維持する",
+    "reason_zh_cn": "在护盾后方部署炮台，安全维持持续火力",
+    "reason_zh_tw": "在護盾後方部署砲塔，安全維持持續火力"
   },
   {
     "hero_id": "junkrat",
     "synergy_hero_id": "zarya",
     "reason": "궁극기 타이어가 그래비톤 서지에 걸린 적을 확정 처치",
     "reason_en": "RIP-Tire secures a kill on enemies caught in Graviton Surge",
-    "reason_ja": "リップタイヤが重力子放出銃に捕らえた敵を確実に仕留める"
+    "reason_ja": "リップタイヤが重力子放出銃に捕らえた敵を確実に仕留める",
+    "reason_zh_cn": "地狱飞轮大招能确定击杀中了重力喷涌的敌人",
+    "reason_zh_tw": "同歸於盡大招能確定擊殺中了引力彈的敵人"
   },
   {
     "hero_id": "mei",
     "synergy_hero_id": "reinhardt",
     "reason": "방벽과 얼음벽을 동시에 세워 좁은 공간을 완전히 장악",
     "reason_en": "Barrier and Ice Wall together fully lock down a narrow space",
-    "reason_ja": "バリアとアイスウォールを同時に設置し、狭い空間を完全に制圧する"
+    "reason_ja": "バリアとアイスウォールを同時に設置し、狭い空間を完全に制圧する",
+    "reason_zh_cn": "同时架起护盾与冰墙，彻底掌控狭窄空间",
+    "reason_zh_tw": "同時架起護盾與冰牆，徹底掌控狹窄空間"
   },
   {
     "hero_id": "symmetra",
     "synergy_hero_id": "reinhardt",
     "reason": "텔레포터로 팀 전체가 빠르게 재집결할 수 있어 방벽 브롤 조합을 지원",
     "reason_en": "Teleporter lets the whole team regroup quickly, supporting the barrier brawl composition",
-    "reason_ja": "テレポーターでチーム全体が素早く再集結でき、バリアのブロール構成を支援する"
+    "reason_ja": "テレポーターでチーム全体が素早く再集結でき、バリアのブロール構成を支援する",
+    "reason_zh_cn": "传送器能让全队迅速重新集结，支援护盾强攻组合",
+    "reason_zh_tw": "傳送器能讓全隊迅速重新集結，支援護盾強攻組合"
   },
   {
     "hero_id": "soldier_76",
     "synergy_hero_id": "lucio",
     "reason": "속도 부스트로 돌격 소총 교전 포지션을 더 빠르게 잡음",
     "reason_en": "Speed Boost lets Soldier: 76 reach his rifle engagement position faster",
-    "reason_ja": "スピードブーストでソルジャー:76がライフル交戦のポジションをより早く取れる"
+    "reason_ja": "スピードブーストでソルジャー:76がライフル交戦のポジションをより早く取れる",
+    "reason_zh_cn": "用速度增益更快占据突击步枪的交战位置",
+    "reason_zh_tw": "用速度增益更快佔據突擊步槍的交戰位置"
   },
   {
     "hero_id": "pharah",
     "synergy_hero_id": "zenyatta",
     "reason": "부조화 표식이 걸린 목표를 로켓 런처로 빠르게 마무리",
     "reason_en": "Rocket Launcher quickly finishes off targets marked by Orb of Discord",
-    "reason_ja": "不和の宝珠がついた目標をロケットランチャーで素早く仕留める"
+    "reason_ja": "不和の宝珠がついた目標をロケットランチャーで素早く仕留める",
+    "reason_zh_cn": "用火箭发射器快速终结中了不和谐之球的目标",
+    "reason_zh_tw": "用火箭發射器快速終結中了紛亂之珠的目標"
   },
   {
     "hero_id": "echo",
     "synergy_hero_id": "ana",
     "reason": "나노 강화로 집중 광선과 폭탄 화력을 증폭",
     "reason_en": "Nano Boost amplifies Echo's Focusing Beam and Sticky Bombs damage",
-    "reason_ja": "ナノブーストでフォーカシングビームとスティッキーボムの火力を増幅する"
+    "reason_ja": "ナノブーストでフォーカシングビームとスティッキーボムの火力を増幅する",
+    "reason_zh_cn": "用纳米激素增幅聚焦光束与黏性炸弹的火力",
+    "reason_zh_tw": "用奈米強化增幅聚能光束與黏性炸彈的火力"
   },
   {
     "hero_id": "brigitte",
     "synergy_hero_id": "reinhardt",
     "reason": "고무로 방벽 유지력을 높여 브롤 조합을 지속시킴",
     "reason_en": "Inspire boosts barrier sustain, keeping the brawl composition going",
-    "reason_ja": "インスパイアでバリアの継戦能力を高め、ブロール構成を持続させる"
+    "reason_ja": "インスパイアでバリアの継戦能力を高め、ブロール構成を持続させる",
+    "reason_zh_cn": "用全军集结提高护盾续航，延续强攻组合",
+    "reason_zh_tw": "用全軍集結提高護盾續航，延續強攻組合"
   },
   {
     "hero_id": "illari",
     "synergy_hero_id": "genji",
     "reason": "치유 기둥이 원거리에서도 지속적으로 다이브 딜러를 회복시킴",
     "reason_en": "Healing Pylon keeps healing the dive damage dealer even at range",
-    "reason_ja": "ヒーリングパイロンが遠距離でもダイブアタッカーを継続的に回復する"
+    "reason_ja": "ヒーリングパイロンが遠距離でもダイブアタッカーを継続的に回復する",
+    "reason_zh_cn": "治疗塔能在远距离持续为突袭输出手回复生命",
+    "reason_zh_tw": "治療塔能在遠距離持續為突擊輸出手回復生命"
   },
   {
     "hero_id": "baptiste",
     "synergy_hero_id": "genji",
     "reason": "불사조 광선탄이 무리한 다이브 이후 생존을 보장",
     "reason_en": "Immortality Field guarantees survival after an overextended dive",
-    "reason_ja": "不死フィールドが無理なダイブの後の生存を保証する"
+    "reason_ja": "不死フィールドが無理なダイブの後の生存を保証する",
+    "reason_zh_cn": "维生力场能保障过度突袭后的生存",
+    "reason_zh_tw": "維生力場能保障過度突擊後的生存"
   },
   {
     "hero_id": "kiriko",
     "synergy_hero_id": "genji",
     "reason": "순간이동으로 다이브한 겐지에게 즉시 합류해 지원",
     "reason_en": "Swift Step lets Kiriko instantly join Genji after he dives in",
-    "reason_ja": "瞬影でダイブしたゲンジにすぐ合流して支援する"
+    "reason_ja": "瞬影でダイブしたゲンジにすぐ合流して支援する",
+    "reason_zh_cn": "用瞬步立刻与突袭的源氏会合支援",
+    "reason_zh_tw": "用瞬影步立刻與突擊的源氏會合支援"
   },
   {
     "hero_id": "lucio",
     "synergy_hero_id": "reinhardt",
     "reason": "속도 부스트로 방벽 돌진 타이밍을 앞당김",
     "reason_en": "Speed Boost speeds up the timing of Reinhardt's shield charge",
-    "reason_ja": "スピードブーストでラインハルトのシールドチャージのタイミングを早める"
+    "reason_ja": "スピードブーストでラインハルトのシールドチャージのタイミングを早める",
+    "reason_zh_cn": "用速度增益提前护盾突进的时机",
+    "reason_zh_tw": "用速度增益提前護盾突進的時機"
   },
   {
     "hero_id": "moira",
     "synergy_hero_id": "zarya",
     "reason": "그래비톤 서지에 걸린 적에게 광역 구슬로 확정 대미지",
     "reason_en": "Guaranteed AoE damage with Biotic Orb on enemies caught in Graviton Surge",
-    "reason_ja": "重力子放出銃に捕らえた敵にバイオティックオーブで確定ダメージを与える"
+    "reason_ja": "重力子放出銃に捕らえた敵にバイオティックオーブで確定ダメージを与える",
+    "reason_zh_cn": "用范围生化球对中了重力喷涌的敌人打出确定伤害",
+    "reason_zh_tw": "用範圍生化球對中了引力彈的敵人打出確定傷害"
   },
   {
     "hero_id": "sojourn",
     "synergy_hero_id": "lucio",
     "reason": "속도 부스트로 활공 이동과 재포지셔닝을 더 빠르게",
     "reason_en": "Speed Boost makes Sojourn's gliding movement and repositioning even faster",
-    "reason_ja": "スピードブーストで滑空移動と再配置をより速くする"
+    "reason_ja": "スピードブーストで滑空移動と再配置をより速くする",
+    "reason_zh_cn": "用速度增益让强力滑行移动与重新走位更快",
+    "reason_zh_tw": "用速度增益讓強力滑行移動與重新走位更快"
   },
   {
     "hero_id": "zenyatta",
     "synergy_hero_id": "genji",
     "reason": "부조화 표식으로 겐지의 다이브 처치 속도를 끌어올림",
     "reason_en": "Orb of Discord speeds up kills during Genji's dive",
-    "reason_ja": "不和の宝珠でゲンジのダイブ時の撃破速度を高める"
+    "reason_ja": "不和の宝珠でゲンジのダイブ時の撃破速度を高める",
+    "reason_zh_cn": "用不和谐之球提升源氏突袭时的处决速度",
+    "reason_zh_tw": "用紛亂之珠提升源氏突擊時的處決速度"
   },
   {
     "hero_id": "wuyang",
     "synergy_hero_id": "reinhardt",
     "reason": "치유의 물결로 방벽 브롤 조합의 유지력을 높임",
     "reason_en": "Healing Wave boosts the barrier brawl composition's sustain",
-    "reason_ja": "癒しの波動でバリアのブロール構成の継戦能力を高める"
+    "reason_ja": "癒しの波動でバリアのブロール構成の継戦能力を高める",
+    "reason_zh_cn": "用治疗波动提高护盾强攻组合的续航",
+    "reason_zh_tw": "用治療波動提高護盾強攻組合的續航"
   },
   {
     "hero_id": "anran",
     "synergy_hero_id": "lucio",
     "reason": "속도 부스트로 화염 부채 암살 타이밍을 극대화",
     "reason_en": "Speed Boost maximizes the timing of Anran's flame fan assassination",
-    "reason_ja": "スピードブーストで炎の扇による暗殺のタイミングを最大化する"
+    "reason_ja": "スピードブーストで炎の扇による暗殺のタイミングを最大化する",
+    "reason_zh_cn": "用速度增益最大化火焰扇暗杀的时机",
+    "reason_zh_tw": "用速度增益最大化火焰扇暗殺的時機"
   },
   {
     "hero_id": "emre",
     "synergy_hero_id": "baptiste",
     "reason": "불사조 광선탄이 생체병기 변신 궁극기 사용 타이밍의 생존을 보장",
     "reason_en": "Immortality Field guarantees survival when using the bio-weapon transformation ultimate",
-    "reason_ja": "不死フィールドが生体兵器への変身という切り札を使うタイミングの生存を保証する"
+    "reason_ja": "不死フィールドが生体兵器への変身という切り札を使うタイミングの生存を保証する",
+    "reason_zh_cn": "维生力场能保障使用生体兵器变形大招时的生存",
+    "reason_zh_tw": "維生力場能保障使用生體兵器變形大招時的生存"
   },
   {
     "hero_id": "freja",
     "synergy_hero_id": "ana",
     "reason": "나노 강화로 올가미 구속 이후 폭발 화력을 증폭",
     "reason_en": "Nano Boost amplifies explosive damage after Freja's snare restrains a target",
-    "reason_ja": "ナノブーストでフレヤの拘束わなの後の爆発火力を増幅する"
+    "reason_ja": "ナノブーストでフレヤの拘束わなの後の爆発火力を増幅する",
+    "reason_zh_cn": "用纳米激素增幅套索束缚之后的爆发火力",
+    "reason_zh_tw": "用奈米強化增幅套索束縛之後的爆發火力"
   },
   {
     "hero_id": "shion",
     "synergy_hero_id": "lucio",
     "reason": "속도 부스트가 오토바이 기동력과 겹쳐 더 빠른 측면 압박",
     "reason_en": "Speed Boost stacks with Shion's motorcycle mobility for faster flank pressure",
-    "reason_ja": "スピードブーストがシオンのバイク機動力と重なり、より速い側面攻撃を可能にする"
+    "reason_ja": "スピードブーストがシオンのバイク機動力と重なり、より速い側面攻撃を可能にする",
+    "reason_zh_cn": "速度增益与摩托车机动性叠加，实现更快的侧翼施压",
+    "reason_zh_tw": "速度增益與摩托車機動性疊加，實現更快的側翼施壓"
   },
   {
     "hero_id": "sierra",
     "synergy_hero_id": "ana",
     "reason": "나노 강화로 표식 추적 사격의 화력을 증폭",
     "reason_en": "Nano Boost amplifies the damage of Sierra's mark-tracking shot",
-    "reason_ja": "ナノブーストでシエラの目印追尾射撃の火力を増幅する"
+    "reason_ja": "ナノブーストでシエラの目印追尾射撃の火力を増幅する",
+    "reason_zh_cn": "用纳米激素增幅标记追踪射击的火力",
+    "reason_zh_tw": "用奈米強化增幅標記追蹤射擊的火力"
   },
   {
     "hero_id": "vendetta",
     "synergy_hero_id": "lucio",
     "reason": "속도 부스트로 대검 근접 콤보 진입 타이밍을 앞당김",
     "reason_en": "Speed Boost speeds up the engage timing for Vendetta's greatsword melee combo",
-    "reason_ja": "スピードブーストでヴェンデッタの大剣による近接コンボの突入タイミングを早める"
+    "reason_ja": "スピードブーストでヴェンデッタの大剣による近接コンボの突入タイミングを早める",
+    "reason_zh_cn": "用速度增益提前大剑近战连招的切入时机",
+    "reason_zh_tw": "用速度增益提前大劍近戰連招的切入時機"
   },
   {
     "hero_id": "jetpack_cat",
     "synergy_hero_id": "genji",
     "reason": "생명줄로 겐지를 원하는 다이브 타이밍에 전선까지 끌어올림",
     "reason_en": "Lifeline pulls Genji to the front line at the desired dive timing",
-    "reason_ja": "ライフラインでゲンジを好きなダイブタイミングで前線まで引き上げる"
+    "reason_ja": "ライフラインでゲンジを好きなダイブタイミングで前線まで引き上げる",
+    "reason_zh_cn": "用生命线在理想的突袭时机把源氏拉到前线",
+    "reason_zh_tw": "用生命線在理想的突擊時機把源氏拉到前線"
   },
   {
     "hero_id": "juno",
     "synergy_hero_id": "tracer",
     "reason": "이동속도 증가로 트레이서의 기동 다이브 타이밍을 더욱 앞당김",
     "reason_en": "Hyper Ring's movement speed boost further speeds up Tracer's mobile dive timing",
-    "reason_ja": "ハイパーリングの移動速度上昇でトレーサーの機動ダイブのタイミングをさらに早める"
+    "reason_ja": "ハイパーリングの移動速度上昇でトレーサーの機動ダイブのタイミングをさらに早める",
+    "reason_zh_cn": "用移动速度提升进一步提前猎空的机动突袭时机",
+    "reason_zh_tw": "用移動速度提升進一步提前閃光的機動突擊時機"
   },
   {
     "hero_id": "hazard",
     "synergy_hero_id": "lucio",
     "reason": "속도 부스트로 돌진형 개시 타이밍을 앞당김",
     "reason_en": "Speed Boost speeds up Hazard's charge-in opening",
-    "reason_ja": "スピードブーストでハザードの突撃開始タイミングを早める"
+    "reason_ja": "スピードブーストでハザードの突撃開始タイミングを早める",
+    "reason_zh_cn": "用速度增益提前冲锋开场的时机",
+    "reason_zh_tw": "用速度增益提前衝鋒開場的時機"
   },
   {
     "hero_id": "dmon",
     "synergy_hero_id": "baptiste",
     "reason": "불사조 광선탄이 돌진 강타 진입 타이밍의 생존을 보장",
     "reason_en": "Immortality Field guarantees survival when D.Mon engages with a charging slam",
-    "reason_ja": "不死フィールドがD.Monの突進からの強打による突入タイミングの生存を保証する"
+    "reason_ja": "不死フィールドがD.Monの突進からの強打による突入タイミングの生存を保証する",
+    "reason_zh_cn": "维生力场能保障冲锋强击切入时机的生存",
+    "reason_zh_tw": "維生力場能保障衝鋒強擊切入時機的生存"
   },
   {
     "hero_id": "ramattra",
     "synergy_hero_id": "baptiste",
     "reason": "불사조 광선탄이 실체화 상태의 저돌적인 근접전 생존을 보장",
     "reason_en": "Immortality Field guarantees survival during aggressive close combat in Nemesis Form",
-    "reason_ja": "不死フィールドがネメシスフォームでの猪突猛進な近接戦闘の生存を保証する"
+    "reason_ja": "不死フィールドがネメシスフォームでの猪突猛進な近接戦闘の生存を保証する",
+    "reason_zh_cn": "维生力场能保障复仇形态下鲁莽近战的生存",
+    "reason_zh_tw": "維生力場能保障復仇形態下魯莽近戰的生存"
   },
   {
     "hero_id": "emre",
     "synergy_hero_id": "lucio",
     "reason": "속도 부스트로 사격 포지셔닝을 더 빠르게 잡음",
     "reason_en": "Speed Boost lets Emre get into firing position faster",
-    "reason_ja": "スピードブーストでエムレの射撃ポジションをより早く確保する"
+    "reason_ja": "スピードブーストでエムレの射撃ポジションをより早く確保する",
+    "reason_zh_cn": "用速度增益更快占据射击走位",
+    "reason_zh_tw": "用速度增益更快佔據射擊走位"
   },
   {
     "hero_id": "freja",
     "synergy_hero_id": "reinhardt",
     "reason": "올가미로 구속한 다수의 적을 화염 강타로 확정 처치",
     "reason_en": "Fire Strike secures kills on multiple enemies restrained by Freja's snare",
-    "reason_ja": "わなで拘束した複数の敵をファイアストライクで確実に仕留める"
+    "reason_ja": "わなで拘束した複数の敵をファイアストライクで確実に仕留める",
+    "reason_zh_cn": "用烈焰打击确定击杀被套索束缚的多名敌人",
+    "reason_zh_tw": "用烈焰擊確定擊殺被套索束縛的多名敵人"
   },
   {
     "hero_id": "shion",
     "synergy_hero_id": "baptiste",
     "reason": "불사조 광선탄이 오토바이 저돌적 기동 이후 생존을 보장",
     "reason_en": "Immortality Field guarantees survival after Shion's aggressive motorcycle engage",
-    "reason_ja": "不死フィールドがバイクでの猪突猛進な機動の後の生存を保証する"
+    "reason_ja": "不死フィールドがバイクでの猪突猛進な機動の後の生存を保証する",
+    "reason_zh_cn": "维生力场能保障摩托车鲁莽突进后的生存",
+    "reason_zh_tw": "維生力場能保障摩托車魯莽突進後的生存"
   },
   {
     "hero_id": "sierra",
     "synergy_hero_id": "lucio",
     "reason": "속도 부스트로 표식 추적 사격 포지셔닝을 더 빠르게",
     "reason_en": "Speed Boost gets Sierra into position for her mark-tracking shot faster",
-    "reason_ja": "スピードブーストでシエラの目印追尾射撃のポジショニングをより速くする"
+    "reason_ja": "スピードブーストでシエラの目印追尾射撃のポジショニングをより速くする",
+    "reason_zh_cn": "用速度增益让标记追踪射击的走位更快",
+    "reason_zh_tw": "用速度增益讓標記追蹤射擊的走位更快"
   },
   {
     "hero_id": "vendetta",
     "synergy_hero_id": "baptiste",
     "reason": "불사조 광선탄이 대검 근접 돌입 이후 생존을 보장",
     "reason_en": "Immortality Field guarantees survival after Vendetta's greatsword melee engage",
-    "reason_ja": "不死フィールドがヴェンデッタの大剣による近接突入の後の生存を保証する"
+    "reason_ja": "不死フィールドがヴェンデッタの大剣による近接突入の後の生存を保証する",
+    "reason_zh_cn": "维生力场能保障大剑近战突入后的生存",
+    "reason_zh_tw": "維生力場能保障大劍近戰突入後的生存"
   },
   {
     "hero_id": "jetpack_cat",
     "synergy_hero_id": "tracer",
     "reason": "생명줄로 트레이서를 원하는 다이브 타이밍에 전선까지 끌어올림",
     "reason_en": "Lifeline pulls Tracer to the front line at the desired dive timing",
-    "reason_ja": "ライフラインでトレーサーを好きなダイブタイミングで前線まで引き上げる"
+    "reason_ja": "ライフラインでトレーサーを好きなダイブタイミングで前線まで引き上げる",
+    "reason_zh_cn": "用生命线在理想的突袭时机把猎空拉到前线",
+    "reason_zh_tw": "用生命線在理想的突擊時機把閃光拉到前線"
   },
   {
     "hero_id": "juno",
     "synergy_hero_id": "genji",
     "reason": "이동속도 증가로 겐지의 다이브 진입과 이탈 타이밍을 지원",
     "reason_en": "Hyper Ring's movement speed boost supports Genji's dive engage and disengage timing",
-    "reason_ja": "ハイパーリングの移動速度上昇でゲンジのダイブの突入と離脱タイミングを支援する"
+    "reason_ja": "ハイパーリングの移動速度上昇でゲンジのダイブの突入と離脱タイミングを支援する",
+    "reason_zh_cn": "用移动速度提升支援源氏突袭的切入与撤离时机",
+    "reason_zh_tw": "用移動速度提升支援源氏突擊的切入與撤離時機"
   },
   {
     "hero_id": "anran",
     "synergy_hero_id": "baptiste",
     "reason": "불사조 광선탄이 고기동 암살 시도 이후 생존을 보장",
     "reason_en": "Immortality Field guarantees survival after a high-mobility assassination attempt",
-    "reason_ja": "不死フィールドが高機動な暗殺の試みの後の生存を保証する"
+    "reason_ja": "不死フィールドが高機動な暗殺の試みの後の生存を保証する",
+    "reason_zh_cn": "维生力场能保障高机动暗杀尝试后的生存",
+    "reason_zh_tw": "維生力場能保障高機動暗殺嘗試後的生存"
   },
   {
     "hero_id": "hazard",
     "synergy_hero_id": "baptiste",
     "reason": "불사조 광선탄이 돌진형 개시 이후 생존을 보장",
     "reason_en": "Immortality Field guarantees survival after Hazard's charge-in opener",
-    "reason_ja": "不死フィールドが突撃型の仕掛けの後の生存を保証する"
+    "reason_ja": "不死フィールドが突撃型の仕掛けの後の生存を保証する",
+    "reason_zh_cn": "维生力场能保障冲锋开场后的生存",
+    "reason_zh_tw": "維生力場能保障衝鋒開場後的生存"
   },
   {
     "hero_id": "bastion",
     "synergy_hero_id": "reinhardt",
     "reason": "방벽 뒤에서 안전하게 탱크 모드 화망을 전개할 수 있음",
     "reason_en": "Sets up safely behind the barrier to unleash tank-mode firepower",
-    "reason_ja": "バリアの後ろで安全にタンクモードの弾幕を展開できる"
+    "reason_ja": "バリアの後ろで安全にタンクモードの弾幕を展開できる",
+    "reason_zh_cn": "能在护盾后方安全展开坦克模式的火网",
+    "reason_zh_tw": "能在護盾後方安全展開坦克模式的火網"
   },
   {
     "hero_id": "doctrine",
     "synergy_hero_id": "genji",
     "reason": "활력 드론으로 공격 속도와 회복량을 동시에 버프해 다이브 딜러의 지속 화력을 높임",
     "reason_en": "The vitality drone buffs attack speed and healing at once, boosting the dive dealer's sustained damage",
-    "reason_ja": "活力ドローンで攻撃速度と回復量を同時に強化し、ダイブアタッカーの継続火力を高める"
+    "reason_ja": "活力ドローンで攻撃速度と回復量を同時に強化し、ダイブアタッカーの継続火力を高める",
+    "reason_zh_cn": "用活力无人机同时增益攻击速度与回复量，提升突袭输出手的持续火力",
+    "reason_zh_tw": "用活力無人機同時增益攻擊速度與回復量，提升突擊輸出手的持續火力"
   },
   {
     "hero_id": "doctrine",
     "synergy_hero_id": "reinhardt",
     "reason": "심판 궁극기의 최대 체력 증가 효과가 방벽 브롤 조합의 생존력을 크게 높임",
     "reason_en": "The max-health increase from the Judgment ultimate greatly boosts the barrier brawl composition's survivability",
-    "reason_ja": "「審判」の切り札による最大体力増加効果が、バリアのブロール構成の生存力を大きく高める"
+    "reason_ja": "「審判」の切り札による最大体力増加効果が、バリアのブロール構成の生存力を大きく高める",
+    "reason_zh_cn": "审判大招的最大生命值提升效果，大幅提高护盾强攻组合的生存能力",
+    "reason_zh_tw": "審判大招的最大生命值提升效果，大幅提高護盾強攻組合的生存能力"
   },
   {
     "hero_id": "mizuki",
     "synergy_hero_id": "reaper",
     "reason": "속박 사슬로 묶은 대상에게 리퍼가 근접 산탄을 확정으로 꽂아넣는 조합",
     "reason_en": "A combo where Reaper lands a guaranteed close-range shotgun blast on a target bound by Mizuki's chain",
-    "reason_ja": "拘束の鎖で縛った相手にリーパーが近距離散弾を確実に撃ち込むコンボ"
+    "reason_ja": "拘束の鎖で縛った相手にリーパーが近距離散弾を確実に撃ち込むコンボ",
+    "reason_zh_cn": "用束缚锁链困住目标后，死神能确定命中近战霰弹的组合",
+    "reason_zh_tw": "用束縛鎖鏈困住目標後，死神能確定命中近戰霰彈的組合"
   },
   {
     "hero_id": "mizuki",
     "synergy_hero_id": "hanzo",
     "reason": "속박 사슬로 묶은 대상에게 한조가 사격을 확정으로 명중시키는 조합",
     "reason_en": "A combo where Hanzo lands a guaranteed shot on a target bound by Mizuki's chain",
-    "reason_ja": "拘束の鎖で縛った相手に半蔵が射撃を確実に命中させるコンボ"
+    "reason_ja": "拘束の鎖で縛った相手に半蔵が射撃を確実に命中させるコンボ",
+    "reason_zh_cn": "用束缚锁链困住目标后，半藏能确定命中射击的组合",
+    "reason_zh_tw": "用束縛鎖鏈困住目標後，半藏能確定命中射擊的組合"
   }
 ]

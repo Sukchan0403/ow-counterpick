@@ -9,7 +9,11 @@
     "name_en": "D.Mon",
     "name_ja": "ディモン",
     "archetype_en": "Mech Squad Commander",
-    "archetype_ja": "メカ部隊の指揮官"
+    "archetype_ja": "メカ部隊の指揮官",
+    "name_zh_cn": "D.Mon",
+    "name_zh_tw": "D.Mon",
+    "archetype_zh_cn": "机甲部队指挥官",
+    "archetype_zh_tw": "機甲部隊指揮官"
   },
   {
     "id": "domina",
@@ -21,7 +25,11 @@
     "name_en": "Domina",
     "name_ja": "ドミナ",
     "archetype_en": "Regenerating Barrier Commander",
-    "archetype_ja": "再生バリアの指揮官"
+    "archetype_ja": "再生バリアの指揮官",
+    "name_zh_cn": "多米娜",
+    "name_zh_tw": "多米娜",
+    "archetype_zh_cn": "再生护盾指挥官",
+    "archetype_zh_tw": "再生護盾指揮官"
   },
   {
     "id": "doomfist",
@@ -33,7 +41,11 @@
     "name_en": "Doomfist",
     "name_ja": "ダムフィスト",
     "archetype_en": "Melee Assault Initiator",
-    "archetype_ja": "近接強襲のイニシエーター"
+    "archetype_ja": "近接強襲のイニシエーター",
+    "name_zh_cn": "末日铁拳",
+    "name_zh_tw": "毀滅拳王",
+    "archetype_zh_cn": "近战突击发起者",
+    "archetype_zh_tw": "近戰突擊發起者"
   },
   {
     "id": "dva",
@@ -45,7 +57,11 @@
     "name_en": "D.Va",
     "name_ja": "D.Va",
     "archetype_en": "Aerial Interceptor",
-    "archetype_ja": "航空阻止"
+    "archetype_ja": "航空阻止",
+    "name_zh_cn": "D.Va",
+    "name_zh_tw": "D.Va",
+    "archetype_zh_cn": "空中拦截手",
+    "archetype_zh_tw": "空中攔截手"
   },
   {
     "id": "hazard",
@@ -57,7 +73,11 @@
     "name_en": "Hazard",
     "name_ja": "ハザード",
     "archetype_en": "Spike Barrier Initiator",
-    "archetype_ja": "棘の壁のイニシエーター"
+    "archetype_ja": "棘の壁のイニシエーター",
+    "name_zh_cn": "危险",
+    "name_zh_tw": "災害",
+    "archetype_zh_cn": "尖刺护盾发起者",
+    "archetype_zh_tw": "尖刺護盾發起者"
   },
   {
     "id": "junker_queen",
@@ -69,7 +89,11 @@
     "name_en": "Junker Queen",
     "name_ja": "ジャンカークイーン",
     "archetype_en": "Bleeding Melee Commander",
-    "archetype_ja": "出血近接の指揮官"
+    "archetype_ja": "出血近接の指揮官",
+    "name_zh_cn": "渣客女王",
+    "name_zh_tw": "垃圾鎮女王",
+    "archetype_zh_cn": "流血近战指挥官",
+    "archetype_zh_tw": "流血近戰指揮官"
   },
   {
     "id": "mauga",
@@ -81,7 +105,11 @@
     "name_en": "Mauga",
     "name_ja": "マウガ",
     "archetype_en": "Dual Chaingun Trooper",
-    "archetype_ja": "二丁機関銃の突撃兵"
+    "archetype_ja": "二丁機関銃の突撃兵",
+    "name_zh_cn": "毛加",
+    "name_zh_tw": "莫加",
+    "archetype_zh_cn": "双管机枪突击兵",
+    "archetype_zh_tw": "雙管機槍突擊兵"
   },
   {
     "id": "orisa",
@@ -93,7 +121,11 @@
     "name_en": "Orisa",
     "name_ja": "オリーサ",
     "archetype_en": "Frontline Anchor",
-    "archetype_ja": "前線の固定役"
+    "archetype_ja": "前線の固定役",
+    "name_zh_cn": "奥丽莎",
+    "name_zh_tw": "歐瑞莎",
+    "archetype_zh_cn": "前线支点",
+    "archetype_zh_tw": "前線支點"
   },
   {
     "id": "ramattra",
@@ -105,7 +137,11 @@
     "name_en": "Ramattra",
     "name_ja": "ラマットラ",
     "archetype_en": "Shapeshifting Monk",
-    "archetype_ja": "変形する修道士"
+    "archetype_ja": "変形する修道士",
+    "name_zh_cn": "拉玛刹",
+    "name_zh_tw": "拉瑪塔",
+    "archetype_zh_cn": "变形僧侣",
+    "archetype_zh_tw": "變形僧侶"
   },
   {
     "id": "reinhardt",
@@ -117,7 +153,11 @@
     "name_en": "Reinhardt",
     "name_ja": "ラインハルト",
     "archetype_en": "Barrier Gatekeeper",
-    "archetype_ja": "バリアの門番"
+    "archetype_ja": "バリアの門番",
+    "name_zh_cn": "莱因哈特",
+    "name_zh_tw": "萊因哈特",
+    "archetype_zh_cn": "护盾门卫",
+    "archetype_zh_tw": "護盾門衛"
   },
   {
     "id": "roadhog",
@@ -129,7 +169,11 @@
     "name_en": "Roadhog",
     "name_ja": "ロードホッグ",
     "archetype_en": "Hook Butcher",
-    "archetype_ja": "フックの虐殺者"
+    "archetype_ja": "フックの虐殺者",
+    "name_zh_cn": "路霸",
+    "name_zh_tw": "攔路豬",
+    "archetype_zh_cn": "铁钩屠夫",
+    "archetype_zh_tw": "鐵鉤屠夫"
   },
   {
     "id": "sigma",
@@ -141,7 +185,11 @@
     "name_en": "Sigma",
     "name_ja": "シグマ",
     "archetype_en": "Gravity Manipulator",
-    "archetype_ja": "重力の操作者"
+    "archetype_ja": "重力の操作者",
+    "name_zh_cn": "西格玛",
+    "name_zh_tw": "席格馬",
+    "archetype_zh_cn": "重力操控者",
+    "archetype_zh_tw": "重力操控者"
   },
   {
     "id": "winston",
@@ -153,7 +201,11 @@
     "name_en": "Winston",
     "name_ja": "ウィンストン",
     "archetype_en": "Initiator",
-    "archetype_ja": "イニシエーター"
+    "archetype_ja": "イニシエーター",
+    "name_zh_cn": "温斯顿",
+    "name_zh_tw": "溫斯頓",
+    "archetype_zh_cn": "突击发起者",
+    "archetype_zh_tw": "突擊發起者"
   },
   {
     "id": "wrecking_ball",
@@ -165,7 +217,11 @@
     "name_en": "Wrecking Ball",
     "name_ja": "レッキングボール",
     "archetype_en": "Sphere Charger",
-    "archetype_ja": "球体の突撃兵"
+    "archetype_ja": "球体の突撃兵",
+    "name_zh_cn": "破坏球",
+    "name_zh_tw": "火爆鋼球",
+    "archetype_zh_cn": "球体冲锋兵",
+    "archetype_zh_tw": "球體衝鋒兵"
   },
   {
     "id": "zarya",
@@ -177,7 +233,11 @@
     "name_en": "Zarya",
     "name_ja": "ザリヤ",
     "archetype_en": "Energy Barrier",
-    "archetype_ja": "エネルギーバリア"
+    "archetype_ja": "エネルギーバリア",
+    "name_zh_cn": "扎莉亚",
+    "name_zh_tw": "札莉雅",
+    "archetype_zh_cn": "能量护盾",
+    "archetype_zh_tw": "能量護盾"
   },
   {
     "id": "anran",
@@ -189,7 +249,11 @@
     "name_en": "Anran",
     "name_ja": "アンラン",
     "archetype_en": "Flame Fan Assassin",
-    "archetype_ja": "炎の扇の暗殺者"
+    "archetype_ja": "炎の扇の暗殺者",
+    "name_zh_cn": "安然",
+    "name_zh_tw": "安燃",
+    "archetype_zh_cn": "火焰扇刺客",
+    "archetype_zh_tw": "火焰扇刺客"
   },
   {
     "id": "ashe",
@@ -201,7 +265,11 @@
     "name_en": "Ashe",
     "name_ja": "アッシュ",
     "archetype_en": "Dynamite Sharpshooter",
-    "archetype_ja": "ダイナマイトの名手"
+    "archetype_ja": "ダイナマイトの名手",
+    "name_zh_cn": "艾什",
+    "name_zh_tw": "艾西",
+    "archetype_zh_cn": "炸药神枪手",
+    "archetype_zh_tw": "炸藥神槍手"
   },
   {
     "id": "bastion",
@@ -213,7 +281,11 @@
     "name_en": "Bastion",
     "name_ja": "バスティオン",
     "archetype_en": "Transforming Fire Support",
-    "archetype_ja": "変形する火力支援兵"
+    "archetype_ja": "変形する火力支援兵",
+    "name_zh_cn": "堡垒",
+    "name_zh_tw": "壁壘機兵",
+    "archetype_zh_cn": "变形火力支援兵",
+    "archetype_zh_tw": "變形火力支援兵"
   },
   {
     "id": "cassidy",
@@ -225,7 +297,11 @@
     "name_en": "Cassidy",
     "name_ja": "キャスディ",
     "archetype_en": "Revolver Outlaw",
-    "archetype_ja": "リボルバーの無法者"
+    "archetype_ja": "リボルバーの無法者",
+    "name_zh_cn": "卡西迪",
+    "name_zh_tw": "卡西迪",
+    "archetype_zh_cn": "左轮枪法外之徒",
+    "archetype_zh_tw": "左輪槍法外之徒"
   },
   {
     "id": "echo",
@@ -237,7 +313,11 @@
     "name_en": "Echo",
     "name_ja": "エコー",
     "archetype_en": "Adaptive Reconnaissance Drone",
-    "archetype_ja": "適応型偵察機"
+    "archetype_ja": "適応型偵察機",
+    "name_zh_cn": "回声",
+    "name_zh_tw": "迴音",
+    "archetype_zh_cn": "适应型侦察无人机",
+    "archetype_zh_tw": "適應型偵察無人機"
   },
   {
     "id": "emre",
@@ -249,7 +329,11 @@
     "name_en": "Emre",
     "name_ja": "エムレ",
     "archetype_en": "Bio-Weapon Transformation Specialist",
-    "archetype_ja": "生体兵器変形のスペシャリスト"
+    "archetype_ja": "生体兵器変形のスペシャリスト",
+    "name_zh_cn": "埃姆雷",
+    "name_zh_tw": "伊默",
+    "archetype_zh_cn": "生体兵器变形专家",
+    "archetype_zh_tw": "生體兵器變形專家"
   },
   {
     "id": "freja",
@@ -261,7 +345,11 @@
     "name_en": "Freja",
     "name_ja": "フレヤ",
     "archetype_en": "Explosive Snare Marksman",
-    "archetype_ja": "爆発ワイヤーの射手"
+    "archetype_ja": "爆発ワイヤーの射手",
+    "name_zh_cn": "弗蕾娅",
+    "name_zh_tw": "弗蕾亞",
+    "archetype_zh_cn": "爆炸陷阱射手",
+    "archetype_zh_tw": "爆炸陷阱射手"
   },
   {
     "id": "genji",
@@ -273,7 +361,11 @@
     "name_en": "Genji",
     "name_ja": "ゲンジ",
     "archetype_en": "Melee Flanker",
-    "archetype_ja": "近接フランカー"
+    "archetype_ja": "近接フランカー",
+    "name_zh_cn": "源氏",
+    "name_zh_tw": "源氏",
+    "archetype_zh_cn": "近战侧翼手",
+    "archetype_zh_tw": "近戰側翼手"
   },
   {
     "id": "hanzo",
@@ -285,7 +377,11 @@
     "name_en": "Hanzo",
     "name_ja": "ハンゾー",
     "archetype_en": "Archery Marksman",
-    "archetype_ja": "弓術の名手"
+    "archetype_ja": "弓術の名手",
+    "name_zh_cn": "半藏",
+    "name_zh_tw": "半藏",
+    "archetype_zh_cn": "弓术神射手",
+    "archetype_zh_tw": "弓術神射手"
   },
   {
     "id": "junkrat",
@@ -297,7 +393,11 @@
     "name_en": "Junkrat",
     "name_ja": "ジャンクラット",
     "archetype_en": "Mine Demolition Specialist",
-    "archetype_ja": "地雷爆破のスペシャリスト"
+    "archetype_ja": "地雷爆破のスペシャリスト",
+    "name_zh_cn": "狂鼠",
+    "name_zh_tw": "炸彈鼠",
+    "archetype_zh_cn": "地雷爆破专家",
+    "archetype_zh_tw": "地雷爆破專家"
   },
   {
     "id": "mei",
@@ -309,7 +409,11 @@
     "name_en": "Mei",
     "name_ja": "メイ",
     "archetype_en": "Freeze Zone Specialist",
-    "archetype_ja": "氷結設置のスペシャリスト"
+    "archetype_ja": "氷結設置のスペシャリスト",
+    "name_zh_cn": "美",
+    "name_zh_tw": "小美",
+    "archetype_zh_cn": "冰冻区域专家",
+    "archetype_zh_tw": "冰凍區域專家"
   },
   {
     "id": "pharah",
@@ -321,7 +425,11 @@
     "name_en": "Pharah",
     "name_ja": "ファラ",
     "archetype_en": "Aerial Rocketeer",
-    "archetype_ja": "空中戦のロケット兵"
+    "archetype_ja": "空中戦のロケット兵",
+    "name_zh_cn": "法老之鹰",
+    "name_zh_tw": "法拉",
+    "archetype_zh_cn": "空战火箭兵",
+    "archetype_zh_tw": "空戰火箭兵"
   },
   {
     "id": "reaper",
@@ -333,7 +441,11 @@
     "name_en": "Reaper",
     "name_ja": "リーパー",
     "archetype_en": "Life-Drain Flanker",
-    "archetype_ja": "生命吸収のフランカー"
+    "archetype_ja": "生命吸収のフランカー",
+    "name_zh_cn": "死神",
+    "name_zh_tw": "死神",
+    "archetype_zh_cn": "生命汲取侧翼手",
+    "archetype_zh_tw": "生命汲取側翼手"
   },
   {
     "id": "shion",
@@ -345,7 +457,11 @@
     "name_en": "Shion",
     "name_ja": "シオン",
     "archetype_en": "Motorcycle Dual-Pistol Gunslinger",
-    "archetype_ja": "バイクの二丁拳銃使い"
+    "archetype_ja": "バイクの二丁拳銃使い",
+    "name_zh_cn": "紫音",
+    "name_zh_tw": "死怨",
+    "archetype_zh_cn": "摩托双枪枪手",
+    "archetype_zh_tw": "摩托雙槍槍手"
   },
   {
     "id": "sierra",
@@ -357,7 +473,11 @@
     "name_en": "Sierra",
     "name_ja": "シエラ",
     "archetype_en": "Mark-Tracking Marksman",
-    "archetype_ja": "マーク追跡の射手"
+    "archetype_ja": "マーク追跡の射手",
+    "name_zh_cn": "塞拉",
+    "name_zh_tw": "席艾拉",
+    "archetype_zh_cn": "标记追踪射手",
+    "archetype_zh_tw": "標記追蹤射手"
   },
   {
     "id": "sojourn",
@@ -369,7 +489,11 @@
     "name_en": "Sojourn",
     "name_ja": "ソジョン",
     "archetype_en": "Long-Range Bombardment",
-    "archetype_ja": "遠距離砲撃"
+    "archetype_ja": "遠距離砲撃",
+    "name_zh_cn": "索杰恩",
+    "name_zh_tw": "索潔恩",
+    "archetype_zh_cn": "远程炮击手",
+    "archetype_zh_tw": "遠程砲擊手"
   },
   {
     "id": "soldier_76",
@@ -381,7 +505,11 @@
     "name_en": "Soldier: 76",
     "name_ja": "ソルジャー:76",
     "archetype_en": "All-Around Assault Trooper",
-    "archetype_ja": "万能型の突撃兵"
+    "archetype_ja": "万能型の突撃兵",
+    "name_zh_cn": "士兵:76",
+    "name_zh_tw": "士兵76",
+    "archetype_zh_cn": "全能型突击兵",
+    "archetype_zh_tw": "全能型突擊兵"
   },
   {
     "id": "sombra",
@@ -393,7 +521,11 @@
     "name_en": "Sombra",
     "name_ja": "ソンブラ",
     "archetype_en": "Hacking Infiltrator",
-    "archetype_ja": "ハッキングの潜入工作員"
+    "archetype_ja": "ハッキングの潜入工作員",
+    "name_zh_cn": "黑影",
+    "name_zh_tw": "駭影",
+    "archetype_zh_cn": "黑客渗透者",
+    "archetype_zh_tw": "駭客滲透者"
   },
   {
     "id": "symmetra",
@@ -405,7 +537,11 @@
     "name_en": "Symmetra",
     "name_ja": "シンメトラ",
     "archetype_en": "Deployable Photon Engineer",
-    "archetype_ja": "設置型フォトン工兵"
+    "archetype_ja": "設置型フォトン工兵",
+    "name_zh_cn": "秩序之光",
+    "name_zh_tw": "辛梅塔",
+    "archetype_zh_cn": "部署型光子工程师",
+    "archetype_zh_tw": "部署型光子工程師"
   },
   {
     "id": "torbjorn",
@@ -417,7 +553,11 @@
     "name_en": "Torbjörn",
     "name_ja": "トールビョーン",
     "archetype_en": "Turret Engineer",
-    "archetype_ja": "タレット設置の技術者"
+    "archetype_ja": "タレット設置の技術者",
+    "name_zh_cn": "托比昂",
+    "name_zh_tw": "托比昂",
+    "archetype_zh_cn": "炮台工程师",
+    "archetype_zh_tw": "砲台工程師"
   },
   {
     "id": "tracer",
@@ -429,7 +569,11 @@
     "name_en": "Tracer",
     "name_ja": "トレーサー",
     "archetype_en": "High-Mobility Disruptor",
-    "archetype_ja": "高機動の攪乱役"
+    "archetype_ja": "高機動の攪乱役",
+    "name_zh_cn": "猎空",
+    "name_zh_tw": "閃光",
+    "archetype_zh_cn": "高机动扰乱者",
+    "archetype_zh_tw": "高機動擾亂者"
   },
   {
     "id": "vendetta",
@@ -441,7 +585,11 @@
     "name_en": "Vendetta",
     "name_ja": "ヴェンデッタ",
     "archetype_en": "Energy Blade Executioner",
-    "archetype_ja": "光剣の処断者"
+    "archetype_ja": "光剣の処断者",
+    "name_zh_cn": "复仇者",
+    "name_zh_tw": "宿怨",
+    "archetype_zh_cn": "能量剑处决者",
+    "archetype_zh_tw": "能量劍處決者"
   },
   {
     "id": "venture",
@@ -453,7 +601,11 @@
     "name_en": "Venture",
     "name_ja": "ベンチャー",
     "archetype_en": "Drill Explorer",
-    "archetype_ja": "掘削ドリルの探検家"
+    "archetype_ja": "掘削ドリルの探検家",
+    "name_zh_cn": "冒险家",
+    "name_zh_tw": "無畏",
+    "archetype_zh_cn": "钻探探险家",
+    "archetype_zh_tw": "鑽探探險家"
   },
   {
     "id": "widowmaker",
@@ -465,7 +617,11 @@
     "name_en": "Widowmaker",
     "name_ja": "ウィドウメイカー",
     "archetype_en": "Sniper",
-    "archetype_ja": "スナイパー"
+    "archetype_ja": "スナイパー",
+    "name_zh_cn": "黑百合",
+    "name_zh_tw": "奪命女",
+    "archetype_zh_cn": "狙击手",
+    "archetype_zh_tw": "狙擊手"
   },
   {
     "id": "ana",
@@ -477,7 +633,11 @@
     "name_en": "Ana",
     "name_ja": "アナ",
     "archetype_en": "Denial Support",
-    "archetype_ja": "ディナイアル・サポート"
+    "archetype_ja": "ディナイアル・サポート",
+    "name_zh_cn": "安娜",
+    "name_zh_tw": "安娜",
+    "archetype_zh_cn": "压制型支援",
+    "archetype_zh_tw": "壓制型支援"
   },
   {
     "id": "baptiste",
@@ -489,7 +649,11 @@
     "name_en": "Baptiste",
     "name_ja": "バティスト",
     "archetype_en": "Survival Support",
-    "archetype_ja": "生存サポート"
+    "archetype_ja": "生存サポート",
+    "name_zh_cn": "巴蒂斯特",
+    "name_zh_tw": "巴帝斯特",
+    "archetype_zh_cn": "生存支援",
+    "archetype_zh_tw": "生存支援"
   },
   {
     "id": "brigitte",
@@ -501,7 +665,11 @@
     "name_en": "Brigitte",
     "name_ja": "ブリギッテ",
     "archetype_en": "Melee Guardian Support",
-    "archetype_ja": "近接守護のサポート"
+    "archetype_ja": "近接守護のサポート",
+    "name_zh_cn": "布丽吉塔",
+    "name_zh_tw": "碧姬",
+    "archetype_zh_cn": "近战守护支援",
+    "archetype_zh_tw": "近戰守護支援"
   },
   {
     "id": "illari",
@@ -513,7 +681,11 @@
     "name_en": "Illari",
     "name_ja": "イラリ",
     "archetype_en": "Solar Turret Support",
-    "archetype_ja": "太陽タレットのサポート"
+    "archetype_ja": "太陽タレットのサポート",
+    "name_zh_cn": "伊拉瑞",
+    "name_zh_tw": "伊拉里",
+    "archetype_zh_cn": "太阳炮台支援",
+    "archetype_zh_tw": "太陽砲台支援"
   },
   {
     "id": "jetpack_cat",
@@ -525,7 +697,11 @@
     "name_en": "Jetpack Cat",
     "name_ja": "ジェットパックキャット",
     "archetype_en": "Aerial Tether Support",
-    "archetype_ja": "空中牽引のサポート"
+    "archetype_ja": "空中牽引のサポート",
+    "name_zh_cn": "喷气背包猫",
+    "name_zh_tw": "火箭貓",
+    "archetype_zh_cn": "空中牵引支援",
+    "archetype_zh_tw": "空中牽引支援"
   },
   {
     "id": "juno",
@@ -537,7 +713,11 @@
     "name_en": "Juno",
     "name_ja": "ジュノ",
     "archetype_en": "Acceleration & Guidance Support",
-    "archetype_ja": "加速誘導のサポート"
+    "archetype_ja": "加速誘導のサポート",
+    "name_zh_cn": "朱诺",
+    "name_zh_tw": "朱諾",
+    "archetype_zh_cn": "加速引导支援",
+    "archetype_zh_tw": "加速引導支援"
   },
   {
     "id": "kiriko",
@@ -549,7 +729,11 @@
     "name_en": "Kiriko",
     "name_ja": "キリコ",
     "archetype_en": "Recon Support",
-    "archetype_ja": "偵察サポート"
+    "archetype_ja": "偵察サポート",
+    "name_zh_cn": "雾子",
+    "name_zh_tw": "霧子",
+    "archetype_zh_cn": "侦察支援",
+    "archetype_zh_tw": "偵察支援"
   },
   {
     "id": "lifeweaver",
@@ -561,7 +745,11 @@
     "name_en": "Lifeweaver",
     "name_ja": "ライフウィーバー",
     "archetype_en": "Life-Blossom Cultivator Support",
-    "archetype_ja": "生命の花を育てるサポート"
+    "archetype_ja": "生命の花を育てるサポート",
+    "name_zh_cn": "生命编织者",
+    "name_zh_tw": "織命",
+    "archetype_zh_cn": "生命花培育支援",
+    "archetype_zh_tw": "生命花培育支援"
   },
   {
     "id": "lucio",
@@ -573,7 +761,11 @@
     "name_en": "Lúcio",
     "name_ja": "ルシオ",
     "archetype_en": "Mobility Support",
-    "archetype_ja": "機動サポート"
+    "archetype_ja": "機動サポート",
+    "name_zh_cn": "卢西奥",
+    "name_zh_tw": "路西歐",
+    "archetype_zh_cn": "机动支援",
+    "archetype_zh_tw": "機動支援"
   },
   {
     "id": "mercy",
@@ -585,7 +777,11 @@
     "name_en": "Mercy",
     "name_ja": "マーシー",
     "archetype_en": "Resurrecting Guardian Angel",
-    "archetype_ja": "復活の守護天使"
+    "archetype_ja": "復活の守護天使",
+    "name_zh_cn": "天使",
+    "name_zh_tw": "慈悲",
+    "archetype_zh_cn": "复活守护天使",
+    "archetype_zh_tw": "復活守護天使"
   },
   {
     "id": "mizuki",
@@ -597,7 +793,11 @@
     "name_en": "Mizuki",
     "name_ja": "ミズキ",
     "archetype_en": "Binding Chain Support",
-    "archetype_ja": "拘束の鎖のサポート"
+    "archetype_ja": "拘束の鎖のサポート",
+    "name_zh_cn": "瑞月",
+    "name_zh_tw": "瑞稀",
+    "archetype_zh_cn": "束缚锁链支援",
+    "archetype_zh_tw": "束縛鎖鏈支援"
   },
   {
     "id": "moira",
@@ -609,7 +809,11 @@
     "name_en": "Moira",
     "name_ja": "モイラ",
     "archetype_en": "Close-Range Sustain Support",
-    "archetype_ja": "近接維持のサポート"
+    "archetype_ja": "近接維持のサポート",
+    "name_zh_cn": "莫伊拉",
+    "name_zh_tw": "莫伊拉",
+    "archetype_zh_cn": "近距离持续支援",
+    "archetype_zh_tw": "近距離持續支援"
   },
   {
     "id": "wuyang",
@@ -621,7 +825,11 @@
     "name_en": "Wuyang",
     "name_ja": "ウーヤン",
     "archetype_en": "Healing Wave Support",
-    "archetype_ja": "癒しの波のサポート"
+    "archetype_ja": "癒しの波のサポート",
+    "name_zh_cn": "舞阳",
+    "name_zh_tw": "無漾",
+    "archetype_zh_cn": "治疗波支援",
+    "archetype_zh_tw": "治療波支援"
   },
   {
     "id": "zenyatta",
@@ -633,7 +841,11 @@
     "name_en": "Zenyatta",
     "name_ja": "ゼニヤッタ",
     "archetype_en": "Long-Range Support",
-    "archetype_ja": "遠距離サポート"
+    "archetype_ja": "遠距離サポート",
+    "name_zh_cn": "禅雅塔",
+    "name_zh_tw": "禪亞塔",
+    "archetype_zh_cn": "远程支援",
+    "archetype_zh_tw": "遠程支援"
   },
   {
     "id": "doctrine",
@@ -645,6 +857,10 @@
     "name_en": "Doctrine",
     "name_ja": "ドクトリン",
     "archetype_en": "Buff Charge Support",
-    "archetype_ja": "強化チャージのサポート"
+    "archetype_ja": "強化チャージのサポート",
+    "name_zh_cn": "Doctrine",
+    "name_zh_tw": "Doctrine",
+    "archetype_zh_cn": "强化充能支援",
+    "archetype_zh_tw": "強化充能支援"
   }
 ]
