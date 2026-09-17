@@ -32,7 +32,9 @@ async function handleResponse<T>(res: Response, locale: Locale): Promise<T> {
     let detail = t.apiInvalidInput;
     try {
       const body = await res.json();
-      detail = typeof body.detail === "string" ? body.detail : JSON.stringify(body.detail);
+      if (body?.detail !== undefined) {
+        detail = typeof body.detail === "string" ? body.detail : JSON.stringify(body.detail);
+      }
     } catch {
       // ignore parse error, use default message
     }
