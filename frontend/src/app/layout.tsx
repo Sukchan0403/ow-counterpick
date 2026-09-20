@@ -44,11 +44,30 @@ const THEME_INIT_SCRIPT = `
 })();
 `;
 
+// 검색 엔진이 사이트 성격(이름/설명/무료 웹앱)을 명확히 이해하도록 돕는
+// JSON-LD. 순위를 직접 올려주진 않지만, 리치 결과(사이트링크 검색창 등)
+// 후보가 되는 데 도움이 되고 사실상 비용이 없어 넣는다.
+const STRUCTURED_DATA = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  url: SITE_URL,
+  applicationCategory: "GameApplication",
+  operatingSystem: "Any (Web)",
+  inLanguage: ["ko", "en", "ja", "zh-CN", "zh-TW"],
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="ko">
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(STRUCTURED_DATA) }}
+        />
       </head>
       <body>{children}</body>
     </html>
