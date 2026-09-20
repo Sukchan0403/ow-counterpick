@@ -104,3 +104,20 @@
   약한 포지션 강조 UI, 밴 단계 포함 여부, 프론트 목업) 명시
 - 기존 "향후 확장"의 틀린 메모("양 팀 6명씩")를 5명으로 정정
 - 코드 변경 없음 — 설계 문서만 커밋·push (`2186933`)
+
+---
+
+# 추가 작업 — 2026-09-20: 구글 검색 노출
+
+목표를 "COUNTERPICK.GG로 검색하면 뜨는 정도"로 확정(경쟁 키워드 랭킹은 불필요
+— 영웅별 SEO 콘텐츠 페이지 작업은 진행 안 함).
+
+- 기존에 이미 돼있던 것 확인: 메타데이터/OG/canonical/hreflang/robots.txt/
+  sitemap.xml 전부 정상, `robots: index,follow`로 noindex 없음
+- 실제로 구글에 전혀 색인 안 된 상태였음 확인 (`site:` 검색 결과 없음)
+- `layout.tsx`에 `WebApplication` JSON-LD 구조화 데이터 추가 (`5efeed9`)
+- Google Search Console 소유권 인증 — 사용자가 다운로드한 HTML 인증 파일을
+  `frontend/public/`에 넣어 배포(`cd3d77e`), 실제 라이브 URL 응답 확인 후
+  사용자가 Search Console에서 "확인" 완료
+- Sitemaps 메뉴에서 `sitemap.xml` 제출 완료
+- 색인까지 며칠~2주 소요 예상 — 코드 쪽에서 더 할 일은 없음, 결과만 기다리면 됨
