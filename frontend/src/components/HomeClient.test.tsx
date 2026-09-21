@@ -65,6 +65,10 @@ beforeEach(() => {
   vi.mocked(fetchMaps).mockReset().mockResolvedValue(MAPS);
   vi.mocked(fetchMeta).mockReset().mockResolvedValue({ season: "Season 4", data_version: "v0.3" });
   vi.mocked(postRecommendations).mockReset().mockResolvedValue(defaultResult());
+  // HomeClient는 언어 전환 후에도 팀 선택을 유지하려고 sessionStorage에 저장한다 —
+  // jsdom의 sessionStorage는 테스트 파일 안에서 공유되므로, 매 테스트를 빈 선택
+  // 상태로 시작하려면 명시적으로 비워줘야 한다.
+  sessionStorage.clear();
 });
 
 async function pickEnemyTeam(user: ReturnType<typeof userEvent.setup>) {
@@ -185,5 +189,37 @@ describe("HomeClient", () => {
     await user.click(screen.getByRole("button", { name: t.backToInput }));
 
     expect(screen.getByText("Tank1")).toBeInTheDocument();
+  });
+
+  it("keeps the team/map selection across a simulated language switch (remount with a new locale)", async () => {
+    // LanguageSwitcher navigates to a separate route per locale (/,/en,/ja,...),
+    // which unmounts this component entirely and mounts a fresh one for the new
+    // locale — simulate that here by unmounting and rendering a new instance.
+    const user = userEvent.setup();
+    const { unmount } = render(<HomeClient locale="en" />);
+    await screen.findByText("Tank1");
+
+    await pickEnemyTeam(user);
+    await pickOurTeam(user);
+    unmount();
+
+    render(<HomeClient locale="ja" />);
+    await screen.findByText("Tank1");
+
+    // Selection carried over from the previous mount, so picking the map alone
+    // is enough to complete the input and auto-submit — no re-picking needed.
+    const tJa = getDictionary("ja");
+    await user.click(screen.getByText(tJa.mapPlaceholder));
+    await user.click(await screen.findByText("Eichenwalde"));
+
+    await waitFor(() => expect(postRecommendations).toHaveBeenCalledTimes(1));
+    expect(postRecommendations).toHaveBeenCalledWith(
+      expect.objectContaining({
+        enemy_heroes: expect.arrayContaining(["tank1", "dps1", "dps2", "sup1", "sup2"]),
+        our_heroes: expect.arrayContaining(["tank2", "dps3", "dps1", "sup3"]),
+        map_id: "eichenwalde",
+      }),
+      "ja",
+    );
   });
 });

@@ -16,6 +16,40 @@ import { LOCALE_HTML_LANG, getDictionary, modeLabel } from "@/lib/i18n";
 
 const OUR_TEAM_SIZE = 4;
 const ENEMY_TEAM_SIZE = 5;
+
+// 언어 스위처는 로케일별 별도 라우트(/,/en,/ja,/zh-cn,/zh-tw)로 이동하는 일반
+// <Link>라서(SEO를 위해 의도적으로 이렇게 만듦 — LanguageSwitcher 참고), 언어를
+// 바꾸면 HomeClient가 통째로 새로 마운트되어 팀 선택이 초기화된다. hero_id/map_id는
+// 언어와 무관한 값이라 sessionStorage에 저장해두고 마운트마다 복원하면, 언어를
+// 바꿔도 같은 조합을 그대로 이어서(다른 언어로) 볼 수 있다. 탭을 닫으면 사라지는
+// sessionStorage를 쓰는 이유는 "다음에 다시 왔을 때도 예전 조합이 남아있는" 걸
+// 원치 않기 때문 — 같은 세션 안에서의 언어 전환만 지원하면 충분하다.
+const SELECTION_STORAGE_KEY = "ow-counterpick:selection";
+
+interface StoredSelection {
+  enemyHeroes: string[];
+  ourHeroes: string[];
+  mapId: string | null;
+  activeTeam: Team;
+}
+
+function loadStoredSelection(): StoredSelection | null {
+  try {
+    const raw = sessionStorage.getItem(SELECTION_STORAGE_KEY);
+    if (!raw) return null;
+    return JSON.parse(raw) as StoredSelection;
+  } catch {
+    return null;
+  }
+}
+
+function saveStoredSelection(selection: StoredSelection) {
+  try {
+    sessionStorage.setItem(SELECTION_STORAGE_KEY, JSON.stringify(selection));
+  } catch {
+    // 프라이빗 모드 등에서 막혀있어도 조용히 무시 — 저장 안 되는 것뿐 기능은 그대로 동작
+  }
+}
 // 오버워치 역할 고정 큐 표준 조합(탱커1·딜러2·힐러2) — backend/app/config.py의
 // TEAM_ROLE_COMPOSITION과 동일 값. 선택창 자체에서 이 정원을 넘는 역할은
 // 고를 수 없게 막아서, 애초에 표준 조합이 아닌 팀 구성이 만들어지지 않게 한다.
@@ -49,6 +83,26 @@ export function HomeClient({ locale }: { locale: Locale }) {
   const [submitPhase, setSubmitPhase] = useState<SubmitPhase>("idle");
   const [validationMessage, setValidationMessage] = useState<string | null>(null);
   const [result, setResult] = useState<RecommendationResponse | null>(null);
+
+  // 언어 전환으로 이 컴포넌트가 새로 마운트돼도 팀 선택이 유지되도록, 마운트 시
+  // sessionStorage에서 복원한다. ThemeToggle과 같은 이유로 초기 렌더(서버/클라
+  // 공통)는 항상 빈 값으로 시작하고, 실제 복원은 마운트 이후 useEffect에서
+  // 한다 — useState 초기값에서 바로 sessionStorage를 읽으면 서버 렌더링 결과와
+  // 달라져 하이드레이션 미스매치가 난다.
+  useEffect(() => {
+    const stored = loadStoredSelection();
+    if (!stored) return;
+    // 마운트 시 1회 외부 저장소(sessionStorage)에서 동기화하는 초기화 로직 — cascading render 아님
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setEnemyHeroes(stored.enemyHeroes);
+    setOurHeroes(stored.ourHeroes);
+    setMapId(stored.mapId);
+    setActiveTeam(stored.activeTeam);
+  }, []);
+
+  useEffect(() => {
+    saveStoredSelection({ enemyHeroes, ourHeroes, mapId, activeTeam });
+  }, [enemyHeroes, ourHeroes, mapId, activeTeam]);
 
   // 우리 팀 4명 + 상대 팀 5명 + 맵이 다 채워지면 버튼 없이 바로 추천을 보여준다.
   // 이 입력 조합으로 이미 요청을 보낸 적 있으면(예: "입력으로 돌아가기"만 누르고
