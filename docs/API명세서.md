@@ -18,6 +18,7 @@
 | GET | `/api/maps` | 맵 목록 조회 | `?lang=ko\|en\|ja\|zh-cn\|zh-tw` (선택) | `Map[]` | 200, 502 |
 | GET | `/api/meta` | 시드 데이터 시즌/버전 정보 | - | `Meta` | 200, 502 |
 | POST | `/api/recommendations` | 빈 포지션 추천 영웅 순위 조회 | `RecommendationRequest` | `RecommendationResponse` | 200, 400, 422, 502 |
+| POST | `/api/team-evaluation` | 드래프트 시뮬레이션 — 이미 확정된 양 팀 5v5 조합 평가 | `TeamEvaluationRequest` | `TeamEvaluationResponse` | 200, 400, 422, 502 |
 
 ### 다국어(`lang`) 처리
 
@@ -136,6 +137,42 @@ DB 조회 없이 `config.SEED_SEASON`/`config.SEED_DATA_VERSION` 상수를 그�
                           // 맵 점수만으로 제한됨을 알리는 안내 문구
 }
 ```
+
+### TeamEvaluationRequest / TeamEvaluationResponse (`POST /api/team-evaluation`)
+
+드래프트 시뮬레이션(사전 팀 평가) 모드 — 실시간 밴프준 보조와 달리 양 팀 5명이
+이미 다 확정된 상태를 입력받는다. **프론트엔드는 아직 미구현**(화면 목업 없음),
+백엔드만 구현·테스트 완료된 상태(`backend/tests/test_team_evaluation.py`).
+
+```
+// 요청
+{
+  enemy_heroes: string[]   // 정확히 5명, 표준 조합(탱커1·딜러2·힐러2)이어야 함
+  our_heroes: string[]     // 정확히 5명, 표준 조합이어야 함
+  map_id: string
+  lang?: "ko" | "en" | "ja" | "zh-cn" | "zh-tw"
+}
+// 응답
+{
+  team_percentage: int     // 우리 팀 5명의 percentage를 역할별 가중 평균으로 합친 값
+                           // (config.ROLE_INFLUENCE_WEIGHT = {tank:1.5, damage:1.2, support:1.0})
+  evaluations: [
+    // RecommendationResponse.recommendations의 HeroRecommendation과 필드 구성이
+    // 완전히 같다(hero_id/hero_name/role/archetype/icon_url/archetype_category/
+    // total_score/percentage/score_breakdown/reasons/is_must_pick/notes/data_gaps).
+    // 다만 "추천 순위"가 아니라 "이미 고른 5명 각각의 평가"라 점수순이 아니라
+    // role 순서(탱커→딜러→딜러→힐러→힐러)로 정렬된다.
+  ]
+}
+```
+
+- **400**: 존재하지 않는 영웅/맵 id, 어느 한쪽이라도 정확히 5명이 아니거나
+  표준 조합(탱커1·딜러2·힐러2)이 아닐 때(`backend/app/composition.py`의
+  `assert_full_team_composition()`).
+- 점수 계산은 `/api/recommendations`와 완전히 같은 `scoring.score_candidates()`를
+  재사용한다 — 차이는 후보군이 "빈 포지션에 맞는 전체 영웅 풀"이 아니라
+  "이미 확정된 우리 팀 5명, 그 5명뿐"이라는 것. 우리 팀원 한 명씩 나머지
+  4명을 `ally_ids`로 넘겨 5번 호출한다(자기 자신과의 시너지는 성립하지 않으므로).
 
 ## 점수 계산 로직 요약
 
