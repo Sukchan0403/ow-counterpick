@@ -1078,5 +1078,1031 @@
     "reason_ja": "狭い側面の路地が多く、機動スキルのないポジションを回り込まれやすい",
     "reason_zh_cn": "狭窄侧翼小巷较多，缺乏机动技能的位置容易被绕后",
     "reason_zh_tw": "狹窄側翼小巷較多，缺乏機動技能的位置容易被繞後"
+  },
+  {
+    "map_id": "antarctic_peninsula",
+    "hero_id": "doomfist",
+    "rating": "보통",
+    "reason": "실내외가 섞인 좁은 통로가 있어 콤보 진입 기회가 상황에 따라 갈림"
+  },
+  {
+    "map_id": "nepal",
+    "hero_id": "doomfist",
+    "rating": "보통",
+    "reason": "사원 내부 좁은 구간과 개활지가 섞여 콤보 성공률이 갈림"
+  },
+  {
+    "map_id": "busan",
+    "hero_id": "doomfist",
+    "rating": "강함",
+    "reason": "골목과 옥상이 뒤섞여 있어 차지 펀치 콤보 진입 각을 잡기 좋음"
+  },
+  {
+    "map_id": "oasis",
+    "hero_id": "doomfist",
+    "rating": "강함",
+    "reason": "건물 사이 좁은 통로가 많아 로켓 펀치 콤보 진입 각을 잡기 좋음"
+  },
+  {
+    "map_id": "lijiang_tower",
+    "hero_id": "doomfist",
+    "rating": "강함",
+    "reason": "타워 내부 좁은 통로 구조라 근접 콤보 진입 각을 잡기 매우 좋음"
+  },
+  {
+    "map_id": "ilios",
+    "hero_id": "doomfist",
+    "rating": "강함",
+    "reason": "폐허의 좁은 구조물 사이를 오가며 콤보 진입 각을 잡기 좋음"
+  },
+  {
+    "map_id": "samoa",
+    "hero_id": "doomfist",
+    "rating": "보통",
+    "reason": "해안 개활지와 좁은 구간이 섞여 콤보 성공률이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "kings_row",
+    "hero_id": "doomfist",
+    "rating": "약함",
+    "reason": "직선 거리 구간이 길어 접근하는 동안 견제에 계속 노출됨"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "doomfist",
+    "rating": "보통",
+    "reason": "세트장 내부 좁은 통로가 섞여 있어 콤보 진입 기회가 상황에 따라 갈림"
+  },
+  {
+    "map_id": "midtown",
+    "hero_id": "doomfist",
+    "rating": "약함",
+    "reason": "개방된 도심 대로 위주라 근접 콤보를 꽂을 진입로가 부족함"
+  },
+  {
+    "map_id": "paraiso",
+    "hero_id": "doomfist",
+    "rating": "보통",
+    "reason": "좁은 수로 골목과 개활지가 섞여 콤보 성공률이 갈림"
+  },
+  {
+    "map_id": "eichenwalde",
+    "hero_id": "doomfist",
+    "rating": "약함",
+    "reason": "성벽 사이 개활지가 넓어 접근 전에 장거리 견제에 계속 노출됨"
+  },
+  {
+    "map_id": "blizzard_world",
+    "hero_id": "doomfist",
+    "rating": "보통",
+    "reason": "테마파크 구간별로 좁은 통로가 섞여 있어 콤보 진입 기회가 상황에 따라 갈림"
+  },
+  {
+    "map_id": "neon_junction",
+    "hero_id": "doomfist",
+    "rating": "약함",
+    "reason": "네온 대로가 트여 있어 콤보를 꽂을 진입로가 부족함"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "doomfist",
+    "rating": "보통",
+    "reason": "좁은 골목과 계단 구간이 섞여 콤보 성공률이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "havana",
+    "hero_id": "doomfist",
+    "rating": "약함",
+    "reason": "개방된 광장 구간이 넓어 접근 전에 장거리 견제에 계속 노출됨"
+  },
+  {
+    "map_id": "watchpoint_gibraltar",
+    "hero_id": "doomfist",
+    "rating": "보통",
+    "reason": "활주로 개활지와 실내 구간이 섞여 콤보 성공률이 갈림"
+  },
+  {
+    "map_id": "route_66",
+    "hero_id": "doomfist",
+    "rating": "보통",
+    "reason": "주유소 실내와 사막 개활지가 섞여 콤보 성공률이 갈림"
+  },
+  {
+    "map_id": "circuit_royal",
+    "hero_id": "doomfist",
+    "rating": "약함",
+    "reason": "긴 직선 트랙 구간이라 접근하기 전에 장거리 견제에 계속 노출됨"
+  },
+  {
+    "map_id": "rialto",
+    "hero_id": "doomfist",
+    "rating": "보통",
+    "reason": "운하 골목이 좁아 근접 콤보 진입 각을 잡기 좋은 구간이 섞여 있음"
+  },
+  {
+    "map_id": "shambali_monastery",
+    "hero_id": "doomfist",
+    "rating": "약함",
+    "reason": "설원 개활지가 넓어 접근 전에 장거리 견제에 계속 노출됨"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "doomfist",
+    "rating": "보통",
+    "reason": "경기장 내부 통로와 개활지가 섞여 콤보 성공률이 갈림"
+  },
+  {
+    "map_id": "new_junk_city",
+    "hero_id": "doomfist",
+    "rating": "강함",
+    "reason": "고철 폐허의 좁은 통로가 많아 콤보 진입 각을 잡기 좋음"
+  },
+  {
+    "map_id": "suravasa",
+    "hero_id": "doomfist",
+    "rating": "강함",
+    "reason": "구조물 사이 좁은 통로가 많아 근접 콤보 진입 각을 잡기 매우 좋음"
+  },
+  {
+    "map_id": "aatlis",
+    "hero_id": "doomfist",
+    "rating": "강함",
+    "reason": "메디나 골목이 좁고 복잡해 콤보 진입 각을 잡기 매우 좋음"
+  },
+  {
+    "map_id": "colosseo",
+    "hero_id": "doomfist",
+    "rating": "강함",
+    "reason": "원형 경기장 통로가 좁아 콤보 진입 각을 잡기 좋음"
+  },
+  {
+    "map_id": "esperanca",
+    "hero_id": "doomfist",
+    "rating": "강함",
+    "reason": "수직 구조물이 많아 다양한 각도에서 콤보 진입로를 만들기 좋음"
+  },
+  {
+    "map_id": "new_queen_street",
+    "hero_id": "doomfist",
+    "rating": "강함",
+    "reason": "도심 골목이 좁고 밀집해 콤보 진입 각을 잡기 좋음"
+  },
+  {
+    "map_id": "runasapi",
+    "hero_id": "doomfist",
+    "rating": "강함",
+    "reason": "고대 유적 통로가 좁아 콤보 진입 각을 잡기 좋음"
+  },
+  {
+    "map_id": "antarctic_peninsula",
+    "hero_id": "wrecking_ball",
+    "rating": "보통",
+    "reason": "경사로와 좁은 실내가 섞여 구르기 경로 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "nepal",
+    "hero_id": "wrecking_ball",
+    "rating": "보통",
+    "reason": "사원 경사로가 있지만 개활지도 넓어 구르기 경로 활용이 갈림"
+  },
+  {
+    "map_id": "busan",
+    "hero_id": "wrecking_ball",
+    "rating": "강함",
+    "reason": "골목과 경사로가 많아 구르기 기동 경로를 만들기 좋음"
+  },
+  {
+    "map_id": "oasis",
+    "hero_id": "wrecking_ball",
+    "rating": "강함",
+    "reason": "원형 구조물 사이 경사로가 많아 구르기 기동 경로를 만들기 좋음"
+  },
+  {
+    "map_id": "lijiang_tower",
+    "hero_id": "wrecking_ball",
+    "rating": "강함",
+    "reason": "타워 내부 계단과 경사가 이어져 구르기 기동 경로를 만들기 매우 좋음"
+  },
+  {
+    "map_id": "ilios",
+    "hero_id": "wrecking_ball",
+    "rating": "강함",
+    "reason": "폐허 지형의 경사와 고지대가 이어져 구르기 기동 경로를 만들기 매우 좋음"
+  },
+  {
+    "map_id": "samoa",
+    "hero_id": "wrecking_ball",
+    "rating": "보통",
+    "reason": "해안 경사와 개활지가 섞여 구르기 경로 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "kings_row",
+    "hero_id": "wrecking_ball",
+    "rating": "보통",
+    "reason": "직선 거리와 골목이 섞여 구르기 경로 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "numbani",
+    "hero_id": "wrecking_ball",
+    "rating": "보통",
+    "reason": "넓은 광장과 좁은 골목이 섞여 구르기 경로 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "midtown",
+    "hero_id": "wrecking_ball",
+    "rating": "약함",
+    "reason": "개방된 도심 대로 위주라 구르기 기동을 살릴 경사로가 부족함"
+  },
+  {
+    "map_id": "paraiso",
+    "hero_id": "wrecking_ball",
+    "rating": "약함",
+    "reason": "수로 위주의 평탄한 구조라 구르기 기동 경로가 제한적임"
+  },
+  {
+    "map_id": "eichenwalde",
+    "hero_id": "wrecking_ball",
+    "rating": "약함",
+    "reason": "성벽 사이 개활지가 넓어 구르기 기동 경로를 만들기 어려움"
+  },
+  {
+    "map_id": "blizzard_world",
+    "hero_id": "wrecking_ball",
+    "rating": "강함",
+    "reason": "테마파크 구간마다 경사와 루프 구조가 많아 구르기 기동 경로를 만들기 좋음"
+  },
+  {
+    "map_id": "neon_junction",
+    "hero_id": "wrecking_ball",
+    "rating": "약함",
+    "reason": "네온 대로가 트여 있어 구르기 기동을 살릴 경사로가 부족함"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "wrecking_ball",
+    "rating": "강함",
+    "reason": "좁은 골목과 계단 경사가 많아 구르기 기동 경로를 만들기 좋음"
+  },
+  {
+    "map_id": "havana",
+    "hero_id": "wrecking_ball",
+    "rating": "약함",
+    "reason": "개방된 광장 구간이 넓어 구르기 기동 경로가 제한적임"
+  },
+  {
+    "map_id": "watchpoint_gibraltar",
+    "hero_id": "wrecking_ball",
+    "rating": "강함",
+    "reason": "활주로 경사와 시설 구조가 이어져 구르기 기동 경로를 만들기 좋음"
+  },
+  {
+    "map_id": "route_66",
+    "hero_id": "wrecking_ball",
+    "rating": "보통",
+    "reason": "사막 개활지와 실내가 섞여 구르기 경로 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "circuit_royal",
+    "hero_id": "wrecking_ball",
+    "rating": "약함",
+    "reason": "긴 직선 트랙 구간이라 구르기 기동을 살릴 경사로가 부족함"
+  },
+  {
+    "map_id": "rialto",
+    "hero_id": "wrecking_ball",
+    "rating": "보통",
+    "reason": "운하 골목의 계단과 다리가 이어져 구르기 경로 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "shambali_monastery",
+    "hero_id": "wrecking_ball",
+    "rating": "약함",
+    "reason": "설원 개활지가 넓어 구르기 기동 경로가 제한적임"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "wrecking_ball",
+    "rating": "강함",
+    "reason": "경기장 내부 경사 구조가 많아 구르기 기동 경로를 만들기 좋음"
+  },
+  {
+    "map_id": "new_junk_city",
+    "hero_id": "wrecking_ball",
+    "rating": "보통",
+    "reason": "고철 폐허의 통로와 경사가 섞여 구르기 경로 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "suravasa",
+    "hero_id": "wrecking_ball",
+    "rating": "강함",
+    "reason": "구조물 사이 경사로가 많아 구르기 기동 경로를 만들기 좋음"
+  },
+  {
+    "map_id": "aatlis",
+    "hero_id": "wrecking_ball",
+    "rating": "보통",
+    "reason": "메디나 골목이 좁고 평탄해 구르기 경로 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "colosseo",
+    "hero_id": "wrecking_ball",
+    "rating": "강함",
+    "reason": "원형 경기장의 둥근 통로 구조가 구르기 기동 경로에 잘 맞음"
+  },
+  {
+    "map_id": "esperanca",
+    "hero_id": "wrecking_ball",
+    "rating": "강함",
+    "reason": "수직 구조물과 경사로가 많아 구르기 기동 경로를 만들기 좋음"
+  },
+  {
+    "map_id": "new_queen_street",
+    "hero_id": "wrecking_ball",
+    "rating": "강함",
+    "reason": "도심 골목의 둥근 교차로 구조가 구르기 기동 경로에 매우 잘 맞음"
+  },
+  {
+    "map_id": "runasapi",
+    "hero_id": "wrecking_ball",
+    "rating": "강함",
+    "reason": "고대 유적의 경사 통로가 많아 구르기 기동 경로를 만들기 좋음"
+  },
+  {
+    "map_id": "antarctic_peninsula",
+    "hero_id": "roadhog",
+    "rating": "보통",
+    "reason": "실내 구간의 모서리가 고리 사슬 각을 잡기 적당함"
+  },
+  {
+    "map_id": "nepal",
+    "hero_id": "roadhog",
+    "rating": "보통",
+    "reason": "사원 내부 모서리가 있어 고리 사슬 각을 잡을 수 있음"
+  },
+  {
+    "map_id": "busan",
+    "hero_id": "roadhog",
+    "rating": "보통",
+    "reason": "골목 모서리가 있어 고리 사슬 각을 잡을 수 있음"
+  },
+  {
+    "map_id": "oasis",
+    "hero_id": "roadhog",
+    "rating": "보통",
+    "reason": "건물 모서리 구간에서 고리 사슬 각을 잡을 수 있음"
+  },
+  {
+    "map_id": "lijiang_tower",
+    "hero_id": "roadhog",
+    "rating": "강함",
+    "reason": "타워 내부 좁은 모서리가 많아 고리 사슬 각을 잡기 매우 좋음"
+  },
+  {
+    "map_id": "ilios",
+    "hero_id": "roadhog",
+    "rating": "강함",
+    "reason": "폐허의 좁은 통로 모서리가 많아 고리 사슬 각을 잡기 매우 좋음"
+  },
+  {
+    "map_id": "samoa",
+    "hero_id": "roadhog",
+    "rating": "보통",
+    "reason": "해안 마을 골목에서 고리 사슬 각을 잡을 수 있음"
+  },
+  {
+    "map_id": "kings_row",
+    "hero_id": "roadhog",
+    "rating": "약함",
+    "reason": "이동 경로가 길어 페이로드를 따라가는 기동력이 부족함"
+  },
+  {
+    "map_id": "numbani",
+    "hero_id": "roadhog",
+    "rating": "약함",
+    "reason": "넓은 광장 위주라 고리 사슬 각을 잡을 모서리가 부족함"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "roadhog",
+    "rating": "약함",
+    "reason": "세트장 구간이 길어 페이로드를 따라가는 기동력이 부족함"
+  },
+  {
+    "map_id": "midtown",
+    "hero_id": "roadhog",
+    "rating": "약함",
+    "reason": "개방된 대로 위주라 고리 사슬 각을 잡을 모서리가 부족함"
+  },
+  {
+    "map_id": "paraiso",
+    "hero_id": "roadhog",
+    "rating": "약함",
+    "reason": "수로가 트여 있어 고리 사슬 각을 잡을 모서리가 부족함"
+  },
+  {
+    "map_id": "eichenwalde",
+    "hero_id": "roadhog",
+    "rating": "약함",
+    "reason": "성벽까지 이동 경로가 길어 페이로드를 따라가는 기동력이 부족함"
+  },
+  {
+    "map_id": "blizzard_world",
+    "hero_id": "roadhog",
+    "rating": "약함",
+    "reason": "구간 전환이 넓게 이어져 페이로드를 따라가는 기동력이 부족함"
+  },
+  {
+    "map_id": "neon_junction",
+    "hero_id": "roadhog",
+    "rating": "약함",
+    "reason": "네온 대로가 트여 있어 고리 사슬 각을 잡을 모서리가 부족함"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "roadhog",
+    "rating": "약함",
+    "reason": "언덕길 이동 경로가 길어 페이로드를 따라가는 기동력이 부족함"
+  },
+  {
+    "map_id": "havana",
+    "hero_id": "roadhog",
+    "rating": "약함",
+    "reason": "광장 구간이 넓어 고리 사슬 각을 잡을 모서리가 부족함"
+  },
+  {
+    "map_id": "watchpoint_gibraltar",
+    "hero_id": "roadhog",
+    "rating": "약함",
+    "reason": "활주로 개활지가 넓어 페이로드를 따라가는 기동력이 부족함"
+  },
+  {
+    "map_id": "circuit_royal",
+    "hero_id": "roadhog",
+    "rating": "약함",
+    "reason": "긴 트랙 구간이라 페이로드를 따라가는 기동력이 부족함"
+  },
+  {
+    "map_id": "rialto",
+    "hero_id": "roadhog",
+    "rating": "약함",
+    "reason": "운하 다리 구간이 길어 페이로드를 따라가는 기동력이 부족함"
+  },
+  {
+    "map_id": "shambali_monastery",
+    "hero_id": "roadhog",
+    "rating": "보통",
+    "reason": "계단 구간의 모서리에서 고리 사슬 각을 잡을 수 있음"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "roadhog",
+    "rating": "약함",
+    "reason": "경기장까지 이동 경로가 길어 페이로드를 따라가는 기동력이 부족함"
+  },
+  {
+    "map_id": "new_junk_city",
+    "hero_id": "roadhog",
+    "rating": "보통",
+    "reason": "고철 폐허의 통로 모서리에서 고리 사슬 각을 잡을 수 있음"
+  },
+  {
+    "map_id": "suravasa",
+    "hero_id": "roadhog",
+    "rating": "보통",
+    "reason": "구조물 모서리에서 고리 사슬 각을 잡을 수 있음"
+  },
+  {
+    "map_id": "aatlis",
+    "hero_id": "roadhog",
+    "rating": "보통",
+    "reason": "메디나 골목 모서리에서 고리 사슬 각을 잡을 수 있음"
+  },
+  {
+    "map_id": "colosseo",
+    "hero_id": "roadhog",
+    "rating": "보통",
+    "reason": "경기장 통로 모서리에서 고리 사슬 각을 잡을 수 있음"
+  },
+  {
+    "map_id": "esperanca",
+    "hero_id": "roadhog",
+    "rating": "보통",
+    "reason": "수직 구조물 모서리에서 고리 사슬 각을 잡을 수 있음"
+  },
+  {
+    "map_id": "new_queen_street",
+    "hero_id": "roadhog",
+    "rating": "강함",
+    "reason": "교차로 모서리가 많아 고리 사슬 각을 잡기 매우 좋음"
+  },
+  {
+    "map_id": "runasapi",
+    "hero_id": "roadhog",
+    "rating": "보통",
+    "reason": "유적 통로 모서리에서 고리 사슬 각을 잡을 수 있음"
+  },
+  {
+    "map_id": "antarctic_peninsula",
+    "hero_id": "mauga",
+    "rating": "보통",
+    "reason": "포인트 주변 통로가 좁아 화망 사격 개시각을 잡기 적당함"
+  },
+  {
+    "map_id": "nepal",
+    "hero_id": "mauga",
+    "rating": "강함",
+    "reason": "사원 초입 통로가 좁아 근접 개시 각을 잡기 좋음"
+  },
+  {
+    "map_id": "busan",
+    "hero_id": "mauga",
+    "rating": "보통",
+    "reason": "골목 초입에서 근접 개시 각을 잡기 적당함"
+  },
+  {
+    "map_id": "oasis",
+    "hero_id": "mauga",
+    "rating": "강함",
+    "reason": "건물 초입 통로가 좁아 근접 개시 각을 잡기 좋음"
+  },
+  {
+    "map_id": "lijiang_tower",
+    "hero_id": "mauga",
+    "rating": "보통",
+    "reason": "타워 초입 통로가 좁지만 계단 구간이 갈려 개시각이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "ilios",
+    "hero_id": "mauga",
+    "rating": "보통",
+    "reason": "폐허 초입 통로가 좁지만 개활지도 있어 개시각이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "samoa",
+    "hero_id": "mauga",
+    "rating": "강함",
+    "reason": "해안 마을 초입 통로가 좁아 근접 개시 각을 잡기 좋음"
+  },
+  {
+    "map_id": "kings_row",
+    "hero_id": "mauga",
+    "rating": "강함",
+    "reason": "초반 골목 구간이 좁아 근접 개시 각을 잡기 좋음"
+  },
+  {
+    "map_id": "numbani",
+    "hero_id": "mauga",
+    "rating": "약함",
+    "reason": "초반 광장이 넓어 접근 전에 견제에 계속 노출됨"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "mauga",
+    "rating": "약함",
+    "reason": "초반 세트장 진입로가 넓어 접근 전에 견제에 계속 노출됨"
+  },
+  {
+    "map_id": "midtown",
+    "hero_id": "mauga",
+    "rating": "보통",
+    "reason": "대로와 골목이 섞여 있어 개시각이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "paraiso",
+    "hero_id": "mauga",
+    "rating": "약함",
+    "reason": "수로가 트여 있어 접근 전에 견제에 계속 노출됨"
+  },
+  {
+    "map_id": "eichenwalde",
+    "hero_id": "mauga",
+    "rating": "보통",
+    "reason": "성문 주변 통로가 좁아 개시각을 잡기 적당함"
+  },
+  {
+    "map_id": "blizzard_world",
+    "hero_id": "mauga",
+    "rating": "약함",
+    "reason": "초반 진입로가 넓어 접근 전에 견제에 계속 노출됨"
+  },
+  {
+    "map_id": "neon_junction",
+    "hero_id": "mauga",
+    "rating": "보통",
+    "reason": "네온 골목이 섞여 있어 개시각이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "mauga",
+    "rating": "약함",
+    "reason": "초반 언덕길이 길게 트여 있어 접근 전에 견제에 계속 노출됨"
+  },
+  {
+    "map_id": "havana",
+    "hero_id": "mauga",
+    "rating": "약함",
+    "reason": "초반 광장이 넓어 접근 전에 견제에 계속 노출됨"
+  },
+  {
+    "map_id": "watchpoint_gibraltar",
+    "hero_id": "mauga",
+    "rating": "약함",
+    "reason": "초반 활주로 개활지가 넓어 접근 전에 견제에 계속 노출됨"
+  },
+  {
+    "map_id": "route_66",
+    "hero_id": "mauga",
+    "rating": "약함",
+    "reason": "사막 개활지가 넓어 접근 전에 견제에 계속 노출됨"
+  },
+  {
+    "map_id": "circuit_royal",
+    "hero_id": "mauga",
+    "rating": "보통",
+    "reason": "트랙 초입 구간이 좁아 개시각을 잡기 적당함"
+  },
+  {
+    "map_id": "rialto",
+    "hero_id": "mauga",
+    "rating": "약함",
+    "reason": "운하 초입 다리가 트여 있어 접근 전에 견제에 계속 노출됨"
+  },
+  {
+    "map_id": "shambali_monastery",
+    "hero_id": "mauga",
+    "rating": "보통",
+    "reason": "계단 초입 통로가 좁아 개시각을 잡기 적당함"
+  },
+  {
+    "map_id": "new_junk_city",
+    "hero_id": "mauga",
+    "rating": "강함",
+    "reason": "초반 좁은 통로가 많아 근접 개시 각을 잡기 매우 좋음"
+  },
+  {
+    "map_id": "suravasa",
+    "hero_id": "mauga",
+    "rating": "강함",
+    "reason": "초반 구조물 통로가 좁아 근접 개시 각을 잡기 매우 좋음"
+  },
+  {
+    "map_id": "aatlis",
+    "hero_id": "mauga",
+    "rating": "강함",
+    "reason": "메디나 초입 골목이 좁아 근접 개시 각을 잡기 매우 좋음"
+  },
+  {
+    "map_id": "colosseo",
+    "hero_id": "mauga",
+    "rating": "강함",
+    "reason": "경기장 초입 통로가 좁아 근접 개시 각을 잡기 좋음"
+  },
+  {
+    "map_id": "esperanca",
+    "hero_id": "mauga",
+    "rating": "강함",
+    "reason": "초반 통로가 좁고 수직 구조가 많아 근접 개시 각을 잡기 좋음"
+  },
+  {
+    "map_id": "new_queen_street",
+    "hero_id": "mauga",
+    "rating": "강함",
+    "reason": "초반 교차로 골목이 좁아 근접 개시 각을 잡기 좋음"
+  },
+  {
+    "map_id": "runasapi",
+    "hero_id": "mauga",
+    "rating": "강함",
+    "reason": "유적 초입 통로가 좁아 근접 개시 각을 잡기 좋음"
+  },
+  {
+    "map_id": "antarctic_peninsula",
+    "hero_id": "winston",
+    "rating": "약함",
+    "reason": "구조가 단순해 도약으로 우회할 측면 루트가 부족함"
+  },
+  {
+    "map_id": "nepal",
+    "hero_id": "winston",
+    "rating": "보통",
+    "reason": "고지대와 개활지가 섞여 도약 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "busan",
+    "hero_id": "winston",
+    "rating": "강함",
+    "reason": "옥상과 골목 사이 고지대가 많아 도약으로 측면을 파고들기 좋음"
+  },
+  {
+    "map_id": "oasis",
+    "hero_id": "winston",
+    "rating": "강함",
+    "reason": "건물 고지대가 많아 도약으로 측면을 파고들기 좋음"
+  },
+  {
+    "map_id": "lijiang_tower",
+    "hero_id": "winston",
+    "rating": "강함",
+    "reason": "타워 주변 고지대가 있어 도약으로 측면을 파고들기 좋음"
+  },
+  {
+    "map_id": "samoa",
+    "hero_id": "winston",
+    "rating": "약함",
+    "reason": "구조가 단순해 도약으로 우회할 측면 루트가 부족함"
+  },
+  {
+    "map_id": "kings_row",
+    "hero_id": "winston",
+    "rating": "약함",
+    "reason": "직선 구간이 길어 도약으로 우회할 측면 루트가 부족함"
+  },
+  {
+    "map_id": "numbani",
+    "hero_id": "winston",
+    "rating": "강함",
+    "reason": "광장 주변 고지대와 측면 통로가 많아 도약 다이브에 매우 좋음"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "winston",
+    "rating": "강함",
+    "reason": "세트장 사이 측면 통로와 지붕이 많아 도약 다이브에 매우 좋음"
+  },
+  {
+    "map_id": "midtown",
+    "hero_id": "winston",
+    "rating": "약함",
+    "reason": "대로 위주 구조라 도약으로 우회할 측면 루트가 부족함"
+  },
+  {
+    "map_id": "paraiso",
+    "hero_id": "winston",
+    "rating": "강함",
+    "reason": "수로 주변 측면 통로가 많아 도약 다이브에 좋음"
+  },
+  {
+    "map_id": "blizzard_world",
+    "hero_id": "winston",
+    "rating": "강함",
+    "reason": "테마파크 지붕과 측면 통로가 많아 도약 다이브에 매우 좋음"
+  },
+  {
+    "map_id": "neon_junction",
+    "hero_id": "winston",
+    "rating": "약함",
+    "reason": "대로가 트여 있어 도약으로 우회할 측면 루트가 부족함"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "winston",
+    "rating": "강함",
+    "reason": "언덕길 옆 지붕과 측면 통로가 많아 도약 다이브에 매우 좋음"
+  },
+  {
+    "map_id": "watchpoint_gibraltar",
+    "hero_id": "winston",
+    "rating": "강함",
+    "reason": "시설 지붕과 측면 통로가 많아 도약 다이브에 매우 좋음"
+  },
+  {
+    "map_id": "route_66",
+    "hero_id": "winston",
+    "rating": "강함",
+    "reason": "주유소 지붕과 측면 통로가 많아 도약 다이브에 매우 좋음"
+  },
+  {
+    "map_id": "circuit_royal",
+    "hero_id": "winston",
+    "rating": "약함",
+    "reason": "트랙이 길게 트여 있어 도약으로 우회할 측면 루트가 부족함"
+  },
+  {
+    "map_id": "rialto",
+    "hero_id": "winston",
+    "rating": "강함",
+    "reason": "운하 옆 지붕과 다리가 많아 도약 다이브에 좋음"
+  },
+  {
+    "map_id": "shambali_monastery",
+    "hero_id": "winston",
+    "rating": "약함",
+    "reason": "설원 개활지 위주라 도약으로 우회할 측면 루트가 부족함"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "winston",
+    "rating": "강함",
+    "reason": "경기장 주변 고지대와 측면 통로가 많아 도약 다이브에 좋음"
+  },
+  {
+    "map_id": "new_junk_city",
+    "hero_id": "winston",
+    "rating": "약함",
+    "reason": "통로가 좁고 밀집해 도약으로 우회할 측면 루트가 부족함"
+  },
+  {
+    "map_id": "suravasa",
+    "hero_id": "winston",
+    "rating": "강함",
+    "reason": "구조물 고지대와 측면 통로가 많아 도약 다이브에 좋음"
+  },
+  {
+    "map_id": "aatlis",
+    "hero_id": "winston",
+    "rating": "보통",
+    "reason": "메디나 골목 구조가 복잡해 도약 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "colosseo",
+    "hero_id": "winston",
+    "rating": "보통",
+    "reason": "경기장 통로가 원형으로 이어져 도약 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "esperanca",
+    "hero_id": "winston",
+    "rating": "강함",
+    "reason": "수직 구조물과 케이블카 루트가 많아 도약 다이브에 좋음"
+  },
+  {
+    "map_id": "new_queen_street",
+    "hero_id": "winston",
+    "rating": "강함",
+    "reason": "도심 지붕과 측면 골목이 많아 도약 다이브에 좋음"
+  },
+  {
+    "map_id": "runasapi",
+    "hero_id": "winston",
+    "rating": "보통",
+    "reason": "유적 지형이 복잡해 도약 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "antarctic_peninsula",
+    "hero_id": "hazard",
+    "rating": "강함",
+    "reason": "포인트 진입로가 좁아 가시 벽으로 초입을 봉쇄하기 좋음"
+  },
+  {
+    "map_id": "nepal",
+    "hero_id": "hazard",
+    "rating": "강함",
+    "reason": "사원 진입로가 좁아 가시 벽으로 초입을 봉쇄하기 좋음"
+  },
+  {
+    "map_id": "busan",
+    "hero_id": "hazard",
+    "rating": "강함",
+    "reason": "골목 진입로가 좁아 가시 벽으로 초입을 봉쇄하기 좋음"
+  },
+  {
+    "map_id": "oasis",
+    "hero_id": "hazard",
+    "rating": "강함",
+    "reason": "건물 진입로가 좁아 가시 벽으로 초입을 봉쇄하기 좋음"
+  },
+  {
+    "map_id": "lijiang_tower",
+    "hero_id": "hazard",
+    "rating": "강함",
+    "reason": "타워 진입로가 좁아 가시 벽으로 초입을 봉쇄하기 좋음"
+  },
+  {
+    "map_id": "ilios",
+    "hero_id": "hazard",
+    "rating": "강함",
+    "reason": "폐허 진입로가 좁아 가시 벽으로 초입을 봉쇄하기 좋음"
+  },
+  {
+    "map_id": "samoa",
+    "hero_id": "hazard",
+    "rating": "보통",
+    "reason": "진입로가 넓고 좁은 구간이 섞여 가시 벽 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "kings_row",
+    "hero_id": "hazard",
+    "rating": "보통",
+    "reason": "골목과 대로가 섞여 가시 벽 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "numbani",
+    "hero_id": "hazard",
+    "rating": "보통",
+    "reason": "광장과 좁은 통로가 섞여 가시 벽 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "midtown",
+    "hero_id": "hazard",
+    "rating": "보통",
+    "reason": "대로와 골목이 섞여 가시 벽 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "paraiso",
+    "hero_id": "hazard",
+    "rating": "강함",
+    "reason": "수로 주변 통로가 좁아 가시 벽으로 진입로를 봉쇄하기 좋음"
+  },
+  {
+    "map_id": "eichenwalde",
+    "hero_id": "hazard",
+    "rating": "강함",
+    "reason": "성문 진입로가 좁아 가시 벽으로 초입을 봉쇄하기 좋음"
+  },
+  {
+    "map_id": "blizzard_world",
+    "hero_id": "hazard",
+    "rating": "보통",
+    "reason": "구간 전환 통로가 넓어 가시 벽 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "neon_junction",
+    "hero_id": "hazard",
+    "rating": "보통",
+    "reason": "네온 골목과 대로가 섞여 가시 벽 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "hazard",
+    "rating": "강함",
+    "reason": "언덕길 초입이 좁아 가시 벽으로 진입로를 봉쇄하기 좋음"
+  },
+  {
+    "map_id": "havana",
+    "hero_id": "hazard",
+    "rating": "약함",
+    "reason": "광장이 넓게 트여 있어 가시 벽으로 봉쇄할 진입로가 부족함"
+  },
+  {
+    "map_id": "watchpoint_gibraltar",
+    "hero_id": "hazard",
+    "rating": "보통",
+    "reason": "활주로 개활지와 좁은 시설 구간이 섞여 가시 벽 활용이 갈림"
+  },
+  {
+    "map_id": "circuit_royal",
+    "hero_id": "hazard",
+    "rating": "약함",
+    "reason": "트랙이 길게 트여 있어 가시 벽으로 봉쇄할 진입로가 부족함"
+  },
+  {
+    "map_id": "rialto",
+    "hero_id": "hazard",
+    "rating": "보통",
+    "reason": "운하 다리 구간이 섞여 가시 벽 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "shambali_monastery",
+    "hero_id": "hazard",
+    "rating": "보통",
+    "reason": "계단 진입로와 개활지가 섞여 가시 벽 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "hazard",
+    "rating": "보통",
+    "reason": "경기장 진입로와 개활지가 섞여 가시 벽 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "new_junk_city",
+    "hero_id": "hazard",
+    "rating": "강함",
+    "reason": "고철 폐허의 좁은 진입로가 많아 가시 벽으로 봉쇄하기 매우 좋음"
+  },
+  {
+    "map_id": "suravasa",
+    "hero_id": "hazard",
+    "rating": "강함",
+    "reason": "구조물 진입로가 좁아 가시 벽으로 봉쇄하기 매우 좋음"
+  },
+  {
+    "map_id": "aatlis",
+    "hero_id": "hazard",
+    "rating": "강함",
+    "reason": "메디나 골목 진입로가 좁아 가시 벽으로 봉쇄하기 좋음"
+  },
+  {
+    "map_id": "colosseo",
+    "hero_id": "hazard",
+    "rating": "보통",
+    "reason": "경기장 진입로와 개활지가 섞여 가시 벽 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "esperanca",
+    "hero_id": "hazard",
+    "rating": "강함",
+    "reason": "수직 구조물 사이 통로가 좁아 가시 벽으로 봉쇄하기 좋음"
+  },
+  {
+    "map_id": "new_queen_street",
+    "hero_id": "hazard",
+    "rating": "보통",
+    "reason": "교차로와 대로가 섞여 가시 벽 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "runasapi",
+    "hero_id": "hazard",
+    "rating": "보통",
+    "reason": "유적 진입로와 개활지가 섞여 가시 벽 활용이 상황에 따라 갈림"
   }
 ]

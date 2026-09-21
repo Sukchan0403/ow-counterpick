@@ -736,5 +736,390 @@
     "reason_ja": "拘束の鎖で縛った相手に半蔵が射撃を確実に命中させるコンボ",
     "reason_zh_cn": "用束缚锁链困住目标后，半藏能确定命中射击的组合",
     "reason_zh_tw": "用束縛鎖鏈困住目標後，半藏能確定命中射擊的組合"
+  },
+  {
+    "hero_id": "doomfist",
+    "synergy_hero_id": "echo",
+    "reason": "지진 충격으로 띄운 대상을 복제 궁극기 화력으로 확정 마무리"
+  },
+  {
+    "hero_id": "doomfist",
+    "synergy_hero_id": "genji",
+    "reason": "지진 충격 크라우드 컨트롤 직후 용검으로 확정 마무리"
+  },
+  {
+    "hero_id": "doomfist",
+    "synergy_hero_id": "pharah",
+    "reason": "지진 충격으로 띄운 대상을 로켓 배럭으로 공중에서 마무리"
+  },
+  {
+    "hero_id": "doomfist",
+    "synergy_hero_id": "sombra",
+    "reason": "해킹 콤보로 무력화한 대상을 로켓 펀치 개시로 확정 처치"
+  },
+  {
+    "hero_id": "doomfist",
+    "synergy_hero_id": "soldier_76",
+    "reason": "지진 충격 이후 헬릭스 로켓 연사로 확정 마무리"
+  },
+  {
+    "hero_id": "doomfist",
+    "synergy_hero_id": "tracer",
+    "reason": "차지 펀치로 벌어놓은 전선 틈을 트레이서가 파고들어 마무리"
+  },
+  {
+    "hero_id": "doomfist",
+    "synergy_hero_id": "venture",
+    "reason": "동시 근접 개시로 시야를 분산시켜 각자의 콤보 성공률을 높임"
+  },
+  {
+    "hero_id": "doomfist",
+    "synergy_hero_id": "vendetta",
+    "reason": "지진 충격으로 묶은 대상을 근접 광검 콤보로 확정 처치"
+  },
+  {
+    "hero_id": "doomfist",
+    "synergy_hero_id": "shion",
+    "reason": "동시 근접 압박으로 상대 힐러 라인을 무너뜨림"
+  },
+  {
+    "hero_id": "doomfist",
+    "synergy_hero_id": "anran",
+    "reason": "차지 펀치 개시 직후 화염 부채 연타로 확정 마무리"
+  },
+  {
+    "hero_id": "doomfist",
+    "synergy_hero_id": "ana",
+    "reason": "나노 강화로 근접 콤보의 순간 화력을 폭증"
+  },
+  {
+    "hero_id": "doomfist",
+    "synergy_hero_id": "kiriko",
+    "reason": "스위프트 스텝으로 콤보 실패 후에도 빠르게 재진입 지원"
+  },
+  {
+    "hero_id": "doomfist",
+    "synergy_hero_id": "moira",
+    "reason": "생체 그랩 힐로 근접 콤보 개시 중 생존을 보장"
+  },
+  {
+    "hero_id": "doomfist",
+    "synergy_hero_id": "jetpack_cat",
+    "reason": "견인 로프로 콤보 진입 타이밍을 원하는 순간에 맞춤"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "synergy_hero_id": "echo",
+    "reason": "지뢰밭으로 흩어놓은 대상을 복제 궁극기로 확정 마무리"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "synergy_hero_id": "genji",
+    "reason": "구르기 개시로 벌어진 전선 틈을 겐지가 용검으로 파고듦"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "synergy_hero_id": "pharah",
+    "reason": "지뢰밭 폭발로 띄운 대상을 로켓 배럭으로 공중에서 마무리"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "synergy_hero_id": "reaper",
+    "reason": "구르기 개시로 흩어놓은 밀집 대상을 산탄 근접으로 확정 마무리"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "synergy_hero_id": "sojourn",
+    "reason": "구르기 개시로 노출된 대상을 레일건 충전 사격으로 마무리"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "synergy_hero_id": "sombra",
+    "reason": "해킹 콤보로 무력화한 대상을 구르기 개시로 확정 처치"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "synergy_hero_id": "soldier_76",
+    "reason": "구르기 개시 직후 헬릭스 로켓 연사로 확정 마무리"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "synergy_hero_id": "tracer",
+    "reason": "구르기로 벌어놓은 전선 틈을 트레이서가 파고들어 마무리"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "synergy_hero_id": "venture",
+    "reason": "동시 근접 개시로 시야를 분산시켜 각자의 콤보 성공률을 높임"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "synergy_hero_id": "vendetta",
+    "reason": "구르기로 묶어놓은 대상을 근접 광검 콤보로 확정 처치"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "synergy_hero_id": "shion",
+    "reason": "동시 근접 압박으로 상대 힐러 라인을 무너뜨림"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "synergy_hero_id": "anran",
+    "reason": "구르기 개시 직후 화염 부채 연타로 확정 마무리"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "synergy_hero_id": "kiriko",
+    "reason": "스위프트 스텝으로 구르기 개시 실패 후에도 빠르게 재진입 지원"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "synergy_hero_id": "jetpack_cat",
+    "reason": "견인 로프로 구르기 개시 타이밍을 원하는 순간에 맞춤"
+  },
+  {
+    "hero_id": "roadhog",
+    "synergy_hero_id": "kiriko",
+    "reason": "스위프트 스텝으로 고리 사슬로 끌어온 대상을 근접에서 함께 마무리"
+  },
+  {
+    "hero_id": "roadhog",
+    "synergy_hero_id": "wuyang",
+    "reason": "치유 파도로 브레더 쿨타임 사이의 생존력을 보강"
+  },
+  {
+    "hero_id": "roadhog",
+    "synergy_hero_id": "jetpack_cat",
+    "reason": "견인 로프로 고리 사슬 개시 타이밍을 원하는 순간에 맞춤"
+  },
+  {
+    "hero_id": "mauga",
+    "synergy_hero_id": "echo",
+    "reason": "돌진 강타로 흩어놓은 대상을 복제 궁극기로 확정 마무리"
+  },
+  {
+    "hero_id": "mauga",
+    "synergy_hero_id": "genji",
+    "reason": "돌진 개시로 벌어진 전선 틈을 겐지가 용검으로 파고듦"
+  },
+  {
+    "hero_id": "mauga",
+    "synergy_hero_id": "pharah",
+    "reason": "돌진 강타로 띄운 대상을 로켓 배럭으로 공중에서 마무리"
+  },
+  {
+    "hero_id": "mauga",
+    "synergy_hero_id": "reaper",
+    "reason": "돌진 개시로 흩어놓은 밀집 대상을 산탄 근접으로 확정 마무리"
+  },
+  {
+    "hero_id": "mauga",
+    "synergy_hero_id": "tracer",
+    "reason": "돌진으로 벌어놓은 전선 틈을 트레이서가 파고들어 마무리"
+  },
+  {
+    "hero_id": "mauga",
+    "synergy_hero_id": "venture",
+    "reason": "동시 근접 개시로 시야를 분산시켜 각자의 콤보 성공률을 높임"
+  },
+  {
+    "hero_id": "mauga",
+    "synergy_hero_id": "vendetta",
+    "reason": "돌진 강타로 묶어놓은 대상을 근접 광검 콤보로 확정 처치"
+  },
+  {
+    "hero_id": "mauga",
+    "synergy_hero_id": "shion",
+    "reason": "동시 근접 압박으로 상대 힐러 라인을 무너뜨림"
+  },
+  {
+    "hero_id": "mauga",
+    "synergy_hero_id": "anran",
+    "reason": "돌진 개시 직후 화염 부채 연타로 확정 마무리"
+  },
+  {
+    "hero_id": "mauga",
+    "synergy_hero_id": "juno",
+    "reason": "하이퍼 링 속도 부스트로 돌진 개시와 이탈 타이밍을 동시에 지원"
+  },
+  {
+    "hero_id": "mauga",
+    "synergy_hero_id": "kiriko",
+    "reason": "스위프트 스텝으로 돌진 개시 실패 후에도 빠르게 재진입 지원"
+  },
+  {
+    "hero_id": "mauga",
+    "synergy_hero_id": "lucio",
+    "reason": "속도 부스트로 돌진 개시 타이밍을 앞당김"
+  },
+  {
+    "hero_id": "mauga",
+    "synergy_hero_id": "moira",
+    "reason": "생체 그랩 힐로 근접 돌진 개시 중 생존을 보장"
+  },
+  {
+    "hero_id": "mauga",
+    "synergy_hero_id": "mizuki",
+    "reason": "속박 사슬로 묶은 대상에게 마우가가 화망 사격을 확정으로 명중시키는 조합"
+  },
+  {
+    "hero_id": "winston",
+    "synergy_hero_id": "echo",
+    "reason": "도약 개시로 흩어놓은 대상을 복제 궁극기로 확정 마무리"
+  },
+  {
+    "hero_id": "winston",
+    "synergy_hero_id": "pharah",
+    "reason": "도약 개시로 띄운 대상을 로켓 배럭으로 공중에서 마무리"
+  },
+  {
+    "hero_id": "winston",
+    "synergy_hero_id": "reaper",
+    "reason": "도약 개시로 흩어놓은 밀집 대상을 산탄 근접으로 확정 마무리"
+  },
+  {
+    "hero_id": "winston",
+    "synergy_hero_id": "sojourn",
+    "reason": "도약 개시로 노출된 대상을 레일건 충전 사격으로 마무리"
+  },
+  {
+    "hero_id": "winston",
+    "synergy_hero_id": "sombra",
+    "reason": "해킹 콤보로 무력화한 대상을 도약 개시로 확정 처치"
+  },
+  {
+    "hero_id": "winston",
+    "synergy_hero_id": "soldier_76",
+    "reason": "도약 개시 직후 헬릭스 로켓 연사로 확정 마무리"
+  },
+  {
+    "hero_id": "winston",
+    "synergy_hero_id": "venture",
+    "reason": "동시 근접 개시로 시야를 분산시켜 각자의 콤보 성공률을 높임"
+  },
+  {
+    "hero_id": "winston",
+    "synergy_hero_id": "vendetta",
+    "reason": "도약으로 묶어놓은 대상을 근접 광검 콤보로 확정 처치"
+  },
+  {
+    "hero_id": "winston",
+    "synergy_hero_id": "shion",
+    "reason": "동시 근접 압박으로 상대 힐러 라인을 무너뜨림"
+  },
+  {
+    "hero_id": "winston",
+    "synergy_hero_id": "anran",
+    "reason": "도약 개시 직후 화염 부채 연타로 확정 마무리"
+  },
+  {
+    "hero_id": "winston",
+    "synergy_hero_id": "ana",
+    "reason": "나노 강화로 근접 개시의 순간 화력을 폭증"
+  },
+  {
+    "hero_id": "winston",
+    "synergy_hero_id": "brigitte",
+    "reason": "방패 강타로 도약 개시 실패 후에도 안전하게 재진입 지원"
+  },
+  {
+    "hero_id": "winston",
+    "synergy_hero_id": "juno",
+    "reason": "하이퍼 링 속도 부스트로 도약 개시와 이탈 타이밍을 동시에 지원"
+  },
+  {
+    "hero_id": "winston",
+    "synergy_hero_id": "kiriko",
+    "reason": "스위프트 스텝으로 도약 개시 실패 후에도 빠르게 재진입 지원"
+  },
+  {
+    "hero_id": "winston",
+    "synergy_hero_id": "lucio",
+    "reason": "속도 부스트로 도약 개시 타이밍을 앞당김"
+  },
+  {
+    "hero_id": "winston",
+    "synergy_hero_id": "jetpack_cat",
+    "reason": "견인 로프로 도약 개시 타이밍을 원하는 순간에 맞춤"
+  },
+  {
+    "hero_id": "hazard",
+    "synergy_hero_id": "echo",
+    "reason": "가시 벽 개시로 흩어놓은 대상을 복제 궁극기로 확정 마무리"
+  },
+  {
+    "hero_id": "hazard",
+    "synergy_hero_id": "genji",
+    "reason": "가시 벽 개시로 벌어진 전선 틈을 겐지가 용검으로 파고듦"
+  },
+  {
+    "hero_id": "hazard",
+    "synergy_hero_id": "pharah",
+    "reason": "가시 벽 개시로 띄운 대상을 로켓 배럭으로 공중에서 마무리"
+  },
+  {
+    "hero_id": "hazard",
+    "synergy_hero_id": "reaper",
+    "reason": "가시 벽 개시로 흩어놓은 밀집 대상을 산탄 근접으로 확정 마무리"
+  },
+  {
+    "hero_id": "hazard",
+    "synergy_hero_id": "sojourn",
+    "reason": "가시 벽 개시로 노출된 대상을 레일건 충전 사격으로 마무리"
+  },
+  {
+    "hero_id": "hazard",
+    "synergy_hero_id": "sombra",
+    "reason": "해킹 콤보로 무력화한 대상을 가시 벽 개시로 확정 처치"
+  },
+  {
+    "hero_id": "hazard",
+    "synergy_hero_id": "soldier_76",
+    "reason": "가시 벽 개시 직후 헬릭스 로켓 연사로 확정 마무리"
+  },
+  {
+    "hero_id": "hazard",
+    "synergy_hero_id": "tracer",
+    "reason": "가시 벽 개시로 벌어놓은 전선 틈을 트레이서가 파고들어 마무리"
+  },
+  {
+    "hero_id": "hazard",
+    "synergy_hero_id": "venture",
+    "reason": "동시 근접 개시로 시야를 분산시켜 각자의 콤보 성공률을 높임"
+  },
+  {
+    "hero_id": "hazard",
+    "synergy_hero_id": "vendetta",
+    "reason": "가시 벽으로 묶어놓은 대상을 근접 광검 콤보로 확정 처치"
+  },
+  {
+    "hero_id": "hazard",
+    "synergy_hero_id": "shion",
+    "reason": "동시 근접 압박으로 상대 힐러 라인을 무너뜨림"
+  },
+  {
+    "hero_id": "hazard",
+    "synergy_hero_id": "anran",
+    "reason": "가시 벽 개시 직후 화염 부채 연타로 확정 마무리"
+  },
+  {
+    "hero_id": "hazard",
+    "synergy_hero_id": "ana",
+    "reason": "나노 강화로 가시 벽 개시의 순간 화력을 폭증"
+  },
+  {
+    "hero_id": "hazard",
+    "synergy_hero_id": "juno",
+    "reason": "하이퍼 링 속도 부스트로 가시 벽 개시와 이탈 타이밍을 동시에 지원"
+  },
+  {
+    "hero_id": "hazard",
+    "synergy_hero_id": "kiriko",
+    "reason": "스위프트 스텝으로 가시 벽 개시 실패 후에도 빠르게 재진입 지원"
+  },
+  {
+    "hero_id": "hazard",
+    "synergy_hero_id": "jetpack_cat",
+    "reason": "견인 로프로 가시 벽 개시 타이밍을 원하는 순간에 맞춤"
   }
 ]

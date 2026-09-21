@@ -238,5 +238,1300 @@
     "hero_id": "dva",
     "other_hero_id": "illari",
     "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "sigma",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "winston",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "junker_queen",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "reinhardt",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "hazard",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "bastion",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "genji",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "reaper",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "tracer",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "venture",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "vendetta",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "shion",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "anran",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "baptiste",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "juno",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "kiriko",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "moira",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "doctrine",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "wuyang",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "sigma",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "zarya",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "reinhardt",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "hazard",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "domina",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "echo",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "genji",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "junkrat",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "tracer",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "venture",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "freja",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "vendetta",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "shion",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "anran",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "kiriko",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "doctrine",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "zarya",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "reinhardt",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "cassidy",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "mei",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "sombra",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "soldier_76",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "torbjorn",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "tracer",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "sierra",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "shion",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "anran",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "emre",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "illari",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "juno",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "doctrine",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "ramattra",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "sigma",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "zarya",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "junker_queen",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "reinhardt",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "domina",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "cassidy",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "sojourn",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "soldier_76",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "symmetra",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "tracer",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "venture",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "widowmaker",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "vendetta",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "shion",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "anran",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "brigitte",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "illari",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "juno",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "lucio",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "doctrine",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "dva",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "doomfist",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "hazard",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "dmon",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "tracer",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "venture",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "sierra",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "shion",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "anran",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "ana",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "illari",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "lifeweaver",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "doctrine",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "doomfist",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "sigma",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "zarya",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "reinhardt",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "dmon",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "domina",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "genji",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "mei",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "reaper",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "sojourn",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "soldier_76",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "torbjorn",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "tracer",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "venture",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "sierra",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "shion",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "anran",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "emre",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "kiriko",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "lifeweaver",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "doctrine",
+    "relation_type": "counter"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "ashe",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "bastion",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "cassidy",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "hanzo",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "junkrat",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "mei",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "reaper",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "sojourn",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "symmetra",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "torbjorn",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "widowmaker",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "freja",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "sierra",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "emre",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "baptiste",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "brigitte",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "illari",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "juno",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "lifeweaver",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "lucio",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "mercy",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "zenyatta",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "mizuki",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "doctrine",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "doomfist",
+    "other_hero_id": "wuyang",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "ashe",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "bastion",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "cassidy",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "hanzo",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "junkrat",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "mei",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "symmetra",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "torbjorn",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "widowmaker",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "freja",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "sierra",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "emre",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "ana",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "baptiste",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "brigitte",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "illari",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "juno",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "lifeweaver",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "lucio",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "mercy",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "moira",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "zenyatta",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "mizuki",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "doctrine",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "other_hero_id": "wuyang",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "ashe",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "bastion",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "cassidy",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "echo",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "genji",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "hanzo",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "junkrat",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "mei",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "pharah",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "reaper",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "sojourn",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "sombra",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "soldier_76",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "symmetra",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "torbjorn",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "tracer",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "venture",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "widowmaker",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "freja",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "vendetta",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "sierra",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "shion",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "anran",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "emre",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "ana",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "baptiste",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "brigitte",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "illari",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "juno",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "lifeweaver",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "lucio",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "mercy",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "moira",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "zenyatta",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "mizuki",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "roadhog",
+    "other_hero_id": "doctrine",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "ashe",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "bastion",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "cassidy",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "hanzo",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "junkrat",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "mei",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "sojourn",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "sombra",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "soldier_76",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "symmetra",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "torbjorn",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "widowmaker",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "freja",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "sierra",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "emre",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "ana",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "baptiste",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "brigitte",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "illari",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "lifeweaver",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "mercy",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "zenyatta",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "doctrine",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "wuyang",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "mauga",
+    "other_hero_id": "jetpack_cat",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "ashe",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "bastion",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "cassidy",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "hanzo",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "junkrat",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "mei",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "symmetra",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "torbjorn",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "widowmaker",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "freja",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "sierra",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "emre",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "baptiste",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "illari",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "lifeweaver",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "mercy",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "moira",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "zenyatta",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "mizuki",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "doctrine",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "winston",
+    "other_hero_id": "wuyang",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "ashe",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "bastion",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "cassidy",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "hanzo",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "junkrat",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "mei",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "symmetra",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "torbjorn",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "widowmaker",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "freja",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "sierra",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "emre",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "baptiste",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "brigitte",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "illari",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "lifeweaver",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "mercy",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "moira",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "zenyatta",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "mizuki",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "doctrine",
+    "relation_type": "synergy"
+  },
+  {
+    "hero_id": "hazard",
+    "other_hero_id": "wuyang",
+    "relation_type": "synergy"
   }
 ]
