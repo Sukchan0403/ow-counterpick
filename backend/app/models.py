@@ -91,6 +91,29 @@ class RecommendationResponse(BaseModel):
     )
 
 
+class TeamEvaluationRequest(BaseModel):
+    """드래프트 시뮬레이션(사전 팀 평가) 모드 — 실시간 밴프준 보조와 달리 양 팀
+    5명이 이미 다 확정된 상태를 입력받는다. 설계 문서의
+    "사전 드래프트 시뮬레이션 모드" 절 참고."""
+
+    enemy_heroes: list[str] = Field(description="상대 팀 5명 (탱커1·딜러2·힐러2)")
+    our_heroes: list[str] = Field(description="우리 팀 5명 (탱커1·딜러2·힐러2)")
+    map_id: str = Field(description="맵 id")
+    lang: Lang = Field(default="ko", description="응답 텍스트 언어")
+
+
+class TeamEvaluationResponse(BaseModel):
+    team_percentage: int = Field(
+        description=(
+            "우리 팀 5명 각자의 percentage를 config.ROLE_INFLUENCE_WEIGHT(탱커>딜러>힐러) "
+            "가중 평균으로 합친 팀 종합 점수."
+        )
+    )
+    evaluations: list[HeroRecommendation] = Field(
+        description="우리 팀 5명 각각의 평가. role 순서(탱커→딜러→힐러)로 정렬됨."
+    )
+
+
 class HeroOut(BaseModel):
     id: str
     name: str

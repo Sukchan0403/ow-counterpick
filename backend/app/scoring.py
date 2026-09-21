@@ -21,6 +21,7 @@ from app.config import (
     PERCENTAGE_AMPLITUDE,
     PERCENTAGE_BASELINE,
     PERCENTAGE_SCALE,
+    ROLE_INFLUENCE_WEIGHT,
     WEIGHT_COUNTER,
     WEIGHT_COUNTERED_BY,
     WEIGHT_MAP_STRONG,
@@ -258,3 +259,18 @@ def score_candidates(
     # 총점 내림차순, 동점이면 영웅명으로 안정 정렬
     results.sort(key=lambda s: (-s.total_score, s.hero_name))
     return results
+
+
+def aggregate_team_percentage(evaluations: list[ScoredHero]) -> int:
+    """드래프트 시뮬레이션(사전 팀 평가) 모드용 — 이미 확정된 우리 팀 5명 각자의
+    percentage를 팀 종합 점수 하나로 합친다.
+
+    단순 평균이 아니라 ROLE_INFLUENCE_WEIGHT로 가중 평균을 낸다 — 탱커 한 명이
+    카운터당하는 것과 힐러 한 명이 카운터당하는 걸 똑같은 무게로 취급하면 안
+    된다는 판단(config.py의 ROLE_INFLUENCE_WEIGHT 주석 참고). evaluations는
+    항상 표준 5인 조합(탱커1·딜러2·힐러2)이 채워진 뒤에만 호출되므로, 빈
+    리스트에 대한 방어 코드는 두지 않는다.
+    """
+    total_weight = sum(ROLE_INFLUENCE_WEIGHT[e.role] for e in evaluations)
+    weighted_sum = sum(ROLE_INFLUENCE_WEIGHT[e.role] * e.percentage for e in evaluations)
+    return round(weighted_sum / total_weight)

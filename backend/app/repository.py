@@ -146,7 +146,8 @@ def fetch_heroes_by_ids(
     placeholders = ",".join("?" for _ in hero_ids)
     query = f"""
         SELECT id, {_localized("name", lang)} AS name, role,
-               {_localized("archetype", lang)} AS archetype
+               {_localized("archetype", lang)} AS archetype,
+               icon_url, archetype_category
         FROM heroes WHERE id IN ({placeholders})
     """
     return conn.execute(query, tuple(hero_ids)).fetchall()

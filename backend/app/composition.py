@@ -46,3 +46,21 @@ def infer_empty_position(our_hero_roles: list[str]) -> str:
         )
 
     return short_roles[0]
+
+
+def assert_full_team_composition(team_label: str, hero_roles: list[str]) -> None:
+    """드래프트 시뮬레이션(사전 팀 평가) 모드용 — 이미 다 채워진 5명의 role
+    목록이 표준 조합(탱커1·딜러2·힐러2)과 정확히 일치하는지 검증한다.
+
+    infer_empty_position()과 달리 "빈 자리를 추론"하는 게 아니라 "이미 다 찬
+    5명이 표준 조합인지 확인만" 하면 되므로 훨씬 단순하다. team_label은 에러
+    메시지에 "상대 팀"/"우리 팀" 중 어느 쪽 문제인지 표시하는 용도.
+    """
+    counts = {role: 0 for role in TEAM_ROLE_COMPOSITION}
+    for role in hero_roles:
+        counts[role] = counts.get(role, 0) + 1
+
+    if counts != TEAM_ROLE_COMPOSITION:
+        raise InvalidTeamCompositionError(
+            f"{team_label} 조합이 표준 구성(탱커 1 · 딜러 2 · 힐러 2)과 다릅니다."
+        )

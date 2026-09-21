@@ -10,7 +10,7 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from app.routers import catalog, recommendations
+from app.routers import catalog, recommendations, team_evaluation
 
 logger = logging.getLogger("ow_backend")
 
@@ -30,6 +30,7 @@ app.add_middleware(
 
 app.include_router(catalog.router)
 app.include_router(recommendations.router)
+app.include_router(team_evaluation.router)
 
 
 @app.get("/health")

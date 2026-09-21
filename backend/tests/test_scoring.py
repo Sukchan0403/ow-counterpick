@@ -6,12 +6,13 @@ import math
 
 from app.config import (
     PERCENTAGE_SCALE,
+    ROLE_INFLUENCE_WEIGHT,
     WEIGHT_COUNTER,
     WEIGHT_COUNTERED_BY,
     WEIGHT_MAP_STRONG,
     WEIGHT_SYNERGY,
 )
-from app.scoring import NEUTRAL_REASON, _particle_wa_gwa, score_candidates
+from app.scoring import NEUTRAL_REASON, ScoredHero, _particle_wa_gwa, aggregate_team_percentage, score_candidates
 
 
 def make_candidates():
@@ -349,3 +350,49 @@ def test_icon_url_and_archetype_category_pass_through_when_present():
     result = score_candidates(candidates, [], [], [])
     assert result[0].icon_url == "https://example.com/kiriko.png"
     assert result[0].archetype_category == "의무관"
+
+
+def test_aggregate_team_percentage_returns_the_shared_value_when_all_equal():
+    # 다섯 명 percentage가 전부 같으면, 가중치가 뭐든 결과는 그 값과 같아야 한다.
+    evaluations = [
+        ScoredHero(hero_id="t", hero_name="T", role="tank", counter_score=0),
+        ScoredHero(hero_id="d1", hero_name="D1", role="damage", counter_score=0),
+        ScoredHero(hero_id="d2", hero_name="D2", role="damage", counter_score=0),
+        ScoredHero(hero_id="s1", hero_name="S1", role="support", counter_score=0),
+        ScoredHero(hero_id="s2", hero_name="S2", role="support", counter_score=0),
+    ]
+    assert all(e.percentage == 50 for e in evaluations)
+    assert aggregate_team_percentage(evaluations) == 50
+
+
+def test_aggregate_team_percentage_weighs_tank_more_than_support():
+    # 탱커 한 명만 카운터당하고(총점 -60) 나머지 4명은 중립(총점 0)인 두 케이스를
+    # 비교 — 카운터당한 사람이 탱커일 때가 힐러일 때보다 종합 점수가 더 낮아야
+    # 한다(config.ROLE_INFLUENCE_WEIGHT: 탱커 > 딜러 > 힐러).
+    tank_hurt = [
+        ScoredHero(hero_id="tank", hero_name="T", role="tank", counter_score=-60),
+        ScoredHero(hero_id="d1", hero_name="D1", role="damage", counter_score=0),
+        ScoredHero(hero_id="d2", hero_name="D2", role="damage", counter_score=0),
+        ScoredHero(hero_id="s1", hero_name="S1", role="support", counter_score=0),
+        ScoredHero(hero_id="s2", hero_name="S2", role="support", counter_score=0),
+    ]
+    support_hurt = [
+        ScoredHero(hero_id="tank", hero_name="T", role="tank", counter_score=0),
+        ScoredHero(hero_id="d1", hero_name="D1", role="damage", counter_score=0),
+        ScoredHero(hero_id="d2", hero_name="D2", role="damage", counter_score=0),
+        ScoredHero(hero_id="s1", hero_name="S1", role="support", counter_score=-60),
+        ScoredHero(hero_id="s2", hero_name="S2", role="support", counter_score=0),
+    ]
+
+    assert aggregate_team_percentage(tank_hurt) < aggregate_team_percentage(support_hurt)
+
+    # 정확한 값도 검증: 가중 평균 공식 그대로.
+    hurt_pct = round(50 + 50 * math.tanh(-60 / PERCENTAGE_SCALE))
+    tank_w, damage_w, support_w = (
+        ROLE_INFLUENCE_WEIGHT["tank"], ROLE_INFLUENCE_WEIGHT["damage"], ROLE_INFLUENCE_WEIGHT["support"],
+    )
+    expected_tank_hurt = round(
+        (tank_w * hurt_pct + damage_w * 50 * 2 + support_w * 50 * 2)
+        / (tank_w + damage_w * 2 + support_w * 2)
+    )
+    assert aggregate_team_percentage(tank_hurt) == expected_tank_hurt
