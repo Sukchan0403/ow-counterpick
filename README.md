@@ -68,6 +68,11 @@ docker compose up --build
 `NEXT_PUBLIC_API_BASE_URL`을 바꿔주세요(런타임 환경변수가 아니라 빌드 인자입니다 —
 `docker-compose.yml`의 `frontend.build.args` 참고).
 
+방문자 추적용 Google Analytics(GA4)를 켜려면 프론트 빌드 시
+`NEXT_PUBLIC_GA_MEASUREMENT_ID`(예: `G-XXXXXXXXXX`)를 넣어주세요 — 값이 없으면
+스크립트 자체가 렌더링되지 않아, 로컬 개발/CI에서는 별도 설정 없이 그냥 꺼져
+있습니다.
+
 ### 또는 직접 실행
 
 #### 백엔드 (FastAPI)

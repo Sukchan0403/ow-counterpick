@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
+
+// 빌드 타임에 주입되는 값(NEXT_PUBLIC_API_BASE_URL과 같은 방식 — 런타임
+// 환경변수가 아니라 빌드 인자). 로컬 개발/CI/아직 값을 안 넣은 배포에서는
+// undefined라 아래에서 스크립트 자체를 렌더링하지 않는다 — 잘못된 ID로 빈
+// 이벤트를 구글에 보내는 것보다, 조용히 꺼두는 쪽이 안전함.
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 const SITE_URL = "https://ow-counterpick-frontend-production.up.railway.app";
 const SITE_TITLE = "오버워치 밴프준 보조 | 카운터픽 추천";
@@ -68,6 +75,22 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(STRUCTURED_DATA) }}
         />
+        {GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_MEASUREMENT_ID}');
+              `}
+            </Script>
+          </>
+        )}
       </head>
       <body>{children}</body>
     </html>
