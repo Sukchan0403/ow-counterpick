@@ -1,7 +1,13 @@
 # 🎯 오버워치 밴프준 보조 (ow-counterpick)
 
+[![backend-tests](https://github.com/Sukchan0403/ow-counterpick/actions/workflows/backend-tests.yml/badge.svg)](https://github.com/Sukchan0403/ow-counterpick/actions/workflows/backend-tests.yml)
+[![frontend-tests](https://github.com/Sukchan0403/ow-counterpick/actions/workflows/frontend-tests.yml/badge.svg)](https://github.com/Sukchan0403/ow-counterpick/actions/workflows/frontend-tests.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 > 상대 팀 픽, 우리 팀 픽, 그리고 맵을 입력하면 — 빈 자리에 어떤 영웅을 넣어야
 > 할지 근거와 함께 추천해주는 웹 서비스.
+
+### 🔗 [배포된 사이트에서 바로 써보기](https://ow-counterpick-frontend-production.up.railway.app)
 
 공식 오버워치 API가 없어서 실시간 승률 통계 대신, **큐레이션된 카운터/시너지/맵
 데이터** 기반으로 추천하는 걸 목표로 하는 개인 포트폴리오 프로젝트입니다.
@@ -106,6 +112,7 @@ pytest -v
 | `GET` | `/api/maps` | 맵 목록 + 데이터 풍부도 조회 |
 | `GET` | `/api/meta` | 시드 데이터 시즌/버전 정보 |
 | `POST` | `/api/recommendations` | 빈 포지션에 대한 추천 영웅 순위 조회 |
+| `POST` | `/api/team-evaluation` | 사전 드래프트 시뮬레이션 — 양 팀 완성 조합의 종합 평가 |
 
 전체 요청/응답 스키마와 에러 케이스는 [`docs/API명세서.md`](docs/API명세서.md)를
 참고하세요.
@@ -117,7 +124,8 @@ pytest -v
 | 프론트엔드 | Next.js, React, TypeScript |
 | 백엔드 | FastAPI, Pydantic |
 | 데이터베이스 | SQLite (큐레이션된 시드 데이터, 외부 API 미사용) |
-| 테스트 | pytest |
+| 테스트 | pytest (백엔드), Vitest + React Testing Library (프론트엔드) |
+| 배포/CI | Docker, Railway, GitHub Actions |
 
 ## 🗺️ 로드맵
 
@@ -134,12 +142,18 @@ pytest -v
       아키타입·추천 근거까지 번역, hreflang 포함)
 - [ ] 대부분의 영웅에 카운터/시너지/맵 관계 데이터가 최소 1건씩은 있지만, 근거를
       더 두껍게 채우고 `하나오카` 맵 등 여전히 빈 조합을 계속 큐레이션
-- [x] 프론트엔드 자동 테스트 (Vitest + React Testing Library, 58개 — 컴포넌트
+- [x] 프론트엔드 자동 테스트 (Vitest + React Testing Library, 59개 — 컴포넌트
       전체 + `lib/api.ts`/`lib/i18n.ts` + `HomeClient` 통합 플로우)
 - [ ] 사전 드래프트 시뮬레이션 모드 — 백엔드(`POST /api/team-evaluation`,
       역할별 가중 평균으로 팀 종합 점수 산출)는 구현·테스트 완료. 프론트는
       화면 목업이 아직 없어서 미착수
 - [ ] 통계 기반 매치업 엔진 (충분한 크라우드소싱 데이터 확보 후)
+
+## 🐛 트러블슈팅 기록
+
+개발 중 실제로 겪은 문제와 해결 과정은 [Issues(닫힘)](https://github.com/Sukchan0403/ow-counterpick/issues?q=is%3Aissue+state%3Aclosed)와
+[`md/2026-09-21-project-retrospective.md`](md/2026-09-21-project-retrospective.md)
+에 정리돼 있습니다 — 미러 픽 버그, CI가 며칠간 조용히 실패하고 있었던 사례 등.
 
 ## 📄 라이선스
 
