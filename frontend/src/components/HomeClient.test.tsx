@@ -191,6 +191,31 @@ describe("HomeClient", () => {
     expect(screen.getByText("Tank1")).toBeInTheDocument();
   });
 
+  it("resets everything back to a blank picker when the logo is clicked", async () => {
+    const user = userEvent.setup();
+    render(<HomeClient locale="en" />);
+    await screen.findByText("Tank1");
+
+    await pickEnemyTeam(user);
+    await pickOurTeam(user);
+    await pickMap(user);
+    await screen.findByText(t.recommendationScore(88));
+
+    await user.click(screen.getByRole("button", { name: /COUNTERPICK/ }));
+
+    // Back on the picker screen, not stuck on the result.
+    expect(screen.getByText("Tank1")).toBeInTheDocument();
+    // The map selection was cleared too (not just "back to input", which keeps it).
+    expect(screen.getByText(t.mapPlaceholder)).toBeInTheDocument();
+
+    // Picking the map alone should NOT be enough to auto-submit again — the
+    // team picks must have been cleared as well, not just the map.
+    await user.click(screen.getByText(t.mapPlaceholder));
+    await user.click(await screen.findByText("Eichenwalde"));
+    await new Promise((r) => setTimeout(r, 10));
+    expect(postRecommendations).toHaveBeenCalledTimes(1); // still just the original submit
+  });
+
   it("keeps the team/map selection across a simulated language switch (remount with a new locale)", async () => {
     // LanguageSwitcher navigates to a separate route per locale (/,/en,/ja,...),
     // which unmounts this component entirely and mounts a fresh one for the new

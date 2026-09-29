@@ -194,12 +194,27 @@ export function HomeClient({ locale }: { locale: Locale }) {
 
   const selectedMap = maps.find((m) => m.id === mapId) ?? null;
 
+  // 로고를 누르면 현재 화면(입력 중이든 결과든)과 무관하게 완전한 초기 상태로
+  // 되돌아간다 — "입력으로 돌아가기"(resetLink)는 팀/맵 선택은 그대로 두고
+  // 결과 화면만 접는 것과 달리, 이건 선택 자체를 전부 비우는 동작이라 별개로 둔다.
+  function handleReset() {
+    setEnemyHeroes([]);
+    setOurHeroes([]);
+    setMapId(null);
+    setActiveTeam("enemy");
+    setValidationMessage(null);
+    setResult(null);
+    setSubmitPhase("idle");
+    lastSubmittedKeyRef.current = null;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   return (
     <div className={styles.page}>
       <div className={styles.header}>
-        <span className={styles.wordmark}>
+        <button type="button" className={styles.wordmark} onClick={handleReset}>
           COUNTERPICK<span className={styles.wordmarkAccent}>.GG</span>
-        </span>
+        </button>
         <div className={styles.headerRight}>
           {meta && (
             <span className={styles.metaBadge}>

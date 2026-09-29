@@ -142,7 +142,7 @@ pytest -v
       아키타입·추천 근거까지 번역, hreflang 포함)
 - [ ] 대부분의 영웅에 카운터/시너지/맵 관계 데이터가 최소 1건씩은 있지만, 근거를
       더 두껍게 채우고 `하나오카` 맵 등 여전히 빈 조합을 계속 큐레이션
-- [x] 프론트엔드 자동 테스트 (Vitest + React Testing Library, 59개 — 컴포넌트
+- [x] 프론트엔드 자동 테스트 (Vitest + React Testing Library, 60개 — 컴포넌트
       전체 + `lib/api.ts`/`lib/i18n.ts` + `HomeClient` 통합 플로우)
 - [ ] 사전 드래프트 시뮬레이션 모드 — 백엔드(`POST /api/team-evaluation`,
       역할별 가중 평균으로 팀 종합 점수 산출)는 구현·테스트 완료. 프론트는
