@@ -2,6 +2,19 @@
 (스펙의 "테스트 전략" > 백엔드 > 라우트 테스트).
 """
 
+from app.config import ALLOWED_ORIGINS
+
+
+def test_cors_allows_configured_frontend_origin(client):
+    allowed_origin = ALLOWED_ORIGINS[0]
+    res = client.get("/api/heroes", headers={"Origin": allowed_origin})
+    assert res.headers["access-control-allow-origin"] == allowed_origin
+
+
+def test_cors_rejects_unlisted_origin(client):
+    res = client.get("/api/heroes", headers={"Origin": "https://evil.example.com"})
+    assert "access-control-allow-origin" not in res.headers
+
 
 def test_get_heroes(client):
     res = client.get("/api/heroes")

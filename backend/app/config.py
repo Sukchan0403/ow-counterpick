@@ -17,6 +17,27 @@ DEFAULT_DB_PATH = BACKEND_DIR.parent / "seed-data" / "overwatch.db"
 
 DB_PATH = Path(os.environ.get("OW_DB_PATH", str(DEFAULT_DB_PATH)))
 
+# CORS 허용 도메인. 실제 배포된 프론트엔드 주소 + 로컬 개발 서버(npm run dev)만
+# 기본으로 허용한다. Railway에 커스텀 도메인을 연결하거나 다른 프론트 배포가
+# 추가되면 OW_ALLOWED_ORIGINS 환경변수(콤마로 구분)로 덮어쓰면 된다.
+_DEFAULT_ALLOWED_ORIGINS = (
+    "https://ow-counterpick-frontend-production.up.railway.app,"
+    "http://localhost:3000,http://127.0.0.1:3000"
+)
+ALLOWED_ORIGINS = [
+    origin.strip()
+    for origin in os.environ.get("OW_ALLOWED_ORIGINS", _DEFAULT_ALLOWED_ORIGINS).split(",")
+    if origin.strip()
+]
+
+# 레이트리밋: 같은 클라이언트(IP)가 짧은 시간에 과도하게 요청하는 걸 막는 간단한
+# 인메모리 고정 윈도우 제한(app/rate_limit.py). Railway가 uvicorn을 단일 워커·
+# 단일 컨테이너로 띄우는 현재 배포 형태를 전제로 한다 — 워커나 인스턴스를
+# 여러 개로 늘리면 인스턴스마다 카운터가 따로 생겨 실제 허용량이 인스턴스 수
+# 만큼 늘어나므로, 그 시점엔 Redis 등 공유 저장소 기반으로 바꿔야 한다.
+RATE_LIMIT_MAX_REQUESTS = int(os.environ.get("OW_RATE_LIMIT_MAX_REQUESTS", "60"))
+RATE_LIMIT_WINDOW_SECONDS = int(os.environ.get("OW_RATE_LIMIT_WINDOW_SECONDS", "60"))
+
 # 하드카운터 가중치 불변식(스펙 "점수 계산 로직"의 "가중치 튜닝 제약" 참고):
 # WEIGHT_COUNTER 1건 값은 다른 모든 보너스의 최댓값 합(시너지 최대 4명 ×
 # WEIGHT_SYNERGY + WEIGHT_MAP_STRONG)보다 항상 커야 한다. 지금 값 기준

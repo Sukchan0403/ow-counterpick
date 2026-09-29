@@ -14,6 +14,11 @@ from pathlib import Path
 _tmp_dir = tempfile.mkdtemp(prefix="ow_backend_test_")
 _TEST_DB_PATH = Path(_tmp_dir) / "test_overwatch.db"
 os.environ["OW_DB_PATH"] = str(_TEST_DB_PATH)
+# 레이트리밋은 같은 TestClient/앱 인스턴스를 여러 테스트가 공유해 요청이
+# 누적되므로, 테스트 스위트가 실제 운영값(기본 60회/60초)에 걸리지 않도록
+# 넉넉하게 풀어둔다. 레이트리밋 자체의 동작은 test_rate_limit.py에서 별도
+# 인스턴스로 검증한다.
+os.environ.setdefault("OW_RATE_LIMIT_MAX_REQUESTS", "100000")
 
 _SCHEMA = """
 CREATE TABLE heroes (

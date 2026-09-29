@@ -10,6 +10,8 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
+from app.config import ALLOWED_ORIGINS
+from app.rate_limit import RateLimitMiddleware
 from app.routers import catalog, recommendations, team_evaluation
 
 logger = logging.getLogger("ow_backend")
@@ -20,13 +22,15 @@ app = FastAPI(
     version="0.1.0",
 )
 
-# 로컬 개발 단계라 일단 전체 허용. 프론트엔드 배포 도메인이 정해지면 좁혀야 함.
+# 배포된 프론트엔드 도메인과 로컬 개발 서버만 허용(app/config.py의
+# ALLOWED_ORIGINS 참고, OW_ALLOWED_ORIGINS 환경변수로 덮어쓸 수 있음).
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=ALLOWED_ORIGINS,
+    allow_methods=["GET", "POST"],
+    allow_headers=["Content-Type"],
 )
+app.add_middleware(RateLimitMiddleware)
 
 app.include_router(catalog.router)
 app.include_router(recommendations.router)
