@@ -33,6 +33,13 @@ interface Dictionary {
   backToInput: string;
   metaBadge: (season: string, dataVersion: string) => string;
 
+  // 홈페이지 상단 소개 섹션 — 검색엔진(크롤러/AI 개요)이 읽을 실제 본문 콘텐츠로도
+  // 쓰이므로, meta description과 내용이 겹쳐도 괜찮다(오히려 일관성이 도움이 됨).
+  introTitle: string;
+  introLead: string;
+  introBullets: string[];
+  introBody: string;
+
   // SharedHeroGrid
   enemyTeam: string;
   ourTeam: string;
@@ -79,6 +86,16 @@ const ko: Dictionary = {
   backToInput: "← 입력으로 돌아가기",
   metaBadge: (season, dataVersion) => `${season} 시드 데이터 · ${dataVersion}`,
 
+  introTitle: "무엇을 해결하나요",
+  introLead: "밴/픽 단계에서 흔히 겪는 고민을 도와줍니다.",
+  introBullets: [
+    "상대가 겐지·트레이서를 픽했는데, 우리 팀 마지막 자리에 뭘 넣어야 카운터가 될까?",
+    "지금 우리 팀 조합(예: 라인하르트+아나)과 시너지 좋은 영웅은?",
+    "이 맵에서 유독 강하거나 약한 영웅이 있나?",
+  ],
+  introBody:
+    "세 가지 점수(카운터·시너지·맵)를 합산해 빈 포지션에 어울리는 영웅을 순위로 보여주고, 왜 추천했는지 근거 문장을 함께 표시합니다. 데이터가 아직 검토 안 된 조합은 \"데이터 없음\" 배지로 솔직하게 드러냅니다.",
+
   enemyTeam: "상대 팀",
   ourTeam: "우리 팀",
   teamCount: (count, max) => `${count}/${max}`,
@@ -117,6 +134,16 @@ const en: Dictionary = {
   mapPlaceholder: "Select a map",
   backToInput: "← Back to picks",
   metaBadge: (season, dataVersion) => `${season} seed data · ${dataVersion}`,
+
+  introTitle: "What this helps with",
+  introLead: "Answers to the questions you run into during bans and picks.",
+  introBullets: [
+    "The enemy picked Genji and Tracer — who should fill our last slot to counter them?",
+    "Who has good synergy with our current picks (like Reinhardt + Ana)?",
+    "Is there a hero that's especially strong or weak on this map?",
+  ],
+  introBody:
+    "It adds up three scores — counter, synergy, and map — to rank the best hero for the open slot, along with the reasoning behind each recommendation. Matchups nobody's reviewed yet are honestly flagged as \"no data\" instead of being scored as if they were neutral.",
 
   enemyTeam: "Enemy team",
   ourTeam: "Our team",
@@ -157,6 +184,16 @@ const ja: Dictionary = {
   backToInput: "← 選択画面に戻る",
   metaBadge: (season, dataVersion) => `${season} シードデータ · ${dataVersion}`,
 
+  introTitle: "こんな悩みを解決します",
+  introLead: "バン・ピック時によくある悩みをサポートします。",
+  introBullets: [
+    "相手がゲンジ・トレーサーをピックした時、残り1枠には誰を入れればカウンターになる?",
+    "今の味方構成(例:ラインハルト+アナ)とシナジーが良いヒーローは?",
+    "このマップで特に強い、または弱いヒーローはいる?",
+  ],
+  introBody:
+    "カウンター・シナジー・マップの3つのスコアを合算して、空いているポジションに合うヒーローを順位付けし、推薦理由も一緒に表示します。まだ検証していない組み合わせは「データなし」バッジで正直に示します。",
+
   enemyTeam: "敵チーム",
   ourTeam: "味方チーム",
   teamCount: (count, max) => `${count}/${max}`,
@@ -196,6 +233,16 @@ const zhCn: Dictionary = {
   backToInput: "← 返回选择",
   metaBadge: (season, dataVersion) => `${season} 种子数据 · ${dataVersion}`,
 
+  introTitle: "能帮你解决这些问题",
+  introLead: "解决禁用/选择阶段常遇到的难题。",
+  introBullets: [
+    "敌方选了源氏和猎空，我方最后一个位置该选谁才能克制他们?",
+    "和我方现有阵容(比如莱因哈特+安娜)配合度高的英雄是谁?",
+    "这张地图上有没有特别强或特别弱的英雄?",
+  ],
+  introBody:
+    "综合克制、配合、地图三项分数，为空缺位置排出推荐英雄顺序，并给出推荐理由。尚未核实的组合会诚实地标注\"暂无数据\"，而不是直接按中立分数处理。",
+
   enemyTeam: "敌方队伍",
   ourTeam: "我方队伍",
   teamCount: (count, max) => `${count}/${max}`,
@@ -234,6 +281,16 @@ const zhTw: Dictionary = {
   mapPlaceholder: "請選擇地圖",
   backToInput: "← 返回選擇",
   metaBadge: (season, dataVersion) => `${season} 種子資料 · ${dataVersion}`,
+
+  introTitle: "能幫你解決這些問題",
+  introLead: "解決禁用/選擇階段常遇到的難題。",
+  introBullets: [
+    "敵方選了源氏和獵空，我方最後一個位置該選誰才能剋制他們?",
+    "和我方現有陣容(比如萊因哈特+安娜)配合度高的英雄是誰?",
+    "這張地圖上有沒有特別強或特別弱的英雄?",
+  ],
+  introBody:
+    "綜合剋制、配合、地圖三項分數，為空缺位置排出推薦英雄順序，並給出推薦理由。尚未核實的組合會誠實地標註\"尚無資料\"，而不是直接按中立分數處理。",
 
   enemyTeam: "敵方隊伍",
   ourTeam: "我方隊伍",

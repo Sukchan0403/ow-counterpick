@@ -227,6 +227,19 @@ export function HomeClient({ locale }: { locale: Locale }) {
         </div>
       </div>
 
+      {submitPhase !== "success" && (
+        <div className={styles.intro}>
+          <h1 className={styles.introTitle}>{t.introTitle}</h1>
+          <p className={styles.introLead}>{t.introLead}</p>
+          <ul className={styles.introBullets}>
+            {t.introBullets.map((bullet) => (
+              <li key={bullet}>{bullet}</li>
+            ))}
+          </ul>
+          <p className={styles.introBody}>{t.introBody}</p>
+        </div>
+      )}
+
       {catalogState === "loading" && <div className={styles.centerNote}>{t.loading}</div>}
 
       {catalogState === "error" && <ErrorScreen onRetry={retryLoadCatalog} locale={locale} />}
