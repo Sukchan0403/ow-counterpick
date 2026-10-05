@@ -2104,5 +2104,1373 @@
     "hero_id": "hazard",
     "rating": "보통",
     "reason": "유적 진입로와 개활지가 섞여 가시 벽 활용이 상황에 따라 갈림"
+  },
+  {
+    "map_id": "antarctic_peninsula",
+    "hero_id": "domina",
+    "rating": "약함",
+    "reason": "포인트 주변이 좁고 엄폐물이 많아 장거리 포킹 각이 잘 나오지 않음"
+  },
+  {
+    "map_id": "nepal",
+    "hero_id": "domina",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "busan",
+    "hero_id": "domina",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "oasis",
+    "hero_id": "domina",
+    "rating": "약함",
+    "reason": "고저차가 심하고 측면 진입로가 많아 기동기 없는 포지션을 쉽게 우회당함"
+  },
+  {
+    "map_id": "lijiang_tower",
+    "hero_id": "domina",
+    "rating": "약함",
+    "reason": "포인트 주변 공간이 좁아 근접 교전 위주로 흘러 장거리 견제 강점을 살리기 어려움"
+  },
+  {
+    "map_id": "samoa",
+    "hero_id": "domina",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "numbani",
+    "hero_id": "domina",
+    "rating": "약함",
+    "reason": "광장 주변 측면 루트와 고지대가 많아 방벽 포지션을 쉽게 우회당함"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "domina",
+    "rating": "약함",
+    "reason": "실내 세트장 구간이 많아 장거리 사선을 확보하기 어려움"
+  },
+  {
+    "map_id": "midtown",
+    "hero_id": "domina",
+    "rating": "강함",
+    "reason": "긴 대로 사선을 따라 포톤 매그넘 장거리 포킹 각을 잡기 좋음"
+  },
+  {
+    "map_id": "paraiso",
+    "hero_id": "domina",
+    "rating": "약함",
+    "reason": "수로를 끼고 고지대가 여러 겹이라 기동기 없이 고지대 싸움에 대응하기 어려움"
+  },
+  {
+    "map_id": "blizzard_world",
+    "hero_id": "domina",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "neon_junction",
+    "hero_id": "domina",
+    "rating": "강함",
+    "reason": "직선형 대로가 길게 뻗어 방벽을 세우고 장거리 견제를 이어가기 좋음"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "domina",
+    "rating": "약함",
+    "reason": "좁은 골목과 측면 루트가 얽혀 있어 방벽 포지션을 우회당하기 쉬움"
+  },
+  {
+    "map_id": "havana",
+    "hero_id": "domina",
+    "rating": "강함",
+    "reason": "긴 직선 언덕길에서 방벽을 세우고 장거리 포킹 각을 잡기 매우 좋음"
+  },
+  {
+    "map_id": "watchpoint_gibraltar",
+    "hero_id": "domina",
+    "rating": "약함",
+    "reason": "고지대와 측면 통로가 많아 다이브와 플랭크에 노출되기 매우 쉬움"
+  },
+  {
+    "map_id": "route_66",
+    "hero_id": "domina",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "circuit_royal",
+    "hero_id": "domina",
+    "rating": "강함",
+    "reason": "트랙을 따라 사선이 길게 트여 있어 장거리 포톤 매그넘 견제에 최적"
+  },
+  {
+    "map_id": "rialto",
+    "hero_id": "domina",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "shambali_monastery",
+    "hero_id": "domina",
+    "rating": "강함",
+    "reason": "긴 계단 진입로를 방벽으로 막고 위아래 사선에서 장거리 포킹하기 좋음"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "domina",
+    "rating": "강함",
+    "reason": "넓은 개활지 사선이 길어 방벽 뒤 장거리 견제가 잘 통함"
+  },
+  {
+    "map_id": "new_junk_city",
+    "hero_id": "domina",
+    "rating": "약함",
+    "reason": "거점 간 이동 거리가 길어 기동기 없는 도미나가 거점 전환에 늦기 쉬움"
+  },
+  {
+    "map_id": "suravasa",
+    "hero_id": "domina",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "aatlis",
+    "hero_id": "domina",
+    "rating": "약함",
+    "reason": "거점이 흩어져 있고 골목이 많아 기동기 없이 거점 전환과 측면 대응이 어려움"
+  },
+  {
+    "map_id": "colosseo",
+    "hero_id": "domina",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "esperanca",
+    "hero_id": "domina",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "new_queen_street",
+    "hero_id": "domina",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "runasapi",
+    "hero_id": "domina",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "antarctic_peninsula",
+    "hero_id": "dmon",
+    "rating": "강함",
+    "reason": "좁은 실내 거점에서 근접 교전을 강요하기 좋음"
+  },
+  {
+    "map_id": "nepal",
+    "hero_id": "dmon",
+    "rating": "강함",
+    "reason": "사선이 짧은 거점 구조로 원거리 견제를 피해 근접 싸움을 열기 좋음"
+  },
+  {
+    "map_id": "busan",
+    "hero_id": "dmon",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "oasis",
+    "hero_id": "dmon",
+    "rating": "강함",
+    "reason": "거점 주변 엄폐물을 타고 접근해 짧은 거리 교전을 유도하기 좋음"
+  },
+  {
+    "map_id": "lijiang_tower",
+    "hero_id": "dmon",
+    "rating": "강함",
+    "reason": "엄폐물이 많은 거점에서 거리를 좁혀 난전을 벌이기 유리함"
+  },
+  {
+    "map_id": "ilios",
+    "hero_id": "dmon",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "samoa",
+    "hero_id": "dmon",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "numbani",
+    "hero_id": "dmon",
+    "rating": "약함",
+    "reason": "긴 직선 사선이 많아 원거리 견제에 노출되기 쉬움"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "dmon",
+    "rating": "약함",
+    "reason": "마지막 구간의 열린 공간과 높은 저격 각에 취약함"
+  },
+  {
+    "map_id": "midtown",
+    "hero_id": "dmon",
+    "rating": "강함",
+    "reason": "코너가 많은 도심 구조로 근접 압박 동선을 잡기 좋음"
+  },
+  {
+    "map_id": "paraiso",
+    "hero_id": "dmon",
+    "rating": "약함",
+    "reason": "넓게 트인 구간과 높은 고지대에서 원거리 화력에 시달리기 쉬움"
+  },
+  {
+    "map_id": "eichenwalde",
+    "hero_id": "dmon",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "blizzard_world",
+    "hero_id": "dmon",
+    "rating": "약함",
+    "reason": "고지대가 많은 구간에서 높은 곳의 딜러를 따라잡기 어려움"
+  },
+  {
+    "map_id": "neon_junction",
+    "hero_id": "dmon",
+    "rating": "강함",
+    "reason": "짧은 골목과 실내 우회로가 많아 근접 교전을 열기 좋음"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "dmon",
+    "rating": "약함",
+    "reason": "넓은 개방 구간과 긴 사선에서 진입 전 피해가 크게 누적됨"
+  },
+  {
+    "map_id": "havana",
+    "hero_id": "dmon",
+    "rating": "약함",
+    "reason": "첫 구간의 긴 저격 사선과 넓은 공간에서 접근이 어려움"
+  },
+  {
+    "map_id": "watchpoint_gibraltar",
+    "hero_id": "dmon",
+    "rating": "약함",
+    "reason": "고지대와 개방된 공중 공간이 많아 원거리·공중 영웅에게 일방적으로 맞기 쉬움"
+  },
+  {
+    "map_id": "route_66",
+    "hero_id": "dmon",
+    "rating": "약함",
+    "reason": "트인 직선 도로와 높은 고지대 저격 각에 쉽게 노출됨"
+  },
+  {
+    "map_id": "circuit_royal",
+    "hero_id": "dmon",
+    "rating": "약함",
+    "reason": "긴 직선 대로와 높은 발코니 사선에서 진입이 막히기 쉬움"
+  },
+  {
+    "map_id": "rialto",
+    "hero_id": "dmon",
+    "rating": "약함",
+    "reason": "운하를 따라 길게 뻗은 사선 탓에 근접 거리를 만들기 어려움"
+  },
+  {
+    "map_id": "shambali_monastery",
+    "hero_id": "dmon",
+    "rating": "강함",
+    "reason": "좁은 계단길과 골목이 이어져 근접 압박을 이어가기 좋음"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "dmon",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "new_junk_city",
+    "hero_id": "dmon",
+    "rating": "강함",
+    "reason": "거점 간 짧은 골목과 실내 구간에서 근접 교전을 강요하기 좋음"
+  },
+  {
+    "map_id": "suravasa",
+    "hero_id": "dmon",
+    "rating": "강함",
+    "reason": "구불구불한 골목 구조로 사선을 끊고 빠르게 접근하기 좋음"
+  },
+  {
+    "map_id": "aatlis",
+    "hero_id": "dmon",
+    "rating": "강함",
+    "reason": "엄폐물이 많은 거점 주변에서 근접 싸움을 유도하기 좋음"
+  },
+  {
+    "map_id": "colosseo",
+    "hero_id": "dmon",
+    "rating": "강함",
+    "reason": "좁은 회랑과 거리가 짧은 교전 구간에서 앞라인 압박이 강함"
+  },
+  {
+    "map_id": "esperanca",
+    "hero_id": "dmon",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "new_queen_street",
+    "hero_id": "dmon",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "runasapi",
+    "hero_id": "dmon",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "antarctic_peninsula",
+    "hero_id": "ramattra",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "nepal",
+    "hero_id": "ramattra",
+    "rating": "강함",
+    "reason": "좁은 거점 주변 근접전 구간이 많아 네메시스 형태로 적을 몰아붙이기 좋음"
+  },
+  {
+    "map_id": "busan",
+    "hero_id": "ramattra",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "oasis",
+    "hero_id": "ramattra",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "lijiang_tower",
+    "hero_id": "ramattra",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "ilios",
+    "hero_id": "ramattra",
+    "rating": "약함",
+    "reason": "넓게 트인 거점과 낙사 지형이 많아 근접 사거리를 유지하기 어려움"
+  },
+  {
+    "map_id": "samoa",
+    "hero_id": "ramattra",
+    "rating": "강함",
+    "reason": "엄폐물이 많은 좁은 골목 구간에서 보이드 방벽과 강타로 거점을 장악하기 좋음"
+  },
+  {
+    "map_id": "kings_row",
+    "hero_id": "ramattra",
+    "rating": "강함",
+    "reason": "좁은 골목과 실내 구간이 이어져 네메시스 형태 강타를 몰아 넣기 좋음"
+  },
+  {
+    "map_id": "numbani",
+    "hero_id": "ramattra",
+    "rating": "약함",
+    "reason": "긴 직선 사거리와 개방된 공간이 많아 근접 진입 전에 견제를 많이 받음"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "ramattra",
+    "rating": "약함",
+    "reason": "고지대가 많아 적이 높은 곳에서 견제하면 근접 강타로 대응하기 어려움"
+  },
+  {
+    "map_id": "midtown",
+    "hero_id": "ramattra",
+    "rating": "강함",
+    "reason": "건물 사이 좁은 거리에서 보이드 방벽으로 화물을 밀며 근접전을 강요하기 좋음"
+  },
+  {
+    "map_id": "paraiso",
+    "hero_id": "ramattra",
+    "rating": "약함",
+    "reason": "고저차가 큰 지형이라 고지대를 점거한 적에게 근접 압박을 넣기 어려움"
+  },
+  {
+    "map_id": "blizzard_world",
+    "hero_id": "ramattra",
+    "rating": "약함",
+    "reason": "측면 루트와 고지대가 많아 적 견제를 받으며 전진해야 하는 부담이 큼"
+  },
+  {
+    "map_id": "neon_junction",
+    "hero_id": "ramattra",
+    "rating": "강함",
+    "reason": "좁은 교차로 구간이 많아 소용돌이와 강타로 밀집한 적을 압박하기 좋음"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "ramattra",
+    "rating": "약함",
+    "reason": "긴 사선과 고지대 견제가 많아 근접 탱커로 진입하기 부담스러움"
+  },
+  {
+    "map_id": "havana",
+    "hero_id": "ramattra",
+    "rating": "강함",
+    "reason": "좁은 골목과 실내 통로에서 네메시스 형태로 정면 브롤을 주도하기 좋음"
+  },
+  {
+    "map_id": "watchpoint_gibraltar",
+    "hero_id": "ramattra",
+    "rating": "약함",
+    "reason": "긴 개방 구간과 높은 위치의 견제각이 많아 근접 압박을 넣기 매우 어려움"
+  },
+  {
+    "map_id": "route_66",
+    "hero_id": "ramattra",
+    "rating": "약함",
+    "reason": "개활지와 긴 직선 구간에서 원거리 견제에 노출되기 쉬움"
+  },
+  {
+    "map_id": "circuit_royal",
+    "hero_id": "ramattra",
+    "rating": "강함",
+    "reason": "좁은 거리와 짧은 교전 거리가 이어져 보이드 방벽과 강타로 정면 돌파하기 좋음"
+  },
+  {
+    "map_id": "rialto",
+    "hero_id": "ramattra",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "shambali_monastery",
+    "hero_id": "ramattra",
+    "rating": "강함",
+    "reason": "좁은 통로와 계단 구간에서 소용돌이와 강타로 적을 몰아붙이기 좋음"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "ramattra",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "new_junk_city",
+    "hero_id": "ramattra",
+    "rating": "강함",
+    "reason": "거점 사이 좁은 실내 구간이 많아 네메시스 형태로 근접 교전을 주도하기 좋음"
+  },
+  {
+    "map_id": "suravasa",
+    "hero_id": "ramattra",
+    "rating": "강함",
+    "reason": "짧은 교전 거리와 엄폐가 많은 거점에서 근접 브롤을 펼치기 좋음"
+  },
+  {
+    "map_id": "aatlis",
+    "hero_id": "ramattra",
+    "rating": "강함",
+    "reason": "좁은 실내 거점에서 보이드 방벽과 강타로 정면 교전을 장악하기 좋음"
+  },
+  {
+    "map_id": "colosseo",
+    "hero_id": "ramattra",
+    "rating": "강함",
+    "reason": "좁은 골목 위주 구조에서 소용돌이로 적을 묶고 강타로 밀어붙이기 좋음"
+  },
+  {
+    "map_id": "esperanca",
+    "hero_id": "ramattra",
+    "rating": "강함",
+    "reason": "짧은 교전 거리의 거리 구간에서 보이드 방벽으로 로봇 쪽 전선을 지키기 좋음"
+  },
+  {
+    "map_id": "new_queen_street",
+    "hero_id": "ramattra",
+    "rating": "강함",
+    "reason": "직선 거리 위주 지형에서 보이드 방벽으로 사선을 가리며 전진하기 좋음"
+  },
+  {
+    "map_id": "runasapi",
+    "hero_id": "ramattra",
+    "rating": "강함",
+    "reason": "좁은 계단과 통로 구간이 많아 네메시스 형태로 정면 교전을 주도하기 좋음"
+  },
+  {
+    "map_id": "antarctic_peninsula",
+    "hero_id": "reinhardt",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "nepal",
+    "hero_id": "reinhardt",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "busan",
+    "hero_id": "reinhardt",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "oasis",
+    "hero_id": "reinhardt",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "lijiang_tower",
+    "hero_id": "reinhardt",
+    "rating": "강함",
+    "reason": "중앙 지점이 좁고 닫힌 구조라 방벽 브롤을 그대로 살리기 좋음"
+  },
+  {
+    "map_id": "ilios",
+    "hero_id": "reinhardt",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "samoa",
+    "hero_id": "reinhardt",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "numbani",
+    "hero_id": "reinhardt",
+    "rating": "약함",
+    "reason": "고지대와 개방된 사선이 많아 방벽만으로 전선을 유지하기 어려움"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "reinhardt",
+    "rating": "약함",
+    "reason": "건물 사이 고지대가 많아 원거리 견제에 노출되기 쉬움"
+  },
+  {
+    "map_id": "midtown",
+    "hero_id": "reinhardt",
+    "rating": "강함",
+    "reason": "좁은 거리와 짧은 교전 거리 덕분에 방벽 전진으로 화물을 밀기 좋음"
+  },
+  {
+    "map_id": "paraiso",
+    "hero_id": "reinhardt",
+    "rating": "약함",
+    "reason": "고저차가 큰 지형과 넓은 개활지가 많아 근접 압박 거리를 만들기 어려움"
+  },
+  {
+    "map_id": "eichenwalde",
+    "hero_id": "reinhardt",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "blizzard_world",
+    "hero_id": "reinhardt",
+    "rating": "약함",
+    "reason": "구역별 고지대와 우회로가 많아 방벽 정면 압박이 쉽게 측면을 내어줌"
+  },
+  {
+    "map_id": "neon_junction",
+    "hero_id": "reinhardt",
+    "rating": "강함",
+    "reason": "짧은 교전 거리와 닫힌 구간이 많아 망치 근접 브롤을 펼치기 좋음"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "reinhardt",
+    "rating": "약함",
+    "reason": "첫 구간 긴 직선 사선과 고지대에서 장거리 견제에 계속 노출됨"
+  },
+  {
+    "map_id": "havana",
+    "hero_id": "reinhardt",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "watchpoint_gibraltar",
+    "hero_id": "reinhardt",
+    "rating": "약함",
+    "reason": "넓은 개방 공간과 높은 고지대가 많아 근접 탱커가 진입할 각이 부족함"
+  },
+  {
+    "map_id": "route_66",
+    "hero_id": "reinhardt",
+    "rating": "약함",
+    "reason": "좁은 골목 사이 고지대가 많아 방벽 아래 전선만으로는 압박하기 어려움"
+  },
+  {
+    "map_id": "circuit_royal",
+    "hero_id": "reinhardt",
+    "rating": "강함",
+    "reason": "실내 구간과 좁은 길목이 많아 방벽으로 전선을 밀고 브롤하기 좋음"
+  },
+  {
+    "map_id": "rialto",
+    "hero_id": "reinhardt",
+    "rating": "약함",
+    "reason": "운하를 가로지르는 긴 사선이 많아 방벽 정면 압박이 쉽게 견제당함"
+  },
+  {
+    "map_id": "shambali_monastery",
+    "hero_id": "reinhardt",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "reinhardt",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "new_junk_city",
+    "hero_id": "reinhardt",
+    "rating": "강함",
+    "reason": "짧은 교전 거리의 점령 지점이 많아 방벽 전진과 망치 브롤이 잘 통함"
+  },
+  {
+    "map_id": "suravasa",
+    "hero_id": "reinhardt",
+    "rating": "강함",
+    "reason": "닫힌 실내형 점령 지점이 많아 방벽으로 입구를 틀어막기 좋음"
+  },
+  {
+    "map_id": "aatlis",
+    "hero_id": "reinhardt",
+    "rating": "강함",
+    "reason": "좁은 골목과 실내 지점이 많아 근접 브롤 조합을 전개하기 좋음"
+  },
+  {
+    "map_id": "colosseo",
+    "hero_id": "reinhardt",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "esperanca",
+    "hero_id": "reinhardt",
+    "rating": "약함",
+    "reason": "고지대와 측면 우회로가 많아 로봇 앞에서 방벽만으로 버티기 어려움"
+  },
+  {
+    "map_id": "new_queen_street",
+    "hero_id": "reinhardt",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "runasapi",
+    "hero_id": "reinhardt",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "antarctic_peninsula",
+    "hero_id": "sigma",
+    "rating": "약함",
+    "reason": "개활지가 넓어 방벽을 세워도 측면에서 노출되기 쉬움"
+  },
+  {
+    "map_id": "nepal",
+    "hero_id": "sigma",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "busan",
+    "hero_id": "sigma",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "oasis",
+    "hero_id": "sigma",
+    "rating": "약함",
+    "reason": "좁은 거점과 여러 진입로 탓에 방벽 하나로 모든 각을 막기 어려움"
+  },
+  {
+    "map_id": "lijiang_tower",
+    "hero_id": "sigma",
+    "rating": "약함",
+    "reason": "근접 교전 위주의 좁은 거점이라 방벽 포킹 거리를 확보하기 힘듦"
+  },
+  {
+    "map_id": "samoa",
+    "hero_id": "sigma",
+    "rating": "강함",
+    "reason": "긴 직선 시야와 넓은 거점 외곽에서 방벽 포킹 거리를 확보하기 좋음"
+  },
+  {
+    "map_id": "kings_row",
+    "hero_id": "sigma",
+    "rating": "강함",
+    "reason": "좁은 초크와 긴 시가지 직선로에서 방벽과 초구체 포킹이 빛남"
+  },
+  {
+    "map_id": "numbani",
+    "hero_id": "sigma",
+    "rating": "약함",
+    "reason": "고지대와 측면 우회로가 많아 방벽 정면 운용이 쉽게 무너짐"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "sigma",
+    "rating": "약함",
+    "reason": "좁은 골목과 다양한 측면 루트 탓에 방벽 위치가 자주 무력화됨"
+  },
+  {
+    "map_id": "midtown",
+    "hero_id": "sigma",
+    "rating": "강함",
+    "reason": "시가지 직선 도로에서 방벽을 앞세운 정면 전진이 효과적"
+  },
+  {
+    "map_id": "paraiso",
+    "hero_id": "sigma",
+    "rating": "약함",
+    "reason": "계단과 고지대가 얽혀 정면 방벽 포킹 거리 확보가 어려움"
+  },
+  {
+    "map_id": "eichenwalde",
+    "hero_id": "sigma",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "blizzard_world",
+    "hero_id": "sigma",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "neon_junction",
+    "hero_id": "sigma",
+    "rating": "강함",
+    "reason": "좁은 거리와 초크에서 방벽으로 전선을 버티며 포킹하기 좋음"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "sigma",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "havana",
+    "hero_id": "sigma",
+    "rating": "강함",
+    "reason": "긴 직선 진격로와 초크에서 방벽 포킹으로 공격 경로를 압박"
+  },
+  {
+    "map_id": "watchpoint_gibraltar",
+    "hero_id": "sigma",
+    "rating": "약함",
+    "reason": "넓은 개활지와 다층 고지대 탓에 방벽 하나로 시야를 가리기 힘듦"
+  },
+  {
+    "map_id": "route_66",
+    "hero_id": "sigma",
+    "rating": "약함",
+    "reason": "구불구불한 화물 경로와 측면 각이 많아 방벽 포킹이 자주 끊김"
+  },
+  {
+    "map_id": "circuit_royal",
+    "hero_id": "sigma",
+    "rating": "강함",
+    "reason": "좁은 실내 초크와 긴 복도형 시야에서 방벽 운용이 매우 유리"
+  },
+  {
+    "map_id": "rialto",
+    "hero_id": "sigma",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "shambali_monastery",
+    "hero_id": "sigma",
+    "rating": "강함",
+    "reason": "좁은 계단식 진격로에서 방벽으로 전선을 붙잡고 포킹하기 좋음"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "sigma",
+    "rating": "강함",
+    "reason": "넓은 개활 진격로에서 방벽과 초구체 포킹으로 장거리 견제가 효과적"
+  },
+  {
+    "map_id": "new_junk_city",
+    "hero_id": "sigma",
+    "rating": "약함",
+    "reason": "거점이 흩어져 있어 느린 이동으로 거점 전환 속도를 따라가기 어려움"
+  },
+  {
+    "map_id": "suravasa",
+    "hero_id": "sigma",
+    "rating": "약함",
+    "reason": "거점 사이 이동이 잦고 측면 각이 많아 방벽 전선 유지가 힘듦"
+  },
+  {
+    "map_id": "aatlis",
+    "hero_id": "sigma",
+    "rating": "약함",
+    "reason": "수직 구조와 넓게 퍼진 거점 탓에 방벽 정면 운용이 어려움"
+  },
+  {
+    "map_id": "colosseo",
+    "hero_id": "sigma",
+    "rating": "강함",
+    "reason": "긴 직선 통로에서 방벽을 앞세워 로봇을 밀어내기 좋음"
+  },
+  {
+    "map_id": "esperanca",
+    "hero_id": "sigma",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "new_queen_street",
+    "hero_id": "sigma",
+    "rating": "강함",
+    "reason": "넓은 직선 도로에서 방벽 포킹으로 로봇 주변 교전을 주도"
+  },
+  {
+    "map_id": "runasapi",
+    "hero_id": "sigma",
+    "rating": "강함",
+    "reason": "직선형 진격로와 좁은 초크에서 방벽으로 전선을 굳히기 좋음"
+  },
+  {
+    "map_id": "antarctic_peninsula",
+    "hero_id": "orisa",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "nepal",
+    "hero_id": "orisa",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "busan",
+    "hero_id": "orisa",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "oasis",
+    "hero_id": "orisa",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "lijiang_tower",
+    "hero_id": "orisa",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "ilios",
+    "hero_id": "orisa",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "samoa",
+    "hero_id": "orisa",
+    "rating": "강함",
+    "reason": "좁은 해안 마을 거점 주변에서 전선을 붙잡고 오래 버티기 좋음"
+  },
+  {
+    "map_id": "numbani",
+    "hero_id": "orisa",
+    "rating": "약함",
+    "reason": "꺾인 골목과 고지대가 많아 정면 포킹 위주의 오리사가 측면을 자주 내줌"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "orisa",
+    "rating": "약함",
+    "reason": "좁은 거리와 높은 건물 고지대에서 측면을 내주기 쉬워 전선 고정이 어려움"
+  },
+  {
+    "map_id": "midtown",
+    "hero_id": "orisa",
+    "rating": "강함",
+    "reason": "개방된 도심 대로에서 투창과 창 견제 각이 길게 나와 전선을 고정하기 좋음"
+  },
+  {
+    "map_id": "paraiso",
+    "hero_id": "orisa",
+    "rating": "약함",
+    "reason": "수로와 고지대가 얽혀 있어 측면과 위쪽에서 들어오는 압박에 취약함"
+  },
+  {
+    "map_id": "eichenwalde",
+    "hero_id": "orisa",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "blizzard_world",
+    "hero_id": "orisa",
+    "rating": "약함",
+    "reason": "건물 고지대와 우회 통로가 많아 정면 위주의 오리사가 측면을 자주 내줌"
+  },
+  {
+    "map_id": "neon_junction",
+    "hero_id": "orisa",
+    "rating": "강함",
+    "reason": "트인 네온 대로에서 장거리 창 견제와 전선 유지가 수월함"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "orisa",
+    "rating": "약함",
+    "reason": "긴 직선 거리와 높은 저격 각에 노출돼 지상 탱커가 일방적으로 맞기 쉬움"
+  },
+  {
+    "map_id": "havana",
+    "hero_id": "orisa",
+    "rating": "약함",
+    "reason": "긴 사거리 저격 구간과 고지대가 많아 지상 탱커가 일방적으로 견제당함"
+  },
+  {
+    "map_id": "watchpoint_gibraltar",
+    "hero_id": "orisa",
+    "rating": "약함",
+    "reason": "공중 동선과 고지대가 많아 지상에서 버티는 오리사가 각을 잡기 어려움"
+  },
+  {
+    "map_id": "route_66",
+    "hero_id": "orisa",
+    "rating": "약함",
+    "reason": "측면 고지대 루트가 많아 화물 앞을 지키는 동안 뒤를 내주기 쉬움"
+  },
+  {
+    "map_id": "circuit_royal",
+    "hero_id": "orisa",
+    "rating": "강함",
+    "reason": "긴 직선 트랙 구간에서 창 견제 각이 잘 나와 화물을 지키며 버티기 좋음"
+  },
+  {
+    "map_id": "rialto",
+    "hero_id": "orisa",
+    "rating": "약함",
+    "reason": "운하와 다리로 갈라진 구조라 측면 진입로를 막기 어려움"
+  },
+  {
+    "map_id": "shambali_monastery",
+    "hero_id": "orisa",
+    "rating": "강함",
+    "reason": "수도원 앞 좁은 진입로를 포티파이로 버티며 전선을 고정하기 좋음"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "orisa",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "new_junk_city",
+    "hero_id": "orisa",
+    "rating": "강함",
+    "reason": "고철 폐허의 좁은 거점 통로에서 투창으로 진입을 끊어내기 좋음"
+  },
+  {
+    "map_id": "suravasa",
+    "hero_id": "orisa",
+    "rating": "강함",
+    "reason": "구조물 사이 짧은 교전 거리에서 전선을 붙잡고 거점을 지키기 좋음"
+  },
+  {
+    "map_id": "aatlis",
+    "hero_id": "orisa",
+    "rating": "강함",
+    "reason": "메디나 골목 거점에서 투창으로 적 진입을 밀어내며 버티기 좋음"
+  },
+  {
+    "map_id": "colosseo",
+    "hero_id": "orisa",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "esperanca",
+    "hero_id": "orisa",
+    "rating": "약함",
+    "reason": "수직 구조물과 측면 동선이 많아 정면 고정형 탱커가 포위당하기 쉬움"
+  },
+  {
+    "map_id": "new_queen_street",
+    "hero_id": "orisa",
+    "rating": "약함",
+    "reason": "교차로와 지붕 루트가 많아 로봇을 따라가는 동안 측면을 자주 내줌"
+  },
+  {
+    "map_id": "runasapi",
+    "hero_id": "orisa",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "antarctic_peninsula",
+    "hero_id": "zarya",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "nepal",
+    "hero_id": "zarya",
+    "rating": "강함",
+    "reason": "폐쇄된 실내 포인트가 많아 빔 사거리 안에서 방벽 교전을 펼치기 좋음"
+  },
+  {
+    "map_id": "busan",
+    "hero_id": "zarya",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "lijiang_tower",
+    "hero_id": "zarya",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "ilios",
+    "hero_id": "zarya",
+    "rating": "약함",
+    "reason": "개방된 우물 맵과 긴 시야선 탓에 빔 사거리 밖에서 견제당하기 쉬움"
+  },
+  {
+    "map_id": "samoa",
+    "hero_id": "zarya",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "kings_row",
+    "hero_id": "zarya",
+    "rating": "강함",
+    "reason": "좁은 거리와 코너가 많아 근거리 방벽 교전으로 에너지를 모으기 좋음"
+  },
+  {
+    "map_id": "numbani",
+    "hero_id": "zarya",
+    "rating": "약함",
+    "reason": "고지대와 긴 직선 구간이 많아 짧은 빔 사거리로 압박하기 어려움"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "zarya",
+    "rating": "약함",
+    "reason": "고지대에서 내려다보는 저격 각이 많아 근거리 교전 각을 잡기 어려움"
+  },
+  {
+    "map_id": "midtown",
+    "hero_id": "zarya",
+    "rating": "강함",
+    "reason": "좁은 도로와 실내 구간이 많아 근거리 방벽 교전을 펼치기 좋음"
+  },
+  {
+    "map_id": "paraiso",
+    "hero_id": "zarya",
+    "rating": "약함",
+    "reason": "높낮이 차가 큰 지형이 많아 지상 근거리 교전을 강요하기 어려움"
+  },
+  {
+    "map_id": "eichenwalde",
+    "hero_id": "zarya",
+    "rating": "약함",
+    "reason": "성 진입로의 긴 직선 구간에서 장거리 견제에 오래 노출됨"
+  },
+  {
+    "map_id": "blizzard_world",
+    "hero_id": "zarya",
+    "rating": "약함",
+    "reason": "넓은 개활지와 고지대가 많아 빔 사거리 안으로 들어가기 어려움"
+  },
+  {
+    "map_id": "neon_junction",
+    "hero_id": "zarya",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "zarya",
+    "rating": "약함",
+    "reason": "긴 직선 구간과 높은 고지대 탓에 빔 사거리 밖에서 일방적으로 견제당함"
+  },
+  {
+    "map_id": "watchpoint_gibraltar",
+    "hero_id": "zarya",
+    "rating": "약함",
+    "reason": "개방된 시야와 넓은 공간이 많아 근거리 탱커가 압박하기 어려움"
+  },
+  {
+    "map_id": "route_66",
+    "hero_id": "zarya",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "circuit_royal",
+    "hero_id": "zarya",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "rialto",
+    "hero_id": "zarya",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "shambali_monastery",
+    "hero_id": "zarya",
+    "rating": "강함",
+    "reason": "좁은 계단과 골목 구간이 많아 방벽 교전으로 에너지를 모으기 좋음"
+  },
+  {
+    "map_id": "new_junk_city",
+    "hero_id": "zarya",
+    "rating": "강함",
+    "reason": "폐쇄된 거점 주변 좁은 구간이 많아 근거리 브롤 교전을 펼치기 좋음"
+  },
+  {
+    "map_id": "suravasa",
+    "hero_id": "zarya",
+    "rating": "강함",
+    "reason": "실내형 거점이 많아 빔 사거리 안에서 방벽 교전을 펼치기 좋음"
+  },
+  {
+    "map_id": "aatlis",
+    "hero_id": "zarya",
+    "rating": "강함",
+    "reason": "좁은 골목과 실내 구간이 많아 근거리 방벽 교전 각을 잡기 좋음"
+  },
+  {
+    "map_id": "colosseo",
+    "hero_id": "zarya",
+    "rating": "강함",
+    "reason": "로봇 주변의 좁은 근거리 교전 구간에서 방벽과 빔을 활용하기 좋음"
+  },
+  {
+    "map_id": "esperanca",
+    "hero_id": "zarya",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "new_queen_street",
+    "hero_id": "zarya",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "runasapi",
+    "hero_id": "zarya",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "antarctic_peninsula",
+    "hero_id": "junker_queen",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "nepal",
+    "hero_id": "junker_queen",
+    "rating": "강함",
+    "reason": "사원 포인트 주변 좁은 근접 공간에서 스캐터건과 도끼 화력을 살리기 좋음"
+  },
+  {
+    "map_id": "busan",
+    "hero_id": "junker_queen",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "oasis",
+    "hero_id": "junker_queen",
+    "rating": "강함",
+    "reason": "포인트 주변 실내 통로와 짧은 교전 거리가 근접 브롤 진입에 유리함"
+  },
+  {
+    "map_id": "lijiang_tower",
+    "hero_id": "junker_queen",
+    "rating": "강함",
+    "reason": "정원과 실내 거점 모두 교전 거리가 짧아 광란으로 밀어붙이기 좋음"
+  },
+  {
+    "map_id": "ilios",
+    "hero_id": "junker_queen",
+    "rating": "강함",
+    "reason": "폐허 포인트가 좁게 둘러싸여 있어 톱니 칼날로 끌어와 근접 압박하기 좋음"
+  },
+  {
+    "map_id": "samoa",
+    "hero_id": "junker_queen",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "numbani",
+    "hero_id": "junker_queen",
+    "rating": "약함",
+    "reason": "광장과 고지대가 넓게 트여 있어 접근 전에 장거리 견제에 노출되기 쉬움"
+  },
+  {
+    "map_id": "hollywood",
+    "hero_id": "junker_queen",
+    "rating": "약함",
+    "reason": "첫 구간 진입로가 긴 직선이라 근접 거리를 좁히기 전에 체력을 잃기 쉬움"
+  },
+  {
+    "map_id": "midtown",
+    "hero_id": "junker_queen",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "paraiso",
+    "hero_id": "junker_queen",
+    "rating": "약함",
+    "reason": "고지대와 긴 사선이 많아 상대 원거리 딜러를 잡으러 가기 어려움"
+  },
+  {
+    "map_id": "eichenwalde",
+    "hero_id": "junker_queen",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "blizzard_world",
+    "hero_id": "junker_queen",
+    "rating": "약함",
+    "reason": "구간 사이 개활지가 넓고 고저차가 심해 근접 진입 각을 잡기 어려움"
+  },
+  {
+    "map_id": "neon_junction",
+    "hero_id": "junker_queen",
+    "rating": "보통",
+    "reason": "특별히 유불리 없는 무난한 지형"
+  },
+  {
+    "map_id": "dorado",
+    "hero_id": "junker_queen",
+    "rating": "약함",
+    "reason": "언덕길 직선 구간이 길어 근접 거리까지 다가가는 동안 견제에 계속 노출됨"
+  },
+  {
+    "map_id": "havana",
+    "hero_id": "junker_queen",
+    "rating": "약함",
+    "reason": "긴 거리의 사선과 높은 고지대가 많아 근접 브롤 거리 확보가 어려움"
+  },
+  {
+    "map_id": "watchpoint_gibraltar",
+    "hero_id": "junker_queen",
+    "rating": "약함",
+    "reason": "활주로 개활지와 공중 고지대가 많아 근접 위주 탱커가 압박하기 어려움"
+  },
+  {
+    "map_id": "route_66",
+    "hero_id": "junker_queen",
+    "rating": "약함",
+    "reason": "직선 도로와 높은 고지대 위주라 원거리 견제를 뚫고 진입하기 어려움"
+  },
+  {
+    "map_id": "circuit_royal",
+    "hero_id": "junker_queen",
+    "rating": "약함",
+    "reason": "긴 직선 사선과 높은 발코니 위주라 근접 진입 전에 저격에 노출되기 쉬움"
+  },
+  {
+    "map_id": "rialto",
+    "hero_id": "junker_queen",
+    "rating": "약함",
+    "reason": "운하를 낀 긴 직선 거리 때문에 근접 교전 거리를 만들기 어려움"
+  },
+  {
+    "map_id": "shambali_monastery",
+    "hero_id": "junker_queen",
+    "rating": "강함",
+    "reason": "계단과 좁은 사원 통로가 많아 근접 브롤 거리로 밀어붙이기 좋음"
+  },
+  {
+    "map_id": "junkertown",
+    "hero_id": "junker_queen",
+    "rating": "약함",
+    "reason": "경기장 진입로가 넓게 트여 있고 고지대가 많아 근접 압박이 어려움"
+  },
+  {
+    "map_id": "new_junk_city",
+    "hero_id": "junker_queen",
+    "rating": "강함",
+    "reason": "고철 폐허의 좁은 골목과 짧은 교전 거리가 광란 진입에 최적"
+  },
+  {
+    "map_id": "suravasa",
+    "hero_id": "junker_queen",
+    "rating": "강함",
+    "reason": "구조물 사이 좁은 통로가 많아 톱니 칼날과 근접 화력을 살리기 좋음"
+  },
+  {
+    "map_id": "aatlis",
+    "hero_id": "junker_queen",
+    "rating": "강함",
+    "reason": "메디나의 좁은 골목이 많아 근접 브롤로 거점을 밀어붙이기 매우 좋음"
+  },
+  {
+    "map_id": "colosseo",
+    "hero_id": "junker_queen",
+    "rating": "강함",
+    "reason": "로봇 경로 주변 골목이 촘촘해 근접 거리에서 광란으로 밀어붙이기 좋음"
+  },
+  {
+    "map_id": "esperanca",
+    "hero_id": "junker_queen",
+    "rating": "강함",
+    "reason": "수직 구조물 사이 짧은 교전 거리가 근접 진입형 탱커에게 유리함"
+  },
+  {
+    "map_id": "new_queen_street",
+    "hero_id": "junker_queen",
+    "rating": "강함",
+    "reason": "좁은 교차로와 건물 사이 통로에서 근접 브롤 거리를 유지하기 좋음"
+  },
+  {
+    "map_id": "runasapi",
+    "hero_id": "junker_queen",
+    "rating": "강함",
+    "reason": "유적 사이 좁은 통로가 많아 지휘의 외침과 함께 근접 진입하기 좋음"
   }
 ]

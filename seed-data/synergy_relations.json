@@ -18,15 +18,6 @@
     "reason_zh_tw": "維生力場能彌補烈焰擊開團瞬間失去護盾保護的空檔"
   },
   {
-    "hero_id": "reinhardt",
-    "synergy_hero_id": "zenyatta",
-    "reason": "방벽으로 자리를 잡고 부조화 표식으로 처치 속도를 끌어올리는 포킹 조합",
-    "reason_en": "A poke combo where the barrier holds position while Orb of Discord speeds up kills",
-    "reason_ja": "バリアで位置を確保し、不和の宝珠で撃破速度を高めるポーク構成",
-    "reason_zh_cn": "靠护盾稳住站位，用不和谐之球提升处决速度的消耗组合",
-    "reason_zh_tw": "靠護盾穩住站位，用紛亂之珠提升處決速度的消耗組合"
-  },
-  {
     "hero_id": "orisa",
     "synergy_hero_id": "zarya",
     "reason": "두 개의 방벽으로 시야를 완전히 차단하는 이중 실드 포킹 조합",
@@ -79,15 +70,6 @@
     "reason_ja": "どちらも高機動のダメージディーラーで、交戦タイミングと撤退ルートを合わせやすい",
     "reason_zh_cn": "二者都是高机动输出手，容易配合交战时机与撤退路线",
     "reason_zh_tw": "二者都是高機動輸出手，容易配合交戰時機與撤退路線"
-  },
-  {
-    "hero_id": "ana",
-    "synergy_hero_id": "zarya",
-    "reason": "나노 강화를 받은 그래비톤 서지 이후 폭발적인 궁극기 대미지",
-    "reason_en": "Explosive ultimate damage when Nano Boost is applied right after Graviton Surge",
-    "reason_ja": "ナノブーストを受けた重力子放出銃で爆発的な大ダメージを与える",
-    "reason_zh_cn": "纳米激素强化后的重力喷涌能打出爆发性大招伤害",
-    "reason_zh_tw": "奈米強化後的引力彈能打出爆發性大招傷害"
   },
   {
     "hero_id": "moira",
@@ -178,15 +160,6 @@
     "reason_ja": "ハイパーリングの移動速度上昇でダイブの突入と離脱タイミングを同時に支援する",
     "reason_zh_cn": "用移动速度提升同时支援突袭的切入与撤离时机",
     "reason_zh_tw": "用移動速度提升同時支援突擊的切入與撤離時機"
-  },
-  {
-    "hero_id": "junker_queen",
-    "synergy_hero_id": "baptiste",
-    "reason": "불사조 광선탄이 여왕의 저돌적인 돌진 이후 생존을 보장해줌",
-    "reason_en": "Immortality Field guarantees survival after Junker Queen's aggressive charge",
-    "reason_ja": "不死フィールドがジャンカークイーンの猪突猛進の後の生存を保証する",
-    "reason_zh_cn": "维生力场能保障女王鲁莽突进后的生存",
-    "reason_zh_tw": "維生力場能保障女王魯莽突進後的生存"
   },
   {
     "hero_id": "junker_queen",
@@ -369,24 +342,6 @@
     "reason_zh_tw": "用閃光彈擊暈目標後，銜接引力彈連招"
   },
   {
-    "hero_id": "torbjorn",
-    "synergy_hero_id": "reinhardt",
-    "reason": "방벽 뒤에 포탑을 배치해 안전하게 지속 화력을 유지",
-    "reason_en": "Placing the turret behind the barrier keeps up safe, sustained firepower",
-    "reason_ja": "バリアの後ろにタレットを設置し、安全に継続火力を維持する",
-    "reason_zh_cn": "在护盾后方部署炮台，安全维持持续火力",
-    "reason_zh_tw": "在護盾後方部署砲塔，安全維持持續火力"
-  },
-  {
-    "hero_id": "junkrat",
-    "synergy_hero_id": "zarya",
-    "reason": "궁극기 타이어가 그래비톤 서지에 걸린 적을 확정 처치",
-    "reason_en": "RIP-Tire secures a kill on enemies caught in Graviton Surge",
-    "reason_ja": "リップタイヤが重力子放出銃に捕らえた敵を確実に仕留める",
-    "reason_zh_cn": "地狱飞轮大招能确定击杀中了重力喷涌的敌人",
-    "reason_zh_tw": "同歸於盡大招能確定擊殺中了引力彈的敵人"
-  },
-  {
     "hero_id": "mei",
     "synergy_hero_id": "reinhardt",
     "reason": "방벽과 얼음벽을 동시에 세워 좁은 공간을 완전히 장악",
@@ -430,15 +385,6 @@
     "reason_ja": "ナノブーストでフォーカシングビームとスティッキーボムの火力を増幅する",
     "reason_zh_cn": "用纳米激素增幅聚焦光束与黏性炸弹的火力",
     "reason_zh_tw": "用奈米強化增幅聚能光束與黏性炸彈的火力"
-  },
-  {
-    "hero_id": "brigitte",
-    "synergy_hero_id": "reinhardt",
-    "reason": "고무로 방벽 유지력을 높여 브롤 조합을 지속시킴",
-    "reason_en": "Inspire boosts barrier sustain, keeping the brawl composition going",
-    "reason_ja": "インスパイアでバリアの継戦能力を高め、ブロール構成を持続させる",
-    "reason_zh_cn": "用全军集结提高护盾续航，延续强攻组合",
-    "reason_zh_tw": "用全軍集結提高護盾續航，延續強攻組合"
   },
   {
     "hero_id": "illari",
@@ -594,15 +540,6 @@
     "reason_zh_tw": "用速度增益提前衝鋒開場的時機"
   },
   {
-    "hero_id": "dmon",
-    "synergy_hero_id": "baptiste",
-    "reason": "불사조 광선탄이 돌진 강타 진입 타이밍의 생존을 보장",
-    "reason_en": "Immortality Field guarantees survival when D.Mon engages with a charging slam",
-    "reason_ja": "不死フィールドがD.Monの突進からの強打による突入タイミングの生存を保証する",
-    "reason_zh_cn": "维生力场能保障冲锋强击切入时机的生存",
-    "reason_zh_tw": "維生力場能保障衝鋒強擊切入時機的生存"
-  },
-  {
     "hero_id": "ramattra",
     "synergy_hero_id": "baptiste",
     "reason": "불사조 광선탄이 실체화 상태의 저돌적인 근접전 생존을 보장",
@@ -619,15 +556,6 @@
     "reason_ja": "スピードブーストでエムレの射撃ポジションをより早く確保する",
     "reason_zh_cn": "用速度增益更快占据射击走位",
     "reason_zh_tw": "用速度增益更快佔據射擊走位"
-  },
-  {
-    "hero_id": "freja",
-    "synergy_hero_id": "reinhardt",
-    "reason": "올가미로 구속한 다수의 적을 화염 강타로 확정 처치",
-    "reason_en": "Fire Strike secures kills on multiple enemies restrained by Freja's snare",
-    "reason_ja": "わなで拘束した複数の敵をファイアストライクで確実に仕留める",
-    "reason_zh_cn": "用烈焰打击确定击杀被套索束缚的多名敌人",
-    "reason_zh_tw": "用烈焰擊確定擊殺被套索束縛的多名敵人"
   },
   {
     "hero_id": "shion",
@@ -709,15 +637,6 @@
     "reason_ja": "活力ドローンで攻撃速度と回復量を同時に強化し、ダイブアタッカーの継続火力を高める",
     "reason_zh_cn": "用活力无人机同时增益攻击速度与回复量，提升突袭输出手的持续火力",
     "reason_zh_tw": "用活力無人機同時增益攻擊速度與回復量，提升突擊輸出手的持續火力"
-  },
-  {
-    "hero_id": "doctrine",
-    "synergy_hero_id": "reinhardt",
-    "reason": "심판 궁극기의 최대 체력 증가 효과가 방벽 브롤 조합의 생존력을 크게 높임",
-    "reason_en": "The max-health increase from the Judgment ultimate greatly boosts the barrier brawl composition's survivability",
-    "reason_ja": "「審判」の切り札による最大体力増加効果が、バリアのブロール構成の生存力を大きく高める",
-    "reason_zh_cn": "审判大招的最大生命值提升效果，大幅提高护盾强攻组合的生存能力",
-    "reason_zh_tw": "審判大招的最大生命值提升效果，大幅提高護盾強攻組合的生存能力"
   },
   {
     "hero_id": "mizuki",
@@ -1121,5 +1040,525 @@
     "hero_id": "hazard",
     "synergy_hero_id": "jetpack_cat",
     "reason": "견인 로프로 가시 벽 개시 타이밍을 원하는 순간에 맞춤"
+  },
+  {
+    "hero_id": "ashe",
+    "synergy_hero_id": "domina",
+    "reason": "세그먼트 방벽 뒤에서 애쉬가 안전하게 고지대 장거리 사격을 이어가는 포킹 조합"
+  },
+  {
+    "hero_id": "bastion",
+    "synergy_hero_id": "domina",
+    "reason": "방벽으로 정면을 지켜주는 동안 강습 모드 바스티온이 화력을 쏟아붓는 진지형 조합"
+  },
+  {
+    "hero_id": "cassidy",
+    "synergy_hero_id": "domina",
+    "reason": "방벽 뒤에서 피스키퍼 정밀 사격을 안전하게 이어가며 근접 진입은 섬광탄으로 차단"
+  },
+  {
+    "hero_id": "domina",
+    "synergy_hero_id": "hanzo",
+    "reason": "방벽 뒤에서 한조가 스톰 애로우로 장거리 맞포킹에 화력을 더함"
+  },
+  {
+    "hero_id": "domina",
+    "synergy_hero_id": "mei",
+    "reason": "얼음벽과 냉각총으로 도미나에게 붙는 다이브 영웅을 끊어주는 보호 조합"
+  },
+  {
+    "hero_id": "domina",
+    "synergy_hero_id": "pharah",
+    "reason": "지상의 장거리 포킹과 공중의 로켓 화력으로 상대를 위아래 동시에 압박"
+  },
+  {
+    "hero_id": "domina",
+    "synergy_hero_id": "sojourn",
+    "reason": "방벽 뒤에서 레일건 충전 사격을 안전하게 쌓아 장거리 포킹 화력을 극대화"
+  },
+  {
+    "hero_id": "domina",
+    "synergy_hero_id": "freja",
+    "reason": "방벽으로 시간을 버는 동안 폭발성 올가미와 볼트로 원거리 견제를 이어가는 조합"
+  },
+  {
+    "hero_id": "domina",
+    "synergy_hero_id": "emre",
+    "reason": "방벽 뒤에서 3점사 사격으로 중장거리 견제를 이어가는 포킹 조합"
+  },
+  {
+    "hero_id": "ana",
+    "synergy_hero_id": "domina",
+    "reason": "생체 수류탄과 나노 강화로 장거리 포킹 교전에서 도미나의 유지력과 화력을 동시에 지원"
+  },
+  {
+    "hero_id": "domina",
+    "synergy_hero_id": "illari",
+    "reason": "방벽 뒤에 태양 포탑을 세워 장거리 교전에서 안정적인 회복을 공급"
+  },
+  {
+    "hero_id": "domina",
+    "synergy_hero_id": "juno",
+    "reason": "하이퍼 링 속도 부스트로 기동기 없는 도미나의 진입과 재배치를 지원"
+  },
+  {
+    "hero_id": "domina",
+    "synergy_hero_id": "kiriko",
+    "reason": "방울 정화와 여우길로 다이브에 노출된 도미나를 살리고 빠르게 재배치"
+  },
+  {
+    "hero_id": "domina",
+    "synergy_hero_id": "zenyatta",
+    "reason": "부조화의 구슬로 포톤 매그넘 포킹 화력을 증폭하고 방벽 뒤에서 안전하게 견제"
+  },
+  {
+    "hero_id": "domina",
+    "synergy_hero_id": "wuyang",
+    "reason": "치유 파도로 장거리 포킹 교전 중 도미나의 체력을 꾸준히 보충"
+  },
+  {
+    "hero_id": "cassidy",
+    "synergy_hero_id": "dmon",
+    "reason": "디몬이 전선을 잡아주는 동안 캐서디가 안정적으로 중거리 화력을 투사"
+  },
+  {
+    "hero_id": "dmon",
+    "synergy_hero_id": "echo",
+    "reason": "디몬의 진입에 맞춰 에코가 공중에서 점착 폭탄으로 추가 화력을 더함"
+  },
+  {
+    "hero_id": "dmon",
+    "synergy_hero_id": "genji",
+    "reason": "디몬이 시선을 끄는 사이 겐지가 측면으로 파고들어 약한 대상을 처치"
+  },
+  {
+    "hero_id": "dmon",
+    "synergy_hero_id": "mei",
+    "reason": "메이의 빙벽으로 적을 분단하면 디몬이 고립된 대상을 근접에서 압박"
+  },
+  {
+    "hero_id": "dmon",
+    "synergy_hero_id": "reaper",
+    "reason": "디몬과 리퍼가 함께 근접 난전을 열어 높은 근거리 화력을 쏟아냄"
+  },
+  {
+    "hero_id": "dmon",
+    "synergy_hero_id": "tracer",
+    "reason": "디몬이 앞에서 압박하는 동안 트레이서가 후방을 흔들어 적 진형을 분산"
+  },
+  {
+    "hero_id": "ana",
+    "synergy_hero_id": "dmon",
+    "reason": "나노 강화와 생체 수류탄으로 디몬의 진입 화력과 생존력을 동시에 끌어올림"
+  },
+  {
+    "hero_id": "dmon",
+    "synergy_hero_id": "kiriko",
+    "reason": "정화의 방울로 디몬의 진입 중 저지와 피해를 지워 과감한 돌입을 보장"
+  },
+  {
+    "hero_id": "dmon",
+    "synergy_hero_id": "lucio",
+    "reason": "속도 증폭으로 디몬과 함께 빠르게 진입해 근접 교전 거리를 단숨에 좁힘"
+  },
+  {
+    "hero_id": "dmon",
+    "synergy_hero_id": "jetpack_cat",
+    "reason": "기동 지원형 지원가가 디몬의 진입과 이탈을 받쳐주는 빠른 돌진 조합"
+  },
+  {
+    "hero_id": "bastion",
+    "synergy_hero_id": "ramattra",
+    "reason": "보이드 방벽이 설정 모드의 바스티온을 보호해 고정 화력을 안전하게 퍼붓는 조합"
+  },
+  {
+    "hero_id": "cassidy",
+    "synergy_hero_id": "ramattra",
+    "reason": "소용돌이로 둔화된 적을 피스키퍼 정밀 사격으로 확정 처치"
+  },
+  {
+    "hero_id": "mei",
+    "synergy_hero_id": "ramattra",
+    "reason": "빙벽으로 적을 분단하고 소용돌이와 냉각총 둔화를 겹쳐 묶어두는 브롤 조합"
+  },
+  {
+    "hero_id": "ramattra",
+    "synergy_hero_id": "reaper",
+    "reason": "네메시스 형태로 전선을 밀고 리퍼가 죽음의 꽃으로 뭉친 적을 쓸어담는 근접 브롤 조합"
+  },
+  {
+    "hero_id": "ramattra",
+    "synergy_hero_id": "sojourn",
+    "reason": "소용돌이로 발을 묶은 적에게 레일건 차지샷을 정확히 꽂아 넣음"
+  },
+  {
+    "hero_id": "freja",
+    "synergy_hero_id": "ramattra",
+    "reason": "폭발성 올가미로 구속한 적을 소용돌이와 네메시스 형태 강타로 연계해 확정 처치"
+  },
+  {
+    "hero_id": "emre",
+    "synergy_hero_id": "ramattra",
+    "reason": "보이드 방벽 뒤에서 엠레가 3점사 사격으로 안정적인 중거리 화력을 지원"
+  },
+  {
+    "hero_id": "brigitte",
+    "synergy_hero_id": "ramattra",
+    "reason": "격려의 방어력과 회복으로 네메시스 형태의 근접 브롤을 오래 지속시키는 조합"
+  },
+  {
+    "hero_id": "illari",
+    "synergy_hero_id": "ramattra",
+    "reason": "태양 포탑의 지속 회복이 네메시스 형태 근접전의 유지력을 크게 높이는 조합"
+  },
+  {
+    "hero_id": "juno",
+    "synergy_hero_id": "ramattra",
+    "reason": "이동속도 증가로 네메시스 형태 진입 거리를 좁히고 섬멸 타이밍을 앞당김"
+  },
+  {
+    "hero_id": "kiriko",
+    "synergy_hero_id": "ramattra",
+    "reason": "정화의 방울로 생체 수류탄 같은 해로운 효과를 지워 네메시스 형태와 섬멸의 생존을 보장"
+  },
+  {
+    "hero_id": "lucio",
+    "synergy_hero_id": "ramattra",
+    "reason": "속도 부스트로 섬멸 진입 속도를 높여 근접 범위 안에 적을 빠르게 끌어들임"
+  },
+  {
+    "hero_id": "moira",
+    "synergy_hero_id": "ramattra",
+    "reason": "근접 지속 회복과 생체 손아귀 공격이 네메시스 형태 브롤에 자연스럽게 녹아드는 조합"
+  },
+  {
+    "hero_id": "ramattra",
+    "synergy_hero_id": "wuyang",
+    "reason": "치유 파도로 네메시스 형태 전진 중 받는 견제 피해를 꾸준히 상쇄"
+  },
+  {
+    "hero_id": "cassidy",
+    "synergy_hero_id": "reinhardt",
+    "reason": "방벽이 정면 화력을 막아주는 동안 캐서디가 안전하게 히트스캔 화력을 퍼부음"
+  },
+  {
+    "hero_id": "reinhardt",
+    "synergy_hero_id": "sojourn",
+    "reason": "방벽 뒤에서 레일건을 충전해 정면 교전 중 강력한 차지샷을 꽂아넣는 조합"
+  },
+  {
+    "hero_id": "ana",
+    "synergy_hero_id": "reinhardt",
+    "reason": "나노 강화제로 강화된 라인하르트가 대지분쇄 이후 전장을 휩쓰는 대표 조합"
+  },
+  {
+    "hero_id": "juno",
+    "synergy_hero_id": "reinhardt",
+    "reason": "하이퍼 링 속도 부스트로 방벽 전진과 근접 진입 타이밍을 앞당김"
+  },
+  {
+    "hero_id": "kiriko",
+    "synergy_hero_id": "reinhardt",
+    "reason": "정화의 방울로 상태이상을 풀고 순보로 붙어 근접 브롤 중인 라인하르트를 끝까지 살림"
+  },
+  {
+    "hero_id": "moira",
+    "synergy_hero_id": "reinhardt",
+    "reason": "생체 손아귀로 근접전에 함께 붙어 회복과 피해를 동시에 넣는 브롤 조합"
+  },
+  {
+    "hero_id": "jetpack_cat",
+    "synergy_hero_id": "reinhardt",
+    "reason": "견인 로프로 라인하르트를 원하는 순간 전선까지 끌어올려 근접 진입을 지원"
+  },
+  {
+    "hero_id": "ashe",
+    "synergy_hero_id": "sigma",
+    "reason": "방벽으로 시야를 가려주고 애쉬가 다이너마이트로 중력 붕괴 대상을 마무리하는 포킹 조합"
+  },
+  {
+    "hero_id": "bastion",
+    "synergy_hero_id": "sigma",
+    "reason": "방벽 뒤에서 바스티온이 안전하게 경계 모드 화력을 쏟아내는 진지 조합"
+  },
+  {
+    "hero_id": "cassidy",
+    "synergy_hero_id": "sigma",
+    "reason": "방벽 뒤에서 캐서디가 안전하게 견제하고 강착으로 넘어진 적을 헤드샷으로 마무리"
+  },
+  {
+    "hero_id": "hanzo",
+    "synergy_hero_id": "sigma",
+    "reason": "중력 붕괴로 떨어뜨린 적을 한조가 스톰 애로우로 순식간에 쓸어 담는 조합"
+  },
+  {
+    "hero_id": "mei",
+    "synergy_hero_id": "sigma",
+    "reason": "얼음벽과 실험용 방벽을 겹쳐 적 진입로를 차단하고 중력 붕괴로 마무리하는 통제 조합"
+  },
+  {
+    "hero_id": "sigma",
+    "synergy_hero_id": "sojourn",
+    "reason": "방벽으로 레일건 충전 각을 보호해 소전이 안전하게 원거리 화력을 쌓는 포킹 조합"
+  },
+  {
+    "hero_id": "sigma",
+    "synergy_hero_id": "widowmaker",
+    "reason": "장거리 방벽으로 저격 각을 지켜 위도우메이커의 픽을 보조하는 원거리 조합"
+  },
+  {
+    "hero_id": "freja",
+    "synergy_hero_id": "sigma",
+    "reason": "중력 붕괴로 묶은 적에게 프레야가 폭발 화력을 확정으로 꽂아넣는 조합"
+  },
+  {
+    "hero_id": "sierra",
+    "synergy_hero_id": "sigma",
+    "reason": "방벽 뒤에서 시에라가 표식 추적 사격을 안전하게 이어가는 원거리 포킹 조합"
+  },
+  {
+    "hero_id": "emre",
+    "synergy_hero_id": "sigma",
+    "reason": "방벽 뒤에서 엠레가 정조준 사격을 쏟아내며 전선 너머 적을 저격하는 조합"
+  },
+  {
+    "hero_id": "baptiste",
+    "synergy_hero_id": "sigma",
+    "reason": "증폭 매트릭스를 방벽 앞에 겹쳐 아군 화력을 높이고 불사조 광선탄으로 생존을 보장"
+  },
+  {
+    "hero_id": "illari",
+    "synergy_hero_id": "sigma",
+    "reason": "방벽 뒤에 치유 기둥을 깔아 시그마 전선의 유지력을 안정적으로 끌어올림"
+  },
+  {
+    "hero_id": "juno",
+    "synergy_hero_id": "sigma",
+    "reason": "하이퍼 링으로 포지션을 빠르게 잡고 펄사 어뢰로 시그마의 체력을 보충"
+  },
+  {
+    "hero_id": "kiriko",
+    "synergy_hero_id": "sigma",
+    "reason": "정화의 방울로 방벽 운용 중 걸린 디버프를 해제하고 쿠나이로 화력을 보탬"
+  },
+  {
+    "hero_id": "lucio",
+    "synergy_hero_id": "sigma",
+    "reason": "속도 부스트로 방벽 전선을 빠르게 재정비하고 소리 파동으로 밀어내기 연계"
+  },
+  {
+    "hero_id": "mercy",
+    "synergy_hero_id": "sigma",
+    "reason": "공격력 증폭으로 초구체와 강착 대미지를 끌어올리는 포킹 조합"
+  },
+  {
+    "hero_id": "sigma",
+    "synergy_hero_id": "wuyang",
+    "reason": "치유 파도로 방벽 운용 중 누적되는 피해를 지속적으로 회복"
+  },
+  {
+    "hero_id": "ashe",
+    "synergy_hero_id": "orisa",
+    "reason": "오리사가 앞을 버티는 동안 고지대에서 안정적인 헤드샷 각을 확보"
+  },
+  {
+    "hero_id": "bastion",
+    "synergy_hero_id": "orisa",
+    "reason": "포티파이로 자리를 잡은 오리사 옆에서 경계 모드 화력을 안전하게 쏟아냄"
+  },
+  {
+    "hero_id": "cassidy",
+    "synergy_hero_id": "orisa",
+    "reason": "오리사 뒤에서 버티며 중거리 견제와 헤드샷 화력으로 전선을 지탱"
+  },
+  {
+    "hero_id": "hanzo",
+    "synergy_hero_id": "orisa",
+    "reason": "오리사가 지키는 전선 뒤에서 폭풍 화살을 마음껏 쏟아붓는 포킹 조합"
+  },
+  {
+    "hero_id": "mei",
+    "synergy_hero_id": "orisa",
+    "reason": "빙벽으로 적을 분리하면 오리사가 투창으로 고립된 대상을 밀어냄"
+  },
+  {
+    "hero_id": "orisa",
+    "synergy_hero_id": "pharah",
+    "reason": "오리사가 지상 전선을 고정하는 동안 파라가 공중에서 포격을 퍼붓는 상하 압박"
+  },
+  {
+    "hero_id": "orisa",
+    "synergy_hero_id": "sojourn",
+    "reason": "전선을 오리사가 지켜주는 동안 레일건을 충전해 원거리 처치를 노림"
+  },
+  {
+    "hero_id": "orisa",
+    "synergy_hero_id": "symmetra",
+    "reason": "오리사가 버티는 전선 뒤에 포탑을 배치해 고정 수비 진형을 완성"
+  },
+  {
+    "hero_id": "orisa",
+    "synergy_hero_id": "torbjorn",
+    "reason": "포탑과 오리사의 버티기로 거점에 견고한 방어선을 구축"
+  },
+  {
+    "hero_id": "orisa",
+    "synergy_hero_id": "tracer",
+    "reason": "오리사가 정면을 붙잡는 사이 트레이서가 측면에서 후열을 흔듦"
+  },
+  {
+    "hero_id": "emre",
+    "synergy_hero_id": "orisa",
+    "reason": "오리사 전선 뒤에서 3점사 사격으로 정확한 중거리 화력을 지원"
+  },
+  {
+    "hero_id": "juno",
+    "synergy_hero_id": "orisa",
+    "reason": "하이퍼 링 속도 부스트로 오리사 전진 템포를 끌어올리는 진형 이동 조합"
+  },
+  {
+    "hero_id": "kiriko",
+    "synergy_hero_id": "orisa",
+    "reason": "정화의 방울로 해제기 없는 오리사를 보호하고 여우길로 화력을 증폭"
+  },
+  {
+    "hero_id": "lucio",
+    "synergy_hero_id": "orisa",
+    "reason": "속도 부스트와 광역 치유로 오리사 전선의 진입과 유지를 동시에 지원"
+  },
+  {
+    "hero_id": "moira",
+    "synergy_hero_id": "orisa",
+    "reason": "생체 손아귀 광역 치유와 소멸로 오리사의 장기전 유지력을 받침"
+  },
+  {
+    "hero_id": "mizuki",
+    "synergy_hero_id": "orisa",
+    "reason": "속박 사슬로 묶은 적에게 오리사가 투창과 대지의 분노를 확정으로 꽂는 조합"
+  },
+  {
+    "hero_id": "bastion",
+    "synergy_hero_id": "zarya",
+    "reason": "방벽 씌우기로 설정 모드 바스티온의 전방을 지켜 안정적인 화력을 보장"
+  },
+  {
+    "hero_id": "echo",
+    "synergy_hero_id": "zarya",
+    "reason": "복제로 그래비톤 서지를 한 번 더 사용해 궁극기 연계를 두 배로 늘림"
+  },
+  {
+    "hero_id": "mei",
+    "synergy_hero_id": "zarya",
+    "reason": "빙벽으로 퇴로를 끊고 그래비톤 서지를 연계해 적을 한곳에 확실히 가둠"
+  },
+  {
+    "hero_id": "pharah",
+    "synergy_hero_id": "zarya",
+    "reason": "그래비톤 서지에 묶인 적에게 포화 궁극기를 쏟아내는 대표적 광역 콤보"
+  },
+  {
+    "hero_id": "sojourn",
+    "synergy_hero_id": "zarya",
+    "reason": "방벽 씌우기 보호 아래 레일건을 충전하고 그래비톤 서지 대상에 오버클럭 사격"
+  },
+  {
+    "hero_id": "tracer",
+    "synergy_hero_id": "zarya",
+    "reason": "방벽 씌우기로 다이브한 트레이서를 보호해 점멸 진입의 생존력을 높임"
+  },
+  {
+    "hero_id": "venture",
+    "synergy_hero_id": "zarya",
+    "reason": "동시 근접 진입으로 시야를 분산시키고 방벽 씌우기로 벤처의 굴착 진입을 보호"
+  },
+  {
+    "hero_id": "vendetta",
+    "synergy_hero_id": "zarya",
+    "reason": "그래비톤 서지로 묶은 적에게 근접 광검 콤보를 넣어 확정 처치"
+  },
+  {
+    "hero_id": "baptiste",
+    "synergy_hero_id": "zarya",
+    "reason": "증폭 매트릭스를 그래비톤 서지 위에 겹쳐 묶인 적에게 폭발적 피해"
+  },
+  {
+    "hero_id": "brigitte",
+    "synergy_hero_id": "zarya",
+    "reason": "함께 근접전을 펼치며 수리 팩과 방벽 씌우기로 서로의 전선 유지력을 보강"
+  },
+  {
+    "hero_id": "juno",
+    "synergy_hero_id": "zarya",
+    "reason": "하이퍼 링 속도 부스트로 짧은 빔 사거리를 극복하고 교전 거리를 빠르게 좁힘"
+  },
+  {
+    "hero_id": "kiriko",
+    "synergy_hero_id": "zarya",
+    "reason": "순간이동으로 전진한 자리야를 따라붙어 보호의 방울과 방벽으로 생존을 보장"
+  },
+  {
+    "hero_id": "lucio",
+    "synergy_hero_id": "zarya",
+    "reason": "속도 부스트로 짧은 사거리 탱커인 자리야의 교전 진입을 앞당김"
+  },
+  {
+    "hero_id": "echo",
+    "synergy_hero_id": "junker_queen",
+    "reason": "광란으로 상처를 입혀 묶어둔 적을 에코가 공중에서 광선 집중으로 마무리"
+  },
+  {
+    "hero_id": "genji",
+    "synergy_hero_id": "junker_queen",
+    "reason": "지휘의 외침 추가 체력과 이동속도로 겐지의 용검 진입을 함께 밀어붙이는 돌격 조합"
+  },
+  {
+    "hero_id": "junker_queen",
+    "synergy_hero_id": "pharah",
+    "reason": "지상에서 광란으로 시선을 끄는 동안 파라가 공중에서 로켓 화력을 자유롭게 퍼부음"
+  },
+  {
+    "hero_id": "junker_queen",
+    "synergy_hero_id": "reaper",
+    "reason": "지휘의 외침 이동속도로 리퍼를 근접 거리까지 데려가 함께 브롤 화력을 폭발시킴"
+  },
+  {
+    "hero_id": "junker_queen",
+    "synergy_hero_id": "sojourn",
+    "reason": "톱니 칼날로 끌어와 위치가 고정된 대상을 소전이 레일건 충전 사격으로 마무리"
+  },
+  {
+    "hero_id": "junker_queen",
+    "synergy_hero_id": "sombra",
+    "reason": "해킹으로 생존기를 지운 대상을 톱니 칼날과 광란으로 확정 처치"
+  },
+  {
+    "hero_id": "junker_queen",
+    "synergy_hero_id": "tracer",
+    "reason": "지휘의 외침 보호막과 이동속도가 트레이서의 근접 교전 생존력을 크게 높임"
+  },
+  {
+    "hero_id": "junker_queen",
+    "synergy_hero_id": "venture",
+    "reason": "함께 근접 브롤 거리로 파고들어 지면과 정면을 동시에 압박하는 진입 조합"
+  },
+  {
+    "hero_id": "junker_queen",
+    "synergy_hero_id": "vendetta",
+    "reason": "광란으로 상처를 입혀 묶은 대상을 벤데타가 광검 근접 콤보로 확정 처치"
+  },
+  {
+    "hero_id": "anran",
+    "synergy_hero_id": "junker_queen",
+    "reason": "정커퀸의 광란 진입 직후 안란이 화염 부채 연타로 흩어진 대상을 마무리"
+  },
+  {
+    "hero_id": "junker_queen",
+    "synergy_hero_id": "juno",
+    "reason": "하이퍼 링 속도 부스트로 광란 진입과 이탈 타이밍을 동시에 지원"
+  },
+  {
+    "hero_id": "junker_queen",
+    "synergy_hero_id": "lucio",
+    "reason": "속도 부스트로 지휘의 외침과 함께 적진까지 단숨에 파고드는 전형적인 브롤 조합"
   }
 ]

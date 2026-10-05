@@ -109,15 +109,6 @@
   },
   {
     "hero_id": "zarya",
-    "countered_hero_id": "winston",
-    "reason": "방벽+빔으로 실드 체력을 빠르게 녹여 도약 궁 활용을 막음",
-    "reason_en": "Her barrier plus beam quickly melts his shield health, denying his ultimate dive setup",
-    "reason_ja": "バリアとビームでシールドの耐久を素早く削り、跳躍を活かした動きを封じる",
-    "reason_zh_cn": "用屏障配合光束迅速打掉护盾生命值，阻止其借跳跃背包发动原始狂暴",
-    "reason_zh_tw": "用屏障配合光束迅速消耗護盾生命值，阻止其藉噴射跳躍發動野性之怒"
-  },
-  {
-    "hero_id": "zarya",
     "countered_hero_id": "dva",
     "reason": "빔으로 매트릭스를 강제 소모시켜 이탈 타이밍을 앞당김",
     "reason_en": "Her beam forces D.Va to burn Defense Matrix early, pushing up her disengage timing",
@@ -151,24 +142,6 @@
     "reason_ja": "ブリンクで掴みの角度を避け、バリアが張られる前に近接で瞬間火力を叩き込む",
     "reason_zh_cn": "用闪现躲开抓取角度，在屏障耗尽前打出近身爆发",
     "reason_zh_tw": "用閃現躲開抓取角度，在屏障耗盡前打出近身爆發"
-  },
-  {
-    "hero_id": "reinhardt",
-    "countered_hero_id": "tracer",
-    "reason": "화염 강타 한 방으로 즉시 처치 가능한 체력대",
-    "reason_en": "A single Fire Strike can kill her outright given her low health pool",
-    "reason_ja": "体力が低いため、ファイヤーストライク一発で即座に倒せる",
-    "reason_zh_cn": "一发火焰打击就能秒杀的血量",
-    "reason_zh_tw": "一發烈焰擊就能秒殺的血量"
-  },
-  {
-    "hero_id": "orisa",
-    "countered_hero_id": "tracer",
-    "reason": "투창으로 저체력 플랭커를 원콤 처리",
-    "reason_en": "Energy Javelin one-shots the low-health flanker",
-    "reason_ja": "エナジージャベリンで体力の低いフランカーを一撃で処理できる",
-    "reason_zh_cn": "用能量标枪一击带走低血量的游击手",
-    "reason_zh_tw": "用能量標槍一擊帶走低血量的游擊手"
   },
   {
     "hero_id": "genji",
@@ -214,15 +187,6 @@
     "reason_ja": "スズの护りで状態異常は解除できても、長距離からの牽制そのものは避けにくい",
     "reason_zh_cn": "就算用守护铃铛净化异常状态，也很难躲开远程的持续牵制",
     "reason_zh_tw": "就算用祓除鈴淨化異常狀態，也很難躲開遠程的持續牽制"
-  },
-  {
-    "hero_id": "zarya",
-    "countered_hero_id": "kiriko",
-    "reason": "방벽으로 근접 버스트를 막아 키리코의 카이팅을 무력화",
-    "reason_en": "Her barrier blocks close-range burst, shutting down Kiriko's kiting",
-    "reason_ja": "バリアで近接バーストを防ぎ、キリコの距離を取る立ち回りを無力化する",
-    "reason_zh_cn": "用屏障挡下近身爆发，压制雾子的风筝打法",
-    "reason_zh_tw": "用屏障擋下近身爆發，壓制霧子的風箏打法"
   },
   {
     "hero_id": "widowmaker",
@@ -574,51 +538,6 @@
     "reason_ja": "ジャギードブレードの傷跡効果で被回復量を大幅に下げ、メルシーの回復サイクルを無力化する",
     "reason_zh_cn": "用锯齿刀刃的伤口效果大幅降低回复量，瓦解天使的治疗循环",
     "reason_zh_tw": "用鋸齒刀刃的傷口效果大幅降低回復量，瓦解慈悲的治療循環"
-  },
-  {
-    "hero_id": "junker_queen",
-    "countered_hero_id": "zarya",
-    "reason": "톱니 칼날로 방벽 뒤에 숨은 대상을 직접 끌어내 압박",
-    "reason_en": "Jagged Blade pulls targets hiding behind her barrier out into the open for pressure",
-    "reason_ja": "ジャギードブレードでバリアの後ろに隠れた対象を直接引きずり出し、圧力をかける",
-    "reason_zh_cn": "用锯齿刀刃把躲在屏障后的目标直接拉出来施压",
-    "reason_zh_tw": "用鋸齒刀刃把躲在屏障後的目標直接拉出來施壓"
-  },
-  {
-    "hero_id": "junker_queen",
-    "countered_hero_id": "moira",
-    "reason": "상처 효과로 회복량이 지속적으로 감소하고, 사기충천 이동속도로 페이드 이후에도 추격 가능",
-    "reason_en": "The Wound effect keeps reducing healing, and Adrenaline Rush's speed lets her chase Moira down even after a Fade",
-    "reason_ja": "傷跡効果で回復量が継続的に減り、アドレナリンラッシュの移動速度でフェイドの後も追撃できる",
-    "reason_zh_cn": "伤口效果持续降低回复量，还能靠肾上腺素激增的移速在对方淡出后继续追击",
-    "reason_zh_tw": "傷口效果持續降低回復量，還能靠腎上腺素爆發的移速在對方消失後繼續追擊"
-  },
-  {
-    "hero_id": "sigma",
-    "countered_hero_id": "pharah",
-    "reason": "운동 부여로 로켓 발사체를 흡수해 공중 딜러의 화력을 무력화",
-    "reason_en": "Kinetic Grasp absorbs her rocket projectiles, neutralizing the aerial DPS's firepower",
-    "reason_ja": "キネティックグラスプでロケット弾を吸収し、空中ダメージディーラーの火力を無力化する",
-    "reason_zh_cn": "用动能掌握吸收火箭弹，压制这类空中输出的火力",
-    "reason_zh_tw": "用動能轉化吸收火箭彈，壓制這類空中輸出的火力"
-  },
-  {
-    "hero_id": "sigma",
-    "countered_hero_id": "soldier_76",
-    "reason": "키네틱 그라운드로 헬릭스 로켓을 흡수해 화력을 무력화",
-    "reason_en": "Kinetic Grasp absorbs Helix Rockets, neutralizing his firepower",
-    "reason_ja": "キネティックグラスプでヘリックスロケットを吸収し、火力を無力化する",
-    "reason_zh_cn": "用动能掌握吸收螺旋火箭，压制其火力",
-    "reason_zh_tw": "用動能轉化吸收旋風火箭，壓制其火力"
-  },
-  {
-    "hero_id": "sigma",
-    "countered_hero_id": "zarya",
-    "reason": "중력 붕괴 궁극기가 방벽을 무시하고 광역 기절을 걺",
-    "reason_en": "His Gravitic Flux ultimate ignores barriers and stuns the whole area",
-    "reason_ja": "グラビティックフラックスはバリアを無視して範囲全体をスタンさせる",
-    "reason_zh_cn": "引力通量大招无视屏障，对范围内目标造成群体眩晕",
-    "reason_zh_tw": "重力流大招無視屏障，對範圍內目標造成群體暈眩"
   },
   {
     "hero_id": "reaper",
@@ -1197,51 +1116,6 @@
     "reason_zh_tw": "用鋸齒牆擋住退路，衝上前擊殺沒有位移技能的目標"
   },
   {
-    "hero_id": "dmon",
-    "countered_hero_id": "torbjorn",
-    "reason": "파워 배리어로 포탑 화망을 막아내며 돌진 강타로 접근",
-    "reason_en": "Power Barrier blocks the turret's barrage while a charging slam closes the distance",
-    "reason_ja": "パワーバリアでタレットの弾幕を防ぎつつ、突進スラムで接近する",
-    "reason_zh_cn": "用能量屏障挡下炮塔的火力网，再用浪涌打击接近",
-    "reason_zh_tw": "用能量屏障擋下砲塔的火力網，再用衝刺打擊接近"
-  },
-  {
-    "hero_id": "dmon",
-    "countered_hero_id": "bastion",
-    "reason": "파워 배리어로 고정 화력을 막아내고 돌진 강타로 접근해 처치",
-    "reason_en": "Power Barrier blocks the stationary firepower, then a charging slam closes in for the kill",
-    "reason_ja": "パワーバリアで据え置き火力を防ぎ、突進スラムで接近して仕留める",
-    "reason_zh_cn": "用能量屏障挡下固定火力，再用浪涌打击接近并击杀",
-    "reason_zh_tw": "用能量屏障擋下固定火力，再用衝刺打擊接近並擊殺"
-  },
-  {
-    "hero_id": "dmon",
-    "countered_hero_id": "widowmaker",
-    "reason": "추진기로 저격 사선을 회피하며 빠르게 거리를 좁힘",
-    "reason_en": "Thrusters dodge the sniper's line of fire while quickly closing the distance",
-    "reason_ja": "スラスターで狙撃の射線を避けつつ、素早く距離を詰める",
-    "reason_zh_cn": "用推进器躲开狙击射线，快速拉近距离",
-    "reason_zh_tw": "用推進器躲開狙擊射線，快速拉近距離"
-  },
-  {
-    "hero_id": "ramattra",
-    "countered_hero_id": "pharah",
-    "reason": "보이드 방벽으로 공중 로켓 공격을 막아내고 게걸스러운 소용돌이로 강제로 끌어내림",
-    "reason_en": "Void Barrier blocks her aerial rocket fire, then Ravenous Vortex forcibly pulls her down",
-    "reason_ja": "ヴォイドバリアで空中からのロケット攻撃を防ぎ、貪欲な渦で強制的に引きずり下ろす",
-    "reason_zh_cn": "用虚空屏障挡下空中的火箭攻击，再用贪婪漩涡强行把对方拉下地面",
-    "reason_zh_tw": "用虛空屏障擋下空中的火箭攻擊，再用貪婪漩渦強行把對方拉下地面"
-  },
-  {
-    "hero_id": "ramattra",
-    "countered_hero_id": "junkrat",
-    "reason": "보이드 방벽으로 곡사 폭발물을 막아냄",
-    "reason_en": "Void Barrier blocks his lobbed explosives",
-    "reason_ja": "ヴォイドバリアで放物線状の爆発物を防ぐ",
-    "reason_zh_cn": "用虚空屏障挡下抛物线爆炸物",
-    "reason_zh_tw": "用虛空屏障擋下拋物線爆炸物"
-  },
-  {
     "hero_id": "emre",
     "countered_hero_id": "symmetra",
     "reason": "3연발 사격으로 감시 포탑을 빠르게 파괴",
@@ -1366,15 +1240,6 @@
     "reason_ja": "チャージされたビームがセグメント式バリアタイルを素早く溶かす",
     "reason_zh_cn": "蓄力后的光束能迅速融化屏障阵列的护甲板",
     "reason_zh_tw": "蓄力後的光束能迅速融化屏障陣列的護甲板"
-  },
-  {
-    "hero_id": "genji",
-    "countered_hero_id": "domina",
-    "reason": "반사로 포톤 매그넘 사격을 그대로 되돌려보냄",
-    "reason_en": "Deflect sends her Photon Magnum shots straight back at her",
-    "reason_ja": "攻撃反射でフォトンマグナムの射撃をそのまま跳ね返す",
-    "reason_zh_cn": "用反弹将光子麦格南的射击原样弹回",
-    "reason_zh_tw": "用招架將光子麥格農的射擊原樣彈回"
   },
   {
     "hero_id": "sombra",
@@ -2283,5 +2148,925 @@
     "hero_id": "jetpack_cat",
     "countered_hero_id": "hazard",
     "reason": "견인 로프로 아군을 빼내 개시 콤보를 무산시킴"
+  },
+  {
+    "hero_id": "ramattra",
+    "countered_hero_id": "domina",
+    "reason": "보이드 방벽으로 포톤 매그넘 견제를 받아내고 네메시스 형태로 세그먼트 방벽을 두들겨 부숨"
+  },
+  {
+    "hero_id": "mauga",
+    "countered_hero_id": "domina",
+    "reason": "심장 박동 촉진으로 장거리 견제를 버티며 쌍기관총 화력으로 방벽을 순식간에 녹여버림"
+  },
+  {
+    "hero_id": "reinhardt",
+    "countered_hero_id": "domina",
+    "reason": "방벽으로 포킹을 막아내며 전진해 화염 강타와 망치 근접전으로 기동기 없는 도미나를 압박"
+  },
+  {
+    "hero_id": "hazard",
+    "countered_hero_id": "domina",
+    "reason": "가시 장벽 개시로 포킹 거리를 단숨에 좁혀 근접전으로 끌어들임"
+  },
+  {
+    "hero_id": "dmon",
+    "countered_hero_id": "domina",
+    "reason": "추진기로 빠르게 거리를 좁히고 파워 배리어로 포톤 매그넘 견제를 막아내며 압박"
+  },
+  {
+    "hero_id": "domina",
+    "countered_hero_id": "ashe",
+    "reason": "포톤 매그넘의 긴 사거리로 고지대 애쉬를 맞받아 견제하고 방벽으로 다이너마이트를 차단"
+  },
+  {
+    "hero_id": "domina",
+    "countered_hero_id": "echo",
+    "reason": "포톤 매그넘 장거리 사격이 비행 중인 에코를 꾸준히 맞혀 접착 폭탄 견제를 억제"
+  },
+  {
+    "hero_id": "domina",
+    "countered_hero_id": "genji",
+    "reason": "음파 반발장치로 근접 진입한 겐지를 밀쳐내고 방벽으로 수리검 견제를 받아냄"
+  },
+  {
+    "hero_id": "domina",
+    "countered_hero_id": "hanzo",
+    "reason": "세그먼트 방벽으로 스톰 애로우 사선을 막고 장거리 맞포킹으로 한조를 압도"
+  },
+  {
+    "hero_id": "junkrat",
+    "countered_hero_id": "domina",
+    "reason": "곡사 유탄과 충격 지뢰로 방벽 너머 기동기 없는 도미나에게 꾸준히 폭발 피해를 누적"
+  },
+  {
+    "hero_id": "mei",
+    "countered_hero_id": "domina",
+    "reason": "얼음벽으로 방벽 뒤 도미나를 아군과 분리시키고 냉각총으로 묶어 처치"
+  },
+  {
+    "hero_id": "domina",
+    "countered_hero_id": "pharah",
+    "reason": "포톤 매그넘의 긴 사거리로 공중에 떠 있는 파라를 지속적으로 격추"
+  },
+  {
+    "hero_id": "reaper",
+    "countered_hero_id": "domina",
+    "reason": "그림자 밟기로 측면에 붙어 근접 산탄으로 방벽 뒤 도미나를 직접 녹여버림"
+  },
+  {
+    "hero_id": "sojourn",
+    "countered_hero_id": "domina",
+    "reason": "파워 슬라이드로 각을 바꾸며 레일건 충전 사격으로 방벽 바깥의 도미나를 저격"
+  },
+  {
+    "hero_id": "domina",
+    "countered_hero_id": "soldier_76",
+    "reason": "헬릭스 로켓과 펄스 소총 견제를 방벽으로 받아내며 장거리 맞교전에서 우위"
+  },
+  {
+    "hero_id": "tracer",
+    "countered_hero_id": "domina",
+    "reason": "점멸로 방벽 측면을 돌아 후방으로 파고들어 기동기 없는 도미나를 괴롭힘"
+  },
+  {
+    "hero_id": "venture",
+    "countered_hero_id": "domina",
+    "reason": "굴착 이동으로 방벽 아래로 파고들어 기동기 없는 도미나를 근접에서 기습"
+  },
+  {
+    "hero_id": "vendetta",
+    "countered_hero_id": "domina",
+    "reason": "광검 근접 콤보로 방벽을 우회해 기동기 없는 도미나에게 순간 화력을 쏟아냄"
+  },
+  {
+    "hero_id": "brigitte",
+    "countered_hero_id": "domina",
+    "reason": "방패 강타로 방벽 뒤까지 파고들어 도리깨 투척으로 근접 압박을 이어감"
+  },
+  {
+    "hero_id": "domina",
+    "countered_hero_id": "illari",
+    "reason": "포톤 매그넘 장거리 견제로 태양 포탑을 부수고 일리아리의 소총 각을 지워버림"
+  },
+  {
+    "hero_id": "lucio",
+    "countered_hero_id": "domina",
+    "reason": "속도 부스트와 벽 타기로 포킹 각을 무시하고 소리 파동으로 방벽 뒤 진형을 흐트러뜨림"
+  },
+  {
+    "hero_id": "dva",
+    "countered_hero_id": "dmon",
+    "reason": "방어 매트릭스로 디몬의 화력을 흡수하고 부스터로 기동력에서 앞섬"
+  },
+  {
+    "hero_id": "ramattra",
+    "countered_hero_id": "dmon",
+    "reason": "네메시스 폼 주먹으로 방벽을 관통해 디몬을 근접에서 압도"
+  },
+  {
+    "hero_id": "dmon",
+    "countered_hero_id": "wrecking_ball",
+    "reason": "근접 교전으로 공 형태의 레킹볼을 붙잡아 굴러다닐 틈 없이 화력을 집중"
+  },
+  {
+    "hero_id": "dmon",
+    "countered_hero_id": "sigma",
+    "reason": "방벽 뒤 포킹에 의존하는 시그마에게 거리를 좁혀 근접 난전으로 끌어들임"
+  },
+  {
+    "hero_id": "orisa",
+    "countered_hero_id": "dmon",
+    "reason": "수호의 창으로 디몬의 돌진을 밀어내고 강화로 저지 효과를 무시"
+  },
+  {
+    "hero_id": "junker_queen",
+    "countered_hero_id": "dmon",
+    "reason": "톱니칼과 지휘의 외침으로 지속 피해를 쌓아 디몬의 유지력을 깎아냄"
+  },
+  {
+    "hero_id": "ashe",
+    "countered_hero_id": "dmon",
+    "reason": "다이너마이트와 충격 폭탄으로 디몬과 거리를 벌리며 원거리에서 견제"
+  },
+  {
+    "hero_id": "bastion",
+    "countered_hero_id": "dmon",
+    "reason": "설정 모드의 집중 화력으로 덩치 큰 디몬의 체력을 빠르게 녹임"
+  },
+  {
+    "hero_id": "cassidy",
+    "countered_hero_id": "dmon",
+    "reason": "자석 수류탄과 정확한 헤드샷으로 큰 판정의 디몬에게 꾸준히 피해를 누적"
+  },
+  {
+    "hero_id": "echo",
+    "countered_hero_id": "dmon",
+    "reason": "비행으로 공중에 머물며 점착 폭탄을 퍼부어 디몬이 닿지 않는 위치에서 견제"
+  },
+  {
+    "hero_id": "hanzo",
+    "countered_hero_id": "dmon",
+    "reason": "폭풍 화살로 큰 판정의 디몬에게 한 번에 높은 피해를 몰아넣음"
+  },
+  {
+    "hero_id": "pharah",
+    "countered_hero_id": "dmon",
+    "reason": "공중에서 로켓을 쏟아부어 지상 탱커인 디몬의 손이 닿지 않는 각을 확보"
+  },
+  {
+    "hero_id": "reaper",
+    "countered_hero_id": "dmon",
+    "reason": "근접 산탄 화력으로 덩치 큰 디몬에게 높은 피해를 주고 흡혈로 버팀"
+  },
+  {
+    "hero_id": "dmon",
+    "countered_hero_id": "symmetra",
+    "reason": "근접 교전형 탱커로 포탑과 순간이동기 구역을 빠르게 밀어 정리"
+  },
+  {
+    "hero_id": "widowmaker",
+    "countered_hero_id": "dmon",
+    "reason": "먼 고지대에서 정확한 저격으로 디몬에게 일방적인 피해를 누적"
+  },
+  {
+    "hero_id": "freja",
+    "countered_hero_id": "dmon",
+    "reason": "원거리 정밀 사격과 높은 기동력으로 디몬의 진입 범위를 벗어나 견제"
+  },
+  {
+    "hero_id": "vendetta",
+    "countered_hero_id": "dmon",
+    "reason": "근접 돌진형 딜러로 디몬의 측면을 파고들어 높은 근접 피해를 누적"
+  },
+  {
+    "hero_id": "dmon",
+    "countered_hero_id": "baptiste",
+    "reason": "앞라인을 강하게 밀어붙여 방벽과 증폭 매트릭스 각을 무너뜨림"
+  },
+  {
+    "hero_id": "dmon",
+    "countered_hero_id": "brigitte",
+    "reason": "근접 압박으로 방패 밀쳐내기와 도리깨 견제를 정면으로 받아냄"
+  },
+  {
+    "hero_id": "kiriko",
+    "countered_hero_id": "dmon",
+    "reason": "정화의 방울로 디몬의 저지 효과를 해제하고 순보로 진입을 회피"
+  },
+  {
+    "hero_id": "zenyatta",
+    "countered_hero_id": "dmon",
+    "reason": "부조화의 구슬로 디몬이 받는 피해를 늘려 아군 화력을 집중"
+  },
+  {
+    "hero_id": "wuyang",
+    "countered_hero_id": "dmon",
+    "reason": "물 기반 치유와 밀쳐내기로 디몬의 근접 진입을 끊고 아군을 회복"
+  },
+  {
+    "hero_id": "ramattra",
+    "countered_hero_id": "zarya",
+    "reason": "네메시스 형태 강타로 방벽을 관통해 자리야 본체를 직접 두드리고 막기로 입자포 피해를 줄임"
+  },
+  {
+    "hero_id": "junker_queen",
+    "countered_hero_id": "ramattra",
+    "reason": "톱니칼과 난도질의 출혈 피해로 네메시스 형태의 방어력을 갉아먹고 지휘의 외침으로 버팀"
+  },
+  {
+    "hero_id": "mauga",
+    "countered_hero_id": "ramattra",
+    "reason": "쌍 기관총의 지속 화력으로 네메시스 형태의 방어력을 녹이며 높은 체력으로 근접전을 버팀"
+  },
+  {
+    "hero_id": "ramattra",
+    "countered_hero_id": "reinhardt",
+    "reason": "네메시스 형태 강타가 방벽을 관통해 라인하르트를 방패 너머로 공격"
+  },
+  {
+    "hero_id": "ramattra",
+    "countered_hero_id": "ashe",
+    "reason": "보이드 방벽으로 원거리 사선을 가리고 소용돌이로 엄폐 뒤 애쉬를 묶어 압박"
+  },
+  {
+    "hero_id": "ramattra",
+    "countered_hero_id": "bastion",
+    "reason": "보이드 방벽으로 설정 모드 화력을 흡수하고 막기로 버티며 근접 거리까지 파고듦"
+  },
+  {
+    "hero_id": "ramattra",
+    "countered_hero_id": "cassidy",
+    "reason": "보이드 방벽으로 피스키퍼 견제를 막고 네메시스 형태 강타로 엄폐 뒤까지 공격"
+  },
+  {
+    "hero_id": "echo",
+    "countered_hero_id": "ramattra",
+    "reason": "비행으로 네메시스 형태의 근접 사거리를 벗어난 채 광선 집중으로 마무리"
+  },
+  {
+    "hero_id": "genji",
+    "countered_hero_id": "ramattra",
+    "reason": "튕겨내기로 보이드 가속기 투사체를 되돌리고 높은 기동력으로 근접 강타를 회피"
+  },
+  {
+    "hero_id": "ramattra",
+    "countered_hero_id": "hanzo",
+    "reason": "보이드 방벽으로 화살 사선을 차단하고 네메시스 형태로 진입해 근거리 교전을 강요"
+  },
+  {
+    "hero_id": "mei",
+    "countered_hero_id": "ramattra",
+    "reason": "냉각총 둔화와 빙벽으로 네메시스 형태의 진입 동선을 끊어 근접 압박을 무력화"
+  },
+  {
+    "hero_id": "pharah",
+    "countered_hero_id": "ramattra",
+    "reason": "공중에서 로켓을 퍼부어 네메시스 형태의 근접 사거리 밖에서 일방적으로 견제"
+  },
+  {
+    "hero_id": "ramattra",
+    "countered_hero_id": "sojourn",
+    "reason": "보이드 방벽으로 레일건 차지샷을 막고 소용돌이로 미끄러지기 이동을 묶어 처치"
+  },
+  {
+    "hero_id": "sombra",
+    "countered_hero_id": "ramattra",
+    "reason": "해킹으로 네메시스 형태 전환과 소용돌이를 끊어 진입 타이밍을 무산시킴"
+  },
+  {
+    "hero_id": "ramattra",
+    "countered_hero_id": "symmetra",
+    "reason": "네메시스 형태 강타가 방벽을 관통해 감시 포탑과 시메트라를 함께 정리"
+  },
+  {
+    "hero_id": "tracer",
+    "countered_hero_id": "ramattra",
+    "reason": "점멸로 근접 강타를 피하며 네메시스 형태 밖에서 지속적으로 견제"
+  },
+  {
+    "hero_id": "venture",
+    "countered_hero_id": "ramattra",
+    "reason": "굴착 이동으로 강타 사거리를 빠져나가며 예측 불가능한 각도에서 들이침"
+  },
+  {
+    "hero_id": "ramattra",
+    "countered_hero_id": "freja",
+    "reason": "보이드 방벽으로 폭발 볼트 견제를 막고 소용돌이로 공중에 뜬 프레야를 끌어내림"
+  },
+  {
+    "hero_id": "shion",
+    "countered_hero_id": "ramattra",
+    "reason": "오토바이 기동으로 근접 강타 사거리를 회피하며 쌍권총으로 꾸준히 피해를 누적"
+  },
+  {
+    "hero_id": "anran",
+    "countered_hero_id": "ramattra",
+    "reason": "고기동 접근 후 화염 부채의 화상 피해로 네메시스 형태가 끝난 틈을 파고듦"
+  },
+  {
+    "hero_id": "ramattra",
+    "countered_hero_id": "emre",
+    "reason": "보이드 방벽으로 3점사 사격을 흡수하고 네메시스 형태 강타로 엄폐 뒤를 압박"
+  },
+  {
+    "hero_id": "ana",
+    "countered_hero_id": "ramattra",
+    "reason": "생체 수류탄으로 회복을 끊고 수면총으로 네메시스 형태와 섬멸 진입을 차단"
+  },
+  {
+    "hero_id": "ramattra",
+    "countered_hero_id": "brigitte",
+    "reason": "네메시스 형태 강타가 방벽 방패를 그대로 관통해 브리기테를 근접전에서 압도"
+  },
+  {
+    "hero_id": "ramattra",
+    "countered_hero_id": "lucio",
+    "reason": "소용돌이의 둔화와 하강 효과로 벽타기 기동을 막아 루시우를 붙잡아 처치"
+  },
+  {
+    "hero_id": "zenyatta",
+    "countered_hero_id": "ramattra",
+    "reason": "부조화의 구슬로 네메시스 형태의 방어력을 무력화하고 초월로 섬멸 피해를 상쇄"
+  },
+  {
+    "hero_id": "jetpack_cat",
+    "countered_hero_id": "ramattra",
+    "reason": "견인 로프로 아군을 빼내 네메시스 형태와 섬멸의 근접 콤보를 무산시킴"
+  },
+  {
+    "hero_id": "doomfist",
+    "countered_hero_id": "reinhardt",
+    "reason": "로켓 펀치로 방벽을 우회해 라인하르트를 벽에 박아넣고 전선을 무너뜨림"
+  },
+  {
+    "hero_id": "wrecking_ball",
+    "countered_hero_id": "reinhardt",
+    "reason": "구르기와 그래플링 훅으로 방벽을 넘나들며 라인하르트를 무시하고 후열을 흔듦"
+  },
+  {
+    "hero_id": "reinhardt",
+    "countered_hero_id": "sigma",
+    "reason": "방벽을 들고 거리를 좁힌 뒤 화염 강타와 망치 연타로 시그마의 장거리 견제를 무력화"
+  },
+  {
+    "hero_id": "orisa",
+    "countered_hero_id": "reinhardt",
+    "reason": "방어 태세로 돌진을 버텨내고 창 회전으로 라인하르트의 전진을 계속 끊어냄"
+  },
+  {
+    "hero_id": "reinhardt",
+    "countered_hero_id": "zarya",
+    "reason": "방벽을 들고 근접해 망치 연타로 자리야의 방벽 쿨타임 사이를 파고듦"
+  },
+  {
+    "hero_id": "reinhardt",
+    "countered_hero_id": "dmon",
+    "reason": "화염 강타가 파워 배리어를 관통해 뒤에 숨은 디몬에게도 피해를 꽂아넣음"
+  },
+  {
+    "hero_id": "reinhardt",
+    "countered_hero_id": "ashe",
+    "reason": "방벽으로 애쉬의 저격 견제를 받아내며 전진해 근접 거리로 끌어들임"
+  },
+  {
+    "hero_id": "reinhardt",
+    "countered_hero_id": "cassidy",
+    "reason": "방벽으로 히트스캔 사격을 막아내고 망치 사거리 안으로 들어가면 손쉽게 제압"
+  },
+  {
+    "hero_id": "genji",
+    "countered_hero_id": "reinhardt",
+    "reason": "방벽으로 포탑 화망을 받아내며 진입해 화염 강타로 포탑과 토르비욘을 함께 타격"
+  },
+  {
+    "hero_id": "mei",
+    "countered_hero_id": "reinhardt",
+    "reason": "돌진으로 방패째 벽에 박아넣고 망치 연타로 브리기테를 근접 브롤에서 압도"
+  },
+  {
+    "hero_id": "sombra",
+    "countered_hero_id": "reinhardt",
+    "reason": "질풍참으로 방벽 측면을 파고들고 튕겨내기로 화염 강타를 되돌려 보냄"
+  },
+  {
+    "hero_id": "reinhardt",
+    "countered_hero_id": "torbjorn",
+    "reason": "냉각총으로 이동을 묶고 얼음벽으로 라인하르트와 아군 사이를 갈라놓음"
+  },
+  {
+    "hero_id": "tracer",
+    "countered_hero_id": "reinhardt",
+    "reason": "해킹으로 방벽과 돌진을 봉쇄해 라인하르트를 무방비 상태로 만듦"
+  },
+  {
+    "hero_id": "venture",
+    "countered_hero_id": "reinhardt",
+    "reason": "점멸로 방벽 뒤를 돌아 들어가 라인하르트가 대응할 수 없는 각에서 견제"
+  },
+  {
+    "hero_id": "vendetta",
+    "countered_hero_id": "reinhardt",
+    "reason": "굴착 이동으로 방벽 아래를 지나 측면에서 근접 피해를 꽂아넣음"
+  },
+  {
+    "hero_id": "anran",
+    "countered_hero_id": "reinhardt",
+    "reason": "근접 광검 콤보로 방벽 옆을 파고들어 라인하르트의 대응보다 빠르게 피해를 누적"
+  },
+  {
+    "hero_id": "ana",
+    "countered_hero_id": "reinhardt",
+    "reason": "고기동 접근으로 방벽 측면을 돌아 들어가 화염 부채 연타로 압박"
+  },
+  {
+    "hero_id": "reinhardt",
+    "countered_hero_id": "brigitte",
+    "reason": "생체 수류탄으로 회복을 차단하고 수면총으로 돌진 중인 라인하르트를 멈춰 세움"
+  },
+  {
+    "hero_id": "juno",
+    "countered_hero_id": "reinhardt",
+    "reason": "펄사 어뢰의 유도 성능으로 방벽을 넘어 뒤쪽 대상까지 동시에 견제"
+  },
+  {
+    "hero_id": "kiriko",
+    "countered_hero_id": "reinhardt",
+    "reason": "정화의 방울로 대지분쇄 상태이상을 해제하고 순보로 위기 아군을 즉시 구원"
+  },
+  {
+    "hero_id": "lifeweaver",
+    "countered_hero_id": "reinhardt",
+    "reason": "생명의 손길로 돌진이나 대지분쇄에 걸린 아군을 끌어당겨 연계를 무산시킴"
+  },
+  {
+    "hero_id": "zenyatta",
+    "countered_hero_id": "reinhardt",
+    "reason": "부조화의 구슬로 큰 체격의 라인하르트가 받는 피해를 크게 늘려 빠르게 녹임"
+  },
+  {
+    "hero_id": "mizuki",
+    "countered_hero_id": "reinhardt",
+    "reason": "속박 사슬로 라인하르트의 돌진 이동을 봉쇄해 진입 자체를 무산시킴"
+  },
+  {
+    "hero_id": "jetpack_cat",
+    "countered_hero_id": "reinhardt",
+    "reason": "견인 로프로 돌진에 걸린 아군을 빼내 라인하르트의 근접 콤보를 무산시킴"
+  },
+  {
+    "hero_id": "sigma",
+    "countered_hero_id": "doomfist",
+    "reason": "키네틱 그라운드로 블래스트 펀치 개시를 받아내고 강착으로 진입 동선을 끊음"
+  },
+  {
+    "hero_id": "mauga",
+    "countered_hero_id": "sigma",
+    "reason": "화망 사격의 지속 화력이 실험용 방벽을 빠르게 녹이고 키네틱 그라운드 쿨타임을 노림"
+  },
+  {
+    "hero_id": "sigma",
+    "countered_hero_id": "domina",
+    "reason": "실험용 방벽을 전진 배치해 포톤 매그넘 원거리 견제를 정면에서 차단"
+  },
+  {
+    "hero_id": "sigma",
+    "countered_hero_id": "ashe",
+    "reason": "키네틱 그라운드로 다이너마이트와 탄환을 흡수해 장거리 포킹을 무력화"
+  },
+  {
+    "hero_id": "sigma",
+    "countered_hero_id": "bastion",
+    "reason": "실험용 방벽과 키네틱 그라운드로 경계 모드 화력을 번갈아 받아내며 버팀"
+  },
+  {
+    "hero_id": "sigma",
+    "countered_hero_id": "cassidy",
+    "reason": "키네틱 그라운드로 난사를 흡수하고 강착으로 캐서디를 넘어뜨려 제압"
+  },
+  {
+    "hero_id": "echo",
+    "countered_hero_id": "sigma",
+    "reason": "점착 폭탄과 공중 광선 화력이 방벽을 넘어 위에서 시그마를 녹여냄"
+  },
+  {
+    "hero_id": "genji",
+    "countered_hero_id": "sigma",
+    "reason": "반사로 초구체를 되돌려보내고 방벽 뒤로 파고들어 근접 압박"
+  },
+  {
+    "hero_id": "sigma",
+    "countered_hero_id": "hanzo",
+    "reason": "멀리 세운 방벽으로 스톰 애로우 연사를 막아 한조의 순간 화력을 봉쇄"
+  },
+  {
+    "hero_id": "mei",
+    "countered_hero_id": "sigma",
+    "reason": "냉각 빔이 방벽을 무시하고 접근해 얼음벽으로 시그마를 아군과 분리"
+  },
+  {
+    "hero_id": "pharah",
+    "countered_hero_id": "sigma",
+    "reason": "공중에서 각을 바꿔 방벽 위로 로켓 스플래시를 퍼부어 견제"
+  },
+  {
+    "hero_id": "sigma",
+    "countered_hero_id": "sojourn",
+    "reason": "레일건 충전 사격을 실험용 방벽과 키네틱 그라운드로 번갈아 흡수"
+  },
+  {
+    "hero_id": "sombra",
+    "countered_hero_id": "sigma",
+    "reason": "해킹으로 키네틱 그라운드와 방벽 운용을 봉인하고 후방에서 기습"
+  },
+  {
+    "hero_id": "sigma",
+    "countered_hero_id": "symmetra",
+    "reason": "키네틱 그라운드로 광자 발사기 빔을 흡수하고 초구체로 포탑을 원거리 철거"
+  },
+  {
+    "hero_id": "sigma",
+    "countered_hero_id": "torbjorn",
+    "reason": "초구체를 벽에 튕겨 고정 포탑을 안전 거리에서 손쉽게 철거"
+  },
+  {
+    "hero_id": "venture",
+    "countered_hero_id": "sigma",
+    "reason": "굴착으로 방벽 아래를 파고들어 후방에서 시그마를 직접 타격"
+  },
+  {
+    "hero_id": "sigma",
+    "countered_hero_id": "widowmaker",
+    "reason": "원거리에 세운 방벽으로 저격 각을 가려 위도우메이커의 픽을 차단"
+  },
+  {
+    "hero_id": "sigma",
+    "countered_hero_id": "freja",
+    "reason": "키네틱 그라운드로 폭발성 올가미와 볼트를 흡수해 구속 콤보를 무산"
+  },
+  {
+    "hero_id": "vendetta",
+    "countered_hero_id": "sigma",
+    "reason": "광검 근접 콤보로 방벽을 우회해 붙어서 높은 체력을 빠르게 깎아냄"
+  },
+  {
+    "hero_id": "anran",
+    "countered_hero_id": "sigma",
+    "reason": "고기동 접근 후 화염 부채 연타로 방벽 뒤 시그마를 근접에서 압박"
+  },
+  {
+    "hero_id": "sigma",
+    "countered_hero_id": "emre",
+    "reason": "실험용 방벽으로 3점사 정조준 사격을 막고 강착으로 반격"
+  },
+  {
+    "hero_id": "sigma",
+    "countered_hero_id": "ana",
+    "reason": "키네틱 그라운드로 생체 수류탄과 수면총을 흡수해 아나의 핵심 스킬을 무력화"
+  },
+  {
+    "hero_id": "brigitte",
+    "countered_hero_id": "sigma",
+    "reason": "방패 밀쳐내기와 도리깨 연타로 방벽 뒤까지 붙어 지속적으로 괴롭힘"
+  },
+  {
+    "hero_id": "sigma",
+    "countered_hero_id": "illari",
+    "reason": "방벽을 앞세워 태양 소총 견제를 막고 초구체로 치유 기둥을 철거"
+  },
+  {
+    "hero_id": "juno",
+    "countered_hero_id": "sigma",
+    "reason": "펄사 어뢰가 방벽을 무시하고 유도돼 시그마의 체력을 꾸준히 깎음"
+  },
+  {
+    "hero_id": "kiriko",
+    "countered_hero_id": "sigma",
+    "reason": "정화의 방울로 강착과 중력 붕괴 효과를 해제하고 쿠나이로 머리를 노림"
+  },
+  {
+    "hero_id": "lucio",
+    "countered_hero_id": "sigma",
+    "reason": "소리 파동으로 시그마를 밀어내 방벽 위치를 흐트러뜨림"
+  },
+  {
+    "hero_id": "jetpack_cat",
+    "countered_hero_id": "sigma",
+    "reason": "견인 로프로 강착에 맞을 아군을 빼내 시그마의 콤보를 무산"
+  },
+  {
+    "hero_id": "orisa",
+    "countered_hero_id": "ramattra",
+    "reason": "포티파이로 라마트라의 근접 형태 압박을 버티며 투창으로 접근을 끊어냄"
+  },
+  {
+    "hero_id": "zarya",
+    "countered_hero_id": "orisa",
+    "reason": "입자 방벽으로 투창을 흡수해 에너지를 모은 뒤 고에너지 빔으로 오리사를 녹여냄"
+  },
+  {
+    "hero_id": "orisa",
+    "countered_hero_id": "junker_queen",
+    "reason": "포티파이로 톱니칼 끌어당김을 무시하고 투창으로 돌진을 밀어내 근접전을 거부"
+  },
+  {
+    "hero_id": "domina",
+    "countered_hero_id": "orisa",
+    "reason": "장거리 포톤 매그넘 견제로 오리사가 창을 꽂을 거리 밖에서 체력을 깎아냄"
+  },
+  {
+    "hero_id": "ashe",
+    "countered_hero_id": "orisa",
+    "reason": "원거리 헤드샷 견제와 다이너마이트로 포티파이 쿨타임 사이를 노려 피해를 누적"
+  },
+  {
+    "hero_id": "orisa",
+    "countered_hero_id": "cassidy",
+    "reason": "포티파이로 섬광 없는 근접 압박을 버티며 덩치 큰 화력으로 캐서디를 정면 제압"
+  },
+  {
+    "hero_id": "echo",
+    "countered_hero_id": "orisa",
+    "reason": "공중에서 점착 폭탄과 광선 집중으로 지상의 오리사를 일방적으로 녹여냄"
+  },
+  {
+    "hero_id": "genji",
+    "countered_hero_id": "orisa",
+    "reason": "높은 기동력으로 투창을 피하며 오리사 뒤편의 후열을 직접 노림"
+  },
+  {
+    "hero_id": "hanzo",
+    "countered_hero_id": "orisa",
+    "reason": "원거리 폭풍 화살로 큰 히트박스에 피해를 꾸준히 누적"
+  },
+  {
+    "hero_id": "mei",
+    "countered_hero_id": "orisa",
+    "reason": "냉각총 빔과 빙벽으로 오리사를 아군과 분리해 고립시킴"
+  },
+  {
+    "hero_id": "pharah",
+    "countered_hero_id": "orisa",
+    "reason": "공중에서 로켓 포격을 퍼부어 지상 탱커인 오리사의 반격 각을 차단"
+  },
+  {
+    "hero_id": "soldier_76",
+    "countered_hero_id": "orisa",
+    "reason": "중거리 지속 사격과 나선 로켓으로 큰 히트박스에 피해를 꾸준히 누적"
+  },
+  {
+    "hero_id": "symmetra",
+    "countered_hero_id": "orisa",
+    "reason": "충전된 광선이 오리사를 빠르게 녹이고 순간이동기로 측면을 점거"
+  },
+  {
+    "hero_id": "tracer",
+    "countered_hero_id": "orisa",
+    "reason": "점멸 기동으로 투창을 피하며 오리사 뒤편의 후열을 계속 흔듦"
+  },
+  {
+    "hero_id": "widowmaker",
+    "countered_hero_id": "orisa",
+    "reason": "원거리 저격으로 오리사의 사거리 밖에서 아군 후열을 위협"
+  },
+  {
+    "hero_id": "freja",
+    "countered_hero_id": "orisa",
+    "reason": "높은 고도의 기동 사격과 폭발성 올가미로 오리사를 넘어 후열을 견제"
+  },
+  {
+    "hero_id": "orisa",
+    "countered_hero_id": "vendetta",
+    "reason": "투창으로 근접 광검 진입을 끊어내고 포티파이로 콤보 피해를 버텨냄"
+  },
+  {
+    "hero_id": "anran",
+    "countered_hero_id": "orisa",
+    "reason": "고기동 접근 후 화염 부채 연타로 오리사를 우회해 후열을 압박"
+  },
+  {
+    "hero_id": "illari",
+    "countered_hero_id": "orisa",
+    "reason": "충전 사격으로 큰 히트박스를 원거리에서 꾸준히 견제하며 태양 포탑으로 버팀"
+  },
+  {
+    "hero_id": "lifeweaver",
+    "countered_hero_id": "orisa",
+    "reason": "생명의 나무와 생명 붙잡기로 투창 개시를 무력화하고 아군을 구출"
+  },
+  {
+    "hero_id": "zenyatta",
+    "countered_hero_id": "orisa",
+    "reason": "부조화의 구슬로 큰 히트박스의 오리사가 받는 피해를 크게 증폭"
+  },
+  {
+    "hero_id": "wuyang",
+    "countered_hero_id": "orisa",
+    "reason": "치유 파도로 오리사의 장기전 포킹 피해를 꾸준히 상쇄"
+  },
+  {
+    "hero_id": "zarya",
+    "countered_hero_id": "wrecking_ball",
+    "reason": "입자 방벽으로 파일드라이버 충격을 흡수해 에너지를 채우고 빔으로 보호막을 녹임"
+  },
+  {
+    "hero_id": "winston",
+    "countered_hero_id": "zarya",
+    "reason": "테슬라 캐논이 방벽을 무시하고 연결돼 에너지 충전 없이 체력을 깎아냄"
+  },
+  {
+    "hero_id": "zarya",
+    "countered_hero_id": "junker_queen",
+    "reason": "방벽 씌우기로 톱니 칼날 출혈을 끊고 높은 에너지 빔으로 근접전을 압도"
+  },
+  {
+    "hero_id": "ashe",
+    "countered_hero_id": "zarya",
+    "reason": "긴 사거리 헤드샷으로 방벽 쿨타임 사이를 노려 에너지를 모을 틈을 주지 않음"
+  },
+  {
+    "hero_id": "bastion",
+    "countered_hero_id": "zarya",
+    "reason": "설정 모드 화력이 방벽을 순식간에 깨고 빔 사거리 밖에서 체력을 깎아냄"
+  },
+  {
+    "hero_id": "echo",
+    "countered_hero_id": "zarya",
+    "reason": "비행 기동으로 빔 사거리 밖을 유지하며 점착 폭탄으로 방벽 이후를 노림"
+  },
+  {
+    "hero_id": "hanzo",
+    "countered_hero_id": "zarya",
+    "reason": "폭풍 화살 연사로 방벽이 꺼진 순간 큰 체력을 단숨에 깎아냄"
+  },
+  {
+    "hero_id": "zarya",
+    "countered_hero_id": "junkrat",
+    "reason": "방벽을 미리 씌워 충격탄 연쇄 폭발 피해를 에너지로 바꿔 흡수"
+  },
+  {
+    "hero_id": "mei",
+    "countered_hero_id": "zarya",
+    "reason": "냉각총으로 이동 속도를 묶고 빙벽으로 자리야를 아군과 분리해 고립시킴"
+  },
+  {
+    "hero_id": "pharah",
+    "countered_hero_id": "zarya",
+    "reason": "공중에서 로켓을 쏟아내 짧은 빔 사거리가 닿지 않는 각에서 압박"
+  },
+  {
+    "hero_id": "soldier_76",
+    "countered_hero_id": "zarya",
+    "reason": "헬릭스 로켓과 꾸준한 견제로 방벽이 빠진 타이밍마다 체력을 깎아냄"
+  },
+  {
+    "hero_id": "widowmaker",
+    "countered_hero_id": "zarya",
+    "reason": "원거리 저격으로 에너지를 모을 기회 자체를 주지 않고 체력을 깎아냄"
+  },
+  {
+    "hero_id": "zarya",
+    "countered_hero_id": "ana",
+    "reason": "방벽으로 수면총을 흡수해 무력화하고 높은 에너지로 근접 지원가를 압박"
+  },
+  {
+    "hero_id": "brigitte",
+    "countered_hero_id": "zarya",
+    "reason": "방패 밀쳐내기와 도리깨 견제로 근접 교전을 버티며 빔 압박을 상쇄"
+  },
+  {
+    "hero_id": "zarya",
+    "countered_hero_id": "juno",
+    "reason": "빔 사거리 안으로 들어온 주노를 높은 에너지로 빠르게 녹여 처치"
+  },
+  {
+    "hero_id": "zarya",
+    "countered_hero_id": "lifeweaver",
+    "reason": "방벽으로 견제를 흡수해 에너지를 채우고 기동기가 적은 라이프위버를 빔으로 압박"
+  },
+  {
+    "hero_id": "zarya",
+    "countered_hero_id": "lucio",
+    "reason": "방벽으로 소리 파동 밀쳐내기를 막고 근접한 루시우를 빔으로 빠르게 녹임"
+  },
+  {
+    "hero_id": "zarya",
+    "countered_hero_id": "mercy",
+    "reason": "수호천사로 붙는 대상에게 빔을 지속해 메르시의 낮은 체력을 빠르게 녹임"
+  },
+  {
+    "hero_id": "zarya",
+    "countered_hero_id": "moira",
+    "reason": "생체 손아귀 흡수 피해를 방벽으로 받아내 에너지를 채우고 근접전에서 압도"
+  },
+  {
+    "hero_id": "zenyatta",
+    "countered_hero_id": "zarya",
+    "reason": "부조화의 구슬로 받는 피해를 늘려 방벽이 꺼진 자리야를 빠르게 녹임"
+  },
+  {
+    "hero_id": "junker_queen",
+    "countered_hero_id": "doomfist",
+    "reason": "파워 블록 없이 들어온 둠피스트를 톱니 칼날로 끌어와 스캐터건 근접 화력으로 마무리"
+  },
+  {
+    "hero_id": "junker_queen",
+    "countered_hero_id": "roadhog",
+    "reason": "상처 지속 피해와 도륙으로 로드호그의 자가 회복 효율을 떨어뜨리며 체력 싸움에서 우위"
+  },
+  {
+    "hero_id": "sigma",
+    "countered_hero_id": "junker_queen",
+    "reason": "키네틱 손아귀로 스캐터건과 톱니 칼날 피해를 흡수하고 강착으로 광란 진입을 끊어냄"
+  },
+  {
+    "hero_id": "junker_queen",
+    "countered_hero_id": "hazard",
+    "reason": "지휘의 외침 추가 체력으로 가시 피해를 버티며 톱니 칼날로 끌어와 근접 화력 집중"
+  },
+  {
+    "hero_id": "ashe",
+    "countered_hero_id": "junker_queen",
+    "reason": "근접 사거리 밖에서 머리치기로 견제하고 충격 샷건으로 진입한 정커퀸을 밀어냄"
+  },
+  {
+    "hero_id": "cassidy",
+    "countered_hero_id": "junker_queen",
+    "reason": "사거리 우위로 접근 전부터 체력을 깎고 자성 수류탄으로 진입 직후 큰 피해를 누적"
+  },
+  {
+    "hero_id": "echo",
+    "countered_hero_id": "junker_queen",
+    "reason": "비행으로 근접 사거리를 벗어난 채 접착 폭탄과 광선 집중으로 일방적 견제"
+  },
+  {
+    "hero_id": "genji",
+    "countered_hero_id": "junker_queen",
+    "reason": "튕겨내기로 톱니 칼날과 스캐터건을 되돌리고 기동력으로 근접 범위를 쉽게 이탈"
+  },
+  {
+    "hero_id": "junker_queen",
+    "countered_hero_id": "hanzo",
+    "reason": "지휘의 외침 이동속도로 사거리를 좁혀 이동기가 약한 한조를 톱니 칼날로 끌어와 처치"
+  },
+  {
+    "hero_id": "mei",
+    "countered_hero_id": "junker_queen",
+    "reason": "냉각총 둔화로 광란 진입 속도를 늦추고 빙벽으로 아군과의 연계를 끊어냄"
+  },
+  {
+    "hero_id": "pharah",
+    "countered_hero_id": "junker_queen",
+    "reason": "공중에 머물며 근접 위주인 정커퀸의 사거리 밖에서 로켓 스플래시로 압박"
+  },
+  {
+    "hero_id": "sombra",
+    "countered_hero_id": "junker_queen",
+    "reason": "해킹으로 지휘의 외침과 톱니 칼날을 봉인해 진입 수단을 묶어버림"
+  },
+  {
+    "hero_id": "junker_queen",
+    "countered_hero_id": "torbjorn",
+    "reason": "고체력과 지휘의 외침으로 포탑 화력을 버티며 이동기 없는 토르비욘을 톱니 칼날로 끌어와 처치"
+  },
+  {
+    "hero_id": "widowmaker",
+    "countered_hero_id": "junker_queen",
+    "reason": "근접 사거리 밖 장거리에서 큰 덩치의 정커퀸을 안정적으로 저격"
+  },
+  {
+    "hero_id": "freja",
+    "countered_hero_id": "junker_queen",
+    "reason": "사거리 밖에서 견제하다 폭발성 올가미로 진입하는 정커퀸을 구속해 접근을 차단"
+  },
+  {
+    "hero_id": "ana",
+    "countered_hero_id": "junker_queen",
+    "reason": "생체 수류탄으로 상처 회복 패시브를 끊고 수면총으로 광란 진입을 원천 차단"
+  },
+  {
+    "hero_id": "junker_queen",
+    "countered_hero_id": "brigitte",
+    "reason": "톱니 칼날로 방벽 뒤의 브리기테를 끌어내고 상처 피해로 방패 유지를 어렵게 만듦"
+  },
+  {
+    "hero_id": "illari",
+    "countered_hero_id": "junker_queen",
+    "reason": "태양 소총으로 근접 전 체력을 깎고 분출로 거리를 벌려 근접 압박을 피함"
+  },
+  {
+    "hero_id": "kiriko",
+    "countered_hero_id": "junker_queen",
+    "reason": "정화의 방울로 상처와 도륙 효과를 즉시 정화해 정커퀸의 지속 피해를 무력화"
+  },
+  {
+    "hero_id": "junker_queen",
+    "countered_hero_id": "zenyatta",
+    "reason": "이동기 없는 젠야타를 톱니 칼날로 끌어와 스캐터건으로 순식간에 처치"
+  },
+  {
+    "hero_id": "jetpack_cat",
+    "countered_hero_id": "junker_queen",
+    "reason": "비행 견제로 근접 사거리를 벗어나고 견인 로프로 광란에 걸린 아군을 빼냄"
   }
 ]
