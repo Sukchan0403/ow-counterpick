@@ -37,6 +37,11 @@ ALLOWED_ORIGINS = [
 # 만큼 늘어나므로, 그 시점엔 Redis 등 공유 저장소 기반으로 바꿔야 한다.
 RATE_LIMIT_MAX_REQUESTS = int(os.environ.get("OW_RATE_LIMIT_MAX_REQUESTS", "60"))
 RATE_LIMIT_WINDOW_SECONDS = int(os.environ.get("OW_RATE_LIMIT_WINDOW_SECONDS", "60"))
+# 앱 앞단에 있는 신뢰 가능한 리버스 프록시 개수. 프록시는 X-Forwarded-For 맨
+# 뒤에 자신이 본 접속 IP를 덧붙이므로, 오른쪽에서 이 개수번째 값이 실제
+# 클라이언트다(왼쪽 값들은 클라이언트가 임의로 넣을 수 있어 신뢰 불가).
+# Railway는 엣지 프록시 1단 → 기본 1. 프록시 없이 직접 띄우면 0으로 두면 된다.
+RATE_LIMIT_TRUSTED_PROXY_HOPS = int(os.environ.get("OW_TRUSTED_PROXY_HOPS", "1"))
 
 # 하드카운터 가중치 불변식(스펙 "점수 계산 로직"의 "가중치 튜닝 제약" 참고):
 # WEIGHT_COUNTER 1건 값은 다른 모든 보너스의 최댓값 합(시너지 최대 4명 ×
