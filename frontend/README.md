@@ -42,11 +42,16 @@ Claude 클라우드 샌드박스에서 Playwright로 실제 브라우저를 띄�
 
 - `src/lib/types.ts` — 백엔드 Pydantic 모델과 1:1 대응하는 타입
 - `src/lib/api.ts` — 백엔드 호출 (성공/검증 에러/서버 에러를 구분해서 throw)
-- `src/components/` — 팀 픽 선택(`HeroPickerPanel`), 포지션 선택(`RoleSelectPanel`),
-  맵 선택 모달(`MapPickerModal`), 결과 리스트(`ResultsPanel`), 에러 화면(`ErrorScreen`)
-- `src/app/page.tsx` — 위 컴포넌트들을 엮는 메인(유일한) 페이지. 폼 입력 → 제출 →
-  결과/에러 세 가지 상태를 하나의 페이지에서 전환하는 방식 (실전 밴프준 중 빠르게
-  다시 입력해볼 수 있도록 페이지 이동 없이 처리)
+- `src/lib/i18n.ts` — 5개 언어(ko/en/ja/zh-cn/zh-tw) 사전과 역할·모드 라벨
+- `src/components/HomeClient.tsx` — 메인 화면 전체. 폼 입력 → 제출 → 결과/에러
+  세 가지 상태를 한 페이지에서 전환한다 (실전 밴프준 중 빠르게 다시 입력해볼 수
+  있도록 페이지 이동 없이 처리)
+- `src/components/` — 양 팀 공용 영웅 선택 그리드(`SharedHeroGrid`), 맵 선택
+  모달(`MapPickerModal`), 결과 리스트(`ResultsPanel`), 에러 화면(`ErrorScreen`),
+  언어 전환(`LanguageSwitcher`), 다크/라이트 테마(`ThemeToggle`)
+- `src/app/page.tsx`(한국어), `src/app/{en,ja,zh-cn,zh-tw}/page.tsx` — 언어별
+  경로. 전부 `HomeClient`에 `locale`만 넘긴다. `robots.ts`/`sitemap.ts`는 검색
+  노출용
 
 ## 목업이랑 다른 점 (알아둘 것)
 
@@ -57,6 +62,9 @@ Claude Design 캔버스 목업(6개 화면, OWTICS.GG 스타일)의 색상 토�
 
 ## 다음 단계 후보
 
-- 목업의 헤더 네비게이션(드래프트 시뮬레이션 탭 등) 추가
-- 지금은 새로고침하면 입력이 다 날아감 — 필요하면 로컬스토리지에 임시 저장
-- 배포 (Vercel 등 — 이때 `NEXT_PUBLIC_API_BASE_URL`을 배포된 백엔드 주소로 설정)
+- 드래프트 시뮬레이션(`/api/team-evaluation`) 화면 + 헤더 탭 추가 — #11
+- 지금은 새로고침하면 입력이 다 날아감 — URL 쿼리에 상태를 담아 공유 링크까지
+  해결하는 방안 검토 중 — #18
+
+배포는 Railway에서 운영 중이다(루트 `README.md` 참고). 빌드 시
+`NEXT_PUBLIC_API_BASE_URL`을 배포된 백엔드 주소로 넣는다.
