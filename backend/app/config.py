@@ -31,10 +31,10 @@ ALLOWED_ORIGINS = [
 ]
 
 # 레이트리밋: 같은 클라이언트(IP)가 짧은 시간에 과도하게 요청하는 걸 막는 간단한
-# 인메모리 고정 윈도우 제한(app/rate_limit.py). Render가 uvicorn을 단일 워커·
-# 단일 컨테이너로 띄우는 현재 배포 형태를 전제로 한다 — 워커나 인스턴스를
-# 여러 개로 늘리면 인스턴스마다 카운터가 따로 생겨 실제 허용량이 인스턴스 수
-# 만큼 늘어나므로, 그 시점엔 Redis 등 공유 저장소 기반으로 바꿔야 한다.
+# 인메모리 고정 윈도우 제한(app/rate_limit.py). 카운터가 프로세스 메모리에 있어서,
+# Vercel 함수처럼 트래픽에 따라 인스턴스가 여러 개 뜨면 인스턴스마다 따로 센다 —
+# 실제 허용량이 인스턴스 수만큼 늘어나는 느슨한 제한이다. 엄격하게 막아야 할
+# 시점이 오면 Redis 등 공유 저장소 기반으로 바꿔야 한다.
 RATE_LIMIT_MAX_REQUESTS = int(os.environ.get("OW_RATE_LIMIT_MAX_REQUESTS", "60"))
 RATE_LIMIT_WINDOW_SECONDS = int(os.environ.get("OW_RATE_LIMIT_WINDOW_SECONDS", "60"))
 

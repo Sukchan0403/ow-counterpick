@@ -1,0 +1,19 @@
+# Vercel 배포 전용 설정 — 백엔드(FastAPI)를 Vercel Python 런타임으로 올린다.
+# 프론트엔드는 Root Directory가 frontend/인 별도 Vercel 프로젝트라 이 파일을 보지 않는다.
+#
+# 백엔드 프로젝트의 Root Directory를 backend/가 아니라 저장소 루트로 두는 이유:
+# 앱이 읽는 시드 DB(seed-data/overwatch.db)가 backend/ 밖에 있어서, 루트여야
+# 함수 번들에 같이 들어간다. 로컬 개발/CI는 계속 backend/requirements.txt를 쓴다.
+[project]
+name = "ow-counterpick-api"
+version = "0.1.0"
+requires-python = ">=3.11"
+# backend/requirements.txt에서 런타임에 필요한 것만 옮겼다(uvicorn·pytest 제외 —
+# Vercel이 ASGI 앱을 직접 띄운다). 버전 범위를 바꾸면 양쪽을 같이 맞출 것.
+dependencies = [
+    "fastapi>=0.110,<1.0",
+    "pydantic>=2.0,<3.0",
+]
+
+[tool.vercel]
+entrypoint = "backend.vercel_app:app"
