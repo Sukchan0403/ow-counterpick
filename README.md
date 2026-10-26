@@ -9,8 +9,6 @@
 
 ### 🔗 [배포된 사이트에서 바로 써보기](https://ow-counterpick.vercel.app)
 
-> 백엔드가 무료 플랜이라 한동안 접속이 없으면 잠들어요. 첫 요청은 30~50초 걸릴 수 있습니다.
-
 공식 오버워치 API가 없어서 실시간 승률 통계 대신, **큐레이션된 카운터/시너지/맵
 데이터** 기반으로 추천하는 걸 목표로 하는 개인 포트폴리오 프로젝트입니다.
 
@@ -105,13 +103,15 @@ npm run dev
 
 ### 배포
 
-둘 다 GitHub 저장소를 연결해 두면 master에 push할 때마다 자동 배포된다.
+프론트와 백엔드 모두 Vercel 무료(Hobby) 플랜에, 같은 저장소를 import한 **별도 프로젝트
+두 개**로 올린다. master에 push할 때마다 둘 다 자동 배포된다.
 
-- **백엔드 — Render:** New → Blueprint로 이 저장소를 고르면 루트의 `render.yaml`을
-  읽어 `backend/Dockerfile`로 무료 웹 서비스를 만든다. 프론트 주소가
-  `https://ow-counterpick.vercel.app`이 아니면 `OW_ALLOWED_ORIGINS`를 고친다.
-- **프론트엔드 — Vercel:** 이 저장소를 import하고 Root Directory를 `frontend`로 둔다.
-  환경변수 `NEXT_PUBLIC_API_BASE_URL`에 Render 백엔드 주소를 넣는다(빌드 타임 값이라
+- **백엔드:** Root Directory를 저장소 루트(비워 둠)로 둔다. 루트 `pyproject.toml`의
+  `tool.vercel.entrypoint`가 `backend/vercel_app.py`를 가리키고, 루트여야
+  `seed-data/overwatch.db`가 함수 번들에 같이 들어간다. 프론트 주소가
+  `https://ow-counterpick.vercel.app`이 아니면 환경변수 `OW_ALLOWED_ORIGINS`를 넣는다.
+- **프론트엔드:** Root Directory를 `frontend`로 둔다.
+  환경변수 `NEXT_PUBLIC_API_BASE_URL`에 백엔드 프로젝트 주소를 넣는다(빌드 타임 값이라
   바꾸면 재배포해야 반영된다). 선택: `NEXT_PUBLIC_GA_MEASUREMENT_ID`,
   커스텀 도메인을 쓰면 `NEXT_PUBLIC_SITE_URL`.
 
@@ -144,7 +144,7 @@ pytest -v
 | 백엔드 | FastAPI, Pydantic |
 | 데이터베이스 | SQLite (큐레이션된 시드 데이터, 외부 API 미사용) |
 | 테스트 | pytest (백엔드), Vitest + React Testing Library (프론트엔드) |
-| 배포/CI | Docker, Vercel(프론트), Render(백엔드), GitHub Actions |
+| 배포/CI | Docker, Vercel, GitHub Actions |
 
 ## 🗺️ 로드맵
 
@@ -154,7 +154,7 @@ pytest -v
 - [x] 전체 영웅(54종) · 전체 모드 맵(32개) 카탈로그 확장
 - [x] 빈 포지션 자동 판단 (팀 구성만으로), 클릭 한 번짜리 상대/우리 팀 선택 UI
 - [x] Docker 컨테이너화
-- [x] 실제 배포 (Vercel 프론트 + Render 백엔드, 둘 다 무료 플랜 — Railway에서 이전)
+- [x] 실제 배포 (Vercel 무료 플랜 — 프론트/백엔드 각각 별도 프로젝트, Railway에서 이전)
 - [x] 다크/라이트 테마 토글
 - [x] SEO 기초(메타데이터·robots.txt·sitemap.xml) + 5개 언어(한국어/영어/일본어/
       중국어 간체·번체) 지원 (`/`, `/en`, `/ja`, `/zh-cn`, `/zh-tw` — 영웅 이름·
