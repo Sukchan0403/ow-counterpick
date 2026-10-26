@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import { SITE_URL } from "@/lib/site";
 
 // 빌드 타임에 주입되는 값(NEXT_PUBLIC_API_BASE_URL과 같은 방식 — 런타임
 // 환경변수가 아니라 빌드 인자). 로컬 개발/CI/아직 값을 안 넣은 배포에서는
@@ -8,7 +9,6 @@ import "./globals.css";
 // 이벤트를 구글에 보내는 것보다, 조용히 꺼두는 쪽이 안전함.
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
-const SITE_URL = "https://ow-counterpick-frontend-production.up.railway.app";
 const SITE_TITLE = "오버워치 밴프준 보조 | 카운터픽 추천";
 const SITE_DESCRIPTION =
   "상대 조합, 우리 조합, 맵을 입력하면 빈 포지션에 어떤 영웅을 픽해야 할지 카운터·시너지·맵 궁합 근거와 함께 바로 추천해주는 오버워치 밴픽 보조 도구.";

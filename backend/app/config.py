@@ -17,11 +17,11 @@ DEFAULT_DB_PATH = BACKEND_DIR.parent / "seed-data" / "overwatch.db"
 
 DB_PATH = Path(os.environ.get("OW_DB_PATH", str(DEFAULT_DB_PATH)))
 
-# CORS 허용 도메인. 실제 배포된 프론트엔드 주소 + 로컬 개발 서버(npm run dev)만
-# 기본으로 허용한다. Railway에 커스텀 도메인을 연결하거나 다른 프론트 배포가
-# 추가되면 OW_ALLOWED_ORIGINS 환경변수(콤마로 구분)로 덮어쓰면 된다.
+# CORS 허용 도메인. 실제 배포된 프론트엔드 주소(Vercel) + 로컬 개발 서버(npm run dev)만
+# 기본으로 허용한다. Vercel 프로젝트 이름이 달라 주소가 바뀌었거나 커스텀 도메인을
+# 연결하면 OW_ALLOWED_ORIGINS 환경변수(콤마로 구분)로 덮어쓰면 된다.
 _DEFAULT_ALLOWED_ORIGINS = (
-    "https://ow-counterpick-frontend-production.up.railway.app,"
+    "https://ow-counterpick.vercel.app,"
     "http://localhost:3000,http://127.0.0.1:3000"
 )
 ALLOWED_ORIGINS = [
@@ -31,7 +31,7 @@ ALLOWED_ORIGINS = [
 ]
 
 # 레이트리밋: 같은 클라이언트(IP)가 짧은 시간에 과도하게 요청하는 걸 막는 간단한
-# 인메모리 고정 윈도우 제한(app/rate_limit.py). Railway가 uvicorn을 단일 워커·
+# 인메모리 고정 윈도우 제한(app/rate_limit.py). Render가 uvicorn을 단일 워커·
 # 단일 컨테이너로 띄우는 현재 배포 형태를 전제로 한다 — 워커나 인스턴스를
 # 여러 개로 늘리면 인스턴스마다 카운터가 따로 생겨 실제 허용량이 인스턴스 수
 # 만큼 늘어나므로, 그 시점엔 Redis 등 공유 저장소 기반으로 바꿔야 한다.
