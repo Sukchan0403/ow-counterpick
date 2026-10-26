@@ -1,0 +1,20 @@
+# Render 블루프린트 — 백엔드(FastAPI)만 Render 무료 플랜에 올린다. 프론트엔드는
+# Vercel에 따로 배포한다(README "배포" 참고).
+#
+# 기존 backend/Dockerfile을 그대로 쓴다. 이 Dockerfile은 seed-data/overwatch.db를
+# 같이 복사해야 해서 빌드 컨텍스트가 저장소 루트여야 한다.
+# 무료 플랜은 15분 동안 요청이 없으면 잠들고, 다음 첫 요청에 30~50초가 걸린다.
+services:
+  - type: web
+    name: ow-counterpick-api
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      # 프론트 주소가 기본값(https://ow-counterpick.vercel.app)과 다르면 여기서 덮어쓴다.
+      - key: OW_ALLOWED_ORIGINS
+        value: https://ow-counterpick.vercel.app,http://localhost:3000,http://127.0.0.1:3000
